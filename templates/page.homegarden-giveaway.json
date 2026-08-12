@@ -1,0 +1,52 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "banner_internal_pages_jCaMXA": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "Enter to Win any 1 of 3 Prizes:",
+        "heading_size": "large_text",
+        "content": "<p><strong>• </strong>Fuzion-Ex Electric Stove</p><p><strong>• </strong>$1,000 Off Your Next Project</p><p><strong>• </strong>Free Service Call (Up to $360 Value)  </p>",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/Social_Square-FreshCoast_HHT_F_FFuzion_Stills_v2_FINALS_tiffs-07642.png",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1680209685bfc4567e": {
+      "type": "apps",
+      "blocks": {
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "{formbuilder:MTI1Mjk4}"
+          }
+        }
+      },
+      "block_order": [
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "banner_internal_pages_jCaMXA",
+    "1680209685bfc4567e"
+  ]
+}

@@ -1,0 +1,194 @@
+<!-- Two Column Image w/ Text Template -->
+{% style %}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+{% endstyle %}
+
+{% javascript %}
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", reveal);
+{% endjavascript %}
+
+<section class="{{ section.settings.css_class }}">
+    <div class="block-wrapper flex flex-column relative">
+
+        {%- assign blocks = section.blocks -%}
+        {% for block in blocks %}
+          
+        <div class="two-col-block relative {% if section.settings.reveal-on == true %}reveal{% endif %}">
+            <div class="site-width relative">
+                <div class="two-col-block-inner flex">
+                    
+                    {% if block.settings.image != blank %}
+                    <div
+                      class="img-col col-8 absolute bg-cover bg-center"
+                      data-performance-bg="{{ block.settings.image | image_url: width: 1000 }}"
+                      data-performance-bg-large="{{ block.settings.image | image_url: width: 1600 }}"
+                    ></div>
+                    {% endif %}
+
+                    <div class="text-col fiftyfive col-tbl-8 col-xsm-10 margin-left-auto relative z-index-1 sm-text-center">
+                        {% if block.settings.title != blank %}
+                          <h3 class="h5">{{ block.settings.title | escape }}</h3>
+                        {% endif %}
+
+                        {% if block.settings.text != blank %}
+                          <div class="">
+                            {{ block.settings.text }}
+                          </div>
+                        {% endif %}
+
+                        {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+                          <a href="{{ block.settings.button_link }}" class="text-columns-with-images__button global-button global-button--text col-mbl-12">{{ block.settings.button_label | escape }}</a>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+        {% if section.settings.vertical_text != blank %}
+
+        <div class="vertical-text helvetica tbl-hide">{{ section.settings.vertical_text }}</div>
+        
+        {% endif %}
+
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Two Column Image w/ Text",
+    "tag": "section",
+    "class": "two-col-img-w-text",
+    "settings": [
+    	{
+          "type": "header",
+          "content": "Section Padding"
+        },
+        {
+          "type": "checkbox",
+          "id": "reveal-on",
+          "label": "Use section animation",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "label": "Top spacing",
+          "min": 0,
+          "max": 80,
+          "default": 0,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "label": "Bottom spacing",
+          "default": 0,
+          "min": 0,
+          "max": 80,
+          "unit": "px"
+        },
+		{
+          "type": "header",
+          "content": "Vertical Text"
+        },
+        {
+            "type": "text",
+            "id": "vertical_text",
+            "label": "Vertical text",
+            "default": "GATHER",
+			"info": "Add the <br> tag between each letter to create vertical effect."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text_block",
+            "name": "Panel",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image",
+					"info": "1200x529 px recommended"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Heading",
+                    "default": "Add a title or tagline"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Text"
+                },
+                {
+                    "type": "text",
+                    "id": "button_label",
+                    "label": "Button label"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Button link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Two Column Image w/ Text",
+            "category": "ADVANCED LAYOUT"
+        }
+    ]
+}
+{% endschema %}
+
+{% style %}
+    .block-wrapper { padding: 60px 0; }
+    .block-wrapper:before { content: ''; height: 100%; width: 40%; position: absolute; top: 0; bottom: 0; left: 0; background-color: #3d484e; z-index: -1; }
+    .block-wrapper .vertical-text { text-orientation: upright; position: absolute; top: 60px; right: -65px; z-index: 2; color: #E9841D; font-size: 250px; font-weight: bold; line-height: 1; opacity: .25; text-align: center; }
+    .block-wrapper .two-col-block { margin-bottom: 60px; }
+    .block-wrapper .two-col-block .img-col { height: 100%; top: 0; bottom: 0; }
+    .block-wrapper .two-col-block .text-col { margin-top: 60px; margin-bottom: 60px; background-color: white; padding: 40px; }
+    .block-wrapper > div:last-child { margin-bottom: 0; }
+
+    @media (max-width: 767px ) {
+        .block-wrapper:before { width: 100%; right: 0; }
+        .block-wrapper .two-col-block { margin-bottom: 0 }
+        .block-wrapper .two-col-block .img-col { z-index: 2; height: 250px; top: 40px; left: 20px; width: calc(100% - 40px); }
+        .block-wrapper .two-col-block .text-col { margin: 0 auto; padding-top: 320px }
+    }
+{% endstyle %}

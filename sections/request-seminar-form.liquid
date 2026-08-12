@@ -1,0 +1,30 @@
+<div class="form-wrapper site-width {{ section.settings.css_class }}">
+  {formbuilder:OTc2ODA=}
+</div>
+
+{% schema %}
+  {
+    "name": "Request Seminar Form",
+    "tag": "section",
+    "class": "custom-contact-form",
+    "settings": [
+    ],
+    "presets": [
+      {
+        "name": "Request Seminar Form",
+        "category": "ADVANCED LAYOUT"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .form-wrapper { padding-top: 60px; padding-bottom: 150px; }
+  .form-wrapper .inner .title { margin-bottom: 40px; }
+  .custom-contact-form { position: relative; }
+  .custom-contact-form:after { content: ''; position: absolute; z-index: -1; bottom: 0; left: 0; right: 0; width: 100%; height: 30vw; min-height: 250px; max-height: 450px; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url('https://cdn.shopify.com/s/files/1/0634/4707/2998/files/wood-background.jpg?v=1653598971'); }
+  @media (max-width: 767px ) {
+    .form-wrapper { padding-top: 15px; padding-bottom: 60px; }
+    .form-wrapper .inner { padding: 20px; }
+  }
+</style>

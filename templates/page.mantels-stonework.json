@@ -1,0 +1,175 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "1654199765e6dd120f": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "heading": "Mantels & Stone",
+        "heading_size": "regular_text",
+        "content": "<p>Fireside can help you find the perfect mantel or stone - whether you're adding to a new fireplace or updating an existing fireplace. Create a beautiful centerpiece by choosing from our many options.</p>",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/fireside-mantels.jpg",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16541996068a814df0": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165419960607d5409a-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Granite & Marble Surrounds",
+            "heading_size": "regular_text",
+            "text": "<p>Add timeless beauty and create an inviting space by choosing from a variety of stone surrounds. Available in multiple finishes, these pre-cut sets are designed and safety-tested to be used with the fireplaces we offer.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "165419960607d5409a-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Mantels & Mantel Shelves",
+            "heading_size": "regular_text",
+            "text": "<p>Add a mantel around or mantel shelf above your fireplace for décor and to protect nearby artwork or entertainment systems from the fireplace heat. Available in multiple finishes. Ask us about custom options.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "3e5308c0-b31d-4c8d-a5dd-b71da46f9489": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Natural & Manufactured Stone",
+            "heading_size": "regular_text",
+            "text": "<p>Upgrade your project with the perfect natural or manufactured stone to match your fireplace. Available in multiple styles and colors to seamlessly blend with your room. </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        }
+      },
+      "block_order": [
+        "165419960607d5409a-0",
+        "165419960607d5409a-1",
+        "3e5308c0-b31d-4c8d-a5dd-b71da46f9489"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Shop Fireside Finishings",
+        "sub_text": "With so many styles and colors available to match your home's décor, the design options really are endless. To help you get started, check out our material options below to plan your upcoming installation and bring your dream fireplace to life.",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16575717587e7d4afc": {
+      "type": "featured-collection",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "title": "",
+        "collection_description": true,
+        "collection": "mantels-stonework",
+        "collection_style": "slider",
+        "products_per": 4,
+        "products_limit": 16,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658404146166f28a8": {
+      "type": "featured-text",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 50,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "",
+        "paragraph_text_alignment": "center",
+        "content": "",
+        "button_text_alignment": "center",
+        "button_label": "Browse All Products",
+        "open-new-window": false,
+        "button_link": "shopify://collections/mantels-stonework",
+        "button_type": "orange-text",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1654199933935a1350": {
+      "type": "two-column-bg-image-w-text",
+      "settings": {
+        "bg_img": "shopify://shop_images/fireside-mantels.png",
+        "minion-font": false,
+        "heading": "Don't See Your Style?",
+        "content": "Visit your local showroom to see all available options, including custom mantel options. You can also schedule a virtual tour to browse our vast selection—right from the comfort of your couch.",
+        "btn_link": "shopify://pages/schedule-a-consultation",
+        "btn_text": "Schedule a Consultation",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1657138988b8d73d76": {
+      "type": "product-tabs",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "1654199765e6dd120f",
+    "16541996068a814df0",
+    "16575717587e7d4afc",
+    "1658404146166f28a8",
+    "1654199933935a1350",
+    "1657138988b8d73d76"
+  ]
+}

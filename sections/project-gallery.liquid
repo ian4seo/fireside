@@ -1,0 +1,102 @@
+<!-- Project Gallery Template -->
+
+<div class="gallery-inner site-width {{ section.settings.css_class }}">
+  <ul class="no-list flex flex-wrap">
+  	{%- assign blocks = section.blocks -%}
+  	{% for block in blocks %}
+  	<li class="gallery col-4">
+  		<div class="inner">
+          {% if block.settings.button_link != blank %}<a href="{{ block.settings.button_link }}">{% endif %}
+  			{% if block.settings.image != blank %}
+  				{%- if forloop.index <= 6 -%}
+  					{{ block.settings.image | image_url: width: 900 | image_tag: alt: block.settings.button_label, loading: 'eager', class: 'gallery-image' }}
+  				{%- else -%}
+  					{{ block.settings.image | image_url: width: 900 | image_tag: alt: block.settings.button_label, loading: 'lazy', class: 'gallery-image' }}
+  				{%- endif -%}
+  			{% endif %}
+          {% if block.settings.button_link != blank %}</a>{% endif %}
+  			{% if block.settings.button_label != blank %}
+  			<div class="action">
+  				{% if block.settings.button_link != blank %}
+  					<a class="orange helvetica" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
+  				{% else %}
+  					{{ block.settings.button_label }}
+  				{% endif %}
+  			</div>
+  			{% endif %}
+  		</div>
+  	</li>
+  	{% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+  {
+    "name": "Project Gallery",
+    "tag": "section",
+    "class": "project-gallery",
+    "settings": [
+      {
+          "type": "header",
+          "content": "Advanced"
+      },
+      {
+          "type": "paragraph",
+          "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      },
+      {
+          "type": "text",
+          "id": "css_class",
+          "label": "CSS Class"
+      },
+      {
+          "type": "textarea",
+          "id": "custom_css",
+          "label": "Custom CSS"
+      }
+    ],
+    "blocks": [
+        {
+            "type": "text_block",
+            "name": "Panel",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "button_label",
+                    "label": "Link label"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Link URL"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Project Gallery",
+        "category": "ADVANCED LAYOUT"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+	.project-gallery { background-color: rgba(82,88,102,0.08); }
+ 	.gallery-inner { padding-top: 80px; padding-bottom: 80px; }
+ 	.gallery-inner ul { margin: -15px; }
+ 	.gallery-inner ul li { padding: 15px; }
+ 	.gallery-inner ul li .inner { width: 100%; }
+ 	.gallery-inner ul li .gallery-image { width: 100%; height: auto; display: block; }
+ 	.gallery-inner ul li .action a { display: inline-block; padding-top: 8px; }
+</style>
+
+{% style %}
+    {{ section.settings.custom_css }}
+{% endstyle %}

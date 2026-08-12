@@ -1,0 +1,225 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1652295034e74bc08a": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "Because your home is more than a house.",
+        "heading_size": "large_text",
+        "content": "<p>We believe that many of life's best moments happen around the fire. It’s a place to explore, to grow, to learn, to work. A place of connection and well-being. And most importantly - a place to live.</p>",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/fireside-about2.jpg",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16523745348585eb46": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16523745345a39a35d-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "What We Do",
+            "heading_size": "regular_text",
+            "text": "<p>As your local fireplace experts, we're here to bring your dream design to life. </p><p>Though we have the best selection of brand-name products that feature energy-saving technology, what sets us apart is our commitment to serving our customers' needs.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "16523745345a39a35d-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Projects We Work On",
+            "heading_size": "regular_text",
+            "text": "<p>For more than 70 years, we've supported homeowners, builders, remodelers, architects, and designers across the US on residential and commercial projects.</p><p>No matter the size of the project, our team is equipped to handle the design, installation, and maintenance.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "9285c934-4edf-40f9-a986-6936d914614d": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "How We Give Back",
+            "heading_size": "regular_text",
+            "text": "<p>We're grateful to be part of our local communities across the US.</p><p>It's why we are so passionate about giving back to the neighborhoods we live and work in through organizations like Habitat for Humanity, Built to Honor and Housing First.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        }
+      },
+      "block_order": [
+        "16523745345a39a35d-0",
+        "16523745345a39a35d-1",
+        "9285c934-4edf-40f9-a986-6936d914614d"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Who We Are",
+        "sub_text": "Since 1951, we continue to make the fireplace selection and installation process easy by offering the best sales and service experience possible. We’re fireplace experts focused on the latest trends, technologies and brands to offer you the best solutions.",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "frd_next_steps_i7fBWm": {
+      "type": "frd-next-steps",
+      "blocks": {
+        "step_card_m3zd76": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Homeowners",
+            "description": "Browse our full range of fireplaces for your home",
+            "button_text": "Shop Now",
+            "link": "https://fireside.com/collections/all-products"
+          }
+        },
+        "step_card_43BQPt": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Builders & Remodelers",
+            "description": "Learn about builder programs & trade pricing",
+            "button_text": "FOR PROS",
+            "link": "https://fireside.com/pages/for-pros"
+          }
+        }
+      },
+      "block_order": [
+        "step_card_m3zd76",
+        "step_card_43BQPt"
+      ],
+      "name": "Next Steps",
+      "settings": {
+        "title": "How Can We Help You?",
+        "bottom_richtext": "",
+        "background_color": "#f6f7f9",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e0e0e0",
+        "heading_color": "#333333",
+        "text_color": "#666666",
+        "button_text_color": "#ffffff",
+        "button_style_outlined": false,
+        "columns_per_row": 2,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "card_padding_top": 44,
+        "card_padding_bottom": 44
+      }
+    },
+    "1652375715b1e9507b": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "#3d484e",
+        "heading_text_alignment": "center",
+        "title": "Let's Build Your Perfect Fireplace Together",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>From our in-person and virtual <a href=\"https://fireside.com/collections/all-products\" title=\"https://fireside.com/collections/all-products\">design assistance</a> to the brand-name products in our <a href=\"https://fireside.com/pages/locations\" title=\"https://fireside.com/pages/locations\">showrooms</a>, you'll find quality in everything we do. Not to mention a lifetime partner to ensure the integrity and functionality of your fireplace.</p>",
+        "button_text_alignment": "center",
+        "button_label": "View Products",
+        "open-new-window": false,
+        "button_link": "shopify://collections/all",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "View Past Work",
+        "open-new-window-two": false,
+        "button_link_2": "shopify://pages/project-gallery",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "#ffffff",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16527236941cd12d92": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "142f2a48-edb2-459d-b94a-4c4d3eb2e057": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-showroom.jpg",
+            "title": "Find a Fireplace Store Near You",
+            "text": "<p>Ready to add a fireplace to your homes or commercial projects? We can help! Find the nearest <a href=\"https://fireside.com/pages/locations\" title=\"https://fireside.com/pages/locations\">showroom</a> near you. </p><p>Our team is ready to share their knowledge with you, so you feel confident and ready to take the next step!</p>",
+            "button_label": "View Locations",
+            "button_link": "https://fireside-hearth-and-home.myshopify.com/pages/store-locator"
+          }
+        },
+        "1a6f44eb-bbcf-4dff-8576-bc7b5ffb8014": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-construction.jpg",
+            "title": "Building a Community of Pro Builders",
+            "text": "<p>We offer continuing education and training programs to our network of pros to provide easier access to upcoming fireplace design trends, products, and technology. </p>",
+            "button_label": "Find Pro Tools",
+            "button_link": "shopify://pages/pro-tools"
+          }
+        }
+      },
+      "block_order": [
+        "142f2a48-edb2-459d-b94a-4c4d3eb2e057",
+        "1a6f44eb-bbcf-4dff-8576-bc7b5ffb8014"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": ""
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "1652295034e74bc08a",
+    "16523745348585eb46",
+    "frd_next_steps_i7fBWm",
+    "1652375715b1e9507b",
+    "16527236941cd12d92",
+    "main"
+  ]
+}

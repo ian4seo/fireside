@@ -1,0 +1,68 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "005c07c2-53fe-4de0-9bf7-bef609aea0ef": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1680209685bfc4567e": {
+      "type": "apps",
+      "blocks": {
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "{formbuilder:MTExNTU2}"
+          }
+        }
+      },
+      "block_order": [
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "fb28b348-11d3-4a74-a298-cb71faf2f418": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-UYC75e\"></div>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "0a5a591a-05a0-4a2e-be72-35eb87069383": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "005c07c2-53fe-4de0-9bf7-bef609aea0ef",
+    "1680209685bfc4567e",
+    "fb28b348-11d3-4a74-a298-cb71faf2f418",
+    "0a5a591a-05a0-4a2e-be72-35eb87069383"
+  ]
+}

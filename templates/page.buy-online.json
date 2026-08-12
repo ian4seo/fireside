@@ -1,0 +1,217 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "165307706254106f59": {
+      "type": "banner-internal-pages",
+      "custom_css": [
+        "div {background-color: #000000;}"
+      ],
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "Twin Cities & Madison, WI Fire Lovers Can Now Buy Online",
+        "heading_size": "regular_text",
+        "content": "<p>Shop from the comfort of your home. Now available in the Minneapolis/St. Paul Twin Cities & Madison, WI Metro areas for select products.</p>",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/fireside_online_ecommerce_buy_fireplaces_header.png",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "custom_css": [],
+      "settings": {
+        "wide_display": true,
+        "reveal-on": false,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Not in the Twin Cities or Madison, WI?",
+        "newsletter_text": "<p>Be the first to find out when buying online is available in your area.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "fee0637f-99b5-4927-89f7-30418792a1df": {
+      "type": "featured-promotions",
+      "blocks": {
+        "template--16729945014502__fee0637f-99b5-4927-89f7-30418792a1df-16845219970aeaa59a-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_gas_insert_online_fireside_840x840_a6034a47-2997-4b46-9c92-199e2bb0fae8.png",
+            "link": "https://fireside.com/collections/buy-gas-inserts-online",
+            "title": "INSERTS",
+            "text": "<p>Convert your wood-burning fireplace to gas or electric for an easy and beautiful fire.</p>",
+            "button_label": ""
+          }
+        },
+        "template--16729945014502__fee0637f-99b5-4927-89f7-30418792a1df-16845219970aeaa59a-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_electric_fireplace_online_fireside_840x840_577d56b4-db7a-494f-b187-6e111bd8e306.png",
+            "link": "shopify://collections/shop-online-fireplaces",
+            "title": "FIREPLACES",
+            "text": "<p>Install a gas or electric fireplace nearly anywhere for instant ambiance.</p>",
+            "button_label": ""
+          }
+        },
+        "template--16729945014502__fee0637f-99b5-4927-89f7-30418792a1df-16845219970aeaa59a-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_gas_fire_pit_online_fireside_840x840_ad1ab5e9-17d2-4ea8-ab30-2f361aee28fe.jpg",
+            "link": "https://fireside.com/collections/shop-gas-fire-tables-fire-pits",
+            "title": "FIRE TABLES & PITS",
+            "text": "<p>Transform your outdoor space with a gas fire table or fire pit.</p>",
+            "button_label": ""
+          }
+        },
+        "9383e680-1047-4124-84f8-f231df765530": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_mantels_online_fireside_840x840_e93f3859-aad4-4ca7-ae14-b079a9dc3cfe.png",
+            "link": "https://fireside.com/collections/shop-mantel-shelves",
+            "title": "MANTELS",
+            "text": "<p>Add the perfect finishing touch above your fireplace or insert.</p>",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16729945014502__fee0637f-99b5-4927-89f7-30418792a1df-16845219970aeaa59a-0",
+        "template--16729945014502__fee0637f-99b5-4927-89f7-30418792a1df-16845219970aeaa59a-1",
+        "template--16729945014502__fee0637f-99b5-4927-89f7-30418792a1df-16845219970aeaa59a-2",
+        "9383e680-1047-4124-84f8-f231df765530"
+      ],
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 4,
+        "featured_links_animation": "fadeInDown",
+        "feature_style": "circle",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "72bd63d4-6379-4b09-8d75-ac5ffbacbe68": {
+      "type": "image-text",
+      "blocks": {
+        "template--16705936556262__72bd63d4-6379-4b09-8d75-ac5ffbacbe68-16806414754e51e996-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_gas_insert_online_fireside_840x840_a6034a47-2997-4b46-9c92-199e2bb0fae8.png",
+            "image_crop": "none",
+            "title": "INSERTS",
+            "text": "<p>Upgrade your wood-burning or outdated fireplace effortlessly with our gas or electric inserts. Our inserts are designed to seamlessly fit into your existing fireplace, providing you with a easy, safe, and affordable solution to reignite your enjoyment of your fireplace.</p>",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/buy-gas-inserts-online",
+            "link-two-margin-top": 0,
+            "button_two_label": "Help Me Choose",
+            "link-two": "https://fireside-hearth-and-home.myshopify.com/tools/perfect-product-finder/pick-my-insert",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--16705936556262__72bd63d4-6379-4b09-8d75-ac5ffbacbe68-16806414754e51e996-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_electric_fireplace_online_fireside_840x840_577d56b4-db7a-494f-b187-6e111bd8e306.png",
+            "image_crop": "none",
+            "title": "FIREPLACES",
+            "text": "<p>Experience instant ambiance year- round with our gas and electric fireplaces. Install them almost anywhere and enjoy the benefits of hassle-free installation, minimal upkeep, energy efficiency, and the peace of mind that comes with choosing a Fireside fire product. </p>",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/shop-online-fireplaces",
+            "link-two-margin-top": 0,
+            "button_two_label": "Help Me Choose",
+            "link-two": "https://fireside-hearth-and-home.myshopify.com/tools/perfect-product-finder/choose-electric-fireplace",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "156602c6-e116-4ac1-bee8-9b9ca811b862": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_gas_fire_pit_online_fireside_840x840_ad1ab5e9-17d2-4ea8-ab30-2f361aee28fe.jpg",
+            "image_crop": "none",
+            "title": "FIRE TABLES & PITS",
+            "text": "<p>Transform your outdoor space with a gas fire table or fire pit to extend your outdoor season and serve as the centerpiece of your backyard design fit for entertaining.</p>",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/shop-gas-fire-tables-fire-pits",
+            "link-two-margin-top": 0,
+            "button_two_label": "Help Me Choose",
+            "link-two": "https://fireside-hearth-and-home.myshopify.com/tools/perfect-product-finder/choose-my-fire-pit-table",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "e25fa773-b816-4650-af05-6a9cc245d619": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_mantels_online_fireside_840x840_e93f3859-aad4-4ca7-ae14-b079a9dc3cfe.png",
+            "image_crop": "none",
+            "title": "MANTELS",
+            "text": "<p>Add the perfect finishing touch above your fireplace or insert. Complement your gas, wood, or electric fireplace with a mantel that adds thoughtful detail to create a beautiful showpiece. </p>",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/shop-mantel-shelves",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16705936556262__72bd63d4-6379-4b09-8d75-ac5ffbacbe68-16806414754e51e996-0",
+        "template--16705936556262__72bd63d4-6379-4b09-8d75-ac5ffbacbe68-16806414754e51e996-1",
+        "156602c6-e116-4ac1-bee8-9b9ca811b862",
+        "e25fa773-b816-4650-af05-6a9cc245d619"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "67045df4-234e-4b19-af17-03100dd2e811": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": false,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "SIGN UP FOR OUR NEWSLETTER",
+        "newsletter_text": "<p>Be the first to get a sneak peek at the latest innovations in fireplace design and installation. Subscribe to our newsletter to view recent work, meet our designers, and inspire your next project. You'll also be the first to know about special promotions and exciting discounts to help you plan your fireplace.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165307706254106f59",
+    "newsletter",
+    "fee0637f-99b5-4927-89f7-30418792a1df",
+    "72bd63d4-6379-4b09-8d75-ac5ffbacbe68",
+    "67045df4-234e-4b19-af17-03100dd2e811"
+  ]
+}

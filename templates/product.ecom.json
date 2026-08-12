@@ -1,0 +1,147 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "sidebar": {
+      "type": "product-sidebar-ecom",
+      "settings": {
+        "toggle": false
+      }
+    },
+    "main": {
+      "type": "product-template-ecom",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "form",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "product_breadcrumb": false,
+        "media_position": "is-flex-row",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "product_thumbs": true,
+        "gallery_arrows": true,
+        "enable_product_lightbox": true,
+        "activate_zoom": true,
+        "slideshow_speed": 0,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "bottom",
+        "enable_thumbnail_slider": true
+      }
+    },
+    "0c1b8938-a2cc-4e41-8472-e5ca4e92e106": {
+      "type": "faq",
+      "blocks": {
+        "1cdeae13-3ae8-483c-b3b4-cf43ded026da": {
+          "type": "content",
+          "settings": {
+            "title": "Product Info",
+            "answer": ""
+          }
+        },
+        "template--16678972457190__0c1b8938-a2cc-4e41-8472-e5ca4e92e106-1674140970aaa3ea02-1": {
+          "type": "content",
+          "settings": {
+            "title": "Specs",
+            "answer": ""
+          }
+        },
+        "template--16678972457190__0c1b8938-a2cc-4e41-8472-e5ca4e92e106-1674140970aaa3ea02-2": {
+          "type": "content",
+          "settings": {
+            "title": "Downloads",
+            "answer": "<p><strong>{{ product.metafields.custom.user_guide.value }}</strong></p><p><strong>{{ product.metafields.custom.spec_sheet.value }}</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "1cdeae13-3ae8-483c-b3b4-cf43ded026da",
+        "template--16678972457190__0c1b8938-a2cc-4e41-8472-e5ca4e92e106-1674140970aaa3ea02-1",
+        "template--16678972457190__0c1b8938-a2cc-4e41-8472-e5ca4e92e106-1674140970aaa3ea02-2"
+      ],
+      "settings": {
+        "less-margin": true,
+        "title": ""
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_max_display": 6,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "wide_display": false,
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "You may also like",
+        "products_per_row": 3,
+        "recommended_products_limit": 4
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Subscribe",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "sidebar",
+    "main",
+    "0c1b8938-a2cc-4e41-8472-e5ca4e92e106",
+    "recently-viewed",
+    "recommendations",
+    "newsletter"
+  ]
+}

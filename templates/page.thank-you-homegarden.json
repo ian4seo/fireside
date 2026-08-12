@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "thank_you_estimate_request_hero_wkWJeQ": {
+      "type": "thank-you-estimate-request-hero",
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": false,
+        "image": "shopify://shop_images/fireplace-blueprint-bg-3.webp",
+        "pretext": "<p> </p>",
+        "title": "Thank You for Entering!",
+        "subtitle": "<p>You're officially in the running to win one of these incredible prizes from Fireside Hearth & Home:</p><p><strong>• </strong> Fuzion -Ex Electric Stove</p><p><strong>•  </strong>$1,000 Off Your Next Project</p><p><strong>•  </strong>Free Service Call (Up to $360 Value)</p><p>We appreciate your participation—stay tuned! Winners will be contacted soon. In the meantime, if you have any questions or want to explore our collection of fireplaces, stoves, and inserts, we're here to help!<br/></p>",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "thank_you_estimate_request_hero_wkWJeQ",
+    "main"
+  ]
+}

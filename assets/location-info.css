@@ -1,0 +1,87 @@
+.location-info-container {
+  display: flex;
+  margin: auto;
+  width: 95%;
+  max-width: 1200px;
+}
+.location-details-col {
+  width: 35%;
+  position: relative;
+  margin-top: -5em;
+}
+.location-info-blocks-col {
+  width: 65%;
+  padding: 3em;
+}
+.location-map-container {
+  padding: 2em;
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+.location-details-col a {
+  background: #3D484E;
+  color: #ffffff;
+  padding: .5em 1em;
+  border-radius: 5px;
+  display: block;
+  margin: 1em 0;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Helvetica';
+}
+.location-details-col a:hover {
+  background: #C8CCCE;
+}
+.location-info-hours {
+  font-family: 'Helvetica';
+}
+.location-info-hours p {
+  font-size: 16px;
+}
+.location-info-hours ul {
+  list-style: none;
+  margin-left: -1.2em;
+}
+.location-info-block {
+  display: flex;
+  padding: 2em;
+  background: #f0f0f0;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+.location-info-name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.location-info-address {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: capitalize;
+  letter-spacing: normal;
+}
+.location-info-block-text {
+  padding: 0 0 0 2em;
+}
+.location-info-block-text h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.location-info-block-text p {
+  font-size: 12px;
+}
+.location-info-block-text a {
+  border: 1px solid #e9841d;
+  padding: .25em 1em;
+  color: #e9841d;
+  font-family; "Helvetica";
+  font-size: 16px;
+}
+@media screen and (max-width: 480px){
+  .location-details-col, .location-info-blocks-col {width: 100%; padding: 1em}
+  .location-info-container, .location-info-block {flex-direction: column}
+  .location-info-block-text {padding: 1em 0 0;}
+  .location-details-col {margin-top: 0}
+}

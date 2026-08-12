@@ -1,0 +1,132 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "sidebar": {
+      "type": "product-sidebar",
+      "settings": {
+        "toggle": false
+      }
+    },
+    "main": {
+      "type": "custom-product-template",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_EGYHjg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://forgenflame.com/pages/vermont-castings\"><strong>Vermont Castings by Forge & Flame</strong></a></p>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": false
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "text_EGYHjg",
+        "price",
+        "form",
+        "description"
+      ],
+      "settings": {
+        "product_breadcrumb": false,
+        "media_position": "is-flex-row",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "product_thumbs": true,
+        "gallery_arrows": true,
+        "enable_product_lightbox": true,
+        "activate_zoom": false,
+        "slideshow_speed": 0,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "bottom",
+        "enable_thumbnail_slider": true
+      }
+    },
+    "b4d2ad11-1ce3-42df-816d-a5e1c2d8ec40": {
+      "type": "request-quote-section",
+      "settings": {}
+    },
+    "1652129789ea516a59": {
+      "type": "product-tabs",
+      "settings": {}
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_max_display": 6,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "wide_display": false,
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "You may also like",
+        "products_per_row": 3,
+        "recommended_products_limit": 4
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Subscribe",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1c5b11bd-cff3-4ef8-a296-2633416111e6": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script type=\"text/javascript\">\nvar _learnq = _learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    _learnq.push(['track', 'Added to Cart', cart])\n  }))\n} \n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch))\n$(document).ajaxComplete(function(event, request, settings){\n  if(settings.url == \"/cart/add.js\"){\n      addedToCart()\n  }\n})</script>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "sidebar",
+    "main",
+    "b4d2ad11-1ce3-42df-816d-a5e1c2d8ec40",
+    "1652129789ea516a59",
+    "recently-viewed",
+    "recommendations",
+    "newsletter",
+    "1c5b11bd-cff3-4ef8-a296-2633416111e6"
+  ]
+}

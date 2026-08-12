@@ -1,0 +1,101 @@
+<!-- Content w/ thumbnail Template -->
+
+<section class="content-w-thumbnail {{ section.settings.css_class }} bg-light-gray-alt">
+
+	{%- assign blocks = section.blocks -%}
+
+	<div class="site-width">
+		<div class="col-wrapper">
+			{% for block in blocks %}
+			<div class="col flex flex-wrap align-items-center">
+				
+				<div class="img-col col-3 col-xsm-12">
+					{%
+						render 'image-element',
+						image: block.settings.image,
+						alt: block.settings.alt,
+                        inline_style: "width: 100px"
+					%}
+				</div>
+				
+				<div class="text-col col-9 col-xsm-12">
+					<h3 class="h4">
+						{{ block.settings.title }}
+					</h3>
+					<p>
+						{{ block.settings.content }}
+					</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</section>
+
+{% schema %}
+  {
+    "name": "Content w/ thumbnail",
+    "tag": "section",
+    "settings": [
+      {
+          "type": "header",
+          "content": "Advanced"
+      },
+      {
+          "type": "text",
+          "id": "css_class",
+          "label": "CSS Class"
+      },
+      {
+          "type": "textarea",
+          "id": "custom_css",
+          "label": "Custom CSS"
+      }
+    ],
+    "blocks": [
+    	{
+	    	"type": "text",
+	    	"name": "Block",
+	    	"settings": [
+				{
+				    "type": "image_picker",
+				    "id": "image",
+				    "label": "Image"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+				    "type": "textarea",
+				    "id": "content",
+				    "label": "Content"
+				}
+	    	]
+    	}
+    ],
+    "presets": [{
+       "name": "Content w/ thumbnail",
+       "category": "ADVANCED LAYOUT"
+     }]
+  }
+{% endschema %}
+
+<style>
+	.content-w-thumbnail { padding-top: 60px; padding-bottom: 60px; }
+	.content-w-thumbnail .col-wrapper .col { padding-top: 30px; padding-bottom: 30px; }
+	.content-w-thumbnail .col-wrapper .col .text-col { padding-left: 20px; }
+	@media (max-width: 767px ) {
+		.content-w-thumbnail .col-wrapper .col .img-col { margin-bottom: 25px; }
+	}
+</style>
+
+{% style %}
+    {%
+      render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+    %}
+{% endstyle %}

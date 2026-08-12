@@ -1,0 +1,103 @@
+<!-- Featured Video Template -->
+{% style %}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{% endstyle %}
+
+<section class="{{ section.settings.css_class }} featured-video relative">
+	<div class="sm-site-width">
+      {% if section.settings.title != blank %}
+      <h3 class="h5 text-center">{{ section.settings.title | escape }}</h3>
+      {% endif %}
+
+      {% if section.settings.text != blank %}
+      <div class="text-center has-padding-bottom">
+        {{ section.settings.text }}
+      </div>
+      {% endif %}
+			<iframe loading="lazy" src="{{ section.settings.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</section>
+
+{% schema %}
+{
+    "name": "Featured Video",
+    "tag": "section",
+    "settings": [
+		{
+          "type": "header",
+          "content": "Section Padding"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "label": "Top spacing",
+          "min": 0,
+          "max": 80,
+          "default": 0,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "label": "Bottom spacing",
+          "default": 0,
+          "min": 0,
+          "max": 80,
+          "unit": "px"
+        },
+		{
+          "type": "header",
+          "content": "Content"
+        },
+        {
+        	"type": "text",
+        	"id": "title",
+        	"label": "Heading",
+        	"default": "Add a title or tagline"
+        },
+        {
+        	"type": "richtext",
+        	"id": "text",
+        	"label": "Text"
+        },
+		{
+			"id": "video_url",
+			"type": "text",
+			"label": "Video URL",
+			"default": "https://www.youtube.com/embed/S38Xwuz_d5A"
+		},
+		{
+			"type": "header",
+			"content": "Advanced"
+		},
+		{
+			"type": "text",
+			"id": "css_class",
+			"label": "CSS Class"
+		},
+		{
+			"type": "textarea",
+			"id": "custom_css",
+			"label": "Custom CSS"
+		}
+    ],
+    "presets": [{
+		"name": "Featured Video",
+		"category": "ADVANCED LAYOUT"
+    }]
+}
+{% endschema %}
+
+{% style %}
+    {%
+      render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+    %}
+    .featured-video { padding-bottom: 80px; }
+    .featured-video iframe { width: 100%; }
+    .featured-video:after { content: ''; width: 100%; height: 250px; background-color: #3D484E; display: block; position: absolute; left: 0; right: 0; bottom: 0; z-index: -1; }
+{% endstyle %}

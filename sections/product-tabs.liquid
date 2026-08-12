@@ -1,0 +1,105 @@
+<!-- Product Tabs Template -->
+
+{% comment %} Determine the active state for the tabs {% endcomment %}
+{% if product.metafields.product.specification_charts != blank %}
+    {% assign specification_charts_active = true %}
+{% elsif product.metafields.product.specification_charts == blank and product.metafields.product.downloads != blank %}
+    {% assign downloads_active = true %}
+{% elsif product.metafields.product.specification_charts == blank and product.metafields.product.downloads == blank and product.metafields.product.features != blank %}
+    {% assign features_active = true %}
+{% endif %}
+
+{% comment %} Don't render any product tabs if there is no content {% endcomment %}
+{% if product.metafields.product.specification_charts != blank or product.metafields.product.downloads != blank or product.metafields.product.features != blank %}
+
+    <section class="tabbed-content">
+        
+        <div class="tab-headers flex flex-wrap">
+            
+            {% if product.metafields.product.specification_charts != blank %}
+            <button data-tab="specification_charts" class="tab-heading no-button col-4{% if specification_charts_active == true %} active{% endif %}">Specs</button>
+            {% endif %}
+            
+            {% if product.metafields.product.downloads != blank %}
+            <button data-tab="downloads" class="tab-heading no-button col-4{% if downloads_active == true %} active{% endif %}">Downloads</button>
+            {% endif %}
+
+            {% if product.metafields.product.features != blank %}
+            <button data-tab="features" class="tab-heading no-button col-4{% if features_active == true %} active{% endif %}">Features</button>
+            {% endif %}
+
+        </div>
+
+        <div class="no-list tab-content">
+            
+            {% if product.metafields.product.specification_charts != blank %}
+            <div data-tab="specification_charts" class="content-wrap{% if specification_charts_active == true %}{% else %} display-none{% endif %}">
+                {{ product.metafields.product.specification_charts }}
+            </div>
+            {% endif %}
+
+            {% if product.metafields.product.downloads != blank %}
+            <div data-tab="downloads" class="content-wrap{% if downloads_active == true %}{% else %} display-none{% endif %}">
+                {{ product.metafields.product.downloads }}
+            </div>
+            {% endif %}
+
+            {% if product.metafields.product.features != blank %}
+            <div data-tab="features" class="content-wrap{% if features_active == true %}{% else %} display-none{% endif %}">
+                {{ product.metafields.product.features }}
+            </div>
+            {% endif %}
+
+        </div>
+
+    </section>
+
+{% endif %}
+
+{% schema %}
+{
+    "name": "Product Tabs",
+    "class": "product-tabs-custom",
+    "presets": [
+        {
+            "name": "Product Tabs",
+            "category": "Product"
+        }
+    ]
+}
+{% endschema %}
+
+<style>
+    .tabbed-content { margin: 40px 0; }
+    .tab-headers { border-bottom: 1px solid #A1AEB6; }
+    .tab-headers button { font-family: 'Helvetica', sans-serif; font-weight: bold; font-size: 20px; border-bottom: 2px solid transparent; text-align: center; padding: 12px; background-color: transparent; -webkit-transition: all, .1s;-o-transition: all, .1s;transition: all, .1s;  }
+    .tab-headers button.active { border-bottom: 2px solid #3D484E; }
+    .tab-content { padding-top: 40px; }
+    .tab-content h4,
+    .tab-content .h3 { font-size: 20px; margin-bottom: 10px; }
+    .tab-content .content-wrap ul { margin-bottom: 20px; }
+    .tab-content .content-wrap .col-xs-12 { width: 100%; }
+    .tab-content .content-wrap .col-sm-4 { width: 100%; }
+    .tab-content .content-wrap a { color: #E9841D; }
+
+    @media (max-width: 789px ) {
+        .tab-headers button { font-size: 16px; }
+        .tab-content h4,
+        .tab-content .h3 { font-size: 18px; }
+    }
+</style>
+
+<script>
+  (function (init) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  })(function () {
+        jQuery('.tab-headers button').on('click', function() {
+            jQuery('.tab-headers button').removeClass('active');
+            jQuery(this).addClass('active');
+            var data = jQuery(this).data('tab');
+            jQuery('.tab-content > div').hide();
+            jQuery('.tab-content > div[data-tab="' + data + '"]').show();
+        });
+  });
+</script>

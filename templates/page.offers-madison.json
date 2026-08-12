@@ -1,0 +1,277 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_banner_alt_MFbPX3": {
+      "type": "page-banner-alt",
+      "disabled": true,
+      "settings": {
+        "heading": "Garage Heaters- 25% Off Sale, through May 25th!",
+        "image": "shopify://shop_images/online-MultiTonalBrownTraditionalACUF.webp",
+        "text_alignment": "center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "165533018563016c3e": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "hide-on-mobile": true,
+        "heading": "Current Offers for Madison, Wisconsin",
+        "heading_size": "regular_text",
+        "content": "<p>Learn more about current offers from sales events to online coupons, tax rebates, and financing.</p>",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/promo_madison_a0e35838-0aa9-4982-a7b0-05afaa07fb12.jpg",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "two_column_image_w_text_fePDCA": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "text_block_bMpM44": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/SFS_OfferImage2_1.jpg",
+            "title": "SAVE THIS SUMMER - UP TO $1,500 OFF + A FREE FIREPLACE CARE PLAN!",
+            "text": "<p>Get cozy before the cold. For a limited time, save up to $1,500 on qualifying fireplace projects during our biggest sale of the year. Receive a FREE Fireplace Care Plan (up to a $499 value) with your qualifying fireplace purchase.</p>",
+            "button_label": "LEARN MORE",
+            "button_link": "https://fireside.com/pages/mad-great-hearth-event"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_bMpM44"
+      ],
+      "name": "Two Column Image w/ Text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": ""
+      }
+    },
+    "two_column_image_w_text_P3Nipt": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "text_block_rbHxgq": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/100OffWebsoteOfferPhoto2.jpg",
+            "title": "SAVE $100 ON FIREPLACES, STOVES OR INSERTS",
+            "text": "<p>Need a new fireplace? Get $100 off to help bring home the warmth you need—whether it’s a classic wood-burning hearth or a sleek gas insert. Limited time only!</p>",
+            "button_label": "LEARN MORE",
+            "button_link": "shopify://pages/wi-request-100-coupon"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_rbHxgq"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": ""
+      }
+    },
+    "166125773967225c57": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "6eff8d33-f153-4f4f-8e42-ef023d8523ab": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/FHH-website-service.jpg",
+            "title": "CELEBRATE WITH $75 OFF SERVICE",
+            "text": "<p>As part of our 75th anniversary celebration, enjoy $75 off professional fireplace service using \"PROMO-MS75\" at signup. We’ll inspect, clean, and fine-tune your system so it’s ready for whatever the season brings.</p>",
+            "button_label": "LEARN MORE",
+            "button_link": "https://fireside.com/pages/request-service"
+          }
+        }
+      },
+      "block_order": [
+        "6eff8d33-f153-4f4f-8e42-ef023d8523ab"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": ""
+      }
+    },
+    "1655331127bcaab9ac": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165533112756912c52-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/Screen_Shot_2022-06-15_at_4.12.34_PM.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "https://retailservices.wellsfargo.com/ahapp/init-app?m=0033048166&l=en_US",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165533112756912c52-0"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 20,
+        "padding_bottom": 30,
+        "section-bg": "",
+        "title": "FINANCING PROGRAMS",
+        "sub_text": "12-Month No Interest Financing is available for well-qualified customers for a limited time. You can get a gas insert installed starting at $267/month!* Click on the link below for further details.",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "frd_category_cards_NFe6BB": {
+      "type": "frd-category-cards",
+      "blocks": {
+        "category_card_gh8GKH": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/fireplace-icon-1.svg",
+            "heading": "Gas Fireplaces",
+            "description": "Browse our full selection of gas fireplaces",
+            "button_text": "Browse Collection",
+            "link": "https://fireside.com/collections/gas-fireplaces"
+          }
+        },
+        "category_card_zcKGCt": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/fireplace-icon-3.svg",
+            "heading": "Gas Inserts",
+            "description": "Upgrade your existing fireplace with a gas insert",
+            "button_text": "Browse Collection",
+            "link": "https://fireside.com/collections/gas-inserts"
+          }
+        },
+        "category_card_HNETN9": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/fireplace-icon-2.svg",
+            "heading": "Electric Fireplaces",
+            "description": "Efficient heating with beautiful design",
+            "button_text": "Browse Collection",
+            "link": "https://fireside.com/collections/electric-fireplaces"
+          }
+        }
+      },
+      "block_order": [
+        "category_card_gh8GKH",
+        "category_card_zcKGCt",
+        "category_card_HNETN9"
+      ],
+      "name": "Category Cards",
+      "settings": {
+        "title": "",
+        "background_color": "#3d484e",
+        "card_background_color": "#ffffff",
+        "heading_color": "#333333",
+        "text_color": "#666666",
+        "button_text_color": "#ffffff",
+        "columns_per_row": 3,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "card_padding_top": 32,
+        "card_padding_bottom": 32,
+        "card_border_radius": 12
+      }
+    },
+    "frd_category_cards_mztYix": {
+      "type": "frd-category-cards",
+      "blocks": {
+        "category_card_YmqPUg": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/fireside-home-consultation-icon.png",
+            "heading": "Visit Our Showroom",
+            "description": "Find a showroom near you",
+            "button_text": "Find location",
+            "link": "https://fireside.com/pages/locations"
+          }
+        },
+        "category_card_MWTcJ6": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/Installation_fe86f324-c725-43eb-be93-4284c420ee94.png",
+            "heading": "Need a Tune-Up?",
+            "description": "Fireplaces are what we do best",
+            "button_text": "Request a repair",
+            "link": "https://fireside.com/pages/services"
+          }
+        },
+        "category_card_BMMCrU": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/design-consult-160x160.png",
+            "heading": "Talk to an Expert",
+            "description": "Let us know what you're looking for",
+            "button_text": "contact us",
+            "link": "https://fireside.com/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "category_card_YmqPUg",
+        "category_card_MWTcJ6",
+        "category_card_BMMCrU"
+      ],
+      "name": "Category Cards",
+      "settings": {
+        "title": "",
+        "background_color": "#f1f1f1",
+        "card_background_color": "#ffffff",
+        "heading_color": "#333333",
+        "text_color": "#666666",
+        "button_text_color": "#ffffff",
+        "columns_per_row": 3,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "card_padding_top": 32,
+        "card_padding_bottom": 32,
+        "card_border_radius": 12
+      }
+    }
+  },
+  "order": [
+    "page_banner_alt_MFbPX3",
+    "main",
+    "165533018563016c3e",
+    "two_column_image_w_text_fePDCA",
+    "two_column_image_w_text_P3Nipt",
+    "166125773967225c57",
+    "1655331127bcaab9ac",
+    "frd_category_cards_NFe6BB",
+    "frd_category_cards_mztYix"
+  ]
+}

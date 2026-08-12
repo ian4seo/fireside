@@ -1,0 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "image_with_text_overlay_zGkbkk": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": true,
+        "image": "shopify://shop_images/fireplace-blueprint-bg-3.webp",
+        "pretext": "",
+        "title": "Survey",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner-text-highlighted",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "button_bg_color": "#e9841d",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "custom_liquid_zwQHbz": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"formbold-main-wrapper\">\n  <!-- Author: FormBold Team -->\n  <!-- Learn More: https://formbold.com -->\n  <div class=\"formbold-form-wrapper\">\n<h2>Survey Form</h2>\n    <form action=\"https://formbold.com/s/FORM_ID\" method=\"POST\">\n      <div class=\"formbold-input-flex\">\n        <div>\n          <label for=\"firstname\" class=\"formbold-form-label\">\n            First name\n          </label>\n          <input\n            type=\"text\"\n            name=\"firstname\"\n            id=\"firstname\"\n            placeholder=\"Jane\"\n            class=\"formbold-form-input\"\n          />\n        </div>\n        <div>\n          <label for=\"lastname\" class=\"formbold-form-label\"> Last name </label>\n          <input\n            type=\"text\"\n            name=\"lastname\"\n            id=\"lastname\"\n            placeholder=\"Cooper\"\n            class=\"formbold-form-input\"\n          />\n        </div>\n      </div>\n\n      <div class=\"formbold-mb-5\">\n        <label for=\"qusOne\" class=\"formbold-form-label\">\n          How did you like your experience?\n        </label>\n\n        <div class=\"formbold-radio-flex\">\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusOne\"\n                id=\"qusOne\"\n              />\n              Option one\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusOne\"\n                id=\"qusOne\"\n              />\n              Option Two\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusOne\"\n                id=\"qusOne\"\n              />\n              Option Three\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusOne\"\n                id=\"qusOne\"\n              />\n              None of them\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"formbold-mb-5\">\n        <label for=\"qusTwo\" class=\"formbold-form-label\">\n          On a scale of 1-10 how did we do?\n        </label>\n\n        <div class=\"formbold-radio-flex\">\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusTwo\"\n                id=\"qusTwo\"\n              />\n              Option one\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusTwo\"\n                id=\"qusTwo\"\n              />\n              Option Two\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusTwo\"\n                id=\"qusTwo\"\n              />\n              Option Three\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusTwo\"\n                id=\"qusTwo\"\n              />\n              None of them\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n        </div>\n      </div>\n\n      <div>\n        <label for=\"qusThree\" class=\"formbold-form-label\">\n          How likely are you to recommend us on a scale of 1-10?\n        </label>\n\n        <div class=\"formbold-radio-flex\">\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusThree\"\n                id=\"qusThree\"\n              />\n              Option one\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusThree\"\n                id=\"qusThree\"\n              />\n              Option Two\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusThree\"\n                id=\"qusThree\"\n              />\n              Option Three\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n\n          <div class=\"formbold-radio-group\">\n            <label class=\"formbold-radio-label\">\n              <input\n                class=\"formbold-input-radio\"\n                type=\"radio\"\n                name=\"qusThree\"\n                id=\"qusThree\"\n              />\n              None of them\n              <span class=\"formbold-radio-checkmark\"></span>\n            </label>\n          </div>\n        </div>\n      </div>\n\n      <button class=\"formbold-btn\">Submit</button>\n    </form>\n  </div>\n</div>\n<style>\n  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');\n  * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n  body {\n    font-family: 'Inter', sans-serif;\n  }\n  .formbold-main-wrapper {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding: 48px;\n  }\n\n  .formbold-form-wrapper {\n    margin: 0 auto;\n    max-width: 570px;\n    width: 100%;\n    background: white;\n    padding: 40px;\n  }\n\n  .formbold-img {\n    margin-bottom: 40px;\n  }\n\n  .formbold-input-flex {\n    display: flex;\n    gap: 20px;\n    margin-bottom: 30px;\n  }\n  .formbold-input-flex > div {\n    width: 50%;\n  }\n  .formbold-form-input {\n    width: 100%;\n    padding: 13px 22px;\n    border-radius: 5px;\n    border: 1px solid #dde3ec;\n    background: #ffffff;\n    font-weight: 500;\n    font-size: 16px;\n    color: #536387;\n    outline: none;\n    resize: none;\n  }\n  .formbold-form-input:focus {\n    border-color: #6a64f1;\n    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);\n  }\n  .formbold-form-label {\n    color: #536387;\n    font-weight: 500;\n    font-size: 14px;\n    line-height: 24px;\n    display: block;\n    margin-bottom: 10px;\n  }\n\n  .formbold-mb-5 {\n    margin-bottom: 20px;\n  }\n  .formbold-radio-flex {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n  }\n  .formbold-radio-label {\n    font-size: 14px;\n    line-height: 24px;\n    color: #07074d;\n    position: relative;\n    padding-left: 25px;\n    cursor: pointer;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n  }\n  .formbold-input-radio {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n  }\n  .formbold-radio-checkmark {\n    position: absolute;\n    top: -1px;\n    left: 0;\n    height: 18px;\n    width: 18px;\n    background-color: #ffffff;\n    border: 1px solid #dde3ec;\n    border-radius: 50%;\n  }\n  .formbold-radio-label\n    .formbold-input-radio:checked\n    ~ .formbold-radio-checkmark {\n    background-color: #6a64f1;\n  }\n  .formbold-radio-checkmark:after {\n    content: '';\n    position: absolute;\n    display: none;\n  }\n\n  .formbold-radio-label\n    .formbold-input-radio:checked\n    ~ .formbold-radio-checkmark:after {\n    display: block;\n  }\n\n  .formbold-radio-label .formbold-radio-checkmark:after {\n    top: 50%;\n    left: 50%;\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background: #ffffff;\n    transform: translate(-50%, -50%);\n  }\n\n  .formbold-btn {\n    text-align: center;\n    width: 100%;\n    font-size: 16px;\n    border-radius: 5px;\n    padding: 14px 25px;\n    border: none;\n    font-weight: 500;\n    background-color: #6a64f1;\n    color: white;\n    cursor: pointer;\n    margin-top: 25px;\n  }\n  .formbold-btn:hover {\n    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);\n  }\n</style>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_zGkbkk",
+    "custom_liquid_zwQHbz"
+  ]
+}

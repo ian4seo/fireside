@@ -1,0 +1,176 @@
+/* ============================================================
+   frd-product-actions.css
+   ------------------------------------------------------------
+   Scoped styles for the Product Conversion Actions (PCA) module.
+   Every class uses the .pca- prefix to guarantee zero overlap
+   with existing theme styles.
+
+   Referenced from sections/custom-product-template.liquid.
+   ============================================================ */
+
+/* --- Suppress legacy ZIP-gated CTAs on the custom template ---
+   The original snippets/product.liquid renders
+   #trigger-request-quote and #appointment buttons that are
+   visibility-gated by the ZIP availability script. Since the
+   new PCA block always exposes those same two actions, the
+   legacy ones would double-up once a matching ZIP is entered.
+   Hide them only inside the custom template (.pca-active).
+   Leaves the ZIP availability messaging + Buy Online flow intact.
+*/
+.pca-active #trigger-request-quote,
+.pca-active #appointment {
+  display: none !important;
+}
+
+/* --- Module container (desktop + mobile embedded CTA) ---
+   Default (pre-JS-move) style: subtle card, centered. After the
+   JS moves it into .product__details it gets .pca-module--inline
+   which drops the card chrome so it fits cleanly inside the
+   existing product detail column, directly above the description. */
+.pca-module {
+  margin: 1.25em 0 1.5em;
+  padding: 1.25em;
+  background: #f7f6f3;
+  border: 1px solid #e6e3dd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.pca-module--inline {
+  margin: 1em 0 1.25em;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.pca-module__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pca-module:not(.pca-module--inline) .pca-module__inner {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* --- Button base --- */
+.pca-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75em 1.25em;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  box-sizing: border-box;
+}
+
+/* --- Primary (filled) --- */
+.pca-btn--primary,
+.pca-btn--primary:visited {
+  background-color: #e9841d;
+  color: #ffffff;
+  border-color: #e9841d;
+}
+
+.pca-btn--primary:hover,
+.pca-btn--primary:focus,
+.pca-btn--primary:visited:hover,
+.pca-btn--primary:visited:focus {
+  background-color: #d06f0f;
+  border-color: #d06f0f;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* --- Secondary (outlined) --- */
+.pca-btn--secondary {
+  background-color: transparent;
+  color: #3d484e;
+  border-color: #3d484e;
+}
+
+.pca-btn--secondary:hover,
+.pca-btn--secondary:focus {
+  background-color: #3d484e;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* --- Tertiary (ghost / text link style, reserved for future use) --- */
+.pca-btn--tertiary {
+  background-color: transparent;
+  color: #3d484e;
+  border-color: transparent;
+  text-decoration: underline;
+  text-transform: none;
+  min-height: 0;
+  padding: 0.5em 0.75em;
+}
+
+.pca-btn--tertiary:hover,
+.pca-btn--tertiary:focus {
+  color: #e9841d;
+}
+
+/* ============================================================
+   Persistent mobile action bar
+   ============================================================ */
+
+.pca-mobile-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998; /* below typical cart drawers (which use 9999+) */
+  display: none; /* hidden until JS toggles .is-visible */
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0.5em 0.75em calc(0.5em + env(safe-area-inset-bottom, 0px));
+  background: #ffffff;
+  border-top: 1px solid #e6e3dd;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.pca-mobile-bar.is-visible {
+  display: flex;
+}
+
+.pca-mobile-bar__btn {
+  width: 100%;
+  min-height: 44px;
+  font-size: 13px;
+  padding: 0.5em 0.75em;
+}
+
+/* Fallback vertical spacing in case flex `gap` is stripped by theme CSS. */
+.pca-mobile-bar .pca-mobile-bar__btn + .pca-mobile-bar__btn {
+  margin-top: 0.5em;
+}
+
+/* --- Mobile-only display rule --- */
+@media (min-width: 769px) {
+  .pca-mobile-bar,
+  .pca-mobile-bar.is-visible {
+    display: none !important;
+  }
+}
+
+/* Body padding: added at runtime as an inline style by frd-product-actions.js
+   so it matches the measured bar height (accounts for safe-area inset). */

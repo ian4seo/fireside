@@ -1,0 +1,404 @@
+{% comment %}
+  Section: Next Steps
+  File:    frd-next-steps.liquid
+  Description: Displays a row of action cards with an icon/image,
+               heading, description text, and a CTA button.
+               Similar to Category Cards but with bordered cards
+               and left-aligned section heading.
+{% endcomment %}
+
+{%- assign section_title = section.settings.title -%}
+{%- assign bg_color = section.settings.background_color -%}
+{%- assign btn_text_color = section.settings.button_text_color -%}
+{%- assign columns = section.settings.columns_per_row -%}
+{%- assign card_bg = section.settings.card_background_color -%}
+{%- assign card_border_color = section.settings.card_border_color -%}
+{%- assign heading_color = section.settings.heading_color -%}
+{%- assign text_color = section.settings.text_color -%}
+{%- assign section_padding_top = section.settings.padding_top -%}
+{%- assign section_padding_bottom = section.settings.padding_bottom -%}
+{%- assign card_padding_top = section.settings.card_padding_top -%}
+{%- assign card_padding_bottom = section.settings.card_padding_bottom -%}
+{%- assign bottom_richtext = section.settings.bottom_richtext -%}
+{%- assign button_outlined = section.settings.button_style_outlined -%}
+{%- assign card_border_radius = section.settings.card_border_radius -%}
+
+<style>
+  #frd-next-steps-{{ section.id }} {
+    background-color: {{ bg_color }};
+    padding-top: {{ section_padding_top }}px;
+    padding-bottom: {{ section_padding_bottom }}px;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: {{ heading_color }};
+    text-transform: capitalize;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__grid {
+    display: grid;
+    grid-template-columns: repeat({{ columns }}, 1fr);
+    gap: 24px;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__card {
+    background: {{ card_bg }};
+    border-radius: {{ card_border_radius }}px;
+    border: 1px solid {{ card_border_color }};
+    padding: {{ card_padding_top }}px 24px {{ card_padding_bottom }}px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__card:hover {
+    border-color: #e9841d;
+    transform: translateY(-4px);
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+    object-fit: contain;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__heading {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: {{ heading_color }};
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: {{ text_color }};
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__button {
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+    background-color: #e9841d;
+    color: {{ btn_text_color }};
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 2px solid #e9841d;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.25s ease;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__button:hover {
+    opacity: 0.88;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__button--outlined {
+    background-color: transparent;
+    color: #e9841d;
+    border: 2px solid #e9841d;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__bottom-richtext {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid {{ card_border_color }};
+    font-size: 17px;
+    line-height: 1.6;
+    color: {{ text_color }};
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__bottom-richtext a {
+    color: #e9841d;
+    text-decoration: none;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__bottom-richtext a:hover {
+    text-decoration: underline;
+  }
+
+  #frd-next-steps-{{ section.id }} .frd-ns__bottom-richtext a em {
+    margin-left: 2px;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    #frd-next-steps-{{ section.id }} .frd-ns__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    #frd-next-steps-{{ section.id }} .frd-ns__card {
+      padding: 24px 20px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #frd-next-steps-{{ section.id }} .frd-ns__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<section id="frd-next-steps-{{ section.id }}">
+  <div class="frd-ns__wrapper">
+    {% if section_title != blank %}
+      <h2 class="frd-ns__title">{{ section_title }}</h2>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="frd-ns__grid">
+        {% for block in section.blocks %}
+          <div class="frd-ns__card" {{ block.shopify_attributes }}>
+
+            {%- if block.settings.image != blank -%}
+              <img
+                class="frd-ns__icon"
+                src="{{ block.settings.image | image_url: width: 96 }}"
+                alt="{{ block.settings.image.alt | default: block.settings.heading }}"
+                loading="lazy"
+                width="48"
+                height="48"
+              >
+            {%- endif -%}
+
+            {% if block.settings.heading != blank %}
+              <h3 class="frd-ns__heading">{{ block.settings.heading }}</h3>
+            {% endif %}
+
+            {% if block.settings.description != blank %}
+              <p class="frd-ns__description">{{ block.settings.description }}</p>
+            {% endif %}
+
+            {% if block.settings.button_text != blank %}
+              <a
+                class="frd-ns__button{% if button_outlined %} frd-ns__button--outlined{% endif %}"
+                href="{{ block.settings.link | default: '#' }}"
+              >
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if bottom_richtext != blank %}
+      <div class="frd-ns__bottom-richtext">
+        {{ bottom_richtext }}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Next Steps",
+  "class": "shopify-section--frd-next-steps",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_richtext",
+      "label": "Text Below Cards",
+      "info": "Displayed below the cards grid, useful for additional links or guidance"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card Border Color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_outlined",
+      "label": "Use Outlined Button Style",
+      "info": "Transparent background with a border matching the button color",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "columns_per_row",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "label": "Columns Per Row (Desktop)",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "card_padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Card Padding Top",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Card Padding Bottom",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card Border Radius",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step_card",
+      "name": "Step Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon / Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Step Name"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "Short description of this step"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Next Steps",
+      "settings": {
+        "title": "What Would You Like to Do Next?"
+      },
+      "blocks": [
+        {
+          "type": "step_card",
+          "settings": {
+            "heading": "Browse Products",
+            "description": "Explore our full range of fireplaces, inserts, and stoves",
+            "button_text": "Shop Now"
+          }
+        },
+        {
+          "type": "step_card",
+          "settings": {
+            "heading": "Find a Showroom",
+            "description": "Visit one of our Minnesota showrooms to see products in person",
+            "button_text": "Find Us"
+          }
+        },
+        {
+          "type": "step_card",
+          "settings": {
+            "heading": "Talk to an Expert",
+            "description": "Get personalized help with your fireplace project",
+            "button_text": "Contact"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

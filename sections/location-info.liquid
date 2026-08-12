@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="{{ 'location-info.css' | asset_url }}">
+
+<div class="location-info-container">
+  <div class="location-details-col">
+    <div class="location-map-container">
+      <h1 class="location-info-name">{{ section.settings.location-name }}</h1>
+      <h2 class="location-info-address">{{ section.settings.location-address }}</h2>
+      <img src="{{ section.settings.location-map | image_url }}" alt="{{ section.settings.location-name }}" loading="lazy" decoding="async" height="{{ section.settings.location-map.height }}" width="{{ section.settings.location-map.width }}" style="width: 100%;border-radius:10px" />
+    </div>
+    <a href="tel:{{ section.settings.call-store-link }}">Call Store</a>
+    <a href="{{ section.settings.directions-link }}">Get Directions</a>
+    <div class="location-info-hours">{{ section.settings.hours }}</div>
+  </div>
+  <div class="location-info-blocks-col">
+    {% for block in section.blocks %}
+      <div class="location-info-block">
+        {% if block.settings.info-img %}
+          <img src="{{ block.settings.info-img | image_url: width: 480 }}" alt="{{ block.settings.info-heading }}" loading="lazy" decoding="async" width="240" height="{{ 240 | divided_by: block.settings.info-img.aspect_ratio | round }}" />
+        {% endif %}
+        <div class="location-info-block-text">
+          <h3>{{ block.settings.info-heading }}</h3>
+          <div>{{ block.settings.info-content }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Location info",
+    "presets": [
+      {
+        "name": "Location info"
+      }
+    ],
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "location-map",
+        "label": "Location map"
+      },
+      {
+        "type": "text",
+        "id": "location-name",
+        "label": "Location name"
+      },
+      {
+        "type": "richtext",
+        "id": "location-address",
+        "label": "Location address"
+      },
+      {
+        "type": "text",
+        "id": "call-store-link",
+        "label": "Location phone number"
+      },
+      {
+        "type": "text",
+        "id": "directions-link",
+        "label": "Location Google maps link"
+      },
+      {
+        "type": "richtext",
+        "id": "hours",
+        "label": "Location hours"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "location-info",
+        "name": "Location info",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "info-img",
+            "label": "Info block image"
+          },
+          {
+            "type": "text",
+            "id": "info-heading",
+            "label": "Info block heading"
+          },
+          {
+            "type": "richtext",
+            "id": "info-content",
+            "label": "Info block content"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

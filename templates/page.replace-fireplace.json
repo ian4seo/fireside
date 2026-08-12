@@ -1,0 +1,523 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "165419429360e93cef": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Replace Your Fireplace",
+        "sub-text": "Enhance the warmth and comfort of your living space by replacing your outdated fireplace to match the evolving style and technology of your home.",
+        "bg-img": "shopify://shop_images/fireside-replace.jpg",
+        "view-btn-link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Fireside_Fireplace_Project_Planner_Editable.pdf?v=1683735473",
+        "view-btn": "Download Planner",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "1654194455df1fb5a0": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "81fbeaf7-46c7-4354-ba67-cfcb4776b456": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-fireplace.jpg",
+            "title": "Need to Upgrade an Old Fireplace?",
+            "text": "<p>Like many home appliances, gas fireplaces should ideally be replaced every 10-15 years. When the time comes, our team can help.</p>",
+            "button_label": "Request a Quote",
+            "button_link": "shopify://pages/request-estimate"
+          }
+        },
+        "86466219-89aa-4dc3-8597-b91144b1723e": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-find.png",
+            "title": "Find the Right Replacement",
+            "text": "<p>Home décor trends and technology are always changing. Luckily, fireplaces have changed as well to keep up with new designs that offer greater functionality and efficiency.</p>",
+            "button_label": "Browse Fireplaces",
+            "button_link": "shopify://collections/gas-fireplaces"
+          }
+        },
+        "68570469-d70f-45a1-a4cf-f2013a5e4dbb": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/full_fireplace_installation_fireside.jpg",
+            "title": "Fireside Makes Fireplace Remodeling Easy",
+            "text": "<p>Fireside offers complete installation packages to help design your dream look. In addition to replacing your existing fireplace, we provide stonework, custom woodwork, mantel installation, and more!</p>",
+            "button_label": "Watch The Process",
+            "button_link": "https://youtu.be/TWZ7Dx7WjrE"
+          }
+        },
+        "8f0ac6d7-dffc-4967-9a6b-e7d9efd18ed4": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-mantel-stonework.jpg",
+            "title": "Refresh Mantel or Stonework",
+            "text": "<p>If you're looking for updated styles to match your current décor tastes, Fireside can help streamline your search with our wide variety of mantels and stone. We'll set you up with a beautiful fireplace that meets your needs and complements your space.</p>",
+            "button_label": "Browse Mantels & Stone",
+            "button_link": "shopify://collections/mantels-stonework"
+          }
+        }
+      },
+      "block_order": [
+        "81fbeaf7-46c7-4354-ba67-cfcb4776b456",
+        "86466219-89aa-4dc3-8597-b91144b1723e",
+        "68570469-d70f-45a1-a4cf-f2013a5e4dbb",
+        "8f0ac6d7-dffc-4967-9a6b-e7d9efd18ed4"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": "RENEW"
+      }
+    },
+    "1658293320ab57c46c": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16582933203d89e393-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"Extremely professional and competent from sales to installation. Friendly and helpful staff. Perfectly executed!\"</p><p><strong>- Ian G. </strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "16582933203d89e393-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"I am so impressed with Fireside! Everyone on the team is so kind, considerate, and knowledgeable.\" </p><p><strong>- Marci M. </strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "16582933203d89e393-0",
+        "16582933203d89e393-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16541959854dff8208": {
+      "type": "featured-video",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "title": "See Your Dream Fireplace Come to Life",
+        "text": "<p>Fall back in love with your fireplace with help from our team! To help inspire your design and start envisioning your new fireplace, watch this video from our sales manager Joel. </p>",
+        "video_url": "https://www.youtube.com/embed/q1hRSxVGBzg",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1655758440cf10b53a": {
+      "type": "featured-collection",
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "title": "Explore Products",
+        "collection_description": true,
+        "collection": "replace-existing-fireplace-highlights",
+        "collection_style": "slider",
+        "products_per": 3,
+        "products_limit": 9,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1654196407837b9a7a": {
+      "type": "text-columns-with-images",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "Browse All Products",
+        "section_button_link": "shopify://collections/replace-a-fireplace",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16541969230cb92a3e": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "#d3d3d3",
+        "heading_text_alignment": "center",
+        "title": "Request a Free Consultation",
+        "paragraph_text_alignment": "center",
+        "content": "<p>We'd love to know more about your fireplace goals so we can find a solution that is complementary to your living space.</p><p>Learn how we can help you plan the design—no obligations, we promise!</p>",
+        "button_text_alignment": "center",
+        "button_label": "Visit A Showroom",
+        "open-new-window": false,
+        "button_link": "shopify://pages/store-locator",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "Get Free Consult",
+        "open-new-window-two": false,
+        "button_link_2": "shopify://pages/schedule-a-consultation",
+        "button_type_2": "orange",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "sm-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16583686869093d432": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165836868684fcb249-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_before_6.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165836868684fcb249-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_after_3.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165836868684fcb249-0",
+        "165836868684fcb249-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Before & After Project Photos",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "c10b0e88-c834-4082-be79-d46c84821285": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629089894630__c10b0e88-c834-4082-be79-d46c84821285-1678469495c2171240-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireplace_before_remodel.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "template--16629089894630__c10b0e88-c834-4082-be79-d46c84821285-1678469495c2171240-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireplace_after_remodel.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629089894630__c10b0e88-c834-4082-be79-d46c84821285-1678469495c2171240-0",
+        "template--16629089894630__c10b0e88-c834-4082-be79-d46c84821285-1678469495c2171240-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16583684750cacb573": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16583684759196feb0-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_before_2.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "16583684759196feb0-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_after_2.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "16583684759196feb0-0",
+        "16583684759196feb0-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16583685714b06bb74": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658368571b467e202-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_before_5.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658368571b467e202-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_after_5.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658368571b467e202-0",
+        "1658368571b467e202-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "b4ca0a6f-1522-4cdb-9f6e-8c91c6a07e5a": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16718378533094__b4ca0a6f-1522-4cdb-9f6e-8c91c6a07e5a-168303839267313f01-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/before_fireplace_replacement.png",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "template--16718378533094__b4ca0a6f-1522-4cdb-9f6e-8c91c6a07e5a-168303839267313f01-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/600mod.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--16718378533094__b4ca0a6f-1522-4cdb-9f6e-8c91c6a07e5a-168303839267313f01-0",
+        "template--16718378533094__b4ca0a6f-1522-4cdb-9f6e-8c91c6a07e5a-168303839267313f01-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165419429360e93cef",
+    "1654194455df1fb5a0",
+    "1658293320ab57c46c",
+    "16541959854dff8208",
+    "1655758440cf10b53a",
+    "1654196407837b9a7a",
+    "16541969230cb92a3e",
+    "16583686869093d432",
+    "c10b0e88-c834-4082-be79-d46c84821285",
+    "16583684750cacb573",
+    "16583685714b06bb74",
+    "b4ca0a6f-1522-4cdb-9f6e-8c91c6a07e5a"
+  ]
+}

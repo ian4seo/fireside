@@ -1,0 +1,457 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "1654191197abd274d1": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Add A New Fireplace",
+        "sub-text": "Create more ambiance and comfort in your home by adding a  new fireplace.",
+        "bg-img": "shopify://shop_images/add_fireplace_84f7aed7-ef6c-4824-b7fe-bc983f3677ff.jpg",
+        "view-btn-link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Fireside_Fireplace_Project_Planner_Editable.pdf?v=1683735473",
+        "view-btn": "Download Project Planner",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "16541921203dde51c0": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "16cec87a-2a82-4407-b7bb-d6662578206c": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/increase_resale_value.jpg",
+            "title": "Get An Instant Room Upgrade",
+            "text": "<p>Whether you're finishing a basement, updating a family room, or expanding with a three-season porch, it’s possible to add a fireplace or stove to almost any room, on any level, indoors or out—no matter the age of your home.</p>",
+            "button_label": "Request a Quote",
+            "button_link": "shopify://pages/request-estimate"
+          }
+        },
+        "6d408a39-a213-43ae-888f-5128a6f6ef88": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/home_value_15ae5dd1-e66e-4347-b639-e2e06b5f7694.jpg",
+            "title": "Increase Your Home's Resale Value",
+            "text": "<p>A fireplace is a great place to start as a way to increase your home's resale value. Fireplaces not only transform a room, but they also offer 100% payback on your home’s value.</p>",
+            "button_label": "Project Gallery",
+            "button_link": "shopify://pages/project-gallery"
+          }
+        },
+        "a9b4c582-174b-4262-89df-fdc4d9f1bb02": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/full_fireplace_installation_fireside.jpg",
+            "title": "Fireside Makes Fireplace Installation Easy",
+            "text": "<p>Fireside offers complete installation packages to help design the fireplace of your dreams. In addition to installing the fireplace itself, we provide gas line installation, stonework, electrical, custom woodwork, and more!</p>",
+            "button_label": "Watch Video",
+            "button_link": "https://www.youtube.com/watch?v=ecMGPwMHe5I&t=84s"
+          }
+        }
+      },
+      "block_order": [
+        "16cec87a-2a82-4407-b7bb-d6662578206c",
+        "6d408a39-a213-43ae-888f-5128a6f6ef88",
+        "a9b4c582-174b-4262-89df-fdc4d9f1bb02"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": ""
+      }
+    },
+    "16582926475423a406": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658292647501b22c3-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"I can't say enough good things about the entire process with Fireside. The sales people were fantastic, the installers were great, and the final set-up tech was top notch.\"</p><p><strong>- Jesse L.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1658292647501b22c3-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"Our new fireplace is beautiful! The installers were great. We couldn't be happier. It's a whole new look for our room.\" </p><p><strong>- Shawn H. </strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658292647501b22c3-0",
+        "1658292647501b22c3-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1657884776f3f6cc05": {
+      "type": "text-columns-with-images",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1655758150e5104f69": {
+      "type": "featured-collection",
+      "settings": {
+        "padding_top": 11,
+        "padding_bottom": 0,
+        "title": "Explore Products",
+        "collection_description": true,
+        "collection": "add-a-new-fireplace-highlighted-products",
+        "collection_style": "slider",
+        "products_per": 3,
+        "products_limit": 9,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165419327336204b8d": {
+      "type": "text-columns-with-images",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 35,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "Browse All Products",
+        "section_button_link": "shopify://collections/add-a-new-fireplace",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165419377541f3b72b": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "#d3d3d3",
+        "heading_text_alignment": "center",
+        "title": "Request a Free Consultation",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Turn a room you like into a room you love. We'd love to know more about your fireplace goals so we can find a solution that is complementary to your living space.</p><p>Learn how we can help you plan the design—no obligations, we promise!</p>",
+        "button_text_alignment": "center",
+        "button_label": "Visit A Showroom",
+        "open-new-window": false,
+        "button_link": "shopify://pages/store-locator",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "Get Free Consult",
+        "open-new-window-two": false,
+        "button_link_2": "shopify://pages/schedule-a-consultation",
+        "button_type_2": "orange",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "sm-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1657884097831ae25e": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165788409789e3f86c-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/Add_Schmaltz_Before_1.jpg",
+            "heading-margin-top": 0,
+            "title": "Before",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165788409789e3f86c-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/Add_Schmaltz_After.jpg",
+            "heading-margin-top": 0,
+            "title": "After",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165788409789e3f86c-0",
+        "165788409789e3f86c-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Before & After Project Photos",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "ad037e82-3151-40a9-b1ca-0ade0bc1f709": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "f8efce75-e056-462e-901c-2e42dc88767c": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/bamrick_fireplace_before_empty_wall.jpg",
+            "heading-margin-top": 0,
+            "title": "Before",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "07430340-0cf6-4e10-923b-8fdfa3371498": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/bamrick_fireplace_after.jpg",
+            "heading-margin-top": 0,
+            "title": "After",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "f8efce75-e056-462e-901c-2e42dc88767c",
+        "07430340-0cf6-4e10-923b-8fdfa3371498"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16578846368279c299": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16578846353ffdfb17-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/before_add_fireplace_1.jpg",
+            "heading-margin-top": 0,
+            "title": "Before",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "16578846353ffdfb17-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/after_add_fireplace_1.jpg",
+            "heading-margin-top": 0,
+            "title": "After",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "16578846353ffdfb17-0",
+        "16578846353ffdfb17-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1657884243a7c49746": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165788424282aa007b-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/Add_Yurovich_Before_1.jpg",
+            "heading-margin-top": 0,
+            "title": "Before",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165788424282aa007b-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/Add_Yurovich_After_3.jpg",
+            "heading-margin-top": 0,
+            "title": "After",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165788424282aa007b-0",
+        "165788424282aa007b-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1654191197abd274d1",
+    "16541921203dde51c0",
+    "16582926475423a406",
+    "1657884776f3f6cc05",
+    "1655758150e5104f69",
+    "165419327336204b8d",
+    "165419377541f3b72b",
+    "1657884097831ae25e",
+    "ad037e82-3151-40a9-b1ca-0ade0bc1f709",
+    "16578846368279c299",
+    "1657884243a7c49746"
+  ]
+}

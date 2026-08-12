@@ -1,0 +1,226 @@
+<!-- Testimonials Template -->
+
+{%- assign id = section.id -%}
+{%- assign blocks = section.blocks -%}
+{%- assign title = section.settings.title | escape -%}
+{%- assign css_class = section.settings.css_class -%}
+{%- assign custom_css = section.settings.custom_css -%}
+
+{% style %}
+  {%
+    render 'css-loop',
+    css: custom_css,
+    id: id
+  %}
+  section.testimonials { margin-top: 40px; padding-top: 100px; padding-bottom: 100px; }
+  section.testimonials h3.heading { margin-bottom: 40px; }
+  section.testimonials .column-heading.regular_text { font-size: 19px; }
+  section.testimonials .column-heading.large_text { font-size: 23px; }
+  section.testimonials .testimonial { padding: 40px; }
+  section.testimonials .image-element__wrap { margin-bottom: 15px; }
+  section.testimonials .actions { margin-top: 40px; }
+  section.testimonials .actions .link-wrap { padding: 10px; }
+  section.testimonials .actions .link-wrap a { margin-top: 10px; }
+{% endstyle %}
+
+<section class="testimonials {{ css_class }}" style="background-color: {{ section.settings.bg_color }};">
+  <div class="lg-site-width flex flex-wrap justify-center">
+    
+    {% if title != blank %}
+      <div class="one-whole column">
+        <h3 class="heading helvetica text-center weight-normal">
+          {{ title }}
+        </h3>
+      </div>
+    {% endif %}
+
+    {% for block in blocks %}
+      {%- assign image = block.settings.image -%}
+
+      <div class="testimonial col-4 col-sm-6 col-mbl-12" {{ block.shopify_attributes }}>
+        <div class="text-align--{{ block.settings.align_text }}">
+        {% if block.settings.enable_image %}
+          {% if image != blank %}
+            {%
+              render 'image-element',
+              image: image.src,
+              alt: image.alt
+            %}
+          {% else %}
+            <p>
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </p>
+          {% endif %}
+        {% endif %}
+
+        {% if block.settings.title != blank %}
+          <h3 class="column-heading {{ block.settings.heading_size }} weight-normal">{{ block.settings.title | escape }}</h3>
+        {% endif %}
+
+        {% if block.settings.text != blank %}
+          <div class="rte-setting">
+            {{ block.settings.text }}
+          </div>
+        {% endif %}
+
+        </div>
+      </div>
+    {% endfor %}
+
+    <div class="actions text-center hundred flex flex-wrap justify-center">
+        {% if section.settings.button_label_1 != blank and section.settings.button_link_1 != blank %}
+        <div class="link-wrap">
+          <a href="{{ section.settings.button_link_1 }}" class="btn bg-orange">{{ section.settings.button_label_1 | escape }}</a>
+        </div>
+        {% endif %}
+        
+        {% if section.settings.button_label_2 != blank and section.settings.button_link_2 != blank %}
+        <div class="link-wrap">
+          <a href="{{ section.settings.button_link_2 }}" class="btn bg-orange">{{ section.settings.button_label_2 | escape }}</a>
+        </div>
+        {% endif %}
+
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "class": "testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Testimonials"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "button_label_1",
+      "label": "Button label (1)"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "Button link (1)"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Button label (2)"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Button link (2)"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "text",
+      "id": "html_id",
+      "label": "HTML ID (anchor)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Column",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_image",
+          "label": "Show image",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Add a title or tagline"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "default": "regular_text",
+          "options": [
+            {
+              "value": "regular_text",
+              "label": "Regular"
+            },
+            {
+              "value": "large_text",
+              "label": "Large"
+            }
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
+        },
+        {
+          "type": "select",
+          "id": "align_text",
+          "label": "Text alignment",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

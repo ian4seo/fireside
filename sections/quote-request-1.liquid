@@ -1,0 +1,213 @@
+<!-- Custom Quote Form Template -->
+
+<div class="form-wrapper site-width {{ section.settings.css_class }}">
+  <div class="inner">
+    
+    <h2 class="title h5">{{ section.settings.heading }}</h2>
+
+    {% form 'contact' %}
+      {{ form.errors | default_errors }}
+
+      <div class="your_project mb-20">
+        <label for="">Locations</label>
+        <select name="contact[location]" id="location">
+          <option data-form="form-01" value="MN – Eagan">MN – Eagan</option>
+          <option data-form="form-01" value="MN – Eden Prairie">MN – Eden Prairie</option>
+          <option data-form="form-01" value="MN – Maple Grove">MN – Maple Grove</option>
+          <option data-form="form-01" value="MN – Minnetonka">MN – Minnetonka</option>
+          <option data-form="form-01" value="MN – Roseville">MN – Roseville</option>
+          <option data-form="form-01" value="WI – Madison">WI – Madison</option>
+          <option data-form="form-02" value="DE – Bridgeville">DE – Bridgeville</option>
+          <option data-form="form-02" value="MD – Elkridge">MD – Elkridge</option>
+          <option data-form="form-02" value="NC – Raleigh">NC – Raleigh</option>
+          <option data-form="form-02" value="NC – Charlotte">NC – Charlotte</option>
+          <option data-form="form-02" value="NC – Greensboro">NC – Greensboro</option>
+          <option data-form="form-02" value="NC – Wilmington">NC – Wilmington</option>
+          <option data-form="form-02" value="NJ – Robbinsville">NJ – Robbinsville</option>
+          <option data-form="form-02" value="NY – Goshen">NY – Goshen</option>
+          <option data-form="form-02" value="PA – Limerick">PA – Limerick</option>
+          <option data-form="form-02" value="PA – York">PA – York</option>
+          <option data-form="form-02" value="SC – Charleston">SC – Charleston</option>
+          <option data-form="form-02" value="SC – Columbia">SC – Columbia</option>
+          <option data-form="form-02" value="SC – Greenville">SC – Greenville</option>
+          <option data-form="form-02" value="SC – Myrtle Beach">SC – Myrtle Beach</option>
+          <option data-form="form-02" value="TN – Knoxville">TN – Knoxville</option>
+          <option data-form="form-02" value="TN – Nashville">TN – Nashville</option>
+          <option data-form="form-02" value="VA – Charlottesville">VA – Charlottesville</option>
+          <option data-form="form-02" value="VA – Newport News">VA – Newport News</option>
+          <option data-form="form-02" value="VA – Richmond">VA – Richmond</option>
+          <option data-form="form-02" value="VA – Chantilly">VA – Chantilly</option>
+          <option data-form="form-02" value="TX – Dallas">TX – Dallas</option>
+        </select>
+      </div>
+      <div class="first-name half-left">
+        <label for="first-name">*First name</label>
+        <input required="required" type="text" name="contact[first_name]" id="first-name" />
+      </div>
+
+      <div class="last-name half-right">
+        <label for="last-name">*Last name</label>
+        <input required="required" type="text" name="contact[last_name]" id="last-name" />
+      </div>
+    
+      <div class="phone half-left">
+        <label for="phone">*Phone</label>
+        <input required="required" type="tel" name="contact[phone]" id="phone" />
+      </div>
+
+      <div class="email half-right">
+        <label for="email">*Email</label>
+        <input required="required" type="email" name="contact[email]" id="email" />
+      </div>
+
+      <div class="address whole">
+        <label for="address">Street Address</label>
+        <input type="text" name="contact[address]" id="address" />
+      </div>
+
+      <div class="city third-left">
+        <label for="city">City</label>
+        <input type="text" name="contact[city]" id="city" />
+      </div>
+
+      <div class="state third-center">
+        <label for="state">State</label>
+        <input type="text" name="contact[state]" id="state" />
+      </div>
+
+      <div class="zip third-right">
+        <label for="zip">*Zip</label>
+        <input required="required" type="text" name="contact[zip]" id="zip" />
+      </div>
+    
+      <div class="customer_type form-02 mb-20">
+        <label for="customer_type">*I am a</label>
+        <input onclick="iamSwitch()" type="radio" name="contact[customer_type]" value="homeowner" id="homeowner"><label class="inline-label inline-block" for="homeowner">Homeowner</label>
+        <input onclick="iamSwitch()" type="radio" name="contact[customer_type]" value="professional" id="professional"><label class="inline-label inline-block" for="professional">Professional</label>
+      </div>
+      <script>
+         function iamSwitch() {
+           document.getElementById("company_name_field").style.display = "none";
+           document.getElementById("builder_name_field").style.display = "none";
+           if(event.target.value == "professional") {
+               document.getElementById("company_name_field").style.display = "block";
+           } else {
+           	   document.getElementById("builder_name_field").style.display = "block";
+           }
+         }  
+      </script>
+    
+      <div id="company_name_field" class="company_name" style="display:none;">
+        <label for="company_name">Company Name</label>
+        <input type="text" name="contact[company_name]" id="company_name" />
+      </div>
+    
+      <div id="builder_name_field" class="builder_name" style="display:none;">
+        <label for="builder_name">Builder or Contractor Name</label>
+        <input type="text" name="contact[builder_name]" id="builder_name" />
+      </div>
+
+      <div class="your_project mb-20">
+        <label for="your_project">*Project Type</label>
+        <input class="form-01" required="required" type="radio" name="contact[your_project]" value="convert-existing" id="convert-existing"><label class="inline-label inline-block form-01" for="convert-existing">Convert Wood Fireplace to Gas</label>
+        <input class="form-01" required="required" type="radio" name="contact[your_project]" value="add-a-fireplace" id="add-a-fireplace"><label class="inline-label inline-block form-01" for="add-a-fireplace">Add New Fireplace</label>
+        <input class="form-01" required="required" type="radio" name="contact[your_project]" value="replace-existing" id="replace-existing"><label class="inline-label inline-block form-01" for="replace-existing">Replace Existing Fireplace</label>
+        <input class="form-01" required="required" type="radio" name="contact[your_project]" value="home-addition" id="home-addition"><label class="inline-label inline-block form-01" for="home-addition">Other</label>
+        <input class="form-02" required="required" type="radio" name="contact[your_project]" value="new-construction" id="new-construction"><label class="inline-label inline-block form-02" for="new-construction">New Construction</label>
+        <input class="form-02" required="required" type="radio" name="contact[your_project]" value="remodeling" id="remodeling"><label class="inline-label inline-block form-02" for="remodeling">Remodeling</label>
+      </div>
+
+      <div class="fuel_type mb-20 form-01">
+        <label for="">*Project Timeline</label>
+        <input type="radio" name="contact[fuel_type]" value="" id=""><label class="inline-label inline-block" for="">Ready Now</label>
+        <input type="radio" name="contact[fuel_type]" value="" id=""><label class="inline-label inline-block" for="">1 – 3 Months</label>
+        <input type="radio" name="contact[fuel_type]" value="" id=""><label class="inline-label inline-block" for="">4+ Months</label>
+        <input type="radio" name="contact[fuel_type]" value="" id=""><label class="inline-label inline-block" for="">Undecided</label>
+      </div>
+
+      <div class="body">
+        <label for="body">Project Details</label>
+        <textarea name="contact[body]" id="body"></textarea>
+      </div>
+
+      <div class="submit">
+        <input class="btn bg-orange" type="submit" value="Request Quote" />
+      </div>
+    {% endform %}
+
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+  	$(".form-01").show();
+	$(".form-02").hide();
+    
+    $("#location").change(function() {
+    	let formVersion = $("#location option:selected").attr("data-form")
+      	
+        $(".form-01").hide();
+        $(".form-02").hide();
+        $("." + formVersion).fadeIn();
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Quote Request 1",
+    "tag": "section",
+    "class": "custom-quote-form",
+    "settings": [
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Heading",
+        "default": "We'd Love To Hear From You"
+      },
+      {
+          "type": "header",
+          "content": "Advanced"
+      },
+      {
+          "type": "paragraph",
+          "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      },
+      {
+          "type": "text",
+          "id": "css_class",
+          "label": "CSS Class"
+      },
+      {
+          "type": "textarea",
+          "id": "custom_css",
+          "label": "Custom CSS"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Quote Request 1",
+        "category": "ADVANCED LAYOUT"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .form-wrapper { padding-top: 60px; padding-bottom: 150px; }
+  .form-wrapper .inner { padding: 60px; box-shadow: 0 0 20px 0 #A0A0A0BF; background-color: white; }
+  .form-wrapper .inner .title { margin-bottom: 40px; }
+  .custom-quote-form { position: relative; }
+  .custom-quote-form:after { content: ''; position: absolute; z-index: -1; bottom: 0; left: 0; right: 0; width: 100%; height: 30vw; min-height: 250px; max-height: 450px; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url('https://cdn.shopify.com/s/files/1/0634/4707/2998/files/wood-background.jpg?v=1653598971'); }
+  @media (max-width: 767px ) {
+    .form-wrapper { padding-top: 15px; padding-bottom: 60px; }
+    .form-wrapper .inner { padding: 20px; }
+  }
+</style>
+
+{% style %}
+    {%
+      render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+    %}
+{% endstyle %}

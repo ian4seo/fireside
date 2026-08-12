@@ -1,0 +1,153 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "banner_internal_pages_HgRA3c": {
+      "type": "banner-internal-pages",
+      "disabled": true,
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "HOME SHOW SALE GIVEAWAY",
+        "heading_size": "large_text",
+        "content": "<p>Enter for a chance to win a Fusion Electric Stove or a $250 Visa Gift Card during the Madison Home Show Sale! Complete the form below to enter.</p>",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/online-FreshCoast_HHT_F_FFuzion_Stills_v2_FINALS_tiffs-07642.jpg",
+        "css_class": "madison-landing",
+        "custom_css": "p {color:white}"
+      }
+    },
+    "17454507909564ff3c": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_AMghKi": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTI5MDU4\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_AMghKi"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "image_text_LMkiJx": {
+      "type": "image-text",
+      "blocks": {
+        "image_dV7XHm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Installation_865d50fe-be00-4890-bde7-253c49b5811f.jpg",
+            "image_crop": "none",
+            "title": "Order early for best installation date!",
+            "text": "<p>With over 100 years combined technical experience and expertise, Fireside manages your entire fireplace project from start to finish, providing a stress and worry-free experience. Some of the services we offer include free in-home or in-store consultations, preview, install and start-up services, and planned maintenance, cleaning and repair services.  And with the busy holiday season upon us, we recommend ordering early to secure the best installation date.</p>",
+            "button_label": "REQUEST ESTIMATE",
+            "link": "https://fireside.com/pages/request-mn-home-show-sales-coupon",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_dV7XHm"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ".metafield-rich_text_field a {color:#e9841d}"
+      }
+    },
+    "featured_collection_XapKnV": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "title": "{{ page.metafields.custom[\"3rd_section_collection_heading\"].value }}",
+        "collection_description": false,
+        "collection": "buy-gas-inserts-online",
+        "collection_style": "grid",
+        "products_per": 5,
+        "products_limit": 10,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "image_text_xHihAk": {
+      "type": "image-text",
+      "blocks": {
+        "image_cfKRgf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside-find.png",
+            "image_crop": "none",
+            "title": "Flexible Financing!",
+            "text": "<p>Did we mention that we have a standard 12-month No Interest Financing for well-qualified customers? That means you can get a gas insert installed starting at just $389/month! Enjoy the warmth and ambiance of a new fireplace without the upfront cost. Contact a hearth expert today by visiting one of our locations or general offers page.</p>",
+            "button_label": "",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_cfKRgf"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ".metafield-rich_text_field a {color:#e9841d}"
+      }
+    },
+    "custom_liquid_J3dpMq": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"height:400px;\"></div>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_internal_pages_HgRA3c",
+    "17454507909564ff3c",
+    "image_text_LMkiJx",
+    "featured_collection_XapKnV",
+    "image_text_xHihAk",
+    "custom_liquid_J3dpMq"
+  ]
+}

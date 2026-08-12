@@ -1,0 +1,115 @@
+<!-- Page Banner (alt) Template -->
+
+<div class="{{ section.settings.css_class }} page-banner-alt-inner flex align-items-center bg-cover bg-center relative" style="background-image:url('{{ section.settings.image | img_url: 'master' }}'); min-height: 200px;background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;">
+	<div class="{{ section.settings.text_alignment }} {{ section.settings.site_width }} relative z-index-2">
+  		<h1 class="no-top-margin white">{{ section.settings.heading }}</h1>
+	</div>
+	<div class="overlay absolute full z-index-1"></div>
+</div>
+
+{% schema %}
+  {
+    "name": "Page Banner (alt)",
+    "tag": "section",
+	"class": "page-banner-alt",
+    "settings": [
+	  {
+	    "type": "header",
+	    "content": "Banner"
+	  },
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Heading",
+        "default": "Give This Page A Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Banner Image"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "align_left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "site_width",
+        "label": "Dynamic Width",
+        "default": "mbl-site-width",
+        "options": [
+          {
+            "value": "mbl-site-width",
+            "label": "Extra Small"
+          },
+          {
+            "value": "sm-site-width",
+            "label": "Small"
+          },
+          {
+            "value": "med-site-width",
+            "label": "Medium"
+          },
+          {
+            "value": "site-width",
+            "label": "Full"
+          },
+          {
+            "value": "lg-site-width",
+            "label": "Large"
+          }
+        ]
+      },
+      {
+          "type": "header",
+          "content": "Advanced"
+      },
+      {
+          "type": "paragraph",
+          "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      },
+      {
+          "type": "text",
+          "id": "css_class",
+          "label": "CSS Class"
+      },
+      {
+          "type": "textarea",
+          "id": "custom_css",
+          "label": "Custom CSS"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Page Banner (alt)",
+        "category": "ADVANCED LAYOUT"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .page-banner-alt-inner { min-height: 250px; }
+  .page-banner-alt-inner .white { color: white; }
+  .page-banner-alt .overlay { background-color: rgba(61,72,78,.5); }
+</style>
+
+{% style %}
+    {%
+      render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+    %}
+{% endstyle %}

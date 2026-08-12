@@ -1,0 +1,226 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "165351188531819f9f": {
+      "type": "page-banner-alt",
+      "settings": {
+        "heading": "Custom Fireplace Project Gallery",
+        "image": "shopify://shop_images/project_gallery.jpg",
+        "text_alignment": "center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1653590663eb0e89a0": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Design Your Dream Fireplace",
+        "paragraph_text_alignment": "center",
+        "content": "<p>With Stellar Custom Gas Fireplaces, you can create a stunning one-of-a-kind fire feature. Limitless options in nearly any shape and size can be designed for both indoors and outdoors.</p>",
+        "button_text_alignment": "center",
+        "button_label": "Build Your Own",
+        "open-new-window": false,
+        "button_link": "https://custom.stellarhearth.com/",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "sm-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "c582d4dc-7701-451b-9da1-f9ad1c0e7e42": {
+      "type": "project-gallery",
+      "blocks": {
+        "af1b6160-728e-4ab5-b048-6e62a569ac68": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_stellar_custom_gas_fireplace_u-shape.png",
+            "button_label": "Custom Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-gas-fireplace"
+          }
+        },
+        "d137b19a-2d62-4940-b00d-d8d397a1acc5": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_custom_gas_fireplace_stellar_round_living_room_1.png",
+            "button_label": "Custom Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-gas-fireplace"
+          }
+        },
+        "1eca8390-436d-4f48-8a97-e606fe063a4c": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_custom_gas_fireplace_outdoor_pool.png",
+            "button_label": "Custom Outdoor See-Through Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-outdoor-custom-fireplace"
+          }
+        },
+        "2fa0ba3c-37ac-4163-9f59-2501466bf70c": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_custom_gas_fireplace_stellar_square_living_room.png",
+            "button_label": "Custom Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-gas-fireplace"
+          }
+        },
+        "5cc496f7-89aa-49dc-a639-76fee247d93b": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_stellar_custom_fireplace_corner_curved_glass.png",
+            "button_label": "Custom Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-gas-fireplace"
+          }
+        },
+        "393b3262-5a94-41e1-8a92-298cf6f050c6": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_custom_gas_fireplace_u-shape_living_room.png",
+            "button_label": "Custom Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-gas-fireplace"
+          }
+        },
+        "cc497384-b1b7-4dd8-8858-52340f1ba2f9": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_custom_gas_fireplace_outdoor_patio.png",
+            "button_label": "Custom See-Through Outdoor Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-outdoor-custom-fireplace"
+          }
+        },
+        "4ecbdb3f-ae1d-4e66-90b8-ed05da289abf": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_custom_gas_fireplace_stellar_round_business_lobby.png",
+            "button_label": "Custom Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-gas-fireplace"
+          }
+        },
+        "f072888b-a75a-43fa-b641-c645771b54da": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_custom_gas_fireplace_outdoor_open_porch.png",
+            "button_label": "Custom See-Through Outdoor Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-outdoor-custom-fireplace"
+          }
+        },
+        "1afdc2b0-5ba0-4983-8e60-b4e155affa13": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_custom_gas_fireplace_outdoor_rooftop_city_skyline.png",
+            "button_label": "Custom Outdoor Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-outdoor-custom-fireplace"
+          }
+        },
+        "5a6e2e01-fd8a-4c02-b6d5-79f603568aba": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/custom_stellar_gas_fireplace_1_fireside.png",
+            "button_label": "Custom Gas Fireplace",
+            "button_link": "shopify://products/stellar-enlight-gas-fireplace"
+          }
+        }
+      },
+      "block_order": [
+        "af1b6160-728e-4ab5-b048-6e62a569ac68",
+        "d137b19a-2d62-4940-b00d-d8d397a1acc5",
+        "1eca8390-436d-4f48-8a97-e606fe063a4c",
+        "2fa0ba3c-37ac-4163-9f59-2501466bf70c",
+        "5cc496f7-89aa-49dc-a639-76fee247d93b",
+        "393b3262-5a94-41e1-8a92-298cf6f050c6",
+        "cc497384-b1b7-4dd8-8858-52340f1ba2f9",
+        "4ecbdb3f-ae1d-4e66-90b8-ed05da289abf",
+        "f072888b-a75a-43fa-b641-c645771b54da",
+        "1afdc2b0-5ba0-4983-8e60-b4e155affa13",
+        "5a6e2e01-fd8a-4c02-b6d5-79f603568aba"
+      ],
+      "settings": {
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165359183383b3ec00": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Ready to Convert, Add or Replace Your Fireplace?",
+        "paragraph_text_alignment": "center",
+        "content": "<p>We want you to feel confident throughout your project and excited to take the next step toward your dream design. </p><p>We'll help you find the best solutions to complement your next renovation or new build. </p>",
+        "button_text_alignment": "center",
+        "button_label": "Request a Consultation",
+        "open-new-window": false,
+        "button_link": "shopify://pages/schedule-a-consultation",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "SIGN UP FOR OUR NEWSLETTER",
+        "newsletter_text": "<p>Be the first to get a sneak peek at the latest innovations in fireplace design and installation. Subscribe to our newsletter to view recent work, meet our designers, and inspire your next project. You'll also be the first to know about special promotions and exciting discounts to help you plan your fireplace.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165351188531819f9f",
+    "1653590663eb0e89a0",
+    "c582d4dc-7701-451b-9da1-f9ad1c0e7e42",
+    "165359183383b3ec00",
+    "newsletter"
+  ]
+}

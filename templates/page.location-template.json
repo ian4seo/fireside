@@ -1,0 +1,129 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_g3dgQp": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>@media screen and (max-width: 480px){.mobile-space{margin-top:4em}</style>\n<div class=\"mobile-space\">&nbsp;</div>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "image_with_text_overlay_yirg7y": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": false,
+        "image": "shopify://shop_images/Untitled_25.png",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "location_info_eEMMj8": {
+      "type": "location-info",
+      "blocks": {
+        "location_info_cqV3tL": {
+          "type": "location-info",
+          "settings": {
+            "info-img": "{{ page.metafields.custom[\"2nd_section_image\"].value }}",
+            "info-heading": "{{ page.metafields.custom[\"2nd_section_heading\"].value }}",
+            "info-content": "<p>{{ page.metafields.custom[\"2nd_section_content\"] | metafield_tag }}</p>"
+          }
+        },
+        "location_info_HzPf3U": {
+          "type": "location-info",
+          "settings": {
+            "info-img": "{{ page.metafields.custom[\"3rd_section_image\"].value }}",
+            "info-heading": "{{ page.metafields.custom[\"3rd_section_collection_heading\"].value }}",
+            "info-content": "<p>{{ page.metafields.custom[\"3rd_section_content\"] | metafield_tag }}</p>"
+          }
+        },
+        "location_info_FpWQ4g": {
+          "type": "location-info",
+          "settings": {
+            "info-img": "{{ page.metafields.custom[\"4th_section_image\"].value }}",
+            "info-heading": "{{ page.metafields.custom[\"4th_section_heading\"].value }}",
+            "info-content": "{{ page.metafields.custom[\"4th_section_content\"] | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "location_info_cqV3tL",
+        "location_info_HzPf3U",
+        "location_info_FpWQ4g"
+      ],
+      "settings": {
+        "location-map": "{{ page.metafields.custom.location_map_image.value }}",
+        "location-name": "{{ page.metafields.custom.location_name.value }}",
+        "location-address": "<p>{{ page.metafields.custom.location_address | metafield_tag }}</p>",
+        "call-store-link": "{{ page.metafields.custom.location_phone_number.value }}",
+        "directions-link": "{{ page.metafields.custom.location_google_maps_link.value }}",
+        "hours": "<p>{{ page.metafields.custom.location_hours | metafield_tag }}</p>"
+      }
+    },
+    "featured_collection_L7BRcU": {
+      "type": "featured-collection",
+      "settings": {
+        "padding_top": 31,
+        "padding_bottom": 0,
+        "title": "Popular Brands",
+        "collection_description": true,
+        "collection": "minnesota-wisconsin-store-collection",
+        "collection_style": "grid",
+        "products_per": 3,
+        "products_limit": 9,
+        "css_class": "",
+        "custom_css": "{background: #f0f0f0}"
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "settings": {}
+    },
+    "newsletter_eTVpib": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": false,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Sign up for our newsletter",
+        "newsletter_text": "<p>Be the first to get a sneak peek at the latest innovations in fireplace design and installation. Subscribe to our newsletter to view recent work, meet our designers, and inspire your next project. You'll also be the first to know about special promotions and exciting discounts to help you plan your fireplace.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_g3dgQp",
+    "image_with_text_overlay_yirg7y",
+    "location_info_eEMMj8",
+    "featured_collection_L7BRcU",
+    "main",
+    "newsletter_eTVpib"
+  ]
+}

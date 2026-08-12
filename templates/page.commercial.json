@@ -1,0 +1,739 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "16637977600ca65b79": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Luxury & Artistry: Set Your Projects Apart with Fireplaces",
+        "sub-text": "Whether you're a developer, builder, architect, or designer, make your next project stand out with fireplaces. We collaborate on multi-family living, hotels, senior communities, restaurants, offices, and more. Since 1951 we've provided a wide selection of quality materials and professional services for fireplace solutions.",
+        "bg-img": "shopify://shop_images/fireside_commercial_fireplaces_homepage_2389eec2-dd15-4bd2-bc72-b4680ccc4565.png",
+        "view-btn-link": "shopify://collections/commercial-fireplace-products",
+        "view-btn": "Browse Fireplaces",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "16637930581a16d252": {
+      "type": "gallery",
+      "blocks": {
+        "16637930588ef2e3c6-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/true_gas_fireplace_hotel_lobby.png"
+          }
+        },
+        "16637930588ef2e3c6-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/stellar_enlight_outdoor_gas_fireplace_rooftop.png"
+          }
+        },
+        "16637930588ef2e3c6-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/stellar_custom_round_gas_fireplace_lobby.png"
+          }
+        },
+        "16637930588ef2e3c6-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside_commercial_electric_Fireplace.jpg"
+          }
+        },
+        "16637930588ef2e3c6-4": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/scion_electric_fireplace_office.png"
+          }
+        },
+        "16637930588ef2e3c6-5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/stellar_custom_gas_fireplace_hotel_lobby.png"
+          }
+        },
+        "16637930588ef2e3c6-6": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/scion_trinity_electric_fireplace_condo.png"
+          }
+        },
+        "16637930588ef2e3c6-7": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/gsa_fire_table_hotel_courtyard.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "16637930588ef2e3c6-0",
+        "16637930588ef2e3c6-1",
+        "16637930588ef2e3c6-2",
+        "16637930588ef2e3c6-3",
+        "16637930588ef2e3c6-4",
+        "16637930588ef2e3c6-5",
+        "16637930588ef2e3c6-6",
+        "16637930588ef2e3c6-7"
+      ],
+      "settings": {
+        "wide_display": false,
+        "reveal-on": true,
+        "title": "",
+        "gallery_type": "classic",
+        "grid-size": 4,
+        "enable_lightbox": true,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16647602502b7d5031": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "d973f587-570d-4953-8294-da2d8f890a45": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-virtual-consult-01.png",
+            "heading-margin-top": 0,
+            "title": "Best Process & Tools",
+            "heading_size": "regular_text",
+            "text": "<p>Our 9-step process is designed to provide you the optimum fireplace solution, plus we offer a specification tool suite, certified continuing education programs, and on-site resources.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1664760250e4da8711-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/design-consult-160x160.png",
+            "heading-margin-top": 0,
+            "title": "Dedicated Team",
+            "heading_size": "regular_text",
+            "text": "<p>Our commercial teams specialize in understanding your building process to ensure your projects are completed easily, efficiently, safely, and beautifully.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "4e8cf715-9cfa-49d9-bfca-ad32d24c0e2b": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/ongoing-service-support-160x160.png",
+            "heading-margin-top": 0,
+            "title": "Lifetime Support",
+            "heading_size": "regular_text",
+            "text": "<p>In addition to professional site previews and installations, every product is backed by post-install support and service for your clients. </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1664760250e4da8711-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-fireplace-01.png",
+            "heading-margin-top": 0,
+            "title": "Fireplaces For Any Project",
+            "heading_size": "regular_text",
+            "text": "<p>Best-selling brands like Stellar, Heat & Glo, and Heatilator offer a full portfolio of indoor and outdoor fireplaces certified for multi-family and commercial settings.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "d973f587-570d-4953-8294-da2d8f890a45",
+        "1664760250e4da8711-1",
+        "4e8cf715-9cfa-49d9-bfca-ad32d24c0e2b",
+        "1664760250e4da8711-0"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "The Fireside DIfference",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1663796707c56de289": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "f7b97fcb-bf1b-44e2-810d-0454d2b01a51": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_commercial_family.png",
+            "title": "FIREPLACES ADD LUXURY & ARTISTRY",
+            "text": "<p>Fireplaces create a natural gathering spot in communal spaces, or invite a welcomed retreat in multi-family units. Choose from the best gas, electric, and outdoor fireplace options to differentiate your projects.</p>",
+            "button_label": "Bid Request",
+            "button_link": "shopify://pages/commercial-bid-request"
+          }
+        },
+        "bcb28437-d00d-47ed-89c5-a1d1be9a170b": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_stellar_custom_gas_fireplace.png",
+            "title": "CUSTOM FIREPLACE DESIGN",
+            "text": "<p>Stand out with one-of-a-kind Stellar fire features. Customizable to nearly any size, shape, and design element for both indoor and outdoor applications. </p>",
+            "button_label": "Configurator Tool",
+            "button_link": "https://custom.stellarhearth.com/"
+          }
+        },
+        "6e6f4326-17a6-4a16-8a2c-ba1a4f59606b": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_spec_tools_Commercial.jpg",
+            "title": "SPECIFICATION TOOLS",
+            "text": "<p>Our entire fireplace product line is certified for multi-family and commercial settings. Check out our specification tool suite - including CAD Drawings, Revit BIM, and Architect Guides.</p>",
+            "button_label": "Get Spec Tools",
+            "button_link": "shopify://pages/specification-tools"
+          }
+        },
+        "be84718e-cf22-4503-a69a-015216f54ec5": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-pro-resources.jpg",
+            "title": "CONTINUING EDUCATION & EVENTS",
+            "text": "<p>We provide certified continuing education courses for both in-person and online opportunities. Request a customized seminar, or check out our calendar for upcoming events in your area. </p>",
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/commercial-continuing-education"
+          }
+        },
+        "993e5f6c-b313-4c41-9c6e-e2350167aef5": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/commercial_fireplace_service_fireside.jpg",
+            "title": "SERVICE & PREVENTATIVE MAINTENANCE",
+            "text": "<p>Our customized commercial service plans make it easy and convenient to keep fireplaces working and looking their best for lasting luxury. Each plan is designed to meet the needs of the specific fireplaces on your properties.</p>",
+            "button_label": "Service Bid Request",
+            "button_link": "shopify://pages/commercial-service-estimate-request"
+          }
+        }
+      },
+      "block_order": [
+        "f7b97fcb-bf1b-44e2-810d-0454d2b01a51",
+        "bcb28437-d00d-47ed-89c5-a1d1be9a170b",
+        "6e6f4326-17a6-4a16-8a2c-ba1a4f59606b",
+        "be84718e-cf22-4503-a69a-015216f54ec5",
+        "993e5f6c-b313-4c41-9c6e-e2350167aef5"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 0,
+        "padding_bottom": 27,
+        "vertical_text": ""
+      }
+    },
+    "906e2ee5-b224-493a-ab65-a3d51c147ecb": {
+      "type": "two-column-customer-type-button",
+      "blocks": {
+        "template--16504604688614__906e2ee5-b224-493a-ab65-a3d51c147ecb-1665147676c7eb10fe-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/fireside_commercial_gas_fireplaces.png",
+            "title": "Gas Fireplaces",
+            "heading_size": "regular_text",
+            "text": "<p>Make the ultimate room statement with a gas fireplace. Available in modern and traditional design plus multiple sizes - including custom!</p>",
+            "customer-type": "none",
+            "button_label": "Explore Products",
+            "button_link": "shopify://collections/commercial-fireplace-products",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "template--16504604688614__906e2ee5-b224-493a-ab65-a3d51c147ecb-1665147676c7eb10fe-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/scion_trinity_electric_fireplace_condo.png",
+            "title": "Electric Fireplaces",
+            "heading_size": "regular_text",
+            "text": "<p>Explore electric options in modern and traditional designs. Perfect for multi-family units and high-traffic areas for ambiance without extra heat.</p>",
+            "customer-type": "none",
+            "button_label": "Explore Products",
+            "button_link": "shopify://collections/electric-fireplaces",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "5aa32815-87e6-484b-8fb2-283517e6d31c": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/gsa_fire_table_hotel_courtyard.jpg",
+            "title": "Outdoor Fireplaces & Fire Pits",
+            "heading_size": "regular_text",
+            "text": "<p>Elevate your outdoor spaces by including an outdoor fireplace, fire table, or fire feature in courtyards, near pools, and more for the ultimate experience.</p>",
+            "customer-type": "none",
+            "button_label": "Explore Products",
+            "button_link": "shopify://collections/commercial-outdoor-products",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--16504604688614__906e2ee5-b224-493a-ab65-a3d51c147ecb-1665147676c7eb10fe-0",
+        "template--16504604688614__906e2ee5-b224-493a-ab65-a3d51c147ecb-1665147676c7eb10fe-1",
+        "5aa32815-87e6-484b-8fb2-283517e6d31c"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile-padding-top": 0,
+        "mobile-padding-bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "166379669185aa94bc": {
+      "type": "text-columns-with-images",
+      "disabled": true,
+      "blocks": {
+        "16637966913c3e93ec-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>PETER DIRCKS<br/></strong>Senior Vice President </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "16637966913c3e93ec-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>JOHN ZACZEK</strong><br/>Finance Director </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "696cc56e-fa70-48dd-b094-4588efcf0adc": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>MITCH ZECHMANN</strong><br/>Commercial Sales Manager</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "5dcf468b-c764-42a7-8312-7c7f3cc1063a": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>GREG BURGER</strong><br/>Field Operations Manager </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "16637966913c3e93ec-0",
+        "16637966913c3e93ec-1",
+        "696cc56e-fa70-48dd-b094-4588efcf0adc",
+        "5dcf468b-c764-42a7-8312-7c7f3cc1063a"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Meet Our Team",
+        "sub_text": "From start to finish, our team understands all of the elements included in commercial projects.",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "166476098912c5f506": {
+      "type": "text-columns-with-images",
+      "disabled": true,
+      "blocks": {
+        "166476098941d42046-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>BOB SCHROEDER</strong><br/>Operations Director</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "166476098941d42046-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>ELYSE RETHLAKE</strong><br/>Marketing Director</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "faf6820a-84d5-4ac5-929a-8389361e16b9": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>CHRIS KADLEC</strong><br/>Service Manager</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "4338cf2d-8587-4a08-aa6b-af58a3fc2742": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>HEATHER LANGERT</strong><br/>Customer Service Specialist<br/></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "166476098941d42046-1",
+        "166476098941d42046-0",
+        "faf6820a-84d5-4ac5-929a-8389361e16b9",
+        "4338cf2d-8587-4a08-aa6b-af58a3fc2742"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31": {
+      "type": "gallery",
+      "disabled": true,
+      "blocks": {
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/IronmarkBuildingCo_250.webp"
+          }
+        },
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DoranCompaniesLogo.webp"
+          }
+        },
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/YTC-logo-WP.png"
+          }
+        },
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Frana-LogoFinalcolor.png"
+          }
+        },
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-design.webp"
+          }
+        },
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {}
+        },
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-6": {
+          "type": "image",
+          "disabled": true,
+          "settings": {}
+        },
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-7": {
+          "type": "image",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-0",
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-1",
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-2",
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-3",
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-4",
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-5",
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-6",
+        "template--16504604688614__0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31-1665163697be7bc683-7"
+      ],
+      "settings": {
+        "wide_display": false,
+        "reveal-on": true,
+        "title": "Clients: General Contractors",
+        "gallery_type": "classic",
+        "grid-size": 5,
+        "enable_lightbox": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "41038965-af01-4359-b77c-b01287e9b8de": {
+      "type": "gallery",
+      "disabled": true,
+      "blocks": {
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-0": {
+          "type": "image",
+          "settings": {}
+        },
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-1": {
+          "type": "image",
+          "settings": {}
+        },
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-2": {
+          "type": "image",
+          "settings": {}
+        },
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-3": {
+          "type": "image",
+          "settings": {}
+        },
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-4": {
+          "type": "image",
+          "settings": {}
+        },
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-5": {
+          "type": "image",
+          "settings": {}
+        },
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-6": {
+          "type": "image",
+          "settings": {}
+        },
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-7": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-0",
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-1",
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-2",
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-3",
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-4",
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-5",
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-6",
+        "template--16504604688614__41038965-af01-4359-b77c-b01287e9b8de-16661826204e368d25-7"
+      ],
+      "settings": {
+        "wide_display": false,
+        "reveal-on": true,
+        "title": "Clients: Architects & Designers",
+        "gallery_type": "classic",
+        "grid-size": 4,
+        "enable_lightbox": true,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16647600169e507130": {
+      "type": "text-columns-with-images",
+      "disabled": true,
+      "blocks": {
+        "166476001678a6daec-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"Fireside is the greatest ever at commercial projects. We love working with them.\" </p><p>- Commercial Customer 1</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "166476001678a6daec-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"Wouldn't want to work with anyone else except for Fireside on our multi-family projects.\" </p><p>- Commercial Customer 2</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "166476001678a6daec-0",
+        "166476001678a6daec-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16637977600ca65b79",
+    "16637930581a16d252",
+    "16647602502b7d5031",
+    "1663796707c56de289",
+    "906e2ee5-b224-493a-ab65-a3d51c147ecb",
+    "166379669185aa94bc",
+    "166476098912c5f506",
+    "0d0f05cb-eadb-4ddc-a4a0-6d3b54b30b31",
+    "41038965-af01-4359-b77c-b01287e9b8de",
+    "16647600169e507130"
+  ]
+}

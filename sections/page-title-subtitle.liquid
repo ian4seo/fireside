@@ -1,0 +1,104 @@
+<!-- Page Title/subtitle Template -->
+
+<section class="{{ section.settings.css_class }} {{ section.settings.site_width }} {{ section.settings.text_align }} page-title-subtitle">
+	<h1 class="minion-pro">{{ section.settings.heading }}</h1>
+	{% if section.settings.sub_text != blank %}
+		<p>{{ section.settings.sub_text }}</p>
+	{% endif %}
+</section>
+
+{% schema %}
+{
+    "name": "Page Title",
+    "tag": "section",
+    "settings": [
+		{
+			"id": "heading",
+			"type": "text",
+			"label": "Heading",
+			"default": "Lorem Ipsum Dolor"
+		},
+		{
+			"type": "richtext",
+			"id": "sub_text",
+			"label": "Paragraph Text"
+		},
+		{
+		  "type": "select",
+		  "id": "text_align",
+		  "label": "Text Align",
+		  "default": "text-center",
+		  "options": [
+		    {
+		      "value": "",
+		      "label": "Left"
+		    },
+		    {
+		      "value": "text-center",
+		      "label": "Center"
+		    },
+		    {
+		      "value": "text-right",
+		      "label": "Right"
+		    }
+		  ]
+		},
+		{
+		  "type": "select",
+		  "id": "site_width",
+		  "label": "Dynamic Width",
+		  "default": "mbl-site-width",
+		  "options": [
+		    {
+		      "value": "mbl-site-width",
+		      "label": "Extra Small"
+		    },
+		    {
+		      "value": "sm-site-width",
+		      "label": "Small"
+		    },
+		    {
+		      "value": "med-site-width",
+		      "label": "Medium"
+		    },
+		    {
+		      "value": "site-width",
+		      "label": "Full"
+		    },
+		    {
+		      "value": "lg-site-width",
+		      "label": "Large"
+		    }
+		  ]
+		},
+		{
+			"type": "header",
+			"content": "Advanced"
+		},
+		{
+			"type": "text",
+			"id": "css_class",
+			"label": "CSS Class"
+		},
+		{
+			"type": "textarea",
+			"id": "custom_css",
+			"label": "Custom CSS"
+		}
+    ],
+    "presets": [{
+		"name": "Page Title",
+		"category": "ADVANCED LAYOUT"
+    }]
+}
+{% endschema %}
+
+{% style %}
+    {%
+      render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+    %}
+    .page-title-subtitle { padding-top: 60px; padding-bottom: 60px; }
+    .page-title-subtitle h1 { font-size: 44px; }
+{% endstyle %}

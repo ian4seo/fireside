@@ -1,0 +1,1435 @@
+<script
+  type="application/json"
+  data-section-type="image-with-text-overlay"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+{% assign object_selector = '#shopify-section-' | append: section.id %}
+{% assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop %}
+{% assign mobile_text_alpha = section.settings.mobile_text_color | default: 'rgba(0,0,0,0)' | color_extract: 'alpha' %}
+
+{% style %}
+  .frd-mobile-space {margin-top: auto}
+  @media screen and (max-width: 767px){
+    .frd-mobile-space {margin-top: 5em}
+  }
+
+  /* Background Video Styles */
+  .banner.has-background-video {
+    position: relative;
+    overflow: hidden;
+    min-height: 600px; /* Reasonable height instead of full viewport */
+    height: 70vh; /* Use 70% of viewport height for good proportions */
+    max-height: 800px; /* Cap the maximum height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove padding to let flexbox handle centering */
+  }
+
+  .frd-background-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .frd-background-video-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; /* 16:9 aspect ratio */
+    min-height: 100vh;
+    min-width: 177.78vh; /* 16:9 aspect ratio */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border: none;
+  }
+
+  /* Ensure video covers like object-fit: cover */
+  @media screen and (min-aspect-ratio: 16/9) {
+    .frd-background-video-container iframe {
+      width: 100vw;
+      height: 56.25vw;
+    }
+  }
+
+  @media screen and (max-aspect-ratio: 16/9) {
+    .frd-background-video-container iframe {
+      width: 177.78vh;
+      height: 100vh;
+    }
+  }
+
+  .frd-background-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
+
+  .banner.has-background-video .caption {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1200px; /* Ensure content doesn't stretch too wide */
+    padding: 20px; /* Reduced padding for better centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-300px); /* Move content UP significantly for proper centering */
+  }
+
+  /* Ensure proper spacing between content elements on desktop */
+  .banner.has-background-video .caption .pretext,
+  .banner.has-background-video .caption .headline,
+  .banner.has-background-video .caption .subtitle {
+    margin-bottom: 1rem;
+  }
+
+  .banner.has-background-video .caption .pretext:last-child,
+  .banner.has-background-video .caption .headline:last-child,
+  .banner.has-background-video .caption .subtitle:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Ensure content stays above video and maintains layout */
+  .banner.has-background-video .banner-full-link,
+  .banner.has-background-video .darken-bg {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Remove the problematic before pseudo-element */
+  .banner.has-background-video::before {
+    display: none;
+  }
+
+  /* Ensure the banner container maintains full width and height */
+  .banner.has-background-video .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Hide video on mobile and use standard image layout */
+  @media screen and (max-width: 768px) {
+    .banner.has-background-video .frd-background-video-container,
+    .banner.has-background-video .frd-background-video-overlay {
+      display: none !important;
+    }
+    
+    .banner.has-background-video {
+      min-height: 500px; /* Ensure adequate height on mobile */
+      padding: 0; /* Remove padding on mobile */
+      display: block; /* Use block layout instead of flex */
+      align-items: initial; /* Reset flex alignment */
+      justify-content: initial; /* Reset flex justification */
+      position: relative; /* Ensure proper positioning */
+    }
+    
+    .banner.has-background-video .caption {
+      position: absolute; /* Position content over image */
+      top: 50%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Perfect centering - reset desktop transform */
+      z-index: 3;
+      width: 90%; /* Constrain width with margins */
+      margin: 0; /* Reset margin */
+      text-align: center; /* Center align text */
+      max-width: 600px; /* Limit max width */
+      padding: 20px; /* Add some padding */
+      display: block; /* Reset to block on mobile */
+      flex-direction: initial;
+      justify-content: initial;
+      align-items: initial;
+    }
+    
+    /* Ensure mobile content displays normally */
+    .banner.has-background-video .container {
+      position: relative;
+      z-index: 2;
+      height: 100%; /* Take full height */
+      display: block; /* Reset to block layout on mobile */
+      align-items: initial;
+      justify-content: initial;
+    }
+    
+    /* Ensure mobile images fill the banner properly */
+    .banner.has-background-video .is-hidden-desktop-only img {
+      min-height: 500px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  /* Vimeo Video Container Styles */
+  .frd-vimeo-container {
+    position: fixed;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 10002;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: center;
+    will-change: transform, opacity;
+    pointer-events: none;
+  }
+
+  .frd-vimeo-container.frd-initializing {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: none;
+  }
+
+  .frd-vimeo-container.frd-expanding {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .frd-vimeo-container.frd-expanded {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    border-radius: 0;
+  }
+
+  .frd-vimeo-container.frd-collapsing {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .frd-vimeo-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10003;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+  }
+
+  .frd-vimeo-container.frd-expanded .frd-vimeo-close-btn {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.3s;
+  }
+
+  .frd-vimeo-close-btn:hover,
+  .frd-vimeo-close-btn:focus {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+
+  .frd-vimeo-iframe-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .frd-vimeo-container.frd-expanded .frd-vimeo-iframe-container {
+    opacity: 1;
+    transition-delay: 0.4s;
+  }
+
+  .frd-vimeo-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* Top navigation buttons positioning */
+  .top-button-group-wrapper {
+  }
+
+  /* Loading state */
+  .frd-vimeo-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .frd-vimeo-container.frd-expanding .frd-vimeo-loading {
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+
+  .frd-vimeo-loading::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: frd-vimeo-spin 1s linear infinite;
+  }
+
+  /* Manual Play Button for incognito/strict browsers */
+  .frd-vimeo-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10004;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .frd-vimeo-play-overlay.frd-show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .frd-vimeo-play-btn {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .frd-vimeo-play-btn:hover {
+    background: white;
+    transform: scale(1.1);
+  }
+
+  .frd-vimeo-play-btn svg {
+    width: 32px;
+    height: 32px;
+    fill: #333;
+    margin-left: 4px;
+  }
+
+  @keyframes frd-vimeo-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Mobile responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .frd-vimeo-close-btn {
+      top: 10px;
+      right: 10px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .frd-vimeo-close-btn {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .frd-vimeo-close-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .frd-vimeo-container {
+      border: 2px solid white;
+    }
+    
+    .frd-vimeo-close-btn {
+      background: black;
+      border: 2px solid white;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .frd-vimeo-container,
+    .frd-vimeo-close-btn,
+    .frd-vimeo-iframe-container,
+    .frd-vimeo-loading {
+      transition: none !important;
+      animation: none !important;
+    }
+    
+    .frd-vimeo-loading::before {
+      animation: none;
+    }
+  }
+
+  {%
+    render 'css-loop',
+    css: section.settings.custom_css,
+    id: section.id
+  %}
+
+  {% if section.settings.mobile_text_below_image and mobile_text_alpha != 0 %}
+    @media only screen and (max-width: 480px) {
+      {{ object_selector }} .pretext,
+      {{ object_selector }} .headline,
+      {{ object_selector }} .subtitle {
+        color: {{ section.settings.mobile_text_color }};
+      }
+    }
+  {% endif %}
+{% endstyle %}
+
+<section
+  id="banner-{{ section.id }}"
+  class="landing-page-hero {% if section.settings.use-mobile-space %}frd-mobile-space{% endif %}
+    section
+    {% if section.settings.wide_display == false %}
+      is-width-standard
+    {% else %}
+      is-width-wide
+      has-no-side-gutter
+    {% endif %}
+    full-width--{{ section.settings.wide_display }}
+    caption-background-{{ section.settings.caption_content_background }}
+    caption--below-{{ section.settings.mobile_text_below_image }}
+    {{ section.settings.css_class }}
+  "
+>
+  <hr class="top-landing-border">
+  {% if section.settings.top_button_1 or section.settings.top_button_2 or section.settings.top_button_3 %}
+    <div class="top-button-group-wrapper">
+      <div class="top-button-group button-grid-container">
+        {% if section.settings.top_button_1 %}
+          <div class="top_button_1">
+            <a href="{% if section.settings.top_button_1_link %}{{ section.settings.top_button_1_link }}{% else %} # {% endif %}">{{ section.settings.top_button_1 }}</a>
+          </div>
+        {% endif %}
+        {% if section.settings.top_button_2 %}
+          <div class="top_button_2">
+            <a href="{% if section.settings.top_button_2_link %}{{ section.settings.top_button_2_link }}{% else %} # {% endif %}">{{ section.settings.top_button_2 }}</a>
+          </div>
+        {% endif %}
+        {% if section.settings.top_button_3 %}
+          <div class="top_button_3">
+            <a href="{% if section.settings.top_button_3_link %}{{ section.settings.top_button_3_link }}{% else %} # {% endif %}">{{ section.settings.top_button_3 }}</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+  
+  <div class="container">
+    <div
+      class="
+        one-whole
+        column
+        banner
+        {% if section.settings.background_vimeo_video_url != blank %}has-background-video{% endif %}
+      "
+    >
+      <!-- Background Video -->
+      {% if section.settings.background_vimeo_video_url != blank %}
+        {% assign bg_video_url = section.settings.background_vimeo_video_url %}
+        {% assign bg_video_id_temp = bg_video_url | split: '/' | last %}
+        {% assign bg_video_id = bg_video_id_temp | split: '?' | first | split: '#' | first %}
+        
+        <div class="frd-background-video-container" id="frd-bg-video-{{ section.id }}">
+          <iframe
+            data-src="https://player.vimeo.com/video/{{ bg_video_id }}?background=1&autoplay=1&loop=1&byline=0&title=0&portrait=0&muted=1&quality=720p&controls=0&autopause=0"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;">
+          </iframe>
+        </div>
+        <div class="frd-background-video-overlay"></div>
+      {% endif %}
+
+      {% comment %} Video on desktop, images on mobile for better UX {% endcomment %}
+      {% if section.settings.background_vimeo_video_url == blank %}
+        {% comment %} No background video - show standard image background {% endcomment %}
+        {% if section.settings.mobile_image %}
+          <div class="is-hidden-mobile-only">
+            {% if section.settings.image %}
+              {%
+                render 'image-element',
+                image: section.settings.image,
+                alt: section.settings.image.alt,
+                stretch_width: true,
+                additional_classes: mobile_crop
+              %}
+
+              {% if section.settings.caption_content_background == 'darken_bg' %}
+                <div class="darken-bg"></div>
+              {% endif %}
+            {% else %}
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--banner' }}
+            {% endif %}
+          </div>
+          <div class="is-hidden-desktop-only">
+            {%
+              render 'image-element',
+              image: section.settings.mobile_image,
+              alt: section.settings.mobile_image.alt,
+              stretch_width: true,
+              additional_classes: mobile_crop
+            %}
+
+            {% if section.settings.caption_content_background == 'darken_bg' %}
+              <div class="darken-bg"></div>
+            {% endif %}
+          </div>
+        {% else %}
+          {% comment %} No mobile image set, show desktop image on desktop and placeholder on mobile {% endcomment %}
+          <div class="is-hidden-mobile-only">
+            {% if section.settings.image %}
+              {%
+                render 'image-element',
+                image: section.settings.image,
+                alt: section.settings.image.alt,
+                stretch_width: true,
+                additional_classes: mobile_crop
+              %}
+
+              {% if section.settings.caption_content_background == 'darken_bg' %}
+                <div class="darken-bg"></div>
+              {% endif %}
+            {% else %}
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--banner' }}
+            {% endif %}
+          </div>
+          <div class="is-hidden-desktop-only">
+            <img 
+              src="https://fireside.com/cdn/shop/files/Rectangle_1_2000x.png?v=1752767505"
+              alt="Fireplace background"
+              width="2000"
+              height="1125"
+              class="banner__image {{ mobile_crop }}"
+              style="width: 100%; height: auto; object-fit: cover;"
+              loading="lazy"
+            />
+
+            {% if section.settings.caption_content_background == 'darken_bg' %}
+              <div class="darken-bg"></div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% else %}
+        {% comment %} Background video is set - show video on desktop, images on mobile {% endcomment %}
+        
+        {% comment %} Desktop fallback image (hidden, only shows if video fails) {% endcomment %}
+        {% if section.settings.image %}
+          <div class="frd-video-fallback is-hidden-mobile-only" style="display: none;">
+            {%
+              render 'image-element',
+              image: section.settings.image,
+              alt: section.settings.image.alt,
+              stretch_width: true,
+              additional_classes: mobile_crop
+            %}
+            {% if section.settings.caption_content_background == 'darken_bg' %}
+              <div class="darken-bg"></div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% comment %} Mobile images (always show on mobile even with video set) {% endcomment %}
+        {% if section.settings.mobile_image %}
+          <div class="is-hidden-desktop-only">
+            {%
+              render 'image-element',
+              image: section.settings.mobile_image,
+              alt: section.settings.mobile_image.alt,
+              stretch_width: true,
+              additional_classes: mobile_crop
+            %}
+
+            {% if section.settings.caption_content_background == 'darken_bg' %}
+              <div class="darken-bg"></div>
+            {% endif %}
+          </div>
+        {% elsif section.settings.image %}
+          {% comment %} No mobile image set, use desktop image as fallback on mobile {% endcomment %}
+          <div class="is-hidden-desktop-only">
+            {%
+              render 'image-element',
+              image: section.settings.image,
+              alt: section.settings.image.alt,
+              stretch_width: true,
+              additional_classes: mobile_crop
+            %}
+
+            {% if section.settings.caption_content_background == 'darken_bg' %}
+              <div class="darken-bg"></div>
+            {% endif %}
+          </div>
+        {% else %}
+          {% comment %} No mobile image and no desktop image, show custom placeholder on mobile {% endcomment %}
+          <div class="is-hidden-desktop-only">
+            <img 
+              src="https://fireside.com/cdn/shop/files/Rectangle_1_2000x.png?v=1752767505"
+              alt="Fireplace background"
+              width="2000"
+              height="1125"
+              class="banner__image {{ mobile_crop }}"
+              style="width: 100%; height: auto; object-fit: cover;"
+              loading="lazy"
+            />
+
+            {% if section.settings.caption_content_background == 'darken_bg' %}
+              <div class="darken-bg"></div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endif %}
+
+      {% unless section.settings.button1_link != blank and section.settings.button2_link != blank %}
+        {% if section.settings.button1_link != blank and section.settings.button1 == blank %}
+          <a href="{{ section.settings.button1_link }}" class="banner-full-link">
+            {{ section.settings.button1 }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.button2_link != blank and section.settings.button2 == blank %}
+          <a href="{{ section.settings.button2_link }}" class="banner-full-link">
+            {{ section.settings.button2 }}
+          </a>
+        {% endif %}
+      {% endunless %}
+
+      {% unless section.settings.pretext == blank and section.settings.title == blank and section.settings.subtitle == blank and section.settings.button1 == blank and section.settings.button2 == blank %}
+        <div
+          class="
+            position-{{ section.settings.text_position }}
+            caption
+            js-caption
+          "
+        >
+          <div class="align-{{ section.settings.text_align }}">
+            {% if  section.settings.pretext != blank %}
+              <div class="pretext">
+                {{  section.settings.pretext }}
+              </div>
+            {% endif %}
+
+            {% if section.settings.title != blank %}
+              <h1 class="headline">
+                {{ section.settings.title | escape }}
+              </h1>
+            {% endif %}
+
+            {% if section.settings.subtitle != blank %}
+              <div class="subtitle">
+                {{ section.settings.subtitle }}
+              </div>
+            {% endif %}
+
+            {%
+              render 'frd-banner-buttons',
+              button1_text: section.settings.button1,
+              button1_style: section.settings.button1_style,
+              button1_link: section.settings.button1_link,
+              button2_text: section.settings.button2,
+              button2_style: section.settings.button2_style,
+              button2_link: section.settings.button2_link,
+              mobile_text_below_image: section.settings.mobile_text_below_image,
+              mobile_text_color: section.settings.mobile_text_color,
+              object_selector: object_selector,
+            %}
+          </div>
+        </div>
+      {% endunless %}
+    </div>
+  </div>
+
+  <!-- Background Video Script -->
+  {% if section.settings.background_vimeo_video_url != blank %}
+    <script>
+      (function() {
+        const sectionId = '{{ section.id }}';
+        const videoId = '{{ bg_video_id }}';
+        const backgroundVideoContainer = document.getElementById('frd-bg-video-' + sectionId);
+        const fallbackContainer = document.querySelector('#banner-' + sectionId + ' .frd-video-fallback');
+        const bannerElement = document.querySelector('#banner-' + sectionId + ' .banner');
+        
+        if (backgroundVideoContainer && bannerElement) {
+          const iframe = backgroundVideoContainer.querySelector('iframe');
+
+          function loadDesktopVideo() {
+            if (iframe && window.matchMedia('(min-width: 769px)').matches && !iframe.getAttribute('src')) {
+              iframe.src = iframe.dataset.src;
+            }
+          }
+          loadDesktopVideo();
+          
+          // Ensure the banner has proper styling (only on desktop)
+          if (window.innerWidth > 768) {
+            bannerElement.style.position = 'relative';
+            bannerElement.style.overflow = 'hidden';
+            bannerElement.style.minHeight = '600px';
+            bannerElement.style.height = '70vh';
+            bannerElement.style.maxHeight = '800px';
+            bannerElement.style.display = 'flex';
+            bannerElement.style.alignItems = 'center';
+            bannerElement.style.justifyContent = 'center';
+            bannerElement.style.padding = '0';
+          } else {
+            // Apply mobile styling
+            bannerElement.style.display = 'block';
+            bannerElement.style.alignItems = 'initial';
+            bannerElement.style.justifyContent = 'initial';
+            bannerElement.style.padding = '0';
+            bannerElement.style.minHeight = '500px';
+            bannerElement.style.height = 'auto';
+            bannerElement.style.maxHeight = 'none';
+            bannerElement.style.position = 'relative';
+          }
+          
+          // Ensure video container is properly positioned
+          backgroundVideoContainer.style.position = 'absolute';
+          backgroundVideoContainer.style.top = '0';
+          backgroundVideoContainer.style.left = '0';
+          backgroundVideoContainer.style.width = '100%';
+          backgroundVideoContainer.style.height = '100%';
+          backgroundVideoContainer.style.zIndex = '1';
+          
+          // Add error handling for iframe loading
+          if (iframe) {
+            // Ensure iframe covers like object-fit: cover
+            iframe.style.position = 'absolute';
+            iframe.style.top = '50%';
+            iframe.style.left = '50%';
+            iframe.style.width = '100vw';
+            iframe.style.height = '56.25vw';
+            iframe.style.minHeight = '100vh';
+            iframe.style.minWidth = '177.78vh';
+            iframe.style.transform = 'translate(-50%, -50%)';
+            iframe.style.pointerEvents = 'none';
+            iframe.style.border = 'none';
+            
+            iframe.addEventListener('error', function() {
+              console.log('Background video failed to load, showing fallback image');
+              if (fallbackContainer) {
+                fallbackContainer.style.display = 'block';
+              }
+              backgroundVideoContainer.style.display = 'none';
+            });
+            
+            iframe.addEventListener('load', function() {
+              if (fallbackContainer) {
+                fallbackContainer.style.display = 'none';
+              }
+            });
+          }
+          
+          // Handle responsive changes
+          function updateBannerStyling() {
+            loadDesktopVideo();
+            if (window.innerWidth > 768) {
+              bannerElement.style.display = 'flex';
+              bannerElement.style.alignItems = 'center';
+              bannerElement.style.justifyContent = 'center';
+              bannerElement.style.padding = '0';
+              bannerElement.style.minHeight = '600px';
+              bannerElement.style.height = '70vh';
+              bannerElement.style.maxHeight = '800px';
+              bannerElement.style.position = 'relative';
+            } else {
+              bannerElement.style.display = 'block';
+              bannerElement.style.alignItems = 'initial';
+              bannerElement.style.justifyContent = 'initial';
+              bannerElement.style.padding = '0';
+              bannerElement.style.minHeight = '500px';
+              bannerElement.style.height = 'auto';
+              bannerElement.style.maxHeight = 'none';
+              bannerElement.style.position = 'relative';
+            }
+          }
+          
+          // Listen for resize events
+          window.addEventListener('resize', updateBannerStyling);
+        } else {
+          console.log('Background video initialization failed - missing elements');
+        }
+      })();
+    </script>
+  {% endif %}
+
+  <!-- Vimeo Video Container -->
+  {% if section.settings.vimeo_video_url != blank %}
+    {% comment %} Extract video ID from various Vimeo URL formats {% endcomment %}
+    {% assign video_url = section.settings.vimeo_video_url %}
+    {% assign video_id_temp = video_url | split: '/' | last %}
+    {% assign video_id = video_id_temp | split: '?' | first | split: '#' | first %}
+    
+    <div id="frd-vimeo-container-{{ section.id }}" class="frd-vimeo-container" aria-hidden="true">
+      <button class="frd-vimeo-close-btn" aria-label="Close video" data-section-id="{{ section.id }}">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="frd-vimeo-loading"></div>
+      <div class="frd-vimeo-play-overlay" id="frd-vimeo-play-overlay-{{ section.id }}">
+        <button class="frd-vimeo-play-btn" aria-label="Play video">
+          <svg viewBox="0 0 24 24">
+            <polygon points="5,3 19,12 5,21"></polygon>
+          </svg>
+        </button>
+      </div>
+      <div class="frd-vimeo-iframe-container" id="frd-vimeo-iframe-container-{{ section.id }}">
+        <!-- Iframe will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const sectionId = '{{ section.id }}';
+        const videoId = '{{ video_id }}';
+        const autoplay = {{ section.settings.video_autoplay_after_expand | json }};
+        
+                 let player = null;
+         let isVideoLoaded = false;
+         let isAnimating = false;
+         let isPlayerReady = false;
+        
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initializeVideo);
+        } else {
+          initializeVideo();
+        }
+        
+                 function initializeVideo() {
+           const ctaButtons = document.querySelectorAll(`#banner-${sectionId} .global-button, #banner-${sectionId} .banner-button, #banner-${sectionId} .banner-full-link`);
+           const videoContainer = document.getElementById(`frd-vimeo-container-${sectionId}`);
+           const iframeContainer = document.getElementById(`frd-vimeo-iframe-container-${sectionId}`);
+           const playOverlay = document.getElementById(`frd-vimeo-play-overlay-${sectionId}`);
+           const heroSection = document.getElementById(`banner-${sectionId}`);
+           
+           if (!videoContainer || !iframeContainer || !heroSection || !playOverlay) return;
+           
+           // Get close button and play button from within the video container
+           const closeBtn = videoContainer.querySelector('.frd-vimeo-close-btn');
+           const playBtn = playOverlay.querySelector('.frd-vimeo-play-btn');
+          
+          // Modify CTA button behavior
+          ctaButtons.forEach(function(button) {
+            button.addEventListener('click', function(e) {
+              // Only prevent default if we have a valid video to show
+              if (videoId && videoId.trim() !== '' && /^\d+$/.test(videoId.trim()) && !isAnimating) {
+                e.preventDefault();
+                expandVideoFromButton(button);
+              }
+              // If no video ID or invalid video ID, let the original button behavior work (follow the link)
+            });
+          });
+          
+                     // Close button functionality - use event delegation for reliability
+           videoContainer.addEventListener('click', function(e) {
+             if (e.target.closest('.frd-vimeo-close-btn')) {
+               e.preventDefault();
+               e.stopPropagation();
+               if (!isAnimating) {
+                 collapseVideoToButton(ctaButtons[0]);
+               }
+             }
+           });
+           
+                       // Play button functionality for manual playback
+            if (playBtn) {
+              playBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                                 if (player && isPlayerReady) {
+                   console.log('Attempting to play video manually');
+                   // Ensure player is ready before attempting to play
+                   player.setVolume(1).then(function() {
+                     console.log('Volume set to 1');
+                     return player.play();
+                   }).then(function() {
+                     console.log('Video started playing');
+                     playOverlay.classList.remove('frd-show');
+                   }).catch(function(error) {
+                     console.log('Manual play failed:', error);
+                     // If play fails, try one more time after a short delay
+                     setTimeout(function() {
+                       player.play().then(function() {
+                         console.log('Retry play succeeded');
+                         playOverlay.classList.remove('frd-show');
+                       }).catch(function(retryError) {
+                         console.log('Retry play also failed:', retryError);
+                       });
+                     }, 500);
+                   });
+                 } else if (player && !isPlayerReady) {
+                   console.log('Player exists but not ready yet, waiting...');
+                   player.ready().then(function() {
+                     isPlayerReady = true;
+                     player.setVolume(1).then(function() {
+                       return player.play();
+                     }).then(function() {
+                       playOverlay.classList.remove('frd-show');
+                     });
+                   });
+                 } else {
+                   console.log('Player not available yet');
+                 }
+              });
+            }
+          
+          // Keyboard navigation
+          document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && videoContainer.classList.contains('frd-expanded') && !isAnimating) {
+              collapseVideoToButton(ctaButtons[0]);
+            }
+          });
+          
+          function getHeroBounds() {
+            const topButtons = heroSection.querySelector('.top-button-group-wrapper');
+            const topOffset = topButtons ? topButtons.offsetHeight + 20 : 60;
+            const heroRect = heroSection.getBoundingClientRect();
+            
+            return {
+              top: heroRect.top + topOffset,
+              left: 0,
+              width: window.innerWidth,
+              height: window.innerHeight - (heroRect.top + topOffset)
+            };
+          }
+          
+          function expandVideoFromButton(button) {
+            if (isAnimating) return;
+            isAnimating = true;
+            
+            const buttonRect = button.getBoundingClientRect();
+            const heroBounds = getHeroBounds();
+            
+            // Position video container at button location initially
+            videoContainer.style.top = buttonRect.top + 'px';
+            videoContainer.style.left = buttonRect.left + 'px';
+            videoContainer.style.width = buttonRect.width + 'px';
+            videoContainer.style.height = buttonRect.height + 'px';
+            
+            // Show container and add initializing class
+            videoContainer.classList.add('frd-initializing');
+            videoContainer.setAttribute('aria-hidden', 'false');
+            
+            // Force reflow
+            videoContainer.offsetHeight;
+            
+            // Start expansion animation
+            videoContainer.classList.remove('frd-initializing');
+            videoContainer.classList.add('frd-expanding');
+            
+            // Set final expanded dimensions
+            requestAnimationFrame(function() {
+              videoContainer.style.top = heroBounds.top + 'px';
+              videoContainer.style.left = heroBounds.left + 'px';
+              videoContainer.style.width = heroBounds.width + 'px';
+              videoContainer.style.height = heroBounds.height + 'px';
+            });
+            
+            // Handle animation completion
+            setTimeout(function() {
+              videoContainer.classList.remove('frd-expanding');
+              videoContainer.classList.add('frd-expanded');
+              loadVimeoPlayer().then(function() {
+                isAnimating = false;
+              });
+            }, 600);
+            
+            // Prevent scrolling
+            document.body.style.overflow = 'hidden';
+          }
+          
+          function collapseVideoToButton(button) {
+            if (isAnimating) return;
+            isAnimating = true;
+            
+            const buttonRect = button.getBoundingClientRect();
+            
+            // Pause video if playing
+            if (player) {
+              player.pause();
+            }
+            
+            // Start collapse animation
+            videoContainer.classList.remove('frd-expanded');
+            videoContainer.classList.add('frd-collapsing');
+            
+            // Animate back to button position
+            requestAnimationFrame(function() {
+              videoContainer.style.top = buttonRect.top + 'px';
+              videoContainer.style.left = buttonRect.left + 'px';
+              videoContainer.style.width = buttonRect.width + 'px';
+              videoContainer.style.height = buttonRect.height + 'px';
+            });
+            
+                         // Handle animation completion
+             setTimeout(function() {
+               videoContainer.classList.remove('frd-collapsing');
+               videoContainer.setAttribute('aria-hidden', 'true');
+               
+               // Reset container styles
+               videoContainer.style.cssText = '';
+               
+               // Hide play overlay
+               playOverlay.classList.remove('frd-show');
+               
+                               // Clear video content
+                if (iframeContainer) {
+                  iframeContainer.innerHTML = '';
+                }
+                player = null;
+                isVideoLoaded = false;
+                isPlayerReady = false;
+                isAnimating = false;
+               
+               // Restore scrolling
+               document.body.style.overflow = '';
+               
+               // Return focus to button
+               if (button) {
+                 button.focus();
+               }
+             }, 600);
+          }
+          
+          function loadVimeoAPI() {
+            return new Promise(function(resolve, reject) {
+              if (window.Vimeo) {
+                resolve();
+                return;
+              }
+              
+              const script = document.createElement('script');
+              script.src = 'https://player.vimeo.com/api/player.js';
+              script.onload = resolve;
+              script.onerror = reject;
+              document.head.appendChild(script);
+            });
+          }
+          
+          function loadVimeoPlayer() {
+            if (isVideoLoaded) return Promise.resolve();
+            
+            return loadVimeoAPI().then(function() {
+              const iframe = document.createElement('iframe');
+              iframe.src = `https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&muted=0&player_id=frd_vimeo_player_${sectionId}`;
+              iframe.width = '100%';
+              iframe.height = '100%';
+              iframe.frameBorder = '0';
+              iframe.allow = 'autoplay; fullscreen; picture-in-picture; microphone';
+              iframe.id = `frd_vimeo_player_${sectionId}`;
+              iframe.title = 'Vimeo video player';
+              
+              iframeContainer.innerHTML = '';
+              iframeContainer.appendChild(iframe);
+              
+                             player = new Vimeo.Player(iframe);
+               isVideoLoaded = true;
+               isPlayerReady = false;
+               
+               // Handle video end
+               player.on('ended', function() {
+                 setTimeout(function() {
+                   if (!isAnimating) {
+                     const firstButton = ctaButtons[0];
+                     if (firstButton) {
+                       collapseVideoToButton(firstButton);
+                     }
+                   }
+                 }, 1000);
+               });
+              
+                             return player.ready().then(function() {
+                 isPlayerReady = true;
+                 console.log('Vimeo player is ready');
+                 
+                 // Ensure volume is set and video is unmuted
+                 player.setVolume(1).catch(function(error) {
+                   console.log('Could not set volume:', error);
+                 });
+                 
+                 // Auto-play if enabled
+                 if (autoplay) {
+                   setTimeout(function() {
+                     player.play().catch(function(error) {
+                       console.log('Autoplay prevented:', error);
+                       // Show manual play button when autoplay fails
+                       setTimeout(function() {
+                         playOverlay.classList.add('frd-show');
+                       }, 100);
+                     });
+                   }, 200);
+                 } else {
+                   // Show play button after a short delay to ensure player is fully ready
+                   setTimeout(function() {
+                     playOverlay.classList.add('frd-show');
+                   }, 300);
+                 }
+               });
+              
+            }).catch(function(error) {
+              console.error('Error loading Vimeo player:', error);
+              
+              // Show error message
+              iframeContainer.innerHTML = '<div style="color: white; text-align: center; padding: 20px; font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: center; height: 100%;">Unable to load video. Please try again later.</div>';
+              
+              // Auto-close after 3 seconds and fallback to original link
+              setTimeout(function() {
+                if (!isAnimating) {
+                  const firstButton = ctaButtons[0];
+                  collapseVideoToButton(firstButton);
+                  
+                  // Fallback to original link
+                  const originalLink = firstButton && firstButton.href;
+                  if (originalLink && originalLink !== '#' && originalLink !== '') {
+                    window.location.href = originalLink;
+                  }
+                }
+              }, 3000);
+            });
+          }
+          
+          // Handle window resize
+          let resizeTimeout;
+          window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+              if (videoContainer.classList.contains('frd-expanded') && !isAnimating) {
+                const heroBounds = getHeroBounds();
+                videoContainer.style.top = heroBounds.top + 'px';
+                videoContainer.style.left = heroBounds.left + 'px';
+                videoContainer.style.width = heroBounds.width + 'px';
+                videoContainer.style.height = heroBounds.height + 'px';
+              }
+            }, 100);
+          });
+        }
+      })();
+    </script>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Landing Page Hero",
+  "class": "shopify-section--image-with-text-overlay under-menu",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "wide_display",
+      "label": "Wide display",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "use-mobile-space",
+      "label": "Use mobile space",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1800 x 1000px recommended"
+    },
+    {
+      "type": "text",
+      "id": "top_button_1",
+      "label": "Top Button 1"
+    },
+    {
+      "type": "url",
+      "id": "top_button_1_link",
+      "label": "Top Button 1 Link"
+    },
+    {
+      "type": "text",
+      "id": "top_button_2",
+      "label": "Top Button 2"
+    },
+    {
+      "type": "url",
+      "id": "top_button_2_link",
+      "label": "Top Button 2 Link"
+    },
+    {
+      "type": "text",
+      "id": "top_button_3",
+      "label": "Top Button 3"
+    },
+    {
+      "type": "url",
+      "id": "top_button_3_link",
+      "label": "Top Button 3 Link"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "button1",
+      "label": "First button label"
+    },
+    {
+      "type": "url",
+      "id": "button1_link",
+      "label": "First button link"
+    },
+    {
+      "type": "text",
+      "id": "button2",
+      "label": "Second button label"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Second button link"
+    },
+    {
+      "type": "header",
+      "content": "Content layout"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Text contrast",
+      "info": "Improve legibility by applying a contrast technique to your banner's text."
+    },
+    {
+      "type": "select",
+      "id": "caption_content_background",
+      "label": "Contrast technique",
+      "default": "original",
+      "options": [
+        {
+          "value": "original",
+          "label": "None"
+        },
+        {
+          "value": "darken_bg",
+          "label": "Darken banner image"
+        },
+        {
+          "value": "text_box",
+          "label": "Solid box"
+        },
+        {
+          "value": "translucent_text_box",
+          "label": "Translucent box"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Image",
+      "info": "Display a different image on mobile screens. This only appears when the desktop image is set."
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_crop",
+      "label": "Image cropping",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_text_below_image",
+      "label": "Show text below image",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "mobile_text_color",
+      "label": "Text below image",
+      "info": "Set this to \"None\" to use the \"Regular text\" color."
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    },
+    {
+      "type": "header",
+      "content": "Background Video"
+    },
+    {
+      "type": "text",
+      "id": "background_vimeo_video_url",
+      "label": "Background Vimeo Video URL",
+      "info": "Enter a Vimeo URL for background video (e.g., https://vimeo.com/1104249182). Video shows on desktop, images show on mobile for better performance."
+    },
+    {
+      "type": "checkbox",
+      "id": "background_video_autoplay",
+      "label": "Autoplay background video",
+      "default": true,
+      "info": "Background video will autoplay on load (muted by default for browser compatibility)"
+    },
+    {
+      "type": "checkbox",
+      "id": "background_video_loop",
+      "label": "Loop background video",
+      "default": true,
+      "info": "Background video will loop continuously"
+    },
+    {
+      "type": "header",
+      "content": "Vimeo Video Popup"
+    },
+    {
+      "type": "text",
+      "id": "vimeo_video_url",
+      "label": "Vimeo Video URL",
+      "info": "Enter a Vimeo URL (e.g., https://vimeo.com/1104249182). Video will play when the CTA button is clicked if URL is provided."
+    },
+    {
+      "type": "checkbox",
+      "id": "video_autoplay_after_expand",
+      "label": "Auto-play video after expansion",
+      "default": true,
+      "info": "If enabled, video will start playing automatically after expansion. If disabled, user must click play."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Landing Page Hero",
+      "settings": {
+        "image": "",
+        "title": "Your Headline",
+        "text_position": "center",
+        "text_align": "center"
+      }
+    }
+  ]
+}
+
+{% endschema %}

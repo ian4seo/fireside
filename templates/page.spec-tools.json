@@ -1,0 +1,1069 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "16d6103b-6db6-47f2-8b4b-9c699943c2a1": {
+      "type": "page-title-subtitle",
+      "settings": {
+        "heading": "Fireplace Specification Tools",
+        "sub_text": "<p>Fireside offers a full suite of specification tools including CAD Drawings, Revit BIM files, Architect Guides, Product Cut-Sheets, Installation Manuals, Product Brochures and more. </p>",
+        "text_align": "text-center",
+        "site_width": "mbl-site-width",
+        "css_class": "top-space",
+        "custom_css": ".top-space {margin-top:4em}"
+      }
+    },
+    "188235cf-0fd7-448e-8a57-17fc57513043": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__188235cf-0fd7-448e-8a57-17fc57513043-16699095785f267900-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "STELLAR ENLIGHT BAY GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1uaWAyTND9CkEaLCSbmwhTvm0BkapkdE1?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Bay 3' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Bay 3' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1NTob-0GdV4Na81-K8emII3i00H_aeuIs?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Bay 4' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Bay 4' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1Wg0FNdDDQj2HnDWWWSUAqVXMsEiN_vf4?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Bay 5' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Bay 5' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1BiDsxxu-iDAT6eGtX-BwWoeEFZfFEnBH?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Bay 6' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Bay 6' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1wkkVg3q_z3bpzz1QU4nfUuVNmuxrkZIh?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Bay 7' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Bay 7' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1OB9aEqGBN0S7F0CYun8vQdlPndS6SYQl?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Bay 8' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Bay 8' Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__188235cf-0fd7-448e-8a57-17fc57513043-16699095785f267900-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "STELLAR ENLIGHT CORNER GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1ZG4UDUhNqO8rC02WBR3VgKTpLCc0lLmX?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Corner 3' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Corner 3' Gas Fireplace Series</a> </p><p><a href=\"https://drive.google.com/drive/folders/1I713vhzXGw6NOSOrkDN1zpgzJveBmUiQ?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Corner 4' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Corner 4' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1Re9yRrqLTD0SoFLElH8-0BQRuhCtsn5i?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Corner 5' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Corner 5' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1Swh1sx2wGDfoV0afvt_X8nk0jAjyE0Xx?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Corner 6' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Corner 6' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1hn4q2oGR5Ms_lDz4IEHnMZDGmmRbLHZn?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Corner 7' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Corner 7' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1aP_ztmNuQwHA4tfAM5BxTv7XsD9dRqTV?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Corner 8' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Corner 8' Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "c4876992-aded-46d1-8c11-29c5c27bd161": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "STELLAR ENLIGHT ISLAND GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1ZWwmn0Pk6ZcTjPC60IReHIGjdMDXBFKt?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Island 3' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Island 3' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1Fijy1l2d2Pv5QTVG678-XOoySlNjnchb?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Island 4' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Island 4' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1WxabwzT7NgiF08bwH1CRHYQHOptiaEx5?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Island 5' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Island 5' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1m5zGoyn3goFSBz-vrPHgMkgUgDnNTSRc?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Island 6' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Island 6' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1aVKZfC_14Q-ulDYgn15ZK_qXjsRpk9Yy?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Island 7' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Island 7' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1QOUvP4VbbqnLjbPdlj0PIL_eofnawEpI?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Island 8' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Enlight Island 8' Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__188235cf-0fd7-448e-8a57-17fc57513043-16699095785f267900-1",
+        "template--16629090287846__188235cf-0fd7-448e-8a57-17fc57513043-16699095785f267900-0",
+        "c4876992-aded-46d1-8c11-29c5c27bd161"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "05640f4b-70d9-4904-8b32-ad399c88d0bc": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "6f8b2d24-3016-41d9-9892-62175bbb4807": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "STELLAR ENLIGHT PIER GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1Go3NhPNwSGkU7dchlOYxac9f9-jeI5QY?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Pier 3' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Pier 3' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1h3KEaUSl63wHJ13N09AsiXUvJELxOzhU?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Pier 4' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Pier 4' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1yViyV7999J-rPWqxLBmCOTcXnnnpMgnG?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Pier 5' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Pier 5' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/10uaBJSf50ASHf55jMoBcYP7PCOWPUuZB?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Pier 6' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Pier 6' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1dcZEa8VEeVaTQVgEjQGBVbxOKawqYbXM?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Pier 7' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Pier 7' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1dbeTvxI5WeFd9-mz6XvmdMMwD6_2BTL6?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Pier 8' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Pier 8' Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__05640f4b-70d9-4904-8b32-ad399c88d0bc-16691439714414f646-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 600,
+            "heading-margin-top": 0,
+            "title": "STELLAR ENLIGHT SEE-THROUGH GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/11Nx145bu9U5P0mrFSrWTMEupe4CaSP_Z?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight See-Through 3' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight See-Through 3' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1LhnBmTL34aKzc4LI4v4RZ6iwd2ovUowQ?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight See-Through 4' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight See-Through 4' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1s8arlcIQz2vRR7wt4C7ZdKbb48Ak5tK4?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight See-Through 5' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight See-Through 5' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1VRjskm8Ju-hyOq1S0qGKIyf76CtEhQo4?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight See-Through 6' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight See-Through 6' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1CWQ0AijRkahSwiuqocbtLJfn-YJtnB7V?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight See-Through 7' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight See-Through 7' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1KYzK3Z08IVzk2IN66hEWUyt0NHoGghYq?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight See-Through 8' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight See-Through 8' Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__05640f4b-70d9-4904-8b32-ad399c88d0bc-16691439714414f646-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 600,
+            "heading-margin-top": 0,
+            "title": "STELLAR ENLIGHT SINGLE-SIDED GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/10fMDPyZHhv2lt4OVuhuTmUrvsK_mQGx3?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Single-Sided 3' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Single-Sided 3' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1tzj994S8yRX7tu_PwYbQ_lRycRVkzkbT?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Single-Sided 4' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Single-Sided 4' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1aFROOzJfmb6uOE0ycgCWYnG7dTGxCGao?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Single-Sided 5' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Single-Sided 5' Gas Fireplace Series </a></p><p><a href=\"https://drive.google.com/drive/folders/1WQQikdkQW9IlOJ37orXD3jghLPXCwgr5?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Single-Sided 6' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Single-Sided 6' Gas Fireplace Series </a></p><p><a href=\"https://drive.google.com/drive/folders/1NZHCe9X5c871IgyBe0YhY8TeoSygzmVN?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Single-Sided 7' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Single-Sided 7' Gas Fireplace Series </a></p><p><a href=\"https://drive.google.com/drive/folders/1WIXgzXQZV2DGoMzCEuaZZU1zTY0BxsX8?usp=share_link\" target=\"_blank\" title=\"Stellar Enlight Single-Sided 8' Gas Fireplace Series Specification Tools from Fireside Hearth & Home\">Stellar Enlight Single-Sided 8' Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "6f8b2d24-3016-41d9-9892-62175bbb4807",
+        "template--16629090287846__05640f4b-70d9-4904-8b32-ad399c88d0bc-16691439714414f646-1",
+        "template--16629090287846__05640f4b-70d9-4904-8b32-ad399c88d0bc-16691439714414f646-0"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "37b6ea31-5917-41c2-9c50-5fe19c7b9696": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__37b6ea31-5917-41c2-9c50-5fe19c7b9696-16699112375f1a9481-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "STELLAR TRANSCEND INDOOR/OUTDOOR GAS FIREPLACE",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1n47BTYSS-jj16GtwUeGaso5BXw3xVD7X?usp=share_link\" target=\"_blank\" title=\"Stellar Transcend Indoor-Outdoor See-Through 3' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Transcend 3' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1g3HY755fuK_DPaOr0PY3DStyGepLdS_K?usp=share_link\" target=\"_blank\" title=\"Stellar Transcend Indoor-Outdoor See-Through 4' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Transcend 4' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1zvjlOjwn-hrdYPSDBpVdmL74q7K4wRp0?usp=share_link\" target=\"_blank\" title=\"Stellar Transcend Indoor-Outdoor See-Through 5' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Transcend 5' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1BCTAL_9-7mtGM5aAjoqeecpWlvkF5oMp?usp=share_link\" target=\"_blank\" title=\"Stellar Transcend Indoor-Outdoor See-Through 6' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Transcend 6' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1pBgnp9v-UUjgikJ7pNpxu9StgTi0av9j?usp=share_link\" target=\"_blank\" title=\"Stellar Transcend Indoor-Outdoor See-Through 7' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Transcend 7' Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1RExDdlrsB1y8sTjT3ESovQfhXWsEwl-O?usp=share_link\" target=\"_blank\" title=\"Stellar Transcend Indoor-Outdoor See-Through 8' Gas Fireplace Specification Tools from Fireside Hearth & Home\">Stellar Transcend 8' Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__37b6ea31-5917-41c2-9c50-5fe19c7b9696-16699112375f1a9481-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "STELLAR CUSTOM GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://custom.stellarhearth.com/\" target=\"_blank\" title=\"Stellar Custom Gas Fireplace Configurator Build Tool from Fireside Hearth & Home\">Stellar Custom Gas Fireplace Configurator Tool</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "2947473f-8b67-42bb-bbd3-8a6604a69fa3": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO 6000/8000 GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/13IKtN4UJl3nckNW2Lcu4QmFNwdiRP02l?usp=share_link\" target=\"_blank\" title=\"Heat & Glo 6000CLX Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo 6000CLX Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1ytaSEKhmKi0XFkQEmbBvUn-8v2ZqGnBk?usp=share_link\" target=\"_blank\" title=\"Heat & Glo 6000CL Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo 6000CL Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1N8uyyWyS7f2Cymt87x6g6AT2abZeRFR2?usp=share_link\" target=\"_blank\" title=\"Heat & Glo 6000C Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo 6000C Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1dQb9nHCjAAL6wDDP2vo84l9iKyi-0CYU?usp=share_link\" target=\"_blank\" title=\"Heat & Glo 6000 Modern Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo 6000 Modern Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1dm1THDzGM4mb3_4wH4oOLEx5uTKNo1hX?usp=share_link\" target=\"_blank\" title=\"Heat & Glo 8000CLX Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo 8000CLX Gas Fireplace Series </a></p><p><a href=\"https://drive.google.com/drive/folders/1dm1THDzGM4mb3_4wH4oOLEx5uTKNo1hX?usp=share_link\" target=\"_blank\" title=\"Heat & Glo 8000CL Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo 8000CL Gas Fireplace Series </a></p><p><a href=\"https://drive.google.com/drive/folders/1q6WqAp1UCWJZ5XJS34xvgsYamQSzNbwT?usp=share_link\" target=\"_blank\" title=\"Heat & Glo 8000C Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo 8000C Gas Fireplace Series</a> </p><p><a href=\"https://drive.google.com/drive/folders/1yMDt6XbE6tCPTcOBf7QEGnuF2Jyvj67m?usp=share_link\" target=\"_blank\" title=\"Heat & Glo 8000 Modern Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo 8000 Modern Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__37b6ea31-5917-41c2-9c50-5fe19c7b9696-16699112375f1a9481-0",
+        "template--16629090287846__37b6ea31-5917-41c2-9c50-5fe19c7b9696-16699112375f1a9481-1",
+        "2947473f-8b67-42bb-bbd3-8a6604a69fa3"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "22c7886d-2f02-4d93-ace8-be7320a01e5b": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__22c7886d-2f02-4d93-ace8-be7320a01e5b-1670626827925b9845-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO CERONA GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1MhzXA_-zkKZ9rSaiJm8fS0JcRTCoZZ9G?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Cerona 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Cerona 36 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/10f1MlQjX0vtuMl-ldtBCbs5iJoYzyXm2?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Cerona 42 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Cerona 42 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__22c7886d-2f02-4d93-ace8-be7320a01e5b-1670626827925b9845-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO CORNER GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1yDjfwFuXK84RYR8nUTh8H4Y-XAw_cu2G?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Left Corner Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Left Corner Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1wFhMtOFXgoVp0-xAEbiqDzVYujQF-SPn?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Right Corner Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Right Corner Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "0a50be19-2f5f-48a4-8b5d-3d39aa2140fd": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO COSMO GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1JDSiDR00cUJHquYBhPiTgegcX0wdhWTF?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Cosmo 32 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Cosmo 32 Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1TT5gF8Uy1GtATDGgVxzOiFqMQVnE8DK3?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Cosmo 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Cosmo 36 Gas Fireplace Series</a></p><p><a href=\"https://drive.google.com/drive/folders/1qcwldylserWGtpESuLnZHrY4moAsLGW7?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Cosmo 42 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Cosmo 42 Gas Fireplace Series</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__22c7886d-2f02-4d93-ace8-be7320a01e5b-1670626827925b9845-0",
+        "template--16629090287846__22c7886d-2f02-4d93-ace8-be7320a01e5b-1670626827925b9845-1",
+        "0a50be19-2f5f-48a4-8b5d-3d39aa2140fd"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "4317c7c5-24b7-4f46-b7c0-8f18192a1e47": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__4317c7c5-24b7-4f46-b7c0-8f18192a1e47-1671113915b7aa2066-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO ESCAPE SEE-THROUGH GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1ifzlqJ7H49oOi7M_xptk5_xaPVH7vMiH?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Escape 42 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Escape 42 See-Through Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__4317c7c5-24b7-4f46-b7c0-8f18192a1e47-1671113915b7aa2066-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO MEZZO GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1aKxWZw_f_6Sd-GRDnQh29Tf9NYJqUiJ8?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Mezzo 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Mezzo 36 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1YSmSr_vi5A9-oF-IFOx8BUQQpOHJkmH8?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Mezzo 36 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Mezzo 36 See-Through Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1ab9fRTGCMZicaJqsK0_1TaJy15cJO9xe?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Mezzo 48 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Mezzo 48 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1p3gI3XFMCJFqpvHswIR6sLFiZllRjeni?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Mezzo 48 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Mezzo 48 See-Through Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1si5ybTUFyOceOYm5cHyzw97_eiY8cJsT?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Mezzo 60 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Mezzo 60 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1Xw1_vgQ876aM6fn-of3fEfU_jOBLpbPD?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Mezzo 60 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Mezzo 60 See-Through Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1uPnkwOnjsZnNxlWORmoZbgGvMwzb-m4P?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Mezzo 72 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Mezzo 72 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/19exGU3U0K9k45jt59j1Hnnn1C2q3xX6G?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Mezzo 72 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Mezzo 72 See-Through Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "b083a3c1-dc8b-4315-9678-28ef616ba7ad": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO PIER GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1HruszqWdGHMCEfeKY-kaKJyQnEzg8zvM?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Pier 3-Sided Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Pier Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__4317c7c5-24b7-4f46-b7c0-8f18192a1e47-1671113915b7aa2066-0",
+        "template--16629090287846__4317c7c5-24b7-4f46-b7c0-8f18192a1e47-1671113915b7aa2066-1",
+        "b083a3c1-dc8b-4315-9678-28ef616ba7ad"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "f2322bc2-41da-410c-892f-b7ef14c01352": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__f2322bc2-41da-410c-892f-b7ef14c01352-1671122363311f8e1f-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO PRIMO GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1TBfCKdIBxQzjmdca-f0uuACE0urL0h5b?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Primo 48 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Primo 48 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1MOY-4hAAcl4oq_3uEuCqmoKjDmZwEzrn?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Primo 48 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Primo 48 See-Through Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/17XmMFJtLy4mLl4bjp_c04hJpE4HsPpY9?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Primo 60 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Primo 60 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1Jkvz6Kf2WMoSdpL6hRvauqaSNTDUMe2I?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Primo 60 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Primo 60 See-Through Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1A0tAnCB-FReZT9c9aPxFM2lIcKJrTz0c?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Primo 72 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Primo 72 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1qO9d7t-OBwPpKU80sYYNOEpgs-0wxAOF?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Primo 72 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Primo 72 See-Through Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__f2322bc2-41da-410c-892f-b7ef14c01352-1671122363311f8e1f-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO SEE-THROUGH GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1DPkahkj30BL1dlQwG7xWl41pl5oL49vv?usp=share_link\" target=\"_blank\" title=\"Heat & Glo See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo See-Through Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "5a34a64c-8e09-48d0-88fa-0c90c7a5dab6": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO SLIMLINE SL GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1TEkmd7jJRV-gj0GP-RbT76FLECltslXB?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Slimline SL-3X Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Slimline SL-3X Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1y0opYJeGRQWs0X9do8jI5uhHtyy4pn6W?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Slimline SL-5 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Slimline SL-5 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1TriJlivl-9Vmzu8uAQVVnANe78uP1bv6?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Slimline SL-5X Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Slimline SL-5X Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1OfnO_LSGLTH5yxDAyD2K6c4hFtahmzL5?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Slimline SL-7 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Slimline SL-7 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1h0fmjLc9z0Iy7W47Ls70Fzni0h3Dot63?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Slimline SL-7X Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Slimline SL-7X Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/11v4LXsNDG2U_OlxDeruQkI9_OtO2EQnz?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Slimline SL-9 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Slimline SL-9 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1tW5yq7rrI2uyXAkqsoiwBp9UY3f4M3U9?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Slimline SL-9X Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Slimline SL-9X Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__f2322bc2-41da-410c-892f-b7ef14c01352-1671122363311f8e1f-0",
+        "template--16629090287846__f2322bc2-41da-410c-892f-b7ef14c01352-1671122363311f8e1f-1",
+        "5a34a64c-8e09-48d0-88fa-0c90c7a5dab6"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "38aa139b-3f84-43ff-968a-323d6a4c33c7": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__38aa139b-3f84-43ff-968a-323d6a4c33c7-1671131248f1d68a30-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO SLIMLINE SL FUSION GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/16ZWUl7Z7d12v20cb-NXHiV7vDWvo4bnC?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Slimline SL Fusion 5 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Slimline SL Fusion 5 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/15D5xCPji885xfShXYCY9p8un5ojvAUg-?usp=share_link\" target=\"_blank\" title=\"Heat & Glo Slimline SL Fusion 7 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo Slimline SL Fusion 7 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__38aa139b-3f84-43ff-968a-323d6a4c33c7-1671131248f1d68a30-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEAT & GLO TRUE SERIES GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1SArW5HLTsWgJZt0-bvk9eo3--gLsNdrj?usp=share_link\" target=\"_blank\" title=\"Heat & Glo True 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo True 36 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1QJB-o1-tyZetkyoU-pRCE3aZnyTdeES3?usp=share_link\" target=\"_blank\" title=\"Heat & Glo True 42 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo True 42 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1UeGEPoYW-bsBdWyef5RbW35dd1qogMHT?usp=share_link\" target=\"_blank\" title=\"Heat & Glo True 50 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heat & Glo True 50 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "81cad4a8-3dcd-4d6b-869e-7f396c480d53": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEATILATOR CALIBER GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1i-u4WwDtRyNHAupwJk0zzjxyfcpCThwy?usp=share_link\" target=\"_blank\" title=\"Heatilator Caliber 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Caliber 36 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1IvPZccPn-L1NeXx0O4FMmCeanYDst17M?usp=share_link\" target=\"_blank\" title=\"Heatilator Caliber 42 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Caliber 42 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__38aa139b-3f84-43ff-968a-323d6a4c33c7-1671131248f1d68a30-0",
+        "template--16629090287846__38aa139b-3f84-43ff-968a-323d6a4c33c7-1671131248f1d68a30-1",
+        "81cad4a8-3dcd-4d6b-869e-7f396c480d53"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "6c7ddb2a-c3fc-49c6-b64a-626f051c1bca": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__6c7ddb2a-c3fc-49c6-b64a-626f051c1bca-1671131248f1d68a30-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEATILATOR CALIBER NXT GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1hC6zQYwFZ44ZH1c4BT2AEV2kk__AuNN1?usp=share_link\" target=\"_blank\" title=\"Heatilator Caliber nXt 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Caliber nXt 36 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1IbXfmD7fXuXIorDxN9joX7JiAHHyZNwh?usp=share_link\" target=\"_blank\" title=\"Heatilator Caliber nXt 42 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Caliber nXt 42 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__6c7ddb2a-c3fc-49c6-b64a-626f051c1bca-1671131248f1d68a30-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEATILATOR CRAVE GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1I09kzc_YgbqlioMdIFMRgi6jA7FHYVnN?usp=share_link\" target=\"_blank\" title=\"Heatilator Crave 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Crave 36 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1K7d_VbmJaCucA8Y9XifKgQED69RKxeUw?usp=share_link\" target=\"_blank\" title=\"Heatilator Crave 48 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Crave 48 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1leBuHun8hHbNBl3UZnzEeN3_X_1pQDpi?usp=share_link\" target=\"_blank\" title=\"Heatilator Crave 60 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Crave 60 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1JpfxLDcskwyrsNrixP1MwEP6tYQkzp5I?usp=share_link\" target=\"_blank\" title=\"Heatilator Crave 72 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Crave 72 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "ada5450b-b677-4eab-8775-0ed43a6e731e": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEATILATOR CRAVE SEE-THROUGH GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/19LW50kjVU7ES_bXwQCM6_6bcTt3zPWqS?usp=share_link\" target=\"_blank\" title=\"Heatilator Crave 36 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Crave 36 See-Through Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/18-B4p19kLkC1ZNU-IkGcHBdxS5b8xFWy?usp=share_link\" target=\"_blank\" title=\"Heatilator Crave 48 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Crave 48 See-Through Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1EhvccoqNrjFtQoWDxfF3iCUiGAgewVkd?usp=share_link\" target=\"_blank\" title=\"Heatilator Crave 60 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Crave 60 See-Through Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1uIXWZt0-CpGHo7pn9vkAk9dj7tiiMuuc?usp=share_link\" target=\"_blank\" title=\"Heatilator Crave 72 See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Crave 72 See-Through Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__6c7ddb2a-c3fc-49c6-b64a-626f051c1bca-1671131248f1d68a30-0",
+        "template--16629090287846__6c7ddb2a-c3fc-49c6-b64a-626f051c1bca-1671131248f1d68a30-1",
+        "ada5450b-b677-4eab-8775-0ed43a6e731e"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "f5c3fa0c-f8ca-4c47-b159-06388a4e6a39": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__f5c3fa0c-f8ca-4c47-b159-06388a4e6a39-1671131248f1d68a30-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEATILATOR HEIRLOOM GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1grh48iTh4asq6D6zuGgjB8IKl0uZ7ZGT?usp=share_link\" target=\"_blank\" title=\"Heatilator Heirloom 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Heirloom 36 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1aUJu4xoyRv_5HhZsW1VisSxeQRqiVFDN?usp=share_link\" target=\"_blank\" title=\"Heatilator Heirloom 42 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Heirloom 42 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1LjfmAeDFkcVZp7RmxzeIeiD27u_YQZRL?usp=share_link\" target=\"_blank\" title=\"Heatilator Heirloom 50 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Heirloom 50 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__f5c3fa0c-f8ca-4c47-b159-06388a4e6a39-1671131248f1d68a30-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEATILATOR NOVUS GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/13N3pNOxpzgovAgE3UMziQ_YMovrnXtpl?usp=share_link\" target=\"_blank\" title=\"Heatilator Novus 30 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Novus 30 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1KsKKzwS9Z7BfrRvPXL-pVsXvdPYQnEjY?usp=share_link\" target=\"_blank\" title=\"Heatilator Novus 33 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Novus 33 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1lIcGJg6KyHgIJ09NWjEEY7kUuSPQBqiw?usp=share_link\" target=\"_blank\" title=\"Heatilator Novus 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Novus 36 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1-7EMdFPrJr2b6r6cATCtGocXcMpXOc_V?usp=share_link\" target=\"_blank\" title=\"Heatilator Novus 42 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Novus 42 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "f5f98cdf-7eb7-4f3d-90fe-8cc17568f82d": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEATILATOR NOVUS NXT GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1KDotU8d0-CQFF1CmaQbmJSfxFW4cr8kj?usp=share_link\" target=\"_blank\" title=\"Heatilator Novus nXt 33 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Novus nXt 33 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1N-f7MAcdkw_paav8ihM6EQNTtRuoy-nw?usp=share_link\" target=\"_blank\" title=\"Heatilator Novus nXt 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Novus nXt 36 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__f5c3fa0c-f8ca-4c47-b159-06388a4e6a39-1671131248f1d68a30-0",
+        "template--16629090287846__f5c3fa0c-f8ca-4c47-b159-06388a4e6a39-1671131248f1d68a30-1",
+        "f5f98cdf-7eb7-4f3d-90fe-8cc17568f82d"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "375a2dca-97d1-4903-b287-50ebf7723af5": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__375a2dca-97d1-4903-b287-50ebf7723af5-1671131248f1d68a30-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "HEATILATOR RAVE GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1GaS02qwS16ewo31YDkXKHHKg_aYpj2gT?usp=share_link\" target=\"_blank\" title=\"Heatilator Rave 32 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Rave 32 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1grmj4AD5ePD2zrwvGVgunqAWe9NWTbH3?usp=share_link\" target=\"_blank\" title=\"Heatilator Rave 36 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Rave 36 Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1LVYbC5ZCAQc6apuBOVNKYF5Ec7nnCa6g?usp=share_link\" target=\"_blank\" title=\"Heatilator Rave 42 Gas Fireplace Specification Tools from Fireside Hearth & Home\">Heatilator Rave 42 Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__375a2dca-97d1-4903-b287-50ebf7723af5-1671131248f1d68a30-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "SIMPLIFIRE ALLUSION ELECTRIC FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1xIAjnbUQ-fc-DoMrSV5SSJIFunCV0twx?usp=share_link\" target=\"_blank\" title=\"SimpliFire Allusion 40 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Allusion 40 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1aPA6WodeZhPm1OT0_-26ljVkwx6eGkWH?usp=share_link\" target=\"_blank\" title=\"SimpliFire Allusion 48 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Allusion 48 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/10gE-7g0fNT1RQcdQCGvfCNgrNDDleWFa?usp=share_link\" target=\"_blank\" title=\"SimpliFire Allusion 60 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Allusion 60 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1yIFDppZA42gr5VK_ZPaSONV6x_SkGcXN?usp=share_link\" target=\"_blank\" title=\"SimpliFire Allusion 84 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimiliFire Allusion 84 Electric Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "85c16a67-fc24-478e-aa00-422aaa09a9ee": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "SIMPLIFIRE ALLUSION PLATINUM ELECTRIC FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1zshqvjYZHmMFff3zBHfn7gUDyzjGLzpy?usp=share_link\" target=\"_blank\" title=\"SimpliFire Allusion Platinum 50 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Allusion Platinum 50 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1-j5d1DM7RQDyRQk3KdOP_5C2hnK5TMZI?usp=share_link\" target=\"_blank\" title=\"SimpliFire Allusion Platinum 60 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Allusion Platinum 60 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1Vy9jWFFhqZuNe0TSQlhAMiyzU0BaziXN?usp=share_link\" target=\"_blank\" title=\"SimpliFire Allusion Platinum 72 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Allusion Platinum 72 Electric Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__375a2dca-97d1-4903-b287-50ebf7723af5-1671131248f1d68a30-0",
+        "template--16629090287846__375a2dca-97d1-4903-b287-50ebf7723af5-1671131248f1d68a30-1",
+        "85c16a67-fc24-478e-aa00-422aaa09a9ee"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "21d589dd-3a9b-436d-82ea-f05d029d335c": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__21d589dd-3a9b-436d-82ea-f05d029d335c-1671543149014160a1-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "SIMPLIFIRE BUILT-IN ELECTRIC FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/10lu1nmbTsZCMGQ3fJm10Xwkq2kYQ1gp3?usp=share_link\" target=\"_blank\" title=\"SimpliFire Built-In 30 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Built-In 30 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1y3Gw_k1CcjnTA3iBTioigu6N6Rn8GFeu?usp=share_link\" target=\"_blank\" title=\"SimpliFire Built-In 36 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Built-In 36 Electric Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__21d589dd-3a9b-436d-82ea-f05d029d335c-1671543149014160a1-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "SIMPLIFIRE FORMAT ELECTRIC FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1clSV_YGzAMb8BGDQieUe5017OYHlhBku?usp=share_link\" target=\"_blank\" title=\"SimpliFire Format 43 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Format 43 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1Kdh8gx7qoa12yHC6rR9jTRFIR8FMrYmp?usp=share_link\" target=\"_blank\" title=\"SimpliFire Format 50 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Format 50 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1yRNGVppe_bU6QKZxhl1ZmasZ0Rincr0k?usp=share_link\" target=\"_blank\" title=\"SimpliFire Format 60 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Format 60 Electric Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "07797546-5254-4f50-9375-211e0f299032": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "SIMPLIFIRE SCION ELECTRIC FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1-L9AkcYDQ9-qlgaHYorcljMYK9ueYKxC?usp=share_link\" target=\"_blank\" title=\"SimpliFire Scion 43 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Scion 43 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1WaVpgMtJSiKUQxAVi2E2eoEOC3MN_Zmw?usp=share_link\" target=\"_blank\" title=\"SimpliFire Scion 55 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Scion 55 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1WaVpgMtJSiKUQxAVi2E2eoEOC3MN_Zmw?usp=share_link\" target=\"_blank\" title=\"SimpliFire Scion 78 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Scion 78 Electric Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__21d589dd-3a9b-436d-82ea-f05d029d335c-1671543149014160a1-0",
+        "template--16629090287846__21d589dd-3a9b-436d-82ea-f05d029d335c-1671543149014160a1-1",
+        "07797546-5254-4f50-9375-211e0f299032"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1baa5d0f-f9a0-4bf1-a650-b616b7621556": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__1baa5d0f-f9a0-4bf1-a650-b616b7621556-1671546738121c3e20-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "SIMPLIFIRE SCION TRINITY ELECTRIC FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1msMSH_KWfp-JXNec0i5PWy4FXj947khy?usp=share_link\" target=\"_blank\" title=\"SimpliFire Scion Trinity 43 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Scion Trinity 43 Electric Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1J024gUb-GvLr9VEE3mrT-1c9102B4eRz?usp=share_link\" target=\"_blank\" title=\"SimpliFire Scion Trinity 55 Electric Fireplace Specification Tools from Fireside Hearth & Home\">SimpliFire Scion Trinity 55 Electric Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "cc330793-5c63-4b6b-be6c-f97a9b5c1177": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "CASTLEWOOD OUTDOOR WOOD FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1haNto-fs5rc--81OqAAoj_0L_JLm4qCP?usp=share_link\" target=\"_blank\" title=\"Outdoor Castlewood 42 Wood Fireplace Specification Tools from Fireside Hearth & Home\">Castlewood 42 Wood Outdoor Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "32d22db6-2ad3-48c3-bc23-90ccfcde5387": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "COURTYARD OUTDOOR GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1WfH2DWaPKbRhI9ClDsE6D8m6ySnGybTw?usp=share_link\" target=\"_blank\" title=\"Courtyard 36 Outdoor Gas Fireplace Specification Tools from Fireside Hearth & Home\">Courtyard 36 Outdoor Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1h_VRzAd4dE_eW5m7MIiiwGbF4CiE9bU7?usp=share_link\" target=\"_blank\" title=\"Courtyard 42 Outdoor Gas Fireplace Specification Tools from Fireside Hearth & Home\">Courtyard 42 Outdoor Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__1baa5d0f-f9a0-4bf1-a650-b616b7621556-1671546738121c3e20-0",
+        "cc330793-5c63-4b6b-be6c-f97a9b5c1177",
+        "32d22db6-2ad3-48c3-bc23-90ccfcde5387"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "e4967dd3-7ebc-4607-a2a9-edc2d2f9a6d2": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__e4967dd3-7ebc-4607-a2a9-edc2d2f9a6d2-1671548820c3de03e2-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "FORTRESS OUTDOOR SEE-THROUGH GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/11bVCUbaqsoFuAUu0AwL7pPbddBlmbphg?usp=share_link\" target=\"_blank\" title=\"Fortress 36 Indoor-Outdoor See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Fortress 36 Outdoor See-Through Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__e4967dd3-7ebc-4607-a2a9-edc2d2f9a6d2-1671548820c3de03e2-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "LANAI OUTDOOR GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1wbnJUBDrodIfDgq8tNoh8etsYOokNTGv?usp=share_link\" target=\"_blank\" title=\"Lanai 48 Outdoor Gas Fireplace Specification Tools from Fireside Hearth & Home\">Lanai 48 Outdoor Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1xm8PSLt32oyJ1vXoke32VihaLUKAxYB4?usp=share_link\" target=\"_blank\" title=\"Lanai 48 See-Through Outdoor Gas Fireplace Specification Tools from Fireside Hearth & Home\">Lanai 48 See-Through Outdoor Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1_8RlL0Zs2GOcUiUXd5lXcXlZXAxCyicb?usp=share_link\" target=\"_blank\" title=\"Lanai 60 Outdoor Gas Fireplace Specification Tools from Fireside Hearth & Home\">Lanai 60 Outdoor Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "bc49add3-df5d-44c5-8aed-c6a54364f379": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "MONTANA OUTDOOR WOOD FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1HHxvvv7q624SWJ74SYudOq3aUpzwZBiz?usp=share_link\" target=\"_blank\" title=\"Montana 36 Outdoor Wood Fireplace Specification Tools from Fireside Hearth & Home\">Montana 36 Outdoor Wood Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1qcXIEMKENFs9-y3Ae4SeEVwOJzAzUpE9?usp=share_link\" target=\"_blank\" title=\"Montana 42 Outdoor Wood Fireplace Specification Tools from Fireside Hearth & Home\">Montana 42 Outdoor Wood Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__e4967dd3-7ebc-4607-a2a9-edc2d2f9a6d2-1671548820c3de03e2-0",
+        "template--16629090287846__e4967dd3-7ebc-4607-a2a9-edc2d2f9a6d2-1671548820c3de03e2-1",
+        "bc49add3-df5d-44c5-8aed-c6a54364f379"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "66c9f342-7186-44a6-98fc-e1b97960eafb": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090287846__66c9f342-7186-44a6-98fc-e1b97960eafb-1671548820c3de03e2-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "TWILIGHT SEE-THROUGH OUTDOOR GAS FIREPLACE",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1I2_mc-0n8Qw1nvctg4eaFvSNtSr_zBF_?usp=share_link\" target=\"_blank\" title=\"Twilight See-Through Outdoor Gas Fireplace Specification Tools from Fireside Hearth & Home\">Twilight See-Through Outdoor Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1HESrskTnO8wM2MT5ZGaDqUNYBdGyZsG5?usp=share_link\" target=\"_blank\" title=\"Twilight Modern See-Through Gas Fireplace Specification Tools from Fireside Hearth & Home\">Twilight Modern See-Through Outdoor Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "template--16629090287846__66c9f342-7186-44a6-98fc-e1b97960eafb-1671548820c3de03e2-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "VILLA GAS OUTDOOR GAS FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1EAucxDB6nFI-poa4G0k2vm8pu_QZ_Ln-?usp=share_link\" target=\"_blank\" title=\"Villa Gas 36 Outdoor Gas Fireplace Specification Tools from Fireside Hearth & Home\">Villa Gas 36 Outdoor Gas Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1bzD4osyO9-quC0y5wCD9W-sSyJdQClYq?usp=share_link\" target=\"_blank\" title=\"Villa Gas 36 Outdoor Gas Fireplace Specification Tools from Fireside Hearth & Home\">Villa Gas 42 Outdoor Gas Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        },
+        "587f8ec8-17ca-44dd-a3dd-53dec11d4ec0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "VILLAWOOD OUTDOOR WOOD FIREPLACE SERIES",
+            "heading_size": "regular_text",
+            "text": "<p><a href=\"https://drive.google.com/drive/folders/1pawqH_GcOLq7bidGvsMleDoKQvJISvpN?usp=share_link\" target=\"_blank\" title=\"Villawood 36 Outdoor Wood Fireplace Specification Tools from Fireside Hearth & Home\">Villawood 36 Outdoor Wood Fireplace</a></p><p><a href=\"https://drive.google.com/drive/folders/1TN3x3DMpQJFFcgwV-06dvtjypOuVTjAV?usp=share_link\" target=\"_blank\" title=\"Villawood 42 Outdoor Wood Fireplace Specification Tools from Fireside Hearth & Home\">Villawood 42 Outdoor Wood Fireplace</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "quote"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090287846__66c9f342-7186-44a6-98fc-e1b97960eafb-1671548820c3de03e2-0",
+        "template--16629090287846__66c9f342-7186-44a6-98fc-e1b97960eafb-1671548820c3de03e2-1",
+        "587f8ec8-17ca-44dd-a3dd-53dec11d4ec0"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16d6103b-6db6-47f2-8b4b-9c699943c2a1",
+    "188235cf-0fd7-448e-8a57-17fc57513043",
+    "05640f4b-70d9-4904-8b32-ad399c88d0bc",
+    "37b6ea31-5917-41c2-9c50-5fe19c7b9696",
+    "22c7886d-2f02-4d93-ace8-be7320a01e5b",
+    "4317c7c5-24b7-4f46-b7c0-8f18192a1e47",
+    "f2322bc2-41da-410c-892f-b7ef14c01352",
+    "38aa139b-3f84-43ff-968a-323d6a4c33c7",
+    "6c7ddb2a-c3fc-49c6-b64a-626f051c1bca",
+    "f5c3fa0c-f8ca-4c47-b159-06388a4e6a39",
+    "375a2dca-97d1-4903-b287-50ebf7723af5",
+    "21d589dd-3a9b-436d-82ea-f05d029d335c",
+    "1baa5d0f-f9a0-4bf1-a650-b616b7621556",
+    "e4967dd3-7ebc-4607-a2a9-edc2d2f9a6d2",
+    "66c9f342-7186-44a6-98fc-e1b97960eafb"
+  ]
+}

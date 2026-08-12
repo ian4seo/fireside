@@ -1,0 +1,261 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "33b8cc99-c0e5-409a-95c5-7c13ae075441": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "",
+        "sub-text": "",
+        "bg-img": "shopify://shop_images/Gather_at_home_sale_2024.png",
+        "view-btn-link": "https://fireside.com/pages/request-coupon",
+        "view-btn": "Get Offers",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "a28d27eb-de03-4870-8543-1fd041b46239": {
+      "type": "page-title-subtitle",
+      "settings": {
+        "heading": "Save up to $1,200 during the \"Gather at Home\" Sale!",
+        "sub_text": "<h3>The more you buy, the more you save! Instant savings off project total happening now through September 21, 2024!* Visit our showroom on Watts Road for details!</h3><h3></h3><p>*Qualifying Purchases include Gas Fireplaces, Gas Inserts, and related components</p>",
+        "text_align": "text-center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "39859915-3089-4338-9597-d1f42ac5d6e4": {
+      "type": "image-text",
+      "blocks": {
+        "template--16718379417830__39859915-3089-4338-9597-d1f42ac5d6e4-image-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/State_fair_landing_page_-_early_buy_offer.png",
+            "image_crop": "none",
+            "title": "LIMITED TIME OFFER | Free Outdoor Greatroom Company Stonefire Fire Table",
+            "text": "<p><a href=\"https://fireside.com/collections/gas-fireplaces-gas-inserts?view=boost-pfs-original\" title=\"https://fireside.com/collections/gas-fireplaces-gas-inserts?view=boost-pfs-original\">When you purchase a gas insert or gas fireplace with installation! Valid through August 22! For a limited time only and while supplies last. Restrictions apply.</a></p>",
+            "button_label": "Shop Now",
+            "link": "https://fireside.com/collections/gas-fireplaces-gas-inserts?view=boost-pfs-original",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16718379417830__39859915-3089-4338-9597-d1f42ac5d6e4-image-1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "3e840841-0498-412f-b1b5-59ee7acff9c2": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": false,
+        "image": "shopify://shop_images/Untitled_design_-_2023-08-03T134701.634.png",
+        "pretext": "",
+        "title": "WIN A FIRE TABLE!",
+        "subtitle": "<p>Enter below for your chance to win an Outdoor Greatroom Fire Table.</p><p>View <a href=\"https://fireside.com/pages/official-contest-rules\" target=\"_blank\" title=\"https://fireside.com/pages/official-contest-rules\">Official Contest Rules</a>.</p>",
+        "button1": "Enter Here",
+        "button1_link": "https://fireside.com/pages/giveaway",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "53cb320a-17b2-4b72-86e6-78a0e108997d": {
+      "type": "divider",
+      "disabled": true,
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "499a9213-05f9-4ea1-bfc1-bfbf3fe2c780": {
+      "type": "collection-list",
+      "blocks": {
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-1": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "save-200-on-1-500-1-999"
+          }
+        },
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-2": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "300-off-2-000-2-999"
+          }
+        },
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-3": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "500-off-3-000-3-999"
+          }
+        },
+        "4349e2df-5d70-4810-b348-6f987ebe4c88": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "700-off-4-000-4-999"
+          }
+        },
+        "66946347-c7c9-4008-b866-39aea45fe1f4": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "1-000-off-6-000-6-999"
+          }
+        },
+        "3a665c28-f3d8-4b1f-8086-7eaf27efc753": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "1-200-off-7-000"
+          }
+        }
+      },
+      "block_order": [
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-1",
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-2",
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-3",
+        "4349e2df-5d70-4810-b348-6f987ebe4c88",
+        "66946347-c7c9-4008-b866-39aea45fe1f4",
+        "3a665c28-f3d8-4b1f-8086-7eaf27efc753"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Save up to $1,200",
+        "align_height": false,
+        "collection_height": 400,
+        "frontpage_collections_per_row": 3,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "2a8fd153-a81a-4ede-b0ab-049679d180c6": {
+      "type": "page-title-subtitle",
+      "disabled": true,
+      "settings": {
+        "heading": "More Ways to Save",
+        "sub_text": "",
+        "text_align": "text-center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "af0447b1-9541-4998-9423-574a634d4b10": {
+      "type": "image-text",
+      "blocks": {
+        "template--16718379417830__af0447b1-9541-4998-9423-574a634d4b10-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DAR-1224-EBG-K_FlameD_Glass_Waterfall.jpg",
+            "image_crop": "none",
+            "title": "15% Off Outdoor Greatroom Company Fireplaces, Pits & Tables",
+            "text": "",
+            "button_label": "Shop Now",
+            "link": "https://fireside.com/collections/outdoor-greatroom",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--16718379417830__af0447b1-9541-4998-9423-574a634d4b10-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/large-P42iTC_Room_Set_Straight_Final_copy.jpg",
+            "image_crop": "none",
+            "title": "10% Off Wood & Pellet Burning Units, Gas Logs, & Gas Stoves",
+            "text": "",
+            "button_label": "Shop Now",
+            "link": "https://fireside.com/collections/10-off-wood-pellet-burning-units-gas-logs-gas-stoves?view=boost-pfs-original",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16718379417830__af0447b1-9541-4998-9423-574a634d4b10-image-1",
+        "template--16718379417830__af0447b1-9541-4998-9423-574a634d4b10-image-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "11fd0e84-a46b-4715-874f-a160c2a7ab56": {
+      "type": "custom-html",
+      "settings": {
+        "custom_html": "<!--***************************************************************************************************************************\n        INSTRUCTIONS/NOTES:\n        - Copy & paste the code below into the specified locations within your site and files.\n        - If you are using a CMS system like Wordpress, Wix etc. follow their recommendations for inserting the proper references.\n        - The CSS is provided to give the code structure but the majority of the styling will be inherited from your site.\n        - You can double-click this file to confirm that the code is working correctly.\n    ****************************************************************************************************************************-->\n    <!-- library references. Copy & Paste this code into the body of your html page -->\n    <script src=\"https://code.jquery.com/jquery-3.6.3.min.js\" integrity=\"sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=\" crossorigin=\"anonymous\"></script>\n    <script src=\"https://code.jquery.com/jquery-migrate-3.4.0.min.js\" integrity=\"sha256-mBCu5+bVfYzOqpYyK4jm30ZxAZRomuErKEFJFIyrwvM=\" crossorigin=\"anonymous\"></script>\n    <script src=\"https://www.fireplaces.com/syndication/runtime/client/HHTSyndicationJS.js\" type=\"text/javascript\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"https://www.fireplaces.com/syndication/runtime/client/HHTSyndicationCSS.css\">\n\n    <!--This is the JSON configuration that tells the system how to render your selections -->\n    <div id=\"site_configuration\">{\"SiteKey\":\"0013000000MqUg9AAF\",\"Implementation\":\"Coupon\",\"CatalogIncludeCoupon\":false,\"CatalogIncludeContact\":false,\"CatalogIncludeProductFilter\":false,\"CustomIncludeProductFilter\":false,\"CustomIncludeCoupon\":false,\"CustomIncludeContact\":false,\"CustomBrandFilter\":null,\"CurrentUrl\":null,\"CurrentDomain\":null,\"HHTDomain\":\"https://www.fireplaces.com\",\"HHTDataDomain\":\"https://data.hearthnhome.com\",\"Filters\":null,\"AdHocProducts\":null,\"ADHOCIncludeCoupon\":false,\"ADHOCIncludeContact\":false,\"CustomCategory\":null}</div>\n\n    <script>\n        $j(document).ready(function () {\n            HHT.LoadConfig();\n            SyndicationUtility.loadHtml();\n        });\n    </script>\n\n    \n\n    <!-- Enter this code anywhere you wish within the body of your HTML -->\n    <div id=\"HHTSyndicatedCatalogContent\"></div>",
+        "no-top-padding": false,
+        "show-wood-bg": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "33b8cc99-c0e5-409a-95c5-7c13ae075441",
+    "main",
+    "a28d27eb-de03-4870-8543-1fd041b46239",
+    "39859915-3089-4338-9597-d1f42ac5d6e4",
+    "3e840841-0498-412f-b1b5-59ee7acff9c2",
+    "53cb320a-17b2-4b72-86e6-78a0e108997d",
+    "499a9213-05f9-4ea1-bfc1-bfbf3fe2c780",
+    "2a8fd153-a81a-4ede-b0ab-049679d180c6",
+    "af0447b1-9541-4998-9423-574a634d4b10",
+    "11fd0e84-a46b-4715-874f-a160c2a7ab56"
+  ]
+}

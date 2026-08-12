@@ -1,0 +1,277 @@
+{% style %}
+
+ .banner {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+ .banner img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Main container styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -50px; /* Overlapping effect */
+}
+
+.left-column {
+  flex: 0 0 34%;
+  padding: 20px;
+}
+
+.right-column {
+  flex: 0 0 60%;
+  padding: 20px;
+}
+
+/* Location block styles */
+.location-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.location-info {
+  margin-bottom: 10px;
+}
+
+.location-info h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.location-info p {
+  font-size: 16px;
+  color: #555;
+}
+
+.map-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Buttons styles */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Hours styles */
+.hours h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.hours ul {
+  list-style-type: none;
+}
+
+.hours ul li {
+  margin: 5px 0;
+}
+
+/* Right column service block styles */
+.service-block {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.location-banner {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.location-banner h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.service-block div {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.service-block h3 {
+  font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    flex: 0 0 100%;
+    padding: 10px;
+  }
+
+  .banner img {
+    height: 200px;
+  }
+}
+
+{% endstyle %}
+
+    <div class="banner">
+      <img src="{{ section.settings.bg-image | image_url }}" alt="{{ section.settings.bg-image.media.alt }}">
+    </div>
+
+
+  <div class="container" style="max-width: 1200px">
+    <div class="left-column">
+      <div class="location-block">
+        <div class="location-info">
+          <h2>{{ section.settings.citystate }} </h2>
+          <p>{{ section.settings.fulladdress }} </p>
+        </div>
+        <div class="map-image">
+          <img src="{{ section.settings.map-img | image_url }}" alt="decorative Map Location">
+        </div>
+      </div>
+      
+      <div class="buttons">
+        <button class="call-store">Call Store {{ section.settings.phonenumber }} </button>
+        <button ahref="{{ section.settings.maplink }}" class="get-directions">Get Directions</button>
+      </div>
+
+      <div class="hours">
+{{ section.settings.hours }} 
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="service-block">
+        <div class="location-banner">
+          <h2>{{ section.settings.locationtitle }} </h2>
+        </div>
+        <div class="design-services">
+          <h3>{{ section.settings.infoarea1 }} </h3>
+        </div>
+        <div class="fireplace-service">
+          <h3>{{ section.settings.infoarea2 }} </h3>
+        </div>
+        <div class="fireplace-service">
+          <h3>{{ section.settings.infoarea3 }} </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+{% schema %}
+  {
+  "name": "Location Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg-image",
+      "label": "bg-image",
+      "info": "background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "map-img",
+      "label": "map-img",
+      "info": "location map image"
+    },
+    {
+      "type": "text",
+      "id": "citystate",
+      "label": "cityState",
+      "default": "Maple Grove, MN",
+      "placeholder": "Maple Grove, MN",
+      "info": "City and state text"
+    },
+    {
+      "type": "text",
+      "id": "fulladdress",
+      "label": "fullAddress",
+      "default": "7937 Wedgewood Ln N, Maple Grove, MN 55369",
+      "placeholder": "7937 Wedgewood Ln N, Maple Grove, MN 55369",
+      "info": "full street address text"
+    },
+    {
+      "type": "textarea",
+      "id": "phonenumber",
+      "label": "phoneNumber",
+      "default": "(123)-123-1234",
+      "placeholder": "(123)-123-1234",
+      "info": "call store phone nmuber"
+    },
+    {
+      "type": "url",
+      "id": "maplink",
+      "label": "mapLink",
+      "info": "Get Directions button"
+    },
+    {
+      "type": "html",
+      "id": "hours",
+      "label": "hours",
+      "info": "location hours"
+    },
+    {
+      "type": "text",
+      "id": "locationtitle",
+      "label": "locationTitle",
+      "default": "(Location) Fireplace Store & Service",
+      "placeholder": "(Location) Fireplace Store & Service",
+      "info": "Location Name"
+    },
+    {
+      "type": "html",
+      "id": "infoarea1",
+      "label": "infoArea1",
+      "default": "info area 1",
+      "placeholder": "info area 1",
+      "info": "info area 1"
+    },
+    {
+      "type": "html",
+      "id": "infoarea2",
+      "label": "infoArea2",
+      "default": "info area 2",
+      "placeholder": "info area 2",
+      "info": "info area 2"
+    },
+    {
+      "type": "html",
+      "id": "infoarea3",
+      "label": "infoArea3",
+      "default": "info area 3",
+      "placeholder": "info area 3",
+      "info": "info area 3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Location Banner"
+    }
+  ]
+}  
+{% endschema %}

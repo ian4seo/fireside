@@ -1,0 +1,1077 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "1655838711638f4cc6": {
+      "type": "page-banner-alt",
+      "settings": {
+        "heading": "Before & After Project Photos",
+        "image": "shopify://shop_images/project_gallery.jpg",
+        "text_alignment": "center",
+        "site_width": "mbl-site-width",
+        "css_class": "top-space",
+        "custom_css": ".top-space {margin-top:4em}"
+      }
+    },
+    "1658288731870e4539": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165828873069774f59-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_before_5.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165828873069774f59-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_after_2.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165828873069774f59-0",
+        "165828873069774f59-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Before & After: Convert Wood to Gas",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658288995869ab5be": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165828899544b88e13-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_before_2.png",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165828899544b88e13-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_after_6.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165828899544b88e13-0",
+        "165828899544b88e13-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658288848d2a90d88": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165828884805e13677-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_before_7.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165828884805e13677-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_after_5.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165828884805e13677-0",
+        "165828884805e13677-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16582893381248f1ba": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658289338c4f39f03-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_before_10.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658289338c4f39f03-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_after_7.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658289338c4f39f03-0",
+        "1658289338c4f39f03-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658287578846cba81": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165828757866987ffb-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_after_1.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165828757866987ffb-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_before_1.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165828757866987ffb-0",
+        "165828757866987ffb-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165828890856afa8b2": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658288907dd3a0916-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_before_6.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658288907dd3a0916-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_after_4.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658288907dd3a0916-0",
+        "1658288907dd3a0916-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165828920766c9a69d": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658289207720928a7-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_before_3.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658289207720928a7-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_after_3.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658289207720928a7-0",
+        "1658289207720928a7-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16582912776cfcedf5": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658291277704b3e44-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_before_11.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658291277704b3e44-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/convert_after_10.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658291277704b3e44-0",
+        "1658291277704b3e44-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165583887842e85855": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1655838878c52f3b97-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/Add_Schmaltz_Before_1.jpg",
+            "heading-margin-top": 20,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1655838878c52f3b97-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/Add_Schmaltz_After.jpg",
+            "heading-margin-top": 20,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1655838878c52f3b97-0",
+        "1655838878c52f3b97-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Before & After: Add A Fireplace",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658289538ea77bf09": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658289538642e0b1d-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/add_before_1.png",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658289538642e0b1d-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/add_after_2.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658289538642e0b1d-0",
+        "1658289538642e0b1d-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1655838811116a99da": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165583881084f89f3c-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/Add_Yurovich_Before_1.jpg",
+            "heading-margin-top": 20,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165583881084f89f3c-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/Add_Yurovich_After_3.jpg",
+            "heading-margin-top": 20,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165583881084f89f3c-0",
+        "165583881084f89f3c-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1657883414a27b5ee9": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1657883414918cf1b3-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/add_before_2.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1657883414918cf1b3-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/add_after_3.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1657883414918cf1b3-0",
+        "1657883414918cf1b3-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658289804992b7394": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658289804227e1964-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_before_2.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658289804227e1964-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_after_2.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658289804227e1964-0",
+        "1658289804227e1964-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Before & After: Replace A Fireplace",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16582901757433887c": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658290175c730de40-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_before_6.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658290175c730de40-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_after_3.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658290175c730de40-0",
+        "1658290175c730de40-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658290798b8c8ea2c": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658290798301b6345-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_before_4.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658290798301b6345-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_after_6.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658290798301b6345-0",
+        "1658290798301b6345-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658290681a806ea5d": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658290681e429020e-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_before_1.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1658290681e429020e-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_after_1.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658290681e429020e-0",
+        "1658290681e429020e-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658290742ed83757d": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165829074295d6e04a-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_before_5.jpg",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165829074295d6e04a-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/replace_after_5.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165829074295d6e04a-0",
+        "165829074295d6e04a-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658291430e926d762": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "2b953bf0-c804-4cbc-b819-e90a7d157b0d": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/before_fireplace_replacement.png",
+            "heading-margin-top": 0,
+            "title": "BEFORE",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "e54e8c7d-3709-48fb-96fb-d95e47c650a6": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/600mod.jpg",
+            "heading-margin-top": 0,
+            "title": "AFTER",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "2b953bf0-c804-4cbc-b819-e90a7d157b0d",
+        "e54e8c7d-3709-48fb-96fb-d95e47c650a6"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1655838711638f4cc6",
+    "1658288731870e4539",
+    "1658288995869ab5be",
+    "1658288848d2a90d88",
+    "16582893381248f1ba",
+    "1658287578846cba81",
+    "165828890856afa8b2",
+    "165828920766c9a69d",
+    "16582912776cfcedf5",
+    "165583887842e85855",
+    "1658289538ea77bf09",
+    "1655838811116a99da",
+    "1657883414a27b5ee9",
+    "1658289804992b7394",
+    "16582901757433887c",
+    "1658290798b8c8ea2c",
+    "1658290681a806ea5d",
+    "1658290742ed83757d",
+    "1658291430e926d762"
+  ]
+}

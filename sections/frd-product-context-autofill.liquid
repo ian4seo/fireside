@@ -1,0 +1,123 @@
+{% comment %}
+  frd-product-context-autofill.liquid
+  ------------------------------------------------------------
+  Reads product_title and product_sku from the URL's query
+  string and writes them into the matching Powerful Form
+  Builder (Globo) hidden fields on this page.
+
+  Why this is trickier than plain HTML:
+  Globo does NOT use the field name you configured as the
+  input's `name` attribute. Every hidden input is emitted as
+  <input name="hidden-N"> with an auto-incrementing index. The
+  only stable identifier is the user-facing label, which is
+  exposed as `data-label` on the <label> and its .label-content
+  span inside the wrapping <div class="globo-form-control"
+  data-type="hidden">.
+
+  So this script:
+    - waits for .globo-form-control[data-type="hidden"] elements
+      to appear (form mounts async after DOMContentLoaded),
+    - walks each one and matches its label to a known mapping
+      (Product Title / Product SKU),
+    - writes the corresponding query-param value into the
+      nested <input> and dispatches input+change events so
+      Globo's internal state picks it up.
+
+  Stops retrying once both fields are filled OR 15s elapse.
+{% endcomment %}
+
+<script>
+  (function () {
+    /* Mapping: Globo label text  ->  URL query parameter name.
+       These labels are what shows on the form-builder config screen
+       and are emitted as data-label + visible text on each field. */
+    var MAPPINGS = [
+      { label: 'Product Title', param: 'product_title' },
+      { label: 'Product SKU',   param: 'product_sku'   }
+    ];
+    var DEADLINE_MS = 15000;
+
+    function start() {
+      var params = new URLSearchParams(window.location.search);
+
+      /* Build { "Product Title": "...", "Product SKU": "..." }
+         — only for params that were present on the URL. */
+      var values = {};
+      MAPPINGS.forEach(function (m) {
+        var v = params.get(m.param);
+        if (v) values[m.label] = v;
+      });
+      if (!Object.keys(values).length) return;
+
+      function labelOf(control) {
+        var el = control.querySelector('.label-content') ||
+                 control.querySelector('.globo-label');
+        if (!el) return '';
+        return (el.getAttribute('data-label') || el.textContent || '').trim();
+      }
+
+      function fill() {
+        var controls = document.querySelectorAll(
+          '.globo-form-control[data-type="hidden"]'
+        );
+        if (!controls.length) return false;
+
+        var remaining = Object.keys(values).length;
+        controls.forEach(function (control) {
+          var label = labelOf(control);
+          if (!values.hasOwnProperty(label)) return;
+
+          var input = control.querySelector('input');
+          if (!input || input.__pcaFilled) {
+            if (input && input.__pcaFilled) remaining--;
+            return;
+          }
+
+          input.value = values[label];
+          /* Mirror to the attribute too — some form frameworks
+             re-read from the attribute on submit. */
+          input.setAttribute('value', values[label]);
+          input.dispatchEvent(new Event('input',  { bubbles: true }));
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+          input.__pcaFilled = true;
+          remaining--;
+        });
+        return remaining === 0;
+      }
+
+      if (fill()) return;
+
+      if (typeof window.MutationObserver === 'function') {
+        var deadline = Date.now() + DEADLINE_MS;
+        var mo = new MutationObserver(function () {
+          if (fill() || Date.now() > deadline) mo.disconnect();
+        });
+        mo.observe(document.body, { childList: true, subtree: true });
+        setTimeout(function () { mo.disconnect(); }, DEADLINE_MS);
+      }
+    }
+
+    if (document.readyState !== 'loading') {
+      start();
+    } else {
+      document.addEventListener('DOMContentLoaded', start);
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "FRD Context Autofill",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Auto-populates Powerful Form Builder hidden fields from URL query params by matching their label text (Product Title, Product SKU). Retries via MutationObserver because the form mounts async."
+    }
+  ],
+  "presets": [
+    {
+      "name": "FRD Context Autofill"
+    }
+  ]
+}
+{% endschema %}

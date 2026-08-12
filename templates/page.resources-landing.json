@@ -1,0 +1,270 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "frd_short_hero_EJ9ekn": {
+      "type": "frd-short-hero",
+      "name": "Short Hero",
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": false,
+        "image": "shopify://shop_images/Rectangle_1_1.png",
+        "top_button_1": "Gas Inserts",
+        "top_button_1_link": "shopify://pages/upgrade-your-fireplace",
+        "top_button_2": "Gallery",
+        "top_button_2_link": "https://fireside.com/pages/gallery",
+        "top_button_3": "Resources",
+        "top_button_3_link": "https://fireside.com/pages/gas-insert-resources",
+        "title": "RESOURCES",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button2": "",
+        "button2_link": "",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_color": ""
+      }
+    },
+    "frd_image_text_gNrcGJ": {
+      "type": "frd-image-text",
+      "blocks": {
+        "image_WpeBDp": {
+          "type": "image",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Rectangle_6_47a376d4-f5cb-47cc-aed5-f6682f396537.png",
+            "image_crop": "none",
+            "video_url": "",
+            "video_muted": true,
+            "video_loop": true,
+            "video_controls": true,
+            "title": "IS A GAS INSERT WORTH IT?",
+            "text": "<p>Compared to other home renovation projects, an insert is less expensive and and is ready to use and enjoy, faster. Plus, our inserts are 93 percent efficient, meaning they save that amount of hot or cold air otherwise lost out your chimney. It's an easy update, handled by pros, that will leave you wondering why you didn't do it sooner.<br/><br/></p>",
+            "button_label": "",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_WpeBDp"
+      ],
+      "name": "Image or Video with text",
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "frd_dark_featured_multicolumn_EnnR4K": {
+      "type": "frd-dark-featured-multicolumn",
+      "blocks": {
+        "logo_image_DjT8ht": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_7_294af253-4851-4767-a7b2-e772df79405c.png",
+            "link": "",
+            "heading": "GAS",
+            "subheading": "FIREPLACES",
+            "description": "Offer efficient heat, easy operation, and cozy ambiance with minimal maintenance."
+          }
+        },
+        "logo_image_EpDrwb": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_18_b95ad734-04f2-4b67-aeb8-66ba4766207c.png",
+            "link": "",
+            "heading": "WOOD",
+            "subheading": "FIREPLACES",
+            "description": "Provide high heat, classic charm, and the cozy feel of a real wood-burning fire."
+          }
+        },
+        "logo_image_Ywemdf": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_19_a0682983-9fc0-4788-908b-ee0e3993d0b8.png",
+            "link": "",
+            "heading": "ELECTRIC",
+            "subheading": "FIREPLACES",
+            "description": "Deliver hassle-free warmth, modern style, and the ambiance of a fire without the need for venting or fuel."
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_DjT8ht",
+        "logo_image_EpDrwb",
+        "logo_image_Ywemdf"
+      ],
+      "name": "Dark Featured Multicolumn",
+      "settings": {
+        "title": "FIREPLACE OPTIONS"
+      }
+    },
+    "frd_image_video_slider_rXtjPm": {
+      "type": "frd-image-video-slider",
+      "blocks": {
+        "slider_czBLmx": {
+          "type": "slider",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/LionHouse__298.jpg",
+            "video_url": "",
+            "headline": "Consultation",
+            "description": "<p>Our goal is to make your experience easy and above all - fun! We offer 3 simple ways to start your fireplace project with a free sales consult.</p>"
+          }
+        },
+        "slider_x6mUxX": {
+          "type": "slider",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/LionHouse__216.jpg",
+            "video_url": "",
+            "headline": "Installation & Coordination",
+            "description": "<p>We’ll send our friendly pros to your place. They’ll measure and confirm options with you, providing a more accurate and detailed project estimate and timeline. Then a licensed contractor will run a gas line and electric as needed. Our pros will install your gas insert in less than a day (typically). No drywall dust, major construction.<br/><br/></p>"
+          }
+        },
+        "slider_AAykYC": {
+          "type": "slider",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/LionHouse__329.jpg",
+            "video_url": "",
+            "headline": "Enjoy Your Insert!",
+            "description": "<p>In the final stages, the team will ensure the gas, fireplace and remote are functioning properly and walk you through the features of your new fireplace.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "slider_czBLmx",
+        "slider_x6mUxX",
+        "slider_AAykYC"
+      ],
+      "name": "Image Video Slider",
+      "settings": {
+        "title": "WHAT TO EXPECT",
+        "bg_color": "#ffffff",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "css_id": "what-to-expect",
+        "custom_css": ""
+      }
+    },
+    "frd_landing_faqs_T6CfUG": {
+      "type": "frd-landing-faqs",
+      "blocks": {
+        "content_kgNa3D": {
+          "type": "content",
+          "settings": {
+            "title": "What are the benefits of upgrading to a gas insert?",
+            "answer": "<p>Gas inserts provide higher heat efficiency, lower heating costs, and cleaner indoor air. They’re easier to operate with just the push of a button and require minimal maintenance. Plus, their sleek designs and cozy flames make them both practical and stylish.</p>"
+          }
+        },
+        "content_PiATVf": {
+          "type": "content",
+          "settings": {
+            "title": "What should I expect during the consultation and installation process?",
+            "answer": "<p>We take care of everything.We’ll send our friendly pros to your place. They’ll measure and confirm options with you, providing a more accurate and detailed project estimate and timeline. Then a licensed contractor will run a gas line and electric as needed. Our pros will install your gas insert in less than a day (typically). No drywall dust, major construction.</p>"
+          }
+        },
+        "content_frgVt8": {
+          "type": "content",
+          "settings": {
+            "title": "Are gas inserts safe to use around kids and pets?",
+            "answer": "<p>Gas fireplace inserts are a safe solution when installed properly. Because gas inserts are a sealed system, there is zero direct contact with an open flame .</p>"
+          }
+        },
+        "content_hKc48K": {
+          "type": "content",
+          "settings": {
+            "title": "Is a gas fireplace insert worth it?",
+            "answer": "<p>The average cost of a Heat & Glo insert, plus installation, is around $6,500 but will vary depending on your home. Compared to other home renovation projects, an insert is less expensive and is ready to use and enjoy, faster. Plus, a gas fireplace can increase a home’s value up to 12 percent.</p>"
+          }
+        },
+        "content_j3PEVX": {
+          "type": "content",
+          "settings": {
+            "title": "What if I don't currently have a fireplace?",
+            "answer": "<p>We have all kinds of fireplace solutions. While an insert only accommodates an existing, wood-burning fireplace, we offer gas, wood and electric fireplaces that can be installed at any time. The installation and construction process will be different depending on what fireplace you choose.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_kgNa3D",
+        "content_PiATVf",
+        "content_frgVt8",
+        "content_hKc48K",
+        "content_j3PEVX"
+      ],
+      "name": "Landing FAQs",
+      "settings": {
+        "less-margin": false,
+        "title": "FAQs"
+      }
+    },
+    "frd_banner_multi_buttons_CKD73L": {
+      "type": "frd-banner-multi-buttons",
+      "name": "Banner Multi Buttons",
+      "settings": {
+        "heading": "DOWNLOAD OUR FREE GUIDES",
+        "sub_text": "",
+        "button_label": "DESIGN GUIDE",
+        "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Transform_Your_Fireplace_Design_Guide.pdf?v=1758573029",
+        "button_label_2": "PLANNING GUIDE",
+        "button_link_2": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Planning_Guide.pdf?v=1753291556",
+        "button_label_3": "INSTALL CHECKLIST",
+        "button_link_3": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/HHT-install-checklist.pdf?v=1754326069",
+        "background_image": "shopify://shop_images/Rectangle_11.png",
+        "button_bg_color": "#e9841d",
+        "text_align": "text-center"
+      }
+    },
+    "1680209685bfc4567e": {
+      "type": "apps",
+      "blocks": {
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTI2OTY3\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "frd_short_hero_EJ9ekn",
+    "frd_image_text_gNrcGJ",
+    "frd_dark_featured_multicolumn_EnnR4K",
+    "frd_image_video_slider_rXtjPm",
+    "frd_landing_faqs_T6CfUG",
+    "frd_banner_multi_buttons_CKD73L",
+    "1680209685bfc4567e"
+  ]
+}

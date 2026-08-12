@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "1655836482ae115aa0": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165583634718ca0fda": {
+      "type": "apps",
+      "blocks": {
+        "f15a6b53-a674-4808-b6d1-2d32af9d1204": {
+          "type": "shopify://apps/mahina-event-calendar-app/blocks/app-block/e11e7f2a-2a3e-496c-81db-93ba18da671c",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "f15a6b53-a674-4808-b6d1-2d32af9d1204"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "1655836482ae115aa0",
+    "165583634718ca0fda"
+  ]
+}

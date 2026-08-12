@@ -1,0 +1,169 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "165307706254106f59": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "heading": "Fireplace Heat Management Options",
+        "heading_size": "regular_text",
+        "content": "<p>Gas fireplaces with heat management give the most flexibility for enjoying a fire.</p>",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/fireside_heat_management_solutions_fireplaces.png",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165307744338ae2a9a": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 30,
+        "padding_bottom": 60,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Fireside offers gas fireplaces with a wide array of solutions to enjoy a fire year-round, place TV or artwork safely above the fireplace, send heat to warm other rooms, and run wall materials up to the edge of the fireplace for a truly clean finish.</p>",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "open-new-window": false,
+        "button_link": "",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "orange",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "ab256f69-042a-4335-9999-0106a9ce7c18": {
+      "type": "image-text",
+      "blocks": {
+        "6dfdb8d5-57da-417e-b79f-bf42e8e560b4": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_crop": "none",
+            "title": "STELLAR",
+            "text": "<p>Custom designs available. </p>",
+            "button_label": "Watch Video",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "Browse Fireplaces",
+            "link-two": "shopify://collections/stellar-by-heat-glo",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--16708699455718__ab256f69-042a-4335-9999-0106a9ce7c18-167770025241c13c2f-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside_heat_out_kit.png",
+            "image_crop": "none",
+            "title": "Heat Out Kit: Enjoy Fireplace Ambiance Year-Round",
+            "text": "<p>When you don’t want extra warmth inside your home, transfer up to 40 percent of it outside. You can enjoy your fireplace year-round—even in warmer weather or a milder climate. </p>",
+            "button_label": "Watch Video",
+            "link": "https://cdn.shopify.com/videos/c/o/v/16a80bddd7d340858186c457b3c05739.mp4",
+            "link-two-margin-top": 0,
+            "button_two_label": "Browse Compatible Fireplaces",
+            "link-two": "shopify://collections/heat-out-kit-compatible-fireplaces",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "c57d0b6c-b5be-476b-b5e6-2297b54058a8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside_heat_management_heat_zone.png",
+            "image_crop": "none",
+            "title": "Heat-Zone® Kit: Send Heat To Other Rooms",
+            "text": "<p>Enjoy your fire for hours without heat buildup while warming up other rooms. Keep your desired temperature, moving up to 50 percent of the warm air behind the walls to where you want it.</p>",
+            "button_label": "Watch Video",
+            "link": "https://cdn.shopify.com/videos/c/o/v/d6ab51f919024c7ebf7f384b7479fd90.mp4",
+            "link-two-margin-top": 0,
+            "button_two_label": "Browse Compatible Fireplaces",
+            "link-two": "shopify://collections/heat-zone-kit-compatible-fireplaces",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--16708699455718__ab256f69-042a-4335-9999-0106a9ce7c18-167770025241c13c2f-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside_heat_management_passive_heat.png",
+            "image_crop": "none",
+            "title": "Passive Heat: Decrease Clearances for TVs, Artwork & More",
+            "text": "<p>Disperse heat naturally (no fan) into the room, lowering surface temperatures so you can place a TV or artwork just 12\" above the fireplace with no mantel. Choose side, front or open-wall registers.</p>",
+            "button_label": "Watch Video",
+            "link": "https://cdn.shopify.com/videos/c/o/v/efee9584ffd54ad48d50aee7415ea46a.mp4",
+            "link-two-margin-top": 0,
+            "button_two_label": "Browse Compatible Fireplaces",
+            "link-two": "shopify://collections/passive-heat-compatible-fireplaces",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "6dfdb8d5-57da-417e-b79f-bf42e8e560b4",
+        "template--16708699455718__ab256f69-042a-4335-9999-0106a9ce7c18-167770025241c13c2f-1",
+        "c57d0b6c-b5be-476b-b5e6-2297b54058a8",
+        "template--16708699455718__ab256f69-042a-4335-9999-0106a9ce7c18-167770025241c13c2f-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "SIGN UP FOR OUR NEWSLETTER",
+        "newsletter_text": "<p>Be the first to get a sneak peek at the latest innovations in fireplace design and installation. Subscribe to our newsletter to view recent work, meet our designers, and inspire your next project. You'll also be the first to know about special promotions and exciting discounts to help you plan your fireplace.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165307706254106f59",
+    "165307744338ae2a9a",
+    "ab256f69-042a-4335-9999-0106a9ce7c18",
+    "newsletter"
+  ]
+}

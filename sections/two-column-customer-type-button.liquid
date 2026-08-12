@@ -1,0 +1,385 @@
+<script
+  type="application/json"
+  data-section-type="text-columns-with-images"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+{%- assign id = section.id -%}
+
+{% comment %} Content settings {% endcomment %}
+{%- assign blocks = section.blocks -%}
+{%- assign title = section.settings.title | escape -%}
+{%- assign sub_text = section.settings.sub_text | escape -%}
+{% comment %} End content settings {% endcomment %}
+
+{% comment %} Advanced {% endcomment %}
+{%- assign css_class = section.settings.css_class -%}
+{%- assign custom_css = section.settings.custom_css -%}
+
+{% comment %} Section specific CSS {% endcomment %}
+{% style %}
+  {%
+    render 'css-loop',
+    css: custom_css,
+    id: id
+  %}
+
+  .text-columns-with-images h2.heading { margin-top: 40px; margin-bottom: 40px; }
+  .text-columns-with-images .column-heading.regular_text { font-size: 19px; }
+  .text-columns-with-images .column-heading.large_text { font-size: 23px; }
+  .text-columns-with-images .sub-text { margin: 0 auto 55px; max-width: 600px; }
+  .block-wrap.no-image {}
+
+  section#shopify-section-{{ section.id }}{
+    background-color: {{ section.settings.section-bg }};
+	padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media screen and (max-width: 480px) {
+	section#shopify-section-{{ section.id }}{
+  	padding-top: {{ section.settings.mobile-padding-top }}px;
+      padding-bottom: {{ section.settings.mobile-padding-bottom }}px;
+    }
+  }
+
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+{% endstyle %}
+
+{% javascript %}
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+{% endjavascript %}
+
+<section class="text-columns-with-images section {{ css_class }} {% if section.settings.reveal-on == true %}reveal{% endif %}">
+  <div class="container">
+    {% if title != blank %}
+      <div class="one-whole column">
+        <h2 class="heading h1 minion-pro text-center">
+          {{ title }}
+        </h2>
+        {% if sub_text != blank %}
+          <p class="sub-text text-center">
+              {{ sub_text }}
+          </p>
+        {% endif %}
+        <div class="feature_divider"></div>
+      </div>
+    {% endif %}
+
+    {% if section.settings.accent_image != blank %}
+    <div class="accent-bg single bg-cover bg-center absolute" style="background-image:url('{{ section.settings.accent_image | img_url: 'master' }}')"></div>
+    {% endif %}
+
+    <div class="block-wrap flex flex-wrap hundred">
+     
+      {% for block in blocks %}
+        {% comment %} Content settings {% endcomment %}
+        {%- assign image = block.settings.image -%}
+        {% comment %} End content settings {% endcomment %}
+
+        <div class="{% render 'column-width', value: blocks.size %} column {% if blocks.size > 3 %}medium-down--one-half{% else %}medium-down--one-whole{% endif %} text-column" {{ block.shopify_attributes }}>
+          <div class="border-style--{{ block.settings.border_style }} text-align--{{ block.settings.align_text }}">
+          {% if block.settings.enable_image %}
+            {% if image != blank %}
+              {%
+                render 'image-element',
+                image: image.src,
+                alt: image.alt
+              %}
+            {% else %}
+              <p>
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </p>
+            {% endif %}
+          {% endif %}
+
+          {% if block.settings.title != blank %}
+            <h3 class="column-heading {{ block.settings.heading_size }} weight-normal">{{ block.settings.title | escape }}</h3>
+          {% endif %}
+
+          {% if block.settings.text != blank %}
+            <div class="rte-setting">
+              {{ block.settings.text }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+            {%- assign custom-customer-type = block.settings.customer-type -%}
+            <a href="{{ block.settings.button_link }}" data-customer-type="{{ custom-customer-type }}" class="customer-type text-columns-with-images__button global-button global-button--text">{{ block.settings.button_label | escape }}</a>
+          {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+      
+    </div>
+    <div class="is-flex is-justify-center is-align-center section is-width-wide">
+    	{% if section.settings.section_button_label != blank and section.settings.section_button_link != blank %}
+            <a href="{{ section.settings.section_button_link }}" class="text-columns-with-images__button global-button global-button--text text-center">{{ section.settings.section_button_label | escape }}</a>
+    	{% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Two Column Customer",
+  "tag": "section",
+  "class": "shopify-section--text-columns-with-images",
+  "settings": [
+	{
+    	"type": "header",
+    	"content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "reveal-on",
+      "label": "Use section animation",
+      "default": false
+    },
+    {
+    	"type": "range",
+    	"id": "padding_top",
+    	"label": "Desktop Top spacing",
+    	"min": 0,
+    	"max": 80,
+    	"default": 0,
+    	"unit": "px"
+    },
+    {
+    	"type": "range",
+    	"id": "padding_bottom",
+    	"label": "Desktop Bottom spacing",
+    	"default": 0,
+    	"min": 0,
+    	"max": 80,
+    	"unit": "px"
+    },
+    {
+    	"type": "range",
+    	"id": "mobile-padding-top",
+    	"label": "Mobile Bottom spacing",
+    	"default": 0,
+    	"min": 0,
+    	"max": 80,
+    	"unit": "px"
+    },
+    {
+    	"type": "range",
+    	"id": "mobile-padding-bottom",
+    	"label": "Mobile Bottom spacing",
+    	"default": 0,
+    	"min": 0,
+    	"max": 80,
+    	"unit": "px"
+    },
+	{
+      "type": "color",
+      "id": "section-bg",
+      "label": "Background Color"
+    },
+	{
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Text columns with images"
+    },
+    {
+      "type": "textarea",
+      "id": "sub_text",
+      "label": "Paragraph Text"
+    },
+	{
+      "type": "text",
+      "id": "section_button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "section_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "accent_image",
+      "label": "Accent Image"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Column",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_image",
+          "label": "Show image",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Add a title or tagline"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "default": "regular_text",
+          "options": [
+            {
+              "value": "regular_text",
+              "label": "Regular"
+            },
+            {
+              "value": "large_text",
+              "label": "Large"
+            }
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
+        },
+		{
+          "type": "select",
+          "id": "customer-type",
+          "label": "Customer Button Type",
+          "default": "homeowner",
+          "options": [
+            {
+              "value": "homeowner",
+              "label": "Homeowner"
+            },
+            {
+              "value": "professional",
+              "label": "Pro"
+            },
+			{
+              "value": "none",
+              "label": "None"
+            }]
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "align_text",
+          "label": "Text alignment",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "border_style",
+          "label": "Border style",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "quote",
+              "label": "Quote"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two Column Customer Type",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

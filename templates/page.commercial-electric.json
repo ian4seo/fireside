@@ -1,0 +1,321 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "165307706254106f59": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "Add Ambiance To Your Apartment With A Fireplace",
+        "heading_size": "regular_text",
+        "content": "",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/online-FCC_Simplifire_SFE_HowTo_Stills_highres-9567.png",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "dff358bf-4f8b-4ad0-ae0d-61cd4e34e856": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Electric Fireplaces from Fireside",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Electric fireplaces provide easy and safe instant ambiance for your apartment. They are easy to install, maintain and take with you since no framing, venting or gas lines are needed. Fireside has been installing and servicing fireplaces locally since 1951.</p>",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "open-new-window": false,
+        "button_link": "",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "82664409-7cc5-4967-9d7a-bce2a2444005": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16724634468582__82664409-7cc5-4967-9d7a-bce2a2444005-16800148791aea08a3-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/large-Allusion60_Bedroom_BlueFlameNoStones_25ee85c6-e4d4-4f7d-9ef5-09f7b0e53598.jpg",
+            "heading-margin-top": 15,
+            "title": "EASY TO INSTALL & MAINTAIN",
+            "heading_size": "regular_text",
+            "text": "<p>Install electric fireplaces nearly anywhere since no framing, venting, or gas lines are needed.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "template--16724634468582__82664409-7cc5-4967-9d7a-bce2a2444005-16800148791aea08a3-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/large-img-pdp-simplifire-allusion-room-shot-02.jpg",
+            "heading-margin-top": 15,
+            "title": "AFFORDABLE & SAFE",
+            "heading_size": "regular_text",
+            "text": "<p>Electric fireplaces don't have an actual flame, making them safe and cost-effective, running on pennies per hour.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "c1723ad7-a609-4c9d-97f4-56b12759201e": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/online-SFE_Allusion_40_shutterstock_21791203.png",
+            "heading-margin-top": 15,
+            "title": "YEAR-ROUND AMBIANCE",
+            "heading_size": "regular_text",
+            "text": "<p>Provide a safe, beautiful fire - with or without supplemental heat - as a focal point in any room.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--16724634468582__82664409-7cc5-4967-9d7a-bce2a2444005-16800148791aea08a3-0",
+        "template--16724634468582__82664409-7cc5-4967-9d7a-bce2a2444005-16800148791aea08a3-1",
+        "c1723ad7-a609-4c9d-97f4-56b12759201e"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 24,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1657853524e4996ff7": {
+      "type": "image-text",
+      "blocks": {
+        "47d9cda9-5a37-4be0-8c58-01558670b02c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/large-SFE_Allusion_mounted.jpg",
+            "image_crop": "none",
+            "title": "Install Nearly Anywhere",
+            "text": "<p>Our electric fireplaces are designed to be mounted directly to a wall for the easiest way to add a fireplace amenity. No additional construction and no mess - just an instant upgrade.</p>",
+            "button_label": "",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "47d9cda9-5a37-4be0-8c58-01558670b02c"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "6cda79d9-40c5-4e08-bc49-b2e4aabe195a": {
+      "type": "two-column-bg-image-w-text",
+      "settings": {
+        "bg_img": "shopify://shop_images/large-SFE_Allusion_84_shutterstock_739474090.jpg",
+        "minion-font": false,
+        "heading": "Ready To Stand Out?",
+        "content": "Contact Andy Hoffman at (612) 468-1844 or HoffmanA@fireside.com to learn more, discussion options, or setup a fireplace showroom visit.",
+        "btn_link": "",
+        "btn_text": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "f09ae46d-dbd3-498f-992d-d732207e6c66": {
+      "type": "image-text",
+      "blocks": {
+        "b1c53120-5675-4fdd-a040-cdd8a23976a9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SimpliFire_FORMAT_Format50_ALT_Product.jpg",
+            "image_crop": "none",
+            "title": "SIMPLIFIRE FORMAT",
+            "text": "<p>36\" Electric Fireplace </p><ul><li>Floating Mantel Kit for easy placement </li><li>4 Flame Colors </li><li>14 LED Ember-Bed Colors </li><li>Remote Included </li><li>Accent Lighting Included</li><li>Clear Crystal Media & Alpine Timber Logs Included</li><li>Year-round ambiance with or without heat</li></ul>",
+            "button_label": "Brochure",
+            "link": "https://downloads.hearthnhome.com/brochures/SFE-1011U_LinearFireplace_Brochure.pdf",
+            "link-two-margin-top": 0,
+            "button_two_label": "Product Video",
+            "link-two": "https://www.youtube.com/watch?v=BpheBOHpHp4",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--16724634468582__f09ae46d-dbd3-498f-992d-d732207e6c66-1680044274b17f12aa-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/simplifire_allusion48_1024x1024_9c0581fa-7d9c-4d21-8b65-83243c02cd3d.png",
+            "image_crop": "none",
+            "title": "ALLUSION 48\"",
+            "text": "<p>48\" Electric Fireplace </p><ul><li>Wall Mount Kit for easy placement </li><li>4 Flame Colors </li><li>13 LED Ember-Bed Colors </li><li>Clear Crystal Stones Included </li><li>Optional White Stones</li><li>Optional Driftwood Logs</li><li>Year-round ambiance with or without heat </li></ul><p></p>",
+            "button_label": "Brochure",
+            "link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Linear_Fireplace_-_Brochure.pdf?v=1680212980",
+            "link-two-margin-top": 0,
+            "button_two_label": "Product Video",
+            "link-two": "https://www.youtube.com/watch?v=Ypl6oodlM7U",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--16724634468582__f09ae46d-dbd3-498f-992d-d732207e6c66-1680044274b17f12aa-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/simplifire_allusion60_1024x1024_a28c1839-4851-4f32-b924-361902649633.jpg",
+            "image_crop": "none",
+            "title": "ALLUSION 60\"",
+            "text": "<p>60\" Electric Fireplace </p><ul><li>Wall Mount Kit for easy placement </li><li>4 Flame Colors </li><li>13 LED Ember-Bed Colors </li><li>Clear Crystal Stones Included </li><li>Optional White Stones</li><li>Optional Driftwood Logs</li><li>Year-round ambiance with or without heat</li></ul>",
+            "button_label": "Brochure",
+            "link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Linear_Fireplace_-_Brochure.pdf?v=1680212980",
+            "link-two-margin-top": 0,
+            "button_two_label": "Product Video",
+            "link-two": "https://www.youtube.com/watch?v=Ypl6oodlM7U",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "c00b5a29-f14c-4bda-aa92-7f3825049801": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/simplifire_boyd_1024x1024_f832f6d8-3981-4b33-baba-b2b179a83a14.png",
+            "image_crop": "none",
+            "title": "ALLUSION PLATINUM 50\" WITH BOYD CABINET KIT",
+            "text": "<p>50\" Electric Fireplace </p><ul><li>Cabinet Kit in Modern and Farmhouse Styles</li><li>Non-Structural Cabinet Kit for built-in appearance with no messy construction </li><li>4 Flame Colors </li><li>13 LED Ember-Bed Colors </li><li>Clear Crystal Stones Included </li><li>Optional Driftwood Logs</li><li>Hidden Heat Vents</li><li>Year-round ambiance with or without heat</li></ul>",
+            "button_label": "",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1c53120-5675-4fdd-a040-cdd8a23976a9",
+        "template--16724634468582__f09ae46d-dbd3-498f-992d-d732207e6c66-1680044274b17f12aa-0",
+        "template--16724634468582__f09ae46d-dbd3-498f-992d-d732207e6c66-1680044274b17f12aa-1",
+        "c00b5a29-f14c-4bda-aa92-7f3825049801"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "019d54a4-cb56-4711-b175-3d259db2c955": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify://shop_images/install_2.jpg",
+        "pretext": "",
+        "title": "Fireplace Experts Since 1951",
+        "subtitle": "<p>For over 70 years, we've been local fireplace experts focused on fireplace design, installation, and service. </p>",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "darken_bg",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": false,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "SIGN UP FOR OUR NEWSLETTER",
+        "newsletter_text": "<p>Be the first to get a sneak peek at the latest innovations in fireplace design and installation. Subscribe to our newsletter to view recent work, meet our designers, and inspire your next project. You'll also be the first to know about special promotions and exciting discounts to help you plan your fireplace.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165307706254106f59",
+    "dff358bf-4f8b-4ad0-ae0d-61cd4e34e856",
+    "82664409-7cc5-4967-9d7a-bce2a2444005",
+    "1657853524e4996ff7",
+    "6cda79d9-40c5-4e08-bc49-b2e4aabe195a",
+    "f09ae46d-dbd3-498f-992d-d732207e6c66",
+    "019d54a4-cb56-4711-b175-3d259db2c955",
+    "newsletter"
+  ]
+}

@@ -1,0 +1,148 @@
+<!-- Vendor Template -->
+
+<section class="{{ section.settings.css_class }}">
+
+	{%- assign blocks = section.blocks -%}
+
+	<div class="site-width">
+		<div class="brands flex flex-wrap">
+			{% for block in blocks %}
+			<div class="brand col-4 col-tbl-6 col-mbl-12 {% if section.settings.reveal-on == true %}reveal{% endif %}">
+				<img class="brand-image max-image" src="{{ block.settings.image | img_url: '360x228' }}" loading="lazy" decoding="async" width="360" height="228" alt="{{ block.settings.image.alt | escape }}" />
+				<div class="brand-text">
+					<h3 class="brand-name h4 weight-normal">
+						{{ block.settings.title}}
+					</h3>
+					<p>
+						{{ block.settings.brand_desc }}
+					</p>
+					<div class="action">
+						<a href="{{ block.settings.link }}" class="btn bg-orange-text">Learn More</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	{% comment %}
+	<ul class="no-list">
+	  {%- for product_vendor in shop.vendors -%}
+	    <li>{{ product_vendor | link_to_vendor }}</li>
+	  {%- endfor -%}
+	</ul>
+	{% endcomment %}
+
+</section>
+
+{% schema %}
+  {
+    "name": "Brands",
+    "tag": "section",
+    "settings": [
+      {
+          "type": "header",
+          "content": "Advanced"
+      },
+      {
+        "type": "checkbox",
+        "id": "reveal-on",
+        "label": "Use section animation",
+        "default": true
+      },
+      {
+          "type": "text",
+          "id": "css_class",
+          "label": "CSS Class"
+      },
+      {
+          "type": "textarea",
+          "id": "custom_css",
+          "label": "Custom CSS"
+      }
+    ],
+    "blocks": [
+    	{
+	    	"type": "text",
+	    	"name": "Brand",
+	    	"settings": [
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+				    "type": "image_picker",
+				    "id": "image",
+				    "label": "Image",
+					"info": "720x454 px recommended"
+				},
+				{
+				    "type": "textarea",
+				    "id": "brand_desc",
+				    "label": "Description"
+				},
+				{
+				    "type": "url",
+				    "id": "link",
+				    "label": "Brand Link"
+				}
+	    	]
+    	}
+    ],
+    "presets": [{
+       "name": "Brands",
+       "category": "ADVANCED LAYOUT"
+     }]
+  }
+{% endschema %}
+
+<style>
+	.brands { margin: -30px; padding-bottom: 60px; }
+	.brands .brand { padding: 30px; }
+	.brands .brand .brand-text { padding: 25px 0 25px 25px; }
+
+	@media (max-width: 500px ) {
+		.brands { margin: 0 }
+		.brands .brand { padding: 30px 0; }
+	}
+
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+</style>
+
+{% style %}
+    {%
+      render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+    %}
+{% endstyle %}
+
+{% javascript %}
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", reveal);
+{% endjavascript %}

@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "33b8cc99-c0e5-409a-95c5-7c13ae075441": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Request Your Safety Barrier Screen",
+        "sub-text": "As a demonstration of our industry leadership, we're providing free ANSI-compliant retrofit safety barrier screens for units produced before 2003 to homeowners who may need one. While not mandated by the new ANSI standard, this aligns with our commitment to consumer safety. Please call us at 1-888-427-3973 or fill out a request form using the button below!",
+        "bg-img": "shopify://shop_images/FHH_BFC_Sale_PMAX_1200_x_628_px_1.png",
+        "view-btn-link": "https://www.heatnglo.com/fireplace-safety/request-safety-screen",
+        "view-btn": "Request Screen",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "33b8cc99-c0e5-409a-95c5-7c13ae075441"
+  ]
+}

@@ -1,0 +1,113 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "16536810203fa66a9a": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Live Life Fireside.",
+        "sub-text": "",
+        "bg-img": "shopify://shop_images/blog_livelifefireside.png",
+        "view-btn-link": "",
+        "view-btn": "",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "165368105500215664": {
+      "type": "featured-text",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Stay connected to our blog as we share best practices for caring and maintaining your fireplace as well as the latest design and style trends.</p>",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "button_link": "",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "sm-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "blocks": {
+        "251650a4-a624-46f4-b2c9-a0b1f55cfc70": {
+          "type": "recent_posts",
+          "settings": {
+            "blog_post_count": "10"
+          }
+        },
+        "07eb60d9-9bfc-4595-a526-3dc3dc9eb154": {
+          "type": "search",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "251650a4-a624-46f4-b2c9-a0b1f55cfc70",
+        "07eb60d9-9bfc-4595-a526-3dc3dc9eb154"
+      ],
+      "settings": {
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "subtitle": "",
+        "caption_content_background": "original",
+        "blog_posts_per_row": 3,
+        "blog_posts_per_page": 12,
+        "blog_tags": false,
+        "blog_author": false,
+        "read_time": false,
+        "blog_date": true,
+        "blog_comment_count": true,
+        "read_more_link": true,
+        "excerpt_display": "full_excerpt",
+        "toggle": false
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Subscribe",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "16536810203fa66a9a",
+    "165368105500215664",
+    "main",
+    "newsletter"
+  ]
+}

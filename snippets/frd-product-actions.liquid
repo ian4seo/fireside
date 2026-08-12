@@ -1,0 +1,68 @@
+{% comment %}
+  frd-product-actions.liquid
+  ------------------------------------------------------------
+  Always-visible Product Conversion Actions (PCA) block.
+  Rendered from sections/custom-product-template.liquid.
+
+  Hierarchy:
+    - PRIMARY   : "Request a Quote"          (filled)
+    - SECONDARY : "Schedule a Consultation"  (outlined)
+
+  Note: the native "Add to Cart" button for ecomm products is
+  intentionally NOT duplicated here. It continues to live in
+  snippets/product-form.liquid (rendered by the 'form' block),
+  so Shopify purchasable products keep their existing flow.
+
+  Product context (title / SKU) is appended to the quote form
+  page as URL query params so the Powerful Form Builder hidden
+  fields can be auto-populated on arrival by
+  sections/frd-product-context-autofill.liquid.
+
+  SKU is read from the product's first/selected variant SKU
+  (product.selected_or_first_available_variant.sku). When that
+  is blank, the `product_sku` parameter is omitted entirely.
+
+  @param product {Object}  The product object
+{% endcomment %}
+
+{%- assign pca_sku = product.selected_or_first_available_variant.sku -%}
+{%- capture pca_context -%}Product: {{ product.title }}{%- if pca_sku != blank %} | SKU: {{ pca_sku }}{% endif -%}{%- endcapture -%}
+
+{%- capture pca_quote_href -%}
+/pages/free-quote-request?product_title={{ product.title | url_encode }}{%- if pca_sku != blank -%}&product_sku={{ pca_sku | url_encode }}{%- endif -%}
+{%- endcapture -%}
+
+{%- capture pca_consult_href -%}
+https://app.acuityscheduling.com/schedule.php?owner=19466363&appointmentType=51953675&product_title={{ product.title | url_encode }}{%- if pca_sku != blank -%}&product_sku={{ pca_sku | url_encode }}{%- endif -%}
+{%- endcapture -%}
+
+<div
+  class="pca-module"
+  data-pca-module
+  data-pca-product-handle="{{ product.handle }}"
+  data-pca-product-title="{{ product.title | escape }}"
+  data-pca-product-sku="{{ pca_sku | escape }}"
+  data-pca-product-context="{{ pca_context | escape }}"
+>
+  <div class="pca-module__inner">
+    <a
+      href="{{ pca_quote_href | strip }}"
+      class="pca-btn pca-btn--primary"
+      data-pca-action="quote"
+    >
+      Request a Quote
+    </a>
+
+   
+    <a
+      href="https://app.acuityscheduling.com/schedule/cbf68096/appointment/15971217?appointmentTypeIds[]=15971217"
+      class="pca-btn pca-btn--secondary"
+      data-pca-action="consult"
+      target="_blank"
+      rel="noopener"
+    >
+      Schedule a Consultation
+    </a>
+   
+  </div>
+</div>

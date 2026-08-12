@@ -1,0 +1,824 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "homepage_hero_dPL7XY": {
+      "type": "homepage-hero",
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": false,
+        "image": "shopify://shop_images/SFS_HomePageImage2.jpg",
+        "pretext": "<p> </p>",
+        "title": "",
+        "subtitle": "<p><strong>SHOP OUR BIGGEST SALE OF THE YEAR!</strong></p><p><a href=\"https://fireside.com/pages/tc-state-fair-sale\" title=\"https://fireside.com/pages/tc-state-fair-sale\">Twin Cities – State Fair Sale</a></p><p><a href=\"https://fireside.com/pages/mad-great-hearth-event\" title=\"https://fireside.com/pages/mad-great-hearth-event\"> Madison - Great Hearth Event</a></p>",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image": "shopify://shop_images/SFE_AllusionEdge_50_SigFlames_Library_FarmBoydKit_Horiz_14c1d420-e7c0-4de2-a59b-48a37a770402.jpg",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1648675021dfb5ed79": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 40,
+        "mobile-padding-bottom": 20,
+        "bg_color": "#3d484e",
+        "heading_text_alignment": "center",
+        "title": "You dream the ideas. We bring them to life.",
+        "heading_type": "h1",
+        "paragraph_text_alignment": "center",
+        "content": "<p>You're the expert in living your best life. We're the experts in fireplace design, installation, and service. Let's combine the two perspectives to build your perfect fireplace together.</p><p>Whether you're remodeling or building a new home, we can help you plan, install, and care for your fireplace with confidence.</p>",
+        "button_text_alignment": "center",
+        "button_label": "Request Free Estimate",
+        "open-new-window": false,
+        "button_link": "shopify://pages/request-estimate",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "Download Planner",
+        "open-new-window-two": false,
+        "button_link_2": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Fireside_Project_Planner_-_Editable_Form_2023.pdf?v=1677259366",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "regular_text",
+        "text_color": "#ffffff",
+        "site_width": "sm-site-width",
+        "html_id": "design",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16516868905a2247ab": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "fe96a1f4-43b6-4294-9137-7135c56f25e5": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-work-from-home.png",
+            "title": "CONVERT WOOD FIREPLACE TO GAS",
+            "text": "<p>Warmth and comfort are available with just the touch of a button. Convert your wood-burning fireplace to gas and start experiencing greater performance, safety, and convenience. </p><p>Fully installed projects starting around $4,800.</p>",
+            "button_label": "EXPLORE",
+            "button_link": "shopify://pages/convert-my-fireplace"
+          }
+        },
+        "0ddb2b9e-75ac-4f9a-84f2-9151b7d9497c": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_add_fireplace.jpg",
+            "title": "ADD A NEW FIREPLACE",
+            "text": "<p>Install a new fireplace in nearly any area of the home. Fireplaces can be added to indoor or outdoor spaces and come in a variety of designs to complement every style. </p><p>Fully installed projects starting around $7,200. </p>",
+            "button_label": "EXPLORE",
+            "button_link": "shopify://pages/add-new-fireplace"
+          }
+        },
+        "034a8b1e-6c40-45cb-8e9c-f616000760d3": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-family-brunch-fit-lg.png",
+            "title": "REPLACE YOUR FIREPLACE",
+            "text": "<p>Transform your existing fireplace into a fresh design with the added convenience of smart technology. Update just your fireplace or the entire wall - including mantel and stone - for a stunning remodel. </p><p>Fully installed projects starting around $6,800.</p>",
+            "button_label": "EXPLORE",
+            "button_link": "shopify://pages/replace-my-fireplace"
+          }
+        }
+      },
+      "block_order": [
+        "fe96a1f4-43b6-4294-9137-7135c56f25e5",
+        "0ddb2b9e-75ac-4f9a-84f2-9151b7d9497c",
+        "034a8b1e-6c40-45cb-8e9c-f616000760d3"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": ""
+      }
+    },
+    "16528108123d0a1179": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "#3d484e",
+        "heading_text_alignment": "center",
+        "title": "Fireplace Repair & Tune Ups",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Our team has over 100 years of combined technical experience to help keep your fireplace looking and working like new with repair services or preventative maintenance tune ups.</p>",
+        "button_text_alignment": "center",
+        "button_label": "Request Service",
+        "open-new-window": false,
+        "button_link": "shopify://pages/request-service",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "Watch Help Videos",
+        "open-new-window-two": false,
+        "button_link_2": "shopify://pages/troubleshoot",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "#ffffff",
+        "site_width": "mbl-site-width",
+        "html_id": "extend-living-space",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "901eadca-ac38-4b3c-bf8a-a90a2f016ce6": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Buy online",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Shop from the comfort and convenience of home! Select products are available to purchase online for delivery in the Minneapolis/St. Paul Twin Cities & Madison, WI Metros. </p>",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "open-new-window": false,
+        "button_link": "",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "f2308042-f7c3-4ce5-b746-c91a26ce5ab9": {
+      "type": "image-text",
+      "blocks": {
+        "template--16629088846054__f2308042-f7c3-4ce5-b746-c91a26ce5ab9-16787180732f8826af-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_crop": "none",
+            "title": "",
+            "text": "",
+            "button_label": "View all",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16629088846054__f2308042-f7c3-4ce5-b746-c91a26ce5ab9-16787180732f8826af-1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "f85b5388-66a2-4327-8988-8b8790f84a5d": {
+      "type": "featured-promotions",
+      "blocks": {
+        "template--16718379024614__f85b5388-66a2-4327-8988-8b8790f84a5d-16811773848563b62d-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_gas_insert_online_fireside_840x840_a6034a47-2997-4b46-9c92-199e2bb0fae8.png",
+            "link": "shopify://collections/buy-gas-inserts-online",
+            "title": "Inserts",
+            "text": "<p>Convert your wood-burning fireplace to gas or electric.</p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "template--16718379024614__f85b5388-66a2-4327-8988-8b8790f84a5d-16811773848563b62d-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_electric_fireplace_online_fireside_840x840_577d56b4-db7a-494f-b187-6e111bd8e306.png",
+            "link": "shopify://collections/shop-online-fireplaces",
+            "title": "Fireplaces",
+            "text": "<p>Install a gas or electric fireplace nearly anywhere for instant ambiance.</p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "template--16718379024614__f85b5388-66a2-4327-8988-8b8790f84a5d-16811773848563b62d-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_gas_fire_pit_online_fireside_840x840_ad1ab5e9-17d2-4ea8-ab30-2f361aee28fe.jpg",
+            "link": "shopify://collections/shop-gas-fire-tables-fire-pits",
+            "title": "Fire Tables",
+            "text": "<p>Transform your outdoor space with a gas fire table or fire pit.</p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "fc1d9f2f-b2e3-44e3-ae7b-6ed057a912e7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/buy_mantels_online_fireside_840x840_e93f3859-aad4-4ca7-ae14-b079a9dc3cfe.png",
+            "link": "shopify://collections/shop-mantel-shelves",
+            "title": "Mantels",
+            "text": "<p>Add the perfect finishing touch above your fireplace or insert.</p>",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "template--16718379024614__f85b5388-66a2-4327-8988-8b8790f84a5d-16811773848563b62d-0",
+        "template--16718379024614__f85b5388-66a2-4327-8988-8b8790f84a5d-16811773848563b62d-1",
+        "template--16718379024614__f85b5388-66a2-4327-8988-8b8790f84a5d-16811773848563b62d-2",
+        "fc1d9f2f-b2e3-44e3-ae7b-6ed057a912e7"
+      ],
+      "settings": {
+        "wide_display": false,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 4,
+        "featured_links_animation": "fadeIn",
+        "feature_style": "circle",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16517039243c56ca88": {
+      "type": "two-column-bg-image-w-text",
+      "settings": {
+        "bg_img": "shopify://shop_images/fireside-example-bg-mirrored.png",
+        "minion-font": false,
+        "heading": "Turn a room you like into a room you love.",
+        "content": "We believe that time spent together is more than simply being in the same room, and our unique collection of fireplaces can fit any project to bring you more connection and well-being.",
+        "btn_link": "shopify://collections/all-products",
+        "btn_text": "Explore Products",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "57313790-ff8e-4659-afe2-4e4b7fb7313d": {
+      "type": "image-text",
+      "blocks": {
+        "template--16629088846054__57313790-ff8e-4659-afe2-4e4b7fb7313d-16757169027cd7a8ec-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_crop": "none",
+            "title": "Your headline",
+            "text": "<p>Promotion description appears here.</p>",
+            "button_label": "View all",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16629088846054__57313790-ff8e-4659-afe2-4e4b7fb7313d-16757169027cd7a8ec-1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1654267777435990f3": {
+      "type": "two-column-customer-type-button",
+      "blocks": {
+        "165426777720752de6-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/fireside-homeowner.png",
+            "title": "I'm A Homeowner",
+            "heading_size": "regular_text",
+            "text": "<p>Whether you're remodeling an older fireplace, installing an outdoor fire pit, or need to repair an existing fireplace, discover the tools, resources, and technical support you need to move forward with confidence!</p>",
+            "customer-type": "none",
+            "button_label": "Continue To Homeowners",
+            "button_link": "https://fireside-hearth-and-home.myshopify.com/#extend-living-space",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "165426777720752de6-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/fireside-for-pros.jpg",
+            "title": "I'm A Pro",
+            "heading_size": "regular_text",
+            "text": "<p>Get the products you and your clients want from the brands you trust. Whether you're a builder, architect, or interior designer, we'll help you set your projects apart with fireplaces that match a wide variety of solutions!</p>",
+            "customer-type": "professional",
+            "button_label": "Switch To Pro",
+            "button_link": "#",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165426777720752de6-0",
+        "165426777720752de6-1"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "mobile-padding-top": 0,
+        "mobile-padding-bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1651687233040265c8": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 20,
+        "mobile-padding-bottom": 80,
+        "bg_color": "#3d484e",
+        "heading_text_alignment": "center",
+        "title": "Visit Our Fireplace Showrooms",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>In addition to browsing our products online, you can also experience our stunning selection of fireplaces in person by visiting one of our showrooms.</p><p>We also offer free in-home or virtual consultations. We'll help you find the right product that pairs style with functionality. </p>",
+        "button_text_alignment": "center",
+        "button_label": "Find A Fireside",
+        "open-new-window": false,
+        "button_link": "shopify://pages/store-locator",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "Schedule  Consult",
+        "open-new-window-two": false,
+        "button_link_2": "shopify://pages/schedule-a-consultation",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "#ffffff",
+        "site_width": "sm-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1655148332e473e847": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "mobile-padding-top": 40,
+        "mobile-padding-bottom": 0,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Our Recent Work",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "open-new-window": false,
+        "button_link": "",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165522660651b77633": {
+      "type": "featured-promotions",
+      "blocks": {
+        "22ff8feb-0a81-4cac-a593-3ae040b815e1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside-bonus-room.jpg",
+            "link": "shopify://products/heat-glo-6000-series-gas-fireplace",
+            "title": "&nbsp;",
+            "text": "<p>Timeless & Bright</p>",
+            "button_label": ""
+          }
+        },
+        "2c8f5395-bc7d-4416-aba5-2da97b8e4f4a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside-blog-post-2.png",
+            "link": "shopify://products/heat-glo-mezzo-series-gas-fireplace",
+            "title": "&nbsp;",
+            "text": "<p>Modern & Elegant</p>",
+            "button_label": ""
+          }
+        },
+        "585dbbb9-32ac-4875-a8a0-2d89d56f0974": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside-living-room.jpg",
+            "link": "shopify://products/heatilator-heirloom-series-gas-fireplaces",
+            "title": "&nbsp;",
+            "text": "<p>Rustic & Warm</p>",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "22ff8feb-0a81-4cac-a593-3ae040b815e1",
+        "2c8f5395-bc7d-4416-aba5-2da97b8e4f4a",
+        "585dbbb9-32ac-4875-a8a0-2d89d56f0974"
+      ],
+      "settings": {
+        "wide_display": true,
+        "promo_text_on_image_enabled": true,
+        "featured_promos_per_row": 3,
+        "featured_links_animation": "fadeIn",
+        "feature_style": "square",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165281114391c42178": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1652811143f668f2d9-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/design-consult-160x160.png",
+            "heading-margin-top": 0,
+            "title": "DESIGN CONSULT",
+            "heading_size": "regular_text",
+            "text": "<p>Meet with an experienced expert to plan the design and installation of your new fireplace. Our team can help you choose the right materials and products to complement any living space and budget.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1652811143f668f2d9-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/in-home-measurements-160x160.png",
+            "heading-margin-top": 0,
+            "title": "IN-HOME MEASUREMENTS",
+            "heading_size": "regular_text",
+            "text": "<p>To ensure the perfect fit and a seamless installation, one of our experts will visit the project site to finalize measurements and product selection.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1652811143f668f2d9-0",
+        "1652811143f668f2d9-1"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "section-bg": "#d9e5e8",
+        "title": "Our Proven Process",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1649084355ab853ca8": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1649084355d59ba65e-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/ongoing-service-support-160x160.png",
+            "heading-margin-top": 0,
+            "title": "INSTALLATION",
+            "heading_size": "regular_text",
+            "text": "<p>We provide full installation services from start to finish so you can rest easy with peace of mind that your project will be completed efficiently, safely, and beautifully.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1649084355d59ba65e-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/installation-160x160.png",
+            "heading-margin-top": 0,
+            "title": "PRODUCT SETUP & DEMO",
+            "heading_size": "regular_text",
+            "text": "<p>Enjoy your new fireplace with confidence. Our team will walk you through features and tips so you feel comfortable enjoying your new fireplace right away.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1649084355d59ba65e-1",
+        "1649084355d59ba65e-0"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "#d9e5e8",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165281135959129319": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 20,
+        "padding_bottom": 80,
+        "mobile-padding-top": 0,
+        "mobile-padding-bottom": 60,
+        "bg_color": "#d9e5e8",
+        "heading_text_alignment": "center",
+        "title": "",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "",
+        "button_text_alignment": "center",
+        "button_label": "REQUEST A QUOTE",
+        "open-new-window": false,
+        "button_link": "shopify://pages/request-estimate",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "Tour Our Showrooms",
+        "open-new-window-two": false,
+        "button_link_2": "shopify://pages/virtual-tours",
+        "button_type_2": "orange",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1655333664d4bfb0e4": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1655333664d9d4b3ae-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>“Everyone we worked with from sales to install crew exceeded our expectations. Courteous and professional. They project managed everything and it came together perfectly.”</p><p><strong>- David W.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1655333664d9d4b3ae-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>“From the moment we stepped into Fireside, things fell into place. Would recommend to anyone looking for value and excellent service. A pleasure to work with.”</p><p><strong>- Jon & Carol W.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "f9b1b915-2d82-4f31-b1c9-053a959d7bef": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>“If I could give more than five stars, I would. We’re first-time fireplace owners and they took the time to explain everything to us to help us feel comfortable and keep our fireplace running smoothly.” </p><p><strong>- Nancie T.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "a20bff4c-4f0d-41b6-8917-7604c9649ea4": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>“Buying a fireplace has been one of the best purchases for our home! Looking forward to many more years of enjoying it and knowing you folks can help keep it working great!”</p><p><strong>- Dan & Raelee L.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1655333664d9d4b3ae-0",
+        "1655333664d9d4b3ae-1",
+        "f9b1b915-2d82-4f31-b1c9-053a959d7bef",
+        "a20bff4c-4f0d-41b6-8917-7604c9649ea4"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "2140b530-ef89-4c97-8a9e-95f10c4f2662": {
+      "type": "image-text",
+      "blocks": {
+        "template--16629088846054__2140b530-ef89-4c97-8a9e-95f10c4f2662-16751188939ede559d-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/custom_gas_fireplace_stellar_fireside.png",
+            "image_crop": "center",
+            "title": "Custom Fireplace Design",
+            "text": "<p>With Stellar Custom Gas Fireplaces, you can create a stunning one-of-a-kind fire feature. Limitless options in nearly any shape and size can be designed for both indoors and outdoors. </p>",
+            "button_label": "Build Your Own",
+            "link": "https://custom.stellarhearth.com/",
+            "link-two-margin-top": 0,
+            "button_two_label": "View Gallery",
+            "link-two": "shopify://pages/custom-project-gallery",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "109f6293-f211-456d-b6c5-b0d308a6e99c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/fireside_biomass_tax_credit_save_thirty_percent_harman_quadrafire_vermont_Castings_8b5c5bab-87af-4d0c-a346-62bdffb49d00.png",
+            "image_crop": "none",
+            "title": "30% Biomass Tax Credit",
+            "text": "<p>Save up to $2,000 annually with a 30% Biomass Federal Tax Credit on qualifying wood and pellet products.</p>",
+            "button_label": "See Eligible Products",
+            "link": "https://downloads.hearthnhome.com/communications/HHT-4028U_2023-2032_TaxCerts-HHT.pdf",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "image_kpEBPK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside-financing-offers.jpg",
+            "image_crop": "right",
+            "title": "Financing is Available!",
+            "text": "<p>12-month No Interest Financing is available for well-qualified customers for a limited time. You can get a gas insert installed starting at $267/month!* </p>",
+            "button_label": "Learn More",
+            "link": "https://retailservices.wellsfargo.com/ahapp/init-app?m=0033048166&l=en_US",
+            "link-two-margin-top": 0,
+            "button_two_label": "Madison",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16629088846054__2140b530-ef89-4c97-8a9e-95f10c4f2662-16751188939ede559d-0",
+        "109f6293-f211-456d-b6c5-b0d308a6e99c",
+        "image_kpEBPK"
+      ],
+      "settings": {
+        "wide_display": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "homepage_hero_dPL7XY",
+    "1648675021dfb5ed79",
+    "16516868905a2247ab",
+    "16528108123d0a1179",
+    "901eadca-ac38-4b3c-bf8a-a90a2f016ce6",
+    "f2308042-f7c3-4ce5-b746-c91a26ce5ab9",
+    "f85b5388-66a2-4327-8988-8b8790f84a5d",
+    "16517039243c56ca88",
+    "57313790-ff8e-4659-afe2-4e4b7fb7313d",
+    "1654267777435990f3",
+    "1651687233040265c8",
+    "1655148332e473e847",
+    "165522660651b77633",
+    "165281114391c42178",
+    "1649084355ab853ca8",
+    "165281135959129319",
+    "1655333664d4bfb0e4",
+    "2140b530-ef89-4c97-8a9e-95f10c4f2662"
+  ]
+}

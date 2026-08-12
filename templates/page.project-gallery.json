@@ -1,0 +1,336 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "165351188531819f9f": {
+      "type": "page-banner-alt",
+      "settings": {
+        "heading": "Project Gallery",
+        "image": "shopify://shop_images/project_gallery.jpg",
+        "text_alignment": "center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1653590663eb0e89a0": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Discover Fireplace Inspiration",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Our gallery highlights just a few of our favorite fireplace projects. We offer gas, wood, and electric fireplace options to fit your project's size, aesthetics, and needs.  </p>",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "open-new-window": false,
+        "button_link": "",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "sm-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16535926201a83ccb6": {
+      "type": "project-gallery",
+      "blocks": {
+        "8b740af8-b80f-407c-946d-35ab8f0863ee": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/FDN-SS_180618_28241-Boulder_238_SO.jpg",
+            "button_label": "Enlight Gas Fireplace",
+            "button_link": "https://fireside.com/products/stellar-enlight-single-sided-gas-fireplace"
+          }
+        },
+        "4d10212f-f762-47a5-acab-cdfd494652ac": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_cosmo_1.jpg",
+            "button_label": "Cosmo Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-cosmo-series-gas-fireplace"
+          }
+        },
+        "48cd6c9e-18b3-4dd5-9383-4b77fac18b33": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_mezzo_9.jpg",
+            "button_label": "Mezzo Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-mezzo-series-gas-fireplace"
+          }
+        },
+        "f33ddb2e-5d6d-410a-ac0e-643f191a2bd6": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Corner_Angle_Roomshot_180613_Swanson_0264.jpg",
+            "button_label": "Corner Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-corner-series-gas-fireplaces"
+          }
+        },
+        "66317995-410c-4ab3-b285-c75593b661f8": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_sl-7.png",
+            "button_label": "SlimeLine SL Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-slimline-series-gas-fireplace"
+          }
+        },
+        "ca7e2aa6-a453-4b80-86a4-7f5fc2701d80": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/simplifire_allusion_platinum_8.png",
+            "button_label": "Allusion Platinum Electric Fireplace",
+            "button_link": "https://fireside.com/products/simplefire-allusion-platinum-wall-mounted-fireplace"
+          }
+        },
+        "173c310d-23d4-4246-a554-06304bfcf88c": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/HNG-True_ForgedArchFront_2019Artisan_190613_Lecy_0160.jpg",
+            "button_label": "True Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-true-gas-fireplace-series"
+          }
+        },
+        "5217085c-5372-4de0-be9a-e2b1616fbfc6": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_primo.jpg",
+            "button_label": "Primo Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-primo-ii-series-gas-fireplace"
+          }
+        },
+        "83692486-d5e1-4049-ba43-1d13f83b4b94": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_mezzo_11.jpg",
+            "button_label": "Mezzo Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-mezzo-series-gas-fireplace"
+          }
+        },
+        "737df71f-ad2f-438e-ab48-f7ccb7201e5c": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/stellar_enlight_3.jpg",
+            "button_label": "Enlight Gas Fireplace",
+            "button_link": "https://fireside.com/products/stellar-enlight-single-sided-gas-fireplace"
+          }
+        },
+        "271cae88-ca75-4b8f-8823-24809bbd91e5": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_cosmo_3.jpg",
+            "button_label": "Cosmo Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-cosmo-series-gas-fireplace"
+          }
+        },
+        "dcadc7e8-b8af-42e1-96a5-491bd4db02d4": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatilator_Crave.jpg",
+            "button_label": "Crave Gas Fireplace",
+            "button_link": "https://fireside.com/products/heatilator-crave-series-gas-fireplace"
+          }
+        },
+        "f510dd88-c984-4a51-88bf-03a6fa5f565f": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/outdoor_lifestyles_courtyard_066b3083-0e9f-4673-b290-db04d0babb02.png",
+            "button_label": "Outdoor Courtyard Gas Fireplace",
+            "button_link": "https://fireside.com/products/outdoor-lifestyles-courtyard-gas-fireplace"
+          }
+        },
+        "1c4b8c55-e5d6-4a77-bd18-def4d4877fe0": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_true_d3b67115-336c-4078-8c85-7e4bd1811d0e.png",
+            "button_label": "True Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-true-gas-fireplace-series"
+          }
+        },
+        "136fc9a7-d445-451b-bb22-dbf4d2b0d231": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/simplifire_scion_1_fireplace.jpg",
+            "button_label": "Scion Electric Fireplace",
+            "button_link": "https://fireside.com/products/simplifire-scion-electric-fireplace"
+          }
+        },
+        "a18aa63e-e85c-4076-a950-0d63420183c8": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_mezzo_1.jpg",
+            "button_label": "Mezzo Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-mezzo-series-gas-fireplace"
+          }
+        },
+        "0ace925f-c08b-49db-b0f3-399da6a728d5": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/outdoor_lifestyles_courtyard_1.jpg",
+            "button_label": "Courtyard Outdoor Gas Fireplace",
+            "button_link": "https://fireside.com/products/outdoor-lifestyles-courtyard-gas-fireplace"
+          }
+        },
+        "5b7ce117-9011-4546-8db6-296e38cb61fd": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_cerona.jpg",
+            "button_label": "Cerona Gas Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-cerona-gas-fireplace"
+          }
+        },
+        "6f029916-18d8-4102-90bd-5a280e5a95a7": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_supreme_4.jpg",
+            "button_label": "Supreme Gas Insert",
+            "button_link": "https://fireside.com/products/heat-glo-supreme-series-gas-fireplace-insert"
+          }
+        },
+        "15f04797-4eea-4095-b2a0-c5ae019619c8": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/simplifire_scion.jpg",
+            "button_label": "Scion Electric Fireplace",
+            "button_link": "https://fireside.com/products/simplifire-scion-electric-fireplace"
+          }
+        },
+        "a844bf23-f4f2-43b7-9f79-a077bb0afa2c": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_rutherford.jpg",
+            "button_label": "Rutherford Wood Fireplace",
+            "button_link": "https://fireside.com/products/heat-glo-rutherford-wood-fireplace"
+          }
+        },
+        "18e2c3a3-289b-4c8c-a59f-fb97544bf385": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_escape_insert.jpg",
+            "button_label": "Escape Gas Insert",
+            "button_link": "https://fireside.com/products/heat-glo-escape-firebrick-gas-fireplace-insert"
+          }
+        },
+        "783e952b-ee4e-48a6-8d9e-7a38acfea3af": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/stellar_enlight_lobby.jpg",
+            "button_label": "Enlight Gas Fireplace",
+            "button_link": "https://fireside.com/products/stellar-enlight-single-sided-gas-fireplace"
+          }
+        }
+      },
+      "block_order": [
+        "8b740af8-b80f-407c-946d-35ab8f0863ee",
+        "4d10212f-f762-47a5-acab-cdfd494652ac",
+        "48cd6c9e-18b3-4dd5-9383-4b77fac18b33",
+        "f33ddb2e-5d6d-410a-ac0e-643f191a2bd6",
+        "66317995-410c-4ab3-b285-c75593b661f8",
+        "ca7e2aa6-a453-4b80-86a4-7f5fc2701d80",
+        "173c310d-23d4-4246-a554-06304bfcf88c",
+        "5217085c-5372-4de0-be9a-e2b1616fbfc6",
+        "83692486-d5e1-4049-ba43-1d13f83b4b94",
+        "737df71f-ad2f-438e-ab48-f7ccb7201e5c",
+        "271cae88-ca75-4b8f-8823-24809bbd91e5",
+        "dcadc7e8-b8af-42e1-96a5-491bd4db02d4",
+        "f510dd88-c984-4a51-88bf-03a6fa5f565f",
+        "1c4b8c55-e5d6-4a77-bd18-def4d4877fe0",
+        "136fc9a7-d445-451b-bb22-dbf4d2b0d231",
+        "a18aa63e-e85c-4076-a950-0d63420183c8",
+        "0ace925f-c08b-49db-b0f3-399da6a728d5",
+        "5b7ce117-9011-4546-8db6-296e38cb61fd",
+        "6f029916-18d8-4102-90bd-5a280e5a95a7",
+        "15f04797-4eea-4095-b2a0-c5ae019619c8",
+        "a844bf23-f4f2-43b7-9f79-a077bb0afa2c",
+        "18e2c3a3-289b-4c8c-a59f-fb97544bf385",
+        "783e952b-ee4e-48a6-8d9e-7a38acfea3af"
+      ],
+      "settings": {
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165359183383b3ec00": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Ready to Convert, Add or Replace Your Fireplace?",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>We want you to feel confident throughout your project and excited to take the next step toward your dream design. </p><p>We'll help you find the best solutions to complement your next renovation or new build. </p>",
+        "button_text_alignment": "center",
+        "button_label": "Request a Consultation",
+        "open-new-window": false,
+        "button_link": "shopify://pages/schedule-a-consultation",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "SIGN UP FOR OUR NEWSLETTER",
+        "newsletter_text": "<p>Be the first to get a sneak peek at the latest innovations in fireplace design and installation. Subscribe to our newsletter to view recent work, meet our designers, and inspire your next project. You'll also be the first to know about special promotions and exciting discounts to help you plan your fireplace.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165351188531819f9f",
+    "1653590663eb0e89a0",
+    "16535926201a83ccb6",
+    "165359183383b3ec00",
+    "newsletter"
+  ]
+}

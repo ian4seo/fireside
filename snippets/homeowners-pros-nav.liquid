@@ -1,0 +1,76 @@
+<style>
+  .main-nav__wrapper .customer-type {
+    background: #C8CCCE;
+    text-align: center;
+    font-size: 11px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    display: -webkit-box;display: -ms-flexbox;display: flex;
+    -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
+    width: 70px;
+    text-align: center;
+    line-height: 1.2;
+    text-decoration: none;
+    -webkit-box-pack:  center;-ms-flex-pack:  center;justify-content:  center;
+    -webkit-box-align: center;-ms-flex-align: center;align-items: center;
+    -webkit-transition: all .1s;-o-transition: all .1s;transition: all .1s;
+  }
+
+  .main-nav__wrapper .customer-type.customer-type-active {
+    background: #3D484E;
+  }
+
+
+  .main-nav__wrapper .customer-type-container a .link-title {
+    margin-bottom: 15px;
+  }
+
+  .main-nav__wrapper .customer-type-container ul {
+    display: -webkit-box;display: -ms-flexbox;display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav__wrapper .customer-type-container ul li {
+    display: -webkit-box;display: -ms-flexbox;display: flex;
+  }
+
+  .main-nav__wrapper .customer-type-container img { display: block; }
+
+  .main-nav__wrapper a.customer-type-active {
+    background-color: #3D484E;
+    color: white;
+  }
+
+  .animate {
+    animation: animate-down 2s ease forwards;
+  }
+  
+  @keyframes animate-down {
+    from {
+      height: 0;
+    }
+  
+    to {
+      height: 70px;
+    }
+  }
+</style>
+
+<nav class="customer-type-container" role="navigation" aria-label="Choose your customer type">
+  <ul>
+    <li class="animate homeowners">
+      <a aria-label="Homeowner" class="customer-type" href="#" data-customer-type="homeowner">
+        <div class="link-title">Home<br>Owners</div>
+      </a>
+    </li>
+    <li class="animate for-pros">
+      <a aria-label="Professionals" class="customer-type" href="#" data-customer-type="professional">
+        <div class="link-title">For<br>Pros</div>
+      </a>
+    </li>
+  </ul>
+</nav>

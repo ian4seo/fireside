@@ -1,0 +1,241 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "regular_color": "#3d484e",
+    "headline_color": "#3d484e",
+    "headline_footer_text_color": "#3d484e",
+    "sub_footer_text_color": "#ffffff",
+    "promo_text_color": "#3d484e",
+    "shop_home_page_content_text_color": "#3d484e",
+    "newsletter_popup_color": "#3d484e",
+    "newsletter_section_color": "#3d484e",
+    "collection_filter_color": "#3d484e",
+    "top_bar_color": "#3d484e",
+    "top_bar_color_hover": "#3d484e",
+    "nav_color": "#3d484e",
+    "nav_color_home": "#3d484e",
+    "nav_color_hover": "#3d484e",
+    "sub_footer_link_color": "#ffffff",
+    "sub_footer_link_color_hover": "#e9841d",
+    "btn_color": "#3d484e",
+    "btn_hover_color": "#3d484e",
+    "banner_background_color": "#3d484e",
+    "headline_border_color": "#3d484e",
+    "headline_border": "0",
+    "sub_footer_border_color": "#3d484e",
+    "search_section_bg_color": "#ffffff",
+    "top_bar_bg_color": "#ffffff",
+    "header_bg_color": "#ffffff",
+    "header_background": true,
+    "transparent_header": false,
+    "promo_bg_color": "#e6e6e6",
+    "sub_footer_color": "#3d484e",
+    "logo__font": "helvetica_n7",
+    "top_bar_letter_spacing": 0,
+    "nav__font": "helvetica_n4",
+    "nav_font_style": "uppercase",
+    "nav_letter_spacing": 1,
+    "nav_shadow": false,
+    "button_weight": "bold",
+    "button_font_style": "uppercase",
+    "headline__font": "helvetica_n4",
+    "headline_font_style": "none",
+    "headline_letter_spacing": 0,
+    "slideshow_headline_letter_spacing": 0,
+    "slideshow_subtitle__font": "serif",
+    "slideshow_subtitle_letter_spacing": 0,
+    "regular__font": "serif",
+    "footer_heading_font_size": 12,
+    "search_option": "product,page,article",
+    "show_dynamic_checkout_button": false,
+    "display_product_quantity": false,
+    "notify_me_form": false,
+    "all_product_heading": "Shop Fireplaces, Stoves, Inserts & Fire Pits",
+    "all_product_richtext": "<p>Your home is unique. Why not complement its style with a sophisticated fireplace installation that pairs cozy with convenience?</p><p>With traditional and modern fireplaces, stoves, and inserts available in gas, wood, pellet, and electric fuel types, there is no limit to designing your dream project. At least, not when you partner with Fireside Hearth & Home. Whether you're a homeowner or pro, you'll find the best products and styles to fit any project.</p>",
+    "include_faq": true,
+    "faq_1_heading": "What Are Fireplace Inserts?",
+    "faq_1_richtext": "<p>A fireplace insert fits into the opening of your existing fireplace to create a beautiful fire at the touch of the button. Fireplace inserts are most commonly used to convert an existing wood-burning fireplace into a gas or electric fireplace.</p><p>Rather than reconstructing the fireplace itself, including opening up the wall, removing tile or stone, and reframing, this procedure is much more cost effective and simple in terms of home construction and can be done carefully and efficiently by Fireside.</p>",
+    "faq_2_heading": "Do I Need a Permit to Install an Outdoor Fire Pit?",
+    "faq_2_richtext": "<p>The answer to this question depends on where you live. And though you may not need to file paperwork with your county, it's safe to say you will need to follow a strict set of city, state ordinances when it comes to the distance between your fire pit and the surrounding buildings or homes. </p><p>The good news? We've helped many homeowners and businesses throughout the U.S. install stunning fire pits that range in style, size, and energy source (gas, wood, etc.)</p><p>That means when you partner with us, we'll be able to keep you informed of any required permits, local ordinances, and state requirements you need to follow. The result? You get to enjoy your outdoor fire pit in comfort and with confidence. </p>",
+    "all_prods_cta_title": "Request Gas Fireplace Installation",
+    "all_prods_cta": "<p>Let us help you match your living area with a sophisticated gas fireplace design that adds warmth and functionality to any living space. Visit our showroom or schedule a free consultation.</p><p><a href=\"/pages/visit-a-showroom\">Visit a Showroom</a> <a href=\"/pages/contact\">Get a Virtual Consult</a></p>",
+    "mobile_products_per_row": "2",
+    "collection_height": 260,
+    "quick_shop_enabled": false,
+    "quick_shop_style": "popup",
+    "display_tos_checkbox": false,
+    "go_to_checkout": false,
+    "currency_format": "money_format",
+    "newsletter_popup": false,
+    "newsletter_popup_form": false,
+    "newsletter_bg": "shopify://shop_images/FireSide_SC_2_1080x1080_7296303d-6371-4552-9754-2a96051c6ef7.jpg",
+    "newsletter_popup_title": "Save up to $1,200 - Limited Time",
+    "newsletter_popup_text": "<p>Check out our Current Offers</p>",
+    "popup_button1": "OFFERS & FINANCING",
+    "popup_button1_link": "https://fireside.com/pages/general-offers",
+    "newsletter_popup_seconds": 0,
+    "newsletter_popup_days": "2",
+    "favicon": "shopify://shop_images/fireside-favicon-01.png",
+    "checkout_logo_image": "shopify://shop_images/logo.png",
+    "checkout_accent_color": "#3d484e",
+    "checkout_button_color": "#e9841d",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "hide-announcement-bar": false,
+          "promo_text": "<p><strong>HURRY TO SHOP OUR BIGGEST SALE OF THE YEAR!</strong></p>",
+          "promo_btn_text": "Claim Your Savings",
+          "promo_btn_link": "https://fireside.com/pages/general-offers",
+          "social_icons_header": false,
+          "phone_number": "",
+          "top_bar_menu": "",
+          "show_cart": true,
+          "cart_icon": "cart",
+          "show_locale_selector": false,
+          "show_currency_selector": false,
+          "logo_display_width": 170,
+          "logo": "shopify://shop_images/logo.png",
+          "main_linklist": "main-menu",
+          "main_linklist2": "professional-main-menu",
+          "vertical_menu": true,
+          "dropdown_click": false,
+          "search_enabled": true,
+          "fixed_header": true,
+          "logo_position": "left",
+          "logo_alignment": "left",
+          "menu_position": "inline",
+          "menu_alignment": "align_right"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "7b778f72-fcdc-449d-96bc-ca711956a047": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer",
+              "social_icons_footer": false
+            }
+          },
+          "footer-2": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer-1",
+              "social_icons_footer": false
+            }
+          },
+          "a600cd26-ea19-48d6-8d40-f05bd05cfcba": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer-3",
+              "social_icons_footer": false
+            }
+          },
+          "d7a941c7-6966-4bcd-be36-9f79be65d3c3": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer-4",
+              "social_icons_footer": false
+            }
+          }
+        },
+        "block_order": [
+          "7b778f72-fcdc-449d-96bc-ca711956a047",
+          "footer-2",
+          "a600cd26-ea19-48d6-8d40-f05bd05cfcba",
+          "d7a941c7-6966-4bcd-be36-9f79be65d3c3"
+        ],
+        "settings": {
+          "copyright_text": "",
+          "display_designed_by": false,
+          "display_payment_methods": false,
+          "show_locale_selector": false,
+          "show_currency_selector": false
+        }
+      },
+      "custom-footer": {
+        "type": "custom-footer",
+        "blocks": {
+          "custom-footer-1": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer",
+              "social_icons_footer": false
+            }
+          },
+          "custom-footer-2": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer-1",
+              "social_icons_footer": false
+            }
+          },
+          "link_list_UdjgkN": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer-3",
+              "social_icons_footer": false
+            }
+          },
+          "link_list_kgRk6r": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer-4",
+              "social_icons_footer": false
+            }
+          }
+        },
+        "block_order": [
+          "custom-footer-1",
+          "custom-footer-2",
+          "link_list_UdjgkN",
+          "link_list_kgRk6r"
+        ],
+        "settings": {
+          "copyright_text": "",
+          "display_designed_by": true,
+          "display_payment_methods": false,
+          "show_locale_selector": true,
+          "show_currency_selector": true
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "6279071938380501511": {
+        "type": "shopify://apps/powerful-contact-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {}
+      },
+      "3720565183479497137": {
+        "type": "shopify://apps/globo-product-options-variant/blocks/app-embed-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "17587734367913825621": {
+        "type": "shopify://apps/perfect-product-finder-quiz/blocks/popup/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+        "disabled": false,
+        "settings": {
+          "ppf-popup-width": "80%",
+          "ppf-popup-height": "80%",
+          "ppf-popup-width-mobile": "100%",
+          "ppf-popup-height-mobile": "100%"
+        }
+      }
+    }
+  }
+}

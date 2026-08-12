@@ -1,0 +1,300 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "33b8cc99-c0e5-409a-95c5-7c13ae075441": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Fireplace Safety Information",
+        "sub-text": "Fireplaces can pose a risk when not used with proper vigilance. Learn more about fireplace safety and the steps you can take -- including requesting a safety screen.",
+        "bg-img": "shopify://shop_images/FHH_BFC_Sale_PMAX_1200_x_628_px_1.png",
+        "view-btn-link": "shopify://pages/safety-barrier-request",
+        "view-btn": "Request Screen",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "898e0f63-7f5d-475a-a66d-c446539609a5": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--17180852355302__898e0f63-7f5d-475a-a66d-c446539609a5-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireplace-icon-1.svg",
+            "heading-margin-top": 20,
+            "title": "Keep It Clear",
+            "heading_size": "large_text",
+            "text": "<p>Fireplaces reach extremely hot temperatures while in operation and during cool-down. Keep clothing, furniture, draperies and other combustibles out of the way while the fireplace heats or cools.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "fc0cd1c3-329a-4113-8e80-c26e8121652a": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireplace-icon-3.svg",
+            "heading-margin-top": 20,
+            "title": "Use Safety Screen",
+            "heading_size": "large_text",
+            "text": "<p>Ensure that a safety screen is securely in place when your fireplace is in operation to reduce the risk of potential burns. Missing a screen? <br/>Request a fire screen <a href=\"/pages/fireplace-safety-form\" title=\"Fireplace Safety Form\">here.</a></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "a97c81e9-e2d0-4aa0-8919-1afd10f13e04": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireplace-icon-2.svg",
+            "heading-margin-top": 20,
+            "title": "Be Vigilant",
+            "heading_size": "large_text",
+            "text": "<p>Never leave a fire unattended. Do not allow children or pets to get too close to the fireplace. Have your chimney and fireplace professionally inspected at least once a year. Install a carbon monoxide detector.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--17180852355302__898e0f63-7f5d-475a-a66d-c446539609a5-text_block-1",
+        "fc0cd1c3-329a-4113-8e80-c26e8121652a",
+        "a97c81e9-e2d0-4aa0-8919-1afd10f13e04"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "7f548e63-639e-4582-8de0-c5577c0c821a": {
+      "type": "image-text",
+      "blocks": {
+        "template--17180852355302__7f548e63-639e-4582-8de0-c5577c0c821a-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/HNG_hand_reaching_fireplace_heat_danger-2x-jpg.webp",
+            "image_crop": "none",
+            "title": "Danger: HOT",
+            "text": "<p>The glass and metal surrounding your fireplace will reach extreme temperatures and remain hot for a period after your product is shut off. Always supervise and keep children a safe distance away to prevent accidental contact with the glass.</p>",
+            "button_label": "",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--17180852355302__7f548e63-639e-4582-8de0-c5577c0c821a-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/HNG_safety_screen-2x-jpg.webp",
+            "image_crop": "none",
+            "title": "Protect Your Family with a Safety Screen",
+            "text": "<p>A protective safety screen will help prevent skin from meeting the hot glass, greatly reducing the risk of serious burns. Do not remove the screen or alter it in any way.</p>",
+            "button_label": "",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17180852355302__7f548e63-639e-4582-8de0-c5577c0c821a-image-1",
+        "template--17180852355302__7f548e63-639e-4582-8de0-c5577c0c821a-image-2"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "3f3ea59f-109c-49d9-82cc-ed21f3c792ec": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Additional Resources",
+        "paragraph_text_alignment": "center",
+        "content": "",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "open-new-window": false,
+        "button_link": "",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "0588e4d9-0296-4aaa-99a9-c788489cd486": {
+      "type": "video",
+      "settings": {
+        "wide_display": false,
+        "aspect_ratio": "16:9",
+        "autoplay": false,
+        "autoloop": true,
+        "mute_video": false,
+        "show_controls": true,
+        "video_dark_overlay": true,
+        "iframe_video": "https://www.youtube.com/watch?v=zYOfhfHFN3s",
+        "html5_video": "",
+        "display_text_over_video": false,
+        "preheading": "",
+        "heading": "",
+        "subheading": "",
+        "button1_label": "Play Video",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2_label": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "56521d1d-1b8c-403a-b079-cd86ddd0c125": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "0e35a774-92fc-411f-9b86-ed8ef0a831a5": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "70731d11-85fc-4a1b-86f3-94e3343a744e": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 20,
+            "title": "Safety Tips",
+            "heading_size": "large_text",
+            "text": "<p>Download this brochure from the<a href=\"https://www.hpba.org/\" target=\"_blank\">Hearth, Patio & Barbecue Association</a>for best safety practices to enjoy your fireplace or stove and avoid burns. It also reviews safety barriers for glass on gas hearth products.</p>",
+            "button_label": "Read More",
+            "open-new-window": false,
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/HPBA_GasBrochure_web.pdf?v=1704906702",
+            "align_text": "center",
+            "border_style": "box"
+          }
+        },
+        "8a1d2b12-9101-45b0-8aeb-caa98f2237d0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 20,
+            "title": "Safety Infographic",
+            "heading_size": "large_text",
+            "text": "<p>View child safety precautions around gas fireplaces from Safe Kids Worldwide as well as and tips for parents and caregivers.</p>",
+            "button_label": "Read More",
+            "open-new-window": false,
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Safe_Kids_Worldwide_Fireplace_Safety_Infographic.pdf?v=1704906828",
+            "align_text": "center",
+            "border_style": "box"
+          }
+        }
+      },
+      "block_order": [
+        "70731d11-85fc-4a1b-86f3-94e3343a744e",
+        "8a1d2b12-9101-45b0-8aeb-caa98f2237d0"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "33b8cc99-c0e5-409a-95c5-7c13ae075441",
+    "898e0f63-7f5d-475a-a66d-c446539609a5",
+    "7f548e63-639e-4582-8de0-c5577c0c821a",
+    "3f3ea59f-109c-49d9-82cc-ed21f3c792ec",
+    "0588e4d9-0296-4aaa-99a9-c788489cd486",
+    "56521d1d-1b8c-403a-b079-cd86ddd0c125",
+    "0e35a774-92fc-411f-9b86-ed8ef0a831a5"
+  ]
+}

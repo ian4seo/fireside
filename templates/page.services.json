@@ -1,0 +1,713 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "165307706254106f59": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "Fireplace Tune Ups & Repair",
+        "heading_size": "regular_text",
+        "content": "<p>Experience the Fireside Difference with support from our team of experts! Our technicians know the ins and outs of fireplaces to help keep yours working and looking like new.</p>",
+        "btn_link": "https://fireside.com/pages/request-service",
+        "btn_text": "Book Your Tune-Up",
+        "image": "shopify://shop_images/FreshCoastCollective_Fireside_BrandAnthem_Finals_202012_lowres-9140.jpg",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165307744338ae2a9a": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 30,
+        "padding_bottom": 60,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "We're Here to Help",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>From fireplace repair and preventative maintenance tune ups to helping you find the best accessory options to add more personality and functionality to your fireplace, we can help.</p>",
+        "button_text_alignment": "center",
+        "button_label": "Request Repair / Tune Up",
+        "open-new-window": false,
+        "button_link": "shopify://pages/request-service",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "Help Videos",
+        "open-new-window-two": false,
+        "button_link_2": "shopify://pages/troubleshoot",
+        "button_type_2": "orange",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16530774831e1e81cc": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1653077483e96936a2-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/installation-160x160.png",
+            "heading-margin-top": 0,
+            "title": "Fireplace Focused",
+            "heading_size": "regular_text",
+            "text": "<p>Fireplaces are what we do best - we know the products inside & out.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1653077483e96936a2-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/design-consult-160x160.png",
+            "heading-margin-top": 0,
+            "title": "Experienced Pros",
+            "heading_size": "regular_text",
+            "text": "<p>Over 100 years of combined fireplace tech experience with factory-trained certifications.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "084d8cc4-a34f-4457-a441-9d840610da4d": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/ongoing-service-support-160x160.png",
+            "heading-margin-top": 0,
+            "title": "Quality Guarantee",
+            "heading_size": "regular_text",
+            "text": "<p>Enjoy a 90-day service work warranty  for better peace of mind.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1653077483e96936a2-0",
+        "1653077483e96936a2-1",
+        "084d8cc4-a34f-4457-a441-9d840610da4d"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "2fcf9f42-bf52-4feb-841a-779d6c53dcf0": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16629090222310__2fcf9f42-bf52-4feb-841a-779d6c53dcf0-16787186697e975ef3-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireside_fireplace_repair_tune_up_before.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "template--16629090222310__2fcf9f42-bf52-4feb-841a-779d6c53dcf0-16787186697e975ef3-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireside_fireplace_repair_tune_up_after.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--16629090222310__2fcf9f42-bf52-4feb-841a-779d6c53dcf0-16787186697e975ef3-0",
+        "template--16629090222310__2fcf9f42-bf52-4feb-841a-779d6c53dcf0-16787186697e975ef3-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Keep Your Fireplace At Its Best",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16576357499b699eff": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16576357497ca8042c-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"Hands down the best home technician I've ever encountered. Knowledgeable, informative, professional, and with a personality to boot. And my fireplace looks brand new!\" <br/><strong>- Steve F.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "16576357497ca8042c-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"We've used Fireside each year to do a cleaning and update. For a very reasonable cost they've kept our fireplace looking and working like it was when it was new. They're easy to work with and the tech is always friendly and interactive with our children. Great group to work with.\"<br/><strong>- David C.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "0c871a42-4d52-41f1-b9c7-cba8cce0b58c": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"Excellent experience! Our first time having our gas fireplace serviced and we're so happy with the results. The tech completely exceeded our expectations - efficient, professional and very accommodating. He even took the time to share tips for getting the most out of the fireplace. Will definitely use them again.\"<br/><strong>- Shannon H.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "6316d07c-5210-4d35-9687-698c229afdbd": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"We've used Fireside for fireplace maintenance since we purchased our home. I love the simple fact that I can count on them. They keep appointments, offer fair prices, do a great job, and leave me feeling like they care about our safety. And all of the technicians are great.\" <br/><strong>- Robert S.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "16576357497ca8042c-0",
+        "16576357497ca8042c-1",
+        "0c871a42-4d52-41f1-b9c7-cba8cce0b58c",
+        "6316d07c-5210-4d35-9687-698c229afdbd"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165331862219469855": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1653318622f54d6e9b-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Call Ahead",
+            "heading_size": "regular_text",
+            "text": "<p>A factory-trained certified fireplace technician will contact you on their way to the appointment.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "1653318622f54d6e9b-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Conversation",
+            "heading_size": "regular_text",
+            "text": "<p>After introductions, your fireplace tech will ask about your fireplace concerns and confirm their notes.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "0c31b431-218c-4d4e-8b7c-9eb0f687ed83": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Time Commitment",
+            "heading_size": "regular_text",
+            "text": "<p>Appointments typically last between 45 – 90 minutes depending on the amount of repair or cleaning needed.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        }
+      },
+      "block_order": [
+        "1653318622f54d6e9b-0",
+        "1653318622f54d6e9b-1",
+        "0c31b431-218c-4d4e-8b7c-9eb0f687ed83"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "What to expect at your <br>fireplace service appointment",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1653318941f5928e9c": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1653318940294a8e2b-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Service & Maintenance",
+            "heading_size": "regular_text",
+            "text": "<p>Your tech will perform a full fireplace cleaning, inspection, and adjustment while using protective coverings to keep your home clean.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "1653318940294a8e2b-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Recommendations",
+            "heading_size": "regular_text",
+            "text": "<p>Your tech will discuss findings and recommendations if needed. There is no additional labor fee for most repairs—only the cost of parts. </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "a9e82582-ec31-46a3-8243-29b127d7bfec": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Payment",
+            "heading_size": "regular_text",
+            "text": "<p>Payment is due at the time of service, including any additional parts needed for repairs. Credit card, cash or check accepted. Pre-paid plans also available. </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        }
+      },
+      "block_order": [
+        "1653318940294a8e2b-0",
+        "1653318940294a8e2b-1",
+        "a9e82582-ec31-46a3-8243-29b127d7bfec"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165307800827d555bb": {
+      "type": "two-column-bg-image-w-text",
+      "settings": {
+        "bg_img": "shopify://shop_images/FreshCoastCollective_Fireside_BrandAnthem_Finals_202012_lowres-6046.jpg",
+        "minion-font": true,
+        "heading": "Fireside Fireplace Tune Ups Include:",
+        "content": "<h6>Cleaning, Diagnosis &amp; Repair</h6>\n<ul>\n\t<li>Clean and inspect the fireplace heat exchanger, firebox, and burn area</li>\n\t<li>Clean, inspect, and adjust pilot light</li>\n\t<li>Check and adjust valve pressure</li>\n\t<li>Check and adjust logs</li>\n\t<li>Replace ember material</li>\n\t<li>Touch up fireplace interior painted surfaces</li>\n\t<li>Clean glass and check seal</li>\n\t<li>Tighten connections and test for gas leaks</li>\n\t<li>Recommend replacement parts</li>\t\n</ul>",
+        "btn_link": "",
+        "btn_text": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "featured_text_YcgaAc": {
+      "type": "featured-text",
+      "name": "Rich text and image",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "#3d484e",
+        "heading_text_alignment": "center",
+        "title": "Ready to schedule? Book your tune-up today.",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "",
+        "button_text_alignment": "center",
+        "button_label": "Schedule Service",
+        "open-new-window": false,
+        "button_link": "https://fireside.com/pages/request-service",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "#ffffff",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16530800521fc1e48b": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Troubleshooting",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Looking to fix your fireplace on your own? Our fireplace troubleshooting videos and guides can help. From tips on how to sync your remote to instructions on how to relight your pilot light, our DIY videos have you covered for the most common scenarios.</p>",
+        "button_text_alignment": "center",
+        "button_label": "Watch Videos",
+        "open-new-window": false,
+        "button_link": "shopify://pages/troubleshoot",
+        "button_type": "orange-text",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658324374ecb2fef7": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "#3d484e",
+        "heading_text_alignment": "center",
+        "title": "Fireplace Maintenance Plans",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>An easy and affordable way to keep your fireplace at its best! Save money and time when you sign up for a pre-paid maintenance plan.</p>",
+        "button_text_alignment": "center",
+        "button_label": "Sign Up Today And Save",
+        "open-new-window": false,
+        "button_link": "shopify://pages/request-service",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "#ffffff",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1657853524e4996ff7": {
+      "type": "image-text",
+      "blocks": {
+        "165785352423d9ebb9-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/before_after_6000CLX.png",
+            "image_crop": "none",
+            "title": "Need To Replace Your Fireplace?",
+            "text": "<p>Regular care and maintenance can extend the life of your fireplace. But like other appliances, gas fireplaces eventually need to be replaced.<br/><br/>Whether you'd like to match your evolving style, upgrade to new technology, or replace an old fireplace that no longer works, we have endless options to make the process simple so you can get back to enjoying time around the fire. </p>",
+            "button_label": "Request Quote",
+            "link": "shopify://pages/request-estimate",
+            "link-two-margin-top": 0,
+            "button_two_label": "Explore Products",
+            "link-two": "shopify://collections/replace-a-fireplace",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "165785352423d9ebb9-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "frd_next_steps_WwbCeV": {
+      "type": "frd-next-steps",
+      "blocks": {
+        "step_card_8TfLyE": {
+          "type": "step_card",
+          "settings": {
+            "heading": "New Fireplace Installation",
+            "description": "Browse our products fora new installation",
+            "button_text": "Browse Products",
+            "link": "https://fireside.com/collections/gas-fireplaces"
+          }
+        },
+        "step_card_HbihUp": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Upgrade Your Fireplace",
+            "description": "Trade in your old unit for something new",
+            "button_text": "Request Estimate",
+            "link": "https://fireside.com/pages/request-estimate"
+          }
+        },
+        "step_card_NFmTPy": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Parts & Accessories",
+            "description": "Find replacement partsand accessories",
+            "button_text": "Shop Online",
+            "link": "https://fireside.com/collections/all-products"
+          }
+        }
+      },
+      "block_order": [
+        "step_card_8TfLyE",
+        "step_card_HbihUp",
+        "step_card_NFmTPy"
+      ],
+      "name": "Next Steps",
+      "settings": {
+        "title": "Need Something Else?",
+        "bottom_richtext": "",
+        "background_color": "#f6f7f9",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e0e0e0",
+        "heading_color": "#333333",
+        "text_color": "#666666",
+        "button_text_color": "#ffffff",
+        "button_style_outlined": false,
+        "columns_per_row": 3,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "card_padding_top": 32,
+        "card_padding_bottom": 32,
+        "card_border_radius": 12
+      }
+    },
+    "frd_next_steps_Ba7Kgd": {
+      "type": "frd-next-steps",
+      "blocks": {
+        "step_card_ERJNfM": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Browse Products",
+            "description": "Explore our full range of fireplaces, inserts, and stoves",
+            "button_text": "Shop Now",
+            "link": "https://fireside.com/collections/all-products"
+          }
+        },
+        "step_card_aWNk6q": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Find a Showroom",
+            "description": "Visit one of our Minnesota showrooms to see products in person",
+            "button_text": "Find Us",
+            "link": "https://fireside.com/pages/locations"
+          }
+        },
+        "step_card_3wXeG9": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Talk to an Expert",
+            "description": "Get personalized help with your fireplace project",
+            "button_text": "Contact",
+            "link": "https://fireside.com/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "step_card_ERJNfM",
+        "step_card_aWNk6q",
+        "step_card_3wXeG9"
+      ],
+      "name": "Next Steps",
+      "settings": {
+        "title": "What Would You Like to Do Next?",
+        "bottom_richtext": "",
+        "background_color": "#ffffff",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e0e0e0",
+        "heading_color": "#333333",
+        "text_color": "#666666",
+        "button_text_color": "#ffffff",
+        "button_style_outlined": false,
+        "columns_per_row": 3,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "card_padding_top": 32,
+        "card_padding_bottom": 32,
+        "card_border_radius": 12
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165307706254106f59",
+    "165307744338ae2a9a",
+    "16530774831e1e81cc",
+    "2fcf9f42-bf52-4feb-841a-779d6c53dcf0",
+    "16576357499b699eff",
+    "165331862219469855",
+    "1653318941f5928e9c",
+    "165307800827d555bb",
+    "featured_text_YcgaAc",
+    "16530800521fc1e48b",
+    "1658324374ecb2fef7",
+    "1657853524e4996ff7",
+    "frd_next_steps_WwbCeV",
+    "frd_next_steps_Ba7Kgd"
+  ]
+}

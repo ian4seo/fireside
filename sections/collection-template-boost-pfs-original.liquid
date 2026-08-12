@@ -1,0 +1,912 @@
+<script
+  type="application/json"
+  data-section-type="collection-template"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+{% liquid
+  if collection.image
+    assign image = collection.image
+  elsif section.settings.image
+    assign image = section.settings.image
+  else
+    assign image = collection.products.first.featured_image
+  endif
+
+  assign mobile_crop = 'mobile-banner--crop-' | append: section.settings.mobile_image_crop
+
+  assign has_faceted_filtering_block = false
+  assign faceted_filtering_blocks_count = section.blocks | where: "type", "faceted_filtering" | size
+  if faceted_filtering_blocks_count > 0
+    assign has_faceted_filtering_block = true
+  endif
+%}
+
+{% if section.settings.featured_collection_image %}
+  {%
+    render 'template-banner',
+    image: image,
+    mobile_image: section.settings.mobile_image,
+    background_style: section.settings.caption_content_background,
+    mobile_crop: mobile_crop,
+    wide_display: section.settings.wide_display,
+    banner_title: collection.title,
+    show_caption: section.settings.display_collection_title,
+  %}
+{% endif %}
+
+<section class="lg-site-width">
+  <div class="container content collection-wrapper">
+    {% paginate collection.products by 200 %}
+
+    <div class="one-whole column">
+
+      <div class="breadcrumb-collection">
+        {% if section.settings.collection_breadcrumb %}
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "@id": "{{ shop.url }}",
+                    "name": "{{ 'general.breadcrumbs.home' | t }}"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "@id": "{{ routes.collections_url }}/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}",
+                    "name": "{{ collection.title }}"
+                  }
+                }
+                {% if current_tags %}
+                  {% for tag in current_tags %}
+                    {% unless tag contains 'meta-' %}
+                      ,
+                      {
+                        "@type": "ListItem",
+                        "position": {{ forloop.index | plus: 2 }},
+                        "item": {
+                          "@id": "{{ routes.collections_url }}/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}",
+                          "name": "{{ tag }}"
+                        }
+                      }
+                    {% endunless %}
+                  {% endfor %}
+                {% endif %}
+              ]
+            }
+          </script>
+
+          <div class="breadcrumb_text">
+            <a href="{{ routes.root_url }}" title="{{ shop.name | escape }}">
+              <span>{{ 'general.breadcrumbs.home' | t }}</span>
+            </a>
+
+            <span class="breadcrumb-divider">/</span>
+
+            <a href="{{ collection.url }}" title="{{ collection.title | escape }}" class="breadcrumb_link">
+              <span>{{ collection.title }}</span>
+            </a>
+
+            {% if current_tags %}
+              {% for tag in current_tags %}
+                {% unless tag contains 'meta-' %}
+                  <span class="breadcrumb-divider">/</span>
+
+                  <a href="{{ collection.url }}/{{ tag | handleize }}" title="{{ tag | escape }}">
+                    <span>{{ tag }}</span>
+                  </a>
+                {% endunless %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages != 0 and settings.pagination_type != 'load_more' and settings.pagination_type != 'infinite_scroll' %}
+              <span class="breadcrumb-divider">/</span> {{ 'general.breadcrumbs.page' | t: current_page: paginate.current_page, pages: paginate.pages }}
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if section.settings.display_collection_title and section.settings.featured_collection_image == false %}
+      <div class="site-width text-center">
+        {% if collection.handle == 'all' %}
+          <h1 class="minion-pro weight-normal no-margin">{{ settings.all_product_heading }}</h1>
+        {% else %}
+          <h1 class="minion-pro weight-normal no-margin">Shop {{ collection.title }}</h1>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="{% if section.settings.display_collection_title and section.settings.featured_collection_image == false %}one-half column medium-down--one-whole{% else %}one-whole column{% endif %} section_select">
+      {% if collection.handle != blank and collection.products_count > 0 %}
+        {% if section.settings.collection_tags and has_faceted_filtering_block == false %}
+          {% for tag in collection.all_tags %}
+            {% if forloop.first %}
+              <select name="tag_filter" id="tag_filter" class="tag_filter" data-default-collection="{% if collection.handle == 'all' %}{{ routes.all_products_collection_url }}{% else %}{{ collection.url }}{% endif %}">
+                <option {% unless current_tags %}selected="selected"{% endunless %} value="{% if collection.handle == "all" %}{{ routes.all_products_collection_url }}{% else %}{{ collection.url }}{% endif %}">{{ 'collections.general.all_collection_title' | t: title: collection.title }}</option>
+            {% endif %}
+
+            {% unless tag contains 'meta-' %}
+              <option {% if current_tags contains tag %}selected="selected"{% endif %} value="{{ routes.collections_url }}/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}">{{ tag }}</option>
+            {% endunless %}
+
+            {% if forloop.last %}
+              </select>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        {% if section.settings.collection_sort %}
+          <select
+            class="sort_by"
+            id="sort-by"
+            data-sort-by
+          >
+            {%- for option in collection.sort_options -%}
+              {% assign sort_active = false %}
+              {% if collection.sort_by == blank and collection.default_sort_by == option.value %}
+                {% assign sort_active = true %}
+              {% elsif collection.sort_by == option.value %}
+                {% assign sort_active = true %}
+              {% endif %}
+              <option value="{{ option.value }}" {% if sort_active %}selected="selected"{% endif %}>
+                {{ option.name }}
+              </option>
+            {%- endfor -%}
+          </select>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="one-whole column">
+      <div class="feature_divider"></div>
+    </div>
+
+    {% comment %} Check to see if sidebar should be enabled {% endcomment %}
+    {% if section.blocks.size > 0 and collection.handle != 'types' and collection.handle != 'vendors' %}
+      {% assign sidebar = true %}
+    {% else %}
+      {% assign sidebar = false %}
+    {% endif %}
+
+    <div
+      class="
+        content-wrapper
+        is-flex
+        is-flex-wrap
+      "
+    >
+      {%
+        render 'sidebar',
+        results: collection,
+        has_faceted_filtering_block: has_faceted_filtering_block,
+      %}
+
+      <div class="has-sidebar-option sidebar-enabled--{{ sidebar }}">
+        {% if collection.handle == 'all' %}
+          {% if settings.all_product_richtext != blank %}
+            <div class="sm-site-width text-center">
+              <div class="one-whole column">
+                <div class="collection_description rte">
+                  {{ settings.all_product_richtext }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% else %}
+          {% if collection.description != blank %}
+            <div class="sm-site-width text-center">
+              <div class="one-whole column">
+                <div class="collection_description rte">
+                  {{ collection.description }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+        
+
+        {% comment %} <div class="tag-container">
+          <!-- product tag filtering -->
+          {% if collection.all_tags.size == 0 %}
+            No tags found.
+          {% else %}
+            <label for="tag-filter">Filter: </label>
+            <select id="tag-filter" onchange="changeTagFilter($('#tag-filter').val());">
+              <option value="">All</option>
+              {% for tag in collection.all_tags %}
+                <option value="{{ tag | handleize }}">{{ tag | capitalize }}</option>
+              {% endfor %}
+            </select>
+          {% endif %}
+        </div>
+        <script>
+          function changeTagFilter(tag){window.location.href="/collections/all/"+tag}
+          window.addEventListener("load",l=>{let splitUrl=window.location.href.split("/"),lastSlug=splitUrl[splitUrl.length-1].replace("/","");$("#tag-filter").val(lastSlug)});
+        </script> {% endcomment %}
+
+        <div class="container">
+
+          <div class="filter-list-toggle-wrap hundred">
+            <button class="filter-list-toggle display-none sm-block relative">Filters <span class="cross absolute"><span></span><span></span></span></button>
+          </div>
+
+          <div class="one-fourth column collection-filters col-sm-12 sm-hide">
+            
+            {% assign productTypeList = "" %}
+            {% assign buyOnlineList = "" %}
+            {% assign fuelTypeList = "" %}
+            {% assign brandList = "" %}
+            {% assign styleList = "" %}
+            {% assign locationList = "" %}
+            {% assign typeList = "" %}
+            {% assign heatList = "" %}
+            {% assign designList = "" %}
+            {% assign priceList = "" %}
+            {% for product in products %}
+              {% assign productType = product.metafields.product_filter.producttype.value %}
+              {% assign buyOnline = product.metafields.product_filter.buyonline.value %}
+              {% assign fuelType = product.metafields.product_filter.fueltype.value %}
+              {% assign brand = product.metafields.product_filter.brand.value %}
+              {% assign style = product.metafields.product_filter.style.value %}
+              {% assign location = product.metafields.product_filter.location.value %}
+              {% assign type = product.metafields.product_filter.type.value %}
+              {% assign heat = product.metafields.product_filter.heat.value %}
+              {% assign design = product.metafields.product_filter.design.value %}
+
+              {% if productTypeList contains productType %}
+              {% else %}
+                {% assign productTypeList = productTypeList | append: productType | append: "::" %}
+              {% endif %}
+
+              {% if buyOnlineList contains buyOnline %}
+              {% else %}
+                {% assign buyOnlineList = buyOnlineList | append: buyOnline | append: "::" %}
+              {% endif %}
+
+              {% if fuelTypeList contains fuelType %}
+              {% else %}
+                {% assign fuelTypeList = fuelTypeList | append: fuelType | append: "::" %}
+              {% endif %}
+
+              {% if brandList contains brand %}
+              {% else %}
+                {% assign brandList = brandList | append: brand | append: "::" %}
+              {% endif %}
+
+              {% if styleList contains style %}
+              {% else %}
+                {% assign styleList = styleList | append: style | append: "::" %}
+              {% endif %}
+
+              {% if locationList contains location %}
+              {% else %}
+                {% assign locationList = locationList | append: location | append: "::" %}
+              {% endif %}
+
+              {% if typeList contains type %}
+              {% else %}
+                {% assign typeList = typeList | append: type | append: "::" %}
+              {% endif %}
+
+              {% if heatList contains heat %}
+              {% else %}
+                {% assign heatList = heatList | append: heat | append: "::" %}
+              {% endif %}
+            
+              {% if designList contains design %}
+              {% else %}
+                {% assign designList = designList | append: design | append: "::" %}
+              {% endif %}
+            
+              
+              {% assign priceList = "$0 - $2000::$2001 - $4000::$4001+" %}
+              
+
+            {% endfor %}
+
+            {% if productTypeList != "" %}
+              <div class="collection-accordion">
+                <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Product Type <span class="cross absolute"><span></span><span></span></span></p>
+                {% assign filters = productTypeList | split: "::" %}
+                <div class="acc-content">
+                  {% for filter in filters %}
+                    {% if filter != "" %}<label class="minion-pro weight-light" style="font-size:17px"><input type="checkbox" class="product-filter-checkbox" id="filter-producttype" data-filter="{{ filter }}"> {{ filter }}</label>{% endif%}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+            
+            {% if fuelTypeList != "" %}
+              <div class="collection-accordion">
+                <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Fuel Type <span class="cross absolute"><span></span><span></span></span></p>
+                {% assign filters = fuelTypeList | split: "::" %}
+                <div class="acc-content">
+                  {% for filter in filters %}
+                    {% if filter != "" %}<label class="minion-pro weight-light" style="font-size:17px"><input type="checkbox" class="product-filter-checkbox" id="filter-fueltype" data-filter="{{ filter }}"> {{ filter }}</label>{% endif%}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+            
+            {% if styleList != "" %}
+              <div class="collection-accordion">
+                <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Style <span class="cross absolute"><span></span><span></span></span></p>
+                {% assign filters = styleList | split: "::" %}
+                <div class="acc-content">
+                  {% for filter in filters %}
+                    {% if filter != "" %}<label class="minion-pro weight-light" style="font-size:17px"><input type="checkbox" class="product-filter-checkbox" id="filter-style" data-filter="{{ filter }}"> {{ filter }}</label>{% endif%}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+                        
+            {% if designList != "" %}
+              <div class="collection-accordion">
+                <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Design <span class="cross absolute"><span></span><span></span></span></p>
+                {% assign filters = designList | split: "::" %}
+                <div class="acc-content">
+                  {% for filter in filters %}
+                    {% if filter != "" %}<label class="minion-pro weight-light" style="font-size:17px"><input type="checkbox" class="product-filter-checkbox" id="filter-design" data-filter="{{ filter }}"> {{ filter }}</label>{% endif%}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+            
+            {% if priceList != "" %}
+              <div class="collection-accordion">
+                <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Price <span class="cross absolute"><span></span><span></span></span></p>
+                {% assign filters = priceList | split: "::" %}
+                <div class="acc-content">
+                  {% for filter in filters %}
+                    {% if filter != "" %}<label class="minion-pro weight-light" style="font-size:17px"><input type="checkbox" class="product-filter-checkbox" id="filter-price" data-filter="{{ filter }}"> {{ filter }}</label>{% endif%}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+            
+            {% if heatList != "" %}
+              <div class="collection-accordion">
+                <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Heat <span class="cross absolute"><span></span><span></span></span></p>
+                {% assign filters = heatList | split: "::" %}
+                <div class="acc-content">
+                  {% for filter in filters %}
+                    {% if filter != "" %}<label class="minion-pro weight-light" style="font-size:17px"><input type="checkbox" class="product-filter-checkbox" id="filter-heat" data-filter="{{ filter }}"> {{ filter }}</label>{% endif%}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if brandList != "" %}
+              <div class="collection-accordion">
+                <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Brand <span class="cross absolute"><span></span><span></span></span></p>
+                {% assign filters = brandList | split: "::" %}
+                <div class="acc-content">
+                  {% for filter in filters %}
+                    {% if filter != "" %}<label class="minion-pro weight-light" style="font-size:17px"><input type="checkbox" class="product-filter-checkbox" id="filter-brand" data-filter="{{ filter }}"> {{ filter }}</label>{% endif%}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+
+<!--             {% if typeList != "" %}
+              <div class="collection-accordion">
+                <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Type <span class="cross absolute"><span></span><span></span></span></p>
+                {% assign filters = typeList | split: "::" %}
+                <div class="acc-content">
+                  {% for filter in filters %}
+                    <label class="minion-pro weight-light" style="font-size:17px"><input type="checkbox" class="product-filter-checkbox" id="filter-type" data-filter="{{ filter }}"> {{ filter }}</label>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %} -->
+
+            
+            
+<!--             {% if buyOnlineList != "" %}
+              <div class="collection-accordion">
+                <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Buy Online <span class="cross absolute"><span></span><span></span></span></p>
+                {% assign filters = buyOnlineList | split: "::" %}
+                <div class="acc-content">
+                  {% for filter in filters %}
+                    {% if filter != "" %}<label class="minion-pro weight-light" style="font-size:17px"><input type="checkbox" class="product-filter-checkbox" id="filter-buyonline" data-filter="{{ filter }}"> {{ filter }}</label>{% endif%}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %} -->
+
+            
+             <div class="collection-accordion">
+               <p class="acc-title minion-pro pointer relative" style="font-size: 24px;">Location <span class="cross absolute"><span></span><span></span></span></p>
+               <div class="acc-content">
+                 <label class="minion-pro weight-light" style="font-size:17px">Zip Code: <input type="text" class="product-filter-textbox" id="filter-location"></label>
+                 <span id="zip_code_message" class="minion-pro" style="display:none;color: #e9841d;font-size: 14px;">Our products are unavailable through Fireside in your area. Please <a href="https://www.fireplaces.com/where-to-buy" target="_blank">click here</a> for additional options.<br /><br /></span>
+                 <button type="button" id="check_zip_code_button" name="check_zip_code" class="global-button global-button--primary">SEARCH</button>
+               </div>
+             </div>
+            
+            <style id="reset-style"></style>
+
+            <script>
+              $(document).ready(function() {
+                $(".product-filter-checkbox").click(function() {
+                  $(".product-filters").fadeIn();
+                  let checkbox = $(this);
+                  let filterString = "";
+                  $(".product-filter-checkbox").each(function() {
+                    if ($(this).is(':checked')) {
+                      let filter = $(this).attr("data-filter");
+                      filterString = filterString + "data-" + checkbox.attr("id") + ":::" + filter + "===";
+                    }
+                  });
+                  
+                  $(".product-filters").each(function() {
+                   let filterList = filterString.split("===");                    
+                    let productFilter = $(this);
+                    for(const filterValue of filterList ) {
+                      let filterData = filterValue.split(":::");
+                      let filterName = filterData[0];
+                      let filterBy = filterData[1];
+                      if(filterName != "") {
+                        if(productFilter.attr(filterName).length == 0 || productFilter.attr(filterName).includes(filterBy) == false) { 
+                          productFilter.hide();
+                        }
+                      }
+                    }
+                  });
+                });
+                
+                $("#check_zip_code_button").on('click', function() {
+                  $(".product-filters").hide();
+                  let textbox = $("#filter-location");
+                  let filterCount = 0;
+                  let productsFound = 0;
+                  if (textbox.val() != "") {
+                    filterCount++;
+                    $(".product-filters").each(function() {
+                      if($(this).attr("data-filter-location").includes(textbox.val())) { 
+                        $(this).fadeIn();
+                        productsFound++;
+                      }
+                    });
+                  } else { productsFound = 1; }
+                  if(filterCount == 0) { $(".product-filters").fadeIn(); }
+                  if(productsFound == 0) {
+                    $("#zip_code_message").fadeIn();
+                  } else {
+                    $("#zip_code_message").hide();
+                  }
+                });
+              });
+            </script>
+          </div>
+          <div class="three-fourths column col-sm-12">
+            {% if collection.products.size == 0 %}
+              <div class="product-list product-list--collection">
+                <p class="quote">{{ 'collections.general.no_matches' | t }}</p>
+              </div>
+            {% else %}
+              {%- assign products_per_row = section.settings.products_per_row -%}
+              {%
+                render 'product-loop',
+                paginate: paginate,
+                products: products,
+                skip_product: product,
+                products_per_row: products_per_row,
+                sidebar: sidebar,
+              %}
+            {% endif %}
+          </div>
+        </div>
+
+        {% if settings.pagination_type == 'basic_pagination' %}
+          {%
+            render 'pagination',
+            paginate: paginate
+          %}
+        {% endif %}
+      </div>
+    </div>
+  {% endpaginate %}
+  </div>
+</section>
+
+{% if collection.handle == 'all' %}
+  {% if settings.include_faq == true %}
+  <section class="faqs lg-site-width">
+    <div class="inner three-fourths">
+      <h3 class="faq-title">FAQs</h3>
+      <div class="faq">
+        <h4>{{ settings.faq_1_heading }}</h4>
+        <div class="faq-content">{{ settings.faq_1_richtext }}</div>
+      </div>
+      <div class="faq">
+        <h4>{{ settings.faq_2_heading }}</h4>
+        <div class="faq-content">{{ settings.faq_2_richtext }}</div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+{% endif %}
+
+{% if collection.handle == 'all' %}
+  {% if settings.all_prods_cta_title != blank %}
+    <section class="collection-cta all-prods" style="background-color: #3d484e; color: #ffffff;">
+      <div class="inner sm-site-width text-center">
+        <h2 class="white">{{ settings.all_prods_cta_title }}</h2>
+        <p>{{ settings.all_prods_cta }}</p>
+      </div>
+    </section>
+  {% endif %}
+{% endif %}
+
+{% if collection.metafields.collection_meta.call_to_action != blank %}
+<section class="collection-cta" style="background-color: #3d484e; color: #ffffff;">
+  <div class="inner sm-site-width">
+    {{ collection.metafields.collection_meta.call_to_action }}
+  </div>
+</section>
+{% endif %}
+
+<style>
+  .filter-list-toggle-wrap { padding-left: 10px; padding-right: 10px; margin-bottom: 10px; }
+  .filter-list-toggle { color: white; width: 100%; font-size: 16px; background-color: #3d484e; padding: 12px; border: 0; font-family: Helvetica,sans-serif; font-weight: 700; text-align: left; }
+  .collection-cta.all-prods a {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: none;
+    -webkit-transition: color .2s,background-color .2s;
+    -o-transition: color .2s,background-color .2s;
+    transition: color .2s,background-color .2s;
+    color: #3d484e;
+    padding: 12px 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: Helvetica,sans-serif;
+    font-weight: 700;
+    background-color: white;
+  }
+  .collection-cta.all-prods a:hover { background-color: #e9841d; color: white; }
+
+  .faqs .inner { margin-left: auto; padding-bottom: 40px; }
+  .collection-cta .inner { max-width: 650px; padding-top: 80px; padding-bottom: 80px; }
+  .collection-cta .inner h1,
+  .collection-cta .inner h2,
+  .collection-cta .inner h3 { color: white; }
+  @media (max-width: 643px ) {
+    .collection-cta .inner a { display: block; }
+    .collection-cta .inner a:nth-child(1) {
+      margin-bottom: 10px;
+    }
+  }
+</style>
+
+
+
+{% comment %} Shopify-XR {% endcomment %}
+{% if product.media %}
+  <script>
+    window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)}
+    {% assign models = product.media | where: 'media_type', 'model' | json %}
+    ShopifyXR('addModels', {{ models }});
+  </script>
+{% endif %}
+
+<script>
+  (function (init) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  })(function () {
+    jQuery('.acc-title').on('click', function() {
+      jQuery(this).next().slideToggle();
+      jQuery(this).parent().toggleClass('open');
+    });
+
+    jQuery('.filter-list-toggle').on('click', function() {
+      jQuery(this).toggleClass('open');
+      jQuery(this).parents().next().slideToggle();
+    });
+  });
+</script>
+
+<script defer src="https://cdn.shopify.com/shopifycloud/shopify-xr-js/assets/v1.0/shopify-xr.en.js"></script>
+<script defer src="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.en.js"></script>
+
+{% schema %}
+{
+  "name": "Collection",
+  "class": "shopify-section--collection-template under-menu",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "featured_collection_image",
+      "label": "Show banner",
+      "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/115009455768-How-to-add-a-Collection-Banner)",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "wide_display",
+      "label": "Wide display",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Banner image",
+      "info": "This only appears on collections that do not have a collection image. 1800 x 1000px recommended."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile banner image",
+      "info": "Display a different image on mobile screens."
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_crop",
+      "label": "Mobile image cropping",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "caption_content_background",
+      "label": "Text contrast technique",
+      "default": "original",
+      "info": "Improve legibility by applying a contrast technique to your banner’s text.",
+      "options": [
+        {
+          "value": "original",
+          "label": "None"
+        },
+        {
+          "value": "darken_bg",
+          "label": "Darken banner image"
+        },
+        {
+          "value": "text_box",
+          "label": "Solid box"
+        },
+        {
+          "value": "translucent_text_box",
+          "label": "Translucent box"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "display_collection_title",
+      "label": "Show collection title"
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_breadcrumb",
+      "label": "Show breadcrumb links",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_tags",
+      "label": "Enable filtering by product tag",
+      "info": "When using a Faceted filtering block, the tag filter will be hidden."
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_sort",
+      "label": "Enable collection sorting"
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "Products per row",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "pagination_limit",
+      "label": "Products per page",
+      "min": 2,
+      "max": 50,
+      "step": 1,
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create a sidebar by adding content blocks."
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle",
+      "label": "Collapse sidebar content",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "filter_by_collection",
+      "name": "Collection list",
+      "limit": 1
+    },
+    {
+      "type": "faceted_filtering",
+      "name": "Faceted filtering",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "[Learn how](https://help.shopify.com/en/manual/online-store/themes/os20/customize/filters) to configure filters."
+        },
+        {
+          "type": "paragraph",
+          "content": "Using this block will hide any tag filter, tag list, type list, and vendor list blocks."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_filter_product_count",
+          "label": "Show product counts",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "custom_menu_linklist",
+          "label": "Menu"
+        }
+      ]
+    },
+    {
+      "type": "page",
+      "name": "Page",
+      "settings": [
+        {
+          "type": "page",
+          "id": "content_page",
+          "label": "Page"
+        }
+      ]
+    },
+    {
+      "type": "recently_viewed",
+      "name": "Recently viewed products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "To test the recently viewed products, view your online store outside of the Editor and visit multiple product pages. [Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115008765228)"
+        },
+        {
+          "type": "text",
+          "id": "sidebar_rv_title",
+          "label": "Title",
+          "default": "Recently Viewed"
+        },
+        {
+          "type": "range",
+          "id": "sidebar_rv_per",
+          "label": "Products limit",
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "default": 3
+        }
+      ]
+    },
+    {
+      "type": "filter",
+      "name": "Tag filter",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "text",
+          "id": "filter_name",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "filter_tags",
+          "label": "Filter tags",
+          "info": "Add a comma-separated list of product tags. Only the tags found in the collection will be displayed as filters. [Learn more](https://help.outofthesandbox.com/hc/en-us/articles/115008642047)"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_filter_swatches",
+          "label": "Display color swatches"
+        }
+      ]
+    },
+    {
+      "type": "filter_by_tag",
+      "name": "Tag list",
+      "limit": 1
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Text area can be used for special announcements or general information.</p>"
+        }
+      ]
+    },
+    {
+      "type": "filter_by_type",
+      "name": "Type list",
+      "limit": 1
+    },
+    {
+      "type": "filter_by_vendor",
+      "name": "Vendor list",
+      "limit": 1
+    }
+  ]
+}
+
+{% endschema %}
+
+{% style %}
+  .collection_description { margin-bottom: 40px; }
+{% endstyle %}

@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {}
+    },
+    "custom_liquid_XKb6TX": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<br><br>\n<a class=\"e-widget no-button generic-loader\" href=\"https://gleam.io/hN3hI/fireside-facelift-sweepstakes\" rel=\"nofollow\">\n&nbsp; Fireside Facelift Sweepstakes\n</a>\n<script type=\"text/javascript\" src=\"https://widget.gleamjs.io/e.js\" async=\"true\"></script>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "plain_rich_text_P8MyTe": {
+      "type": "plain-rich-text",
+      "disabled": true,
+      "name": "Plain Rich Text",
+      "settings": {
+        "heading": "",
+        "sub_text": "<h4>Photo Gallery</h4>",
+        "text_align": "text-center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "custom_liquid_wDkaE6": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<br><div data-gallery-embed=\"EeEh1\" data-header=\"f\"></div><br><br>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_XKb6TX",
+    "plain_rich_text_P8MyTe",
+    "custom_liquid_wDkaE6"
+  ]
+}

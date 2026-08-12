@@ -1,0 +1,221 @@
+<!-- Hero Banner Template -->
+{% style %}
+
+.bg-image {
+  background-image:url('{{ section.settings.bg-img | img_url: 'master' }}');
+}
+
+ @media screen and (max-width: 480px) {
+  .bg-center, .background-center {
+    background-position: left top;
+  }
+}
+
+.home-banner .banner-content-wrap { height: 33vw; max-height: 750px; min-height: 350px; }
+.home-banner-inner.no-scroll-to-arrow { margin-bottom: 60px; }
+.home-banner .banner-content-wrap .inner { margin-top: auto; background-color: white; padding: 30px 60px; max-width: 600px; }
+.home-banner-inner.has-scroll-to-arrow .banner-content-wrap .inner { padding: 30px 30px 0; }
+
+  @media screen and (max-width: 480px) {
+    .home-banner .banner-content-wrap .inner { padding: 30px; }
+  }
+.home-banner .banner-content-wrap .inner .banner-heading { font-size: 34px; margin-bottom: 10px; }
+.home-banner .banner-content-wrap .inner p { margin-bottom: 20px; }
+.home-banner-inner.has-scroll-to-arrow .banner-content-wrap .inner { position: relative; top: 50px; }
+
+.scroll-to-wrap { background-color: white; padding-top: 50px; }
+.scroll-to-wrap .scroll-arrow { font-family: 'Helvetica', sans-serif; font-weight: bold; background-color: #3D484E; color: white; padding: 7px 40px; display: inline-block; }
+.scroll-to-wrap .scroll-arrow span { display: inline-block; margin-right: 6px; font-size: 23px; line-height: 1; position: relative; top: 2px; }
+
+@media (max-width: 767px ) {
+    .home-banner .home-banner-inner { background-image: none !important; }
+    .home-banner .banner-content-wrap { height: auto; min-height: 0; padding-left: 20px; padding-right: 20px; }
+    .home-banner-inner .banner-content-wrap .inner { top: -50px !important; margin-bottom: -50px; }
+    .home-banner .mobile-image { height: 350px; }
+	.scroll-to-wrap .scroll-arrow {display: block; text-align: center}
+}
+{% endstyle %}
+
+<!-- HOMEOWER ------------------------------>
+{% if section.settings.scroll-arrow == blank %}
+<div class="bg-image home-banner-inner bg-cover bg-center {%if section.settings.pro-content-active == true %}homeowner-content{% else %}{% endif %} no-scroll-to-arrow">
+{% else %}
+<div class="bg-image home-banner-inner bg-cover bg-center {%if section.settings.pro-content-active == true %}homeowner-content{% else %}{% endif %} has-scroll-to-arrow">    
+{% endif %}
+    
+    <div class="mobile-image-wrap">
+        <div class="mobile-image bg-cover bg-center display-none sm-block" style="background-image: {% if section.settings.bg-img-mobile %}url('{{ section.settings.bg-img-mobile | img_url: 'master' }}'){% else %}url('{{ section.settings.bg-img | img_url: 'master' }}');{% endif %}"></div>
+    </div>
+    
+    <div class="site-width">
+        <div class="banner-content-wrap flex justify-center sm-flex-column">
+            <div class="inner text-center">
+                {% if section.settings.banner-heading != blank %}
+                <h1 class="banner-heading minion-pro weight-normal">{{ section.settings.banner-heading }}</h1>
+                {% endif %}
+                {% if section.settings.sub-text != blank %}
+                <p class="">{{ section.settings.sub-text }}</p>
+                {% endif %}
+                {% if section.settings.view-btn != blank %}
+                <a class="btn bg-orange" href="{{ section.settings.view-btn-link }}">{{ section.settings.view-btn }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    {% if section.settings.scroll-arrow != blank %}
+    <div class="scroll-to-wrap">
+        <div class="site-width">
+            
+            {% if section.settings.scroll-arrow != blank %}
+            <span role="button" data-target="#{{ section.settings.scroll-arrow }}" class="scroll-arrow pointer"><span class="orange">↓</span> FOR HOMEOWNERS</span>
+            {% endif %}
+
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+<!-- PROFESSIONAL ------------------------------>
+{% if section.settings.pro-content-active == true %}
+    {% if section.settings.pro-scroll-arrow == blank %}
+    <div class="home-banner-inner bg-cover bg-center professional-content no-scroll-to-arrow" style="background-image:url('{{ section.settings.pro-bg-img | img_url: 'master' }}')">
+    {% else %}    
+    <div class="home-banner-inner bg-cover bg-center professional-content has-scroll-to-arrow" style="background-image:url('{{ section.settings.pro-bg-img | img_url: 'master' }}')">
+    {% endif %}    
+        
+        <div class="mobile-image-wrap">
+            <div class="mobile-image bg-cover bg-center display-none sm-block" style="background-image:{% if section.settings.pro-bg-img-mobile %}url('{{ section.settings.pro-bg-img-mobile | img_url: 'master' }}'){% else %}url('{{ section.settings.pro-bg-img | img_url: 'master' }}');{% endif %}"></div>
+        </div>
+       
+        <div class="site-width">
+            <div class="banner-content-wrap flex justify-center sm-flex-column">            
+                <div class="inner text-center">
+                    {% if section.settings.pro-banner-heading != blank %}
+                    <h1 class="banner-heading minion-pro weight-normal">{{ section.settings.pro-banner-heading }}</h1>
+                    {% endif %}
+                    {% if section.settings.pro-sub-text != blank %}
+                    <p class="">{{ section.settings.pro-sub-text }}</p>
+                    {% endif %}
+                    {% if section.settings.pro-view-btn != blank %}
+                    <a class="btn bg-orange" href="{{ section.settings.pro-view-btn-link }}">{{ section.settings.pro-view-btn }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        {% if section.settings.scroll-arrow != blank or section.settings.pro-scroll-arrow != blank %}
+        <div class="scroll-to-wrap">
+            <div class="site-width">
+
+                {% if section.settings.pro-scroll-arrow != blank %}
+                <span role="button" data-target="#{{ section.settings.pro-scroll-arrow }}" class="scroll-arrow pointer"><span class="orange">↓</span> FOR PROFESSIONALS</span>
+                {% endif %}
+
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+{% endif %}
+
+{% schema %}
+{
+"name": "Hero Banner",
+"tag": "section",
+"class": "home-banner",
+"settings": [
+    {
+      "type": "header",
+      "content": "Homeowner Content"
+    },
+    {
+    "id": "banner-heading",
+    "type": "text",
+    "label": "Heading"
+    },
+    {
+    "id": "sub-text",
+    "type": "text",
+    "label": "Text"
+    },
+    {
+    "id": "bg-img",
+    "type": "image_picker",
+    "label": "Background Image (Desktop)",
+    "info": "1800x590 px recommended"
+    },
+    {
+      "id":"bg-img-mobile",
+      "type":"image_picker",
+      "label": "Background Image (Mobile)"
+    },  
+    {
+    "id": "view-btn-link",
+    "type": "url",
+    "label": "Button URL"
+    },
+    {
+    "id": "view-btn",
+    "type": "text",
+    "label": "Button name"
+    },
+    {
+    "id": "scroll-arrow",
+    "type": "text",
+    "label": "Anchor link (ID of section on this page)."
+    },
+    {
+      "type": "header",
+      "content": "Professional Content"
+    },
+    {
+    "id": "pro-content-active",
+    "type": "checkbox",
+    "label": "Pro Content Active?"
+    },
+    {
+    "id": "pro-banner-heading",
+    "type": "text",
+    "label": "Heading"
+    },
+    {
+    "id": "pro-sub-text",
+    "type": "text",
+    "label": "Text"
+    },
+    {
+    "id": "pro-bg-img",
+    "type": "image_picker",
+    "label": "Background Image (Desktop)"
+    },
+    {
+    "id": "pro-bg-img-mobile",
+    "type": "image_picker",
+    "label": "Background Image (Mobile)"
+    },  
+    {
+    "id": "pro-view-btn-link",
+    "type": "url",
+    "label": "Button URL"
+    },
+    {
+    "id": "pro-view-btn",
+    "type": "text",
+    "label": "Button name"
+    },
+    {
+    "id": "pro-scroll-arrow",
+    "type": "text",
+    "label": "Anchor link (ID of section on this page)."
+    }
+],
+"presets": [
+    {
+    "name": "Hero Banner",
+    "category": "Banner"
+    }
+]
+}
+{% endschema %}

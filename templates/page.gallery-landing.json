@@ -1,0 +1,237 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "frd_short_hero_z7h4UJ": {
+      "type": "frd-short-hero",
+      "name": "Short Hero",
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": false,
+        "image": "shopify://shop_images/Rectangle_1_d6b35324-fb7b-4282-ac5d-3cb5acbef22b.png",
+        "top_button_1": "Gas Inserts",
+        "top_button_1_link": "https://fireside.com/pages/upgrade-your-fireplace",
+        "top_button_2": "Gallery",
+        "top_button_2_link": "https://fireside.com/pages/gallery",
+        "top_button_3": "Resources",
+        "top_button_3_link": "https://fireside.com/pages/gas-insert-resources",
+        "title": "GALLERY",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button2": "",
+        "button2_link": "",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_color": ""
+      }
+    },
+    "frd_image_text_DkhbcB": {
+      "type": "frd-image-text",
+      "blocks": {
+        "image_MPGzee": {
+          "type": "image",
+          "settings": {
+            "media_type": "video",
+            "image": "shopify://shop_images/Group_2.png",
+            "image_crop": "none",
+            "video_url": "https://vimeo.com/1106200783?share=copy",
+            "video_muted": true,
+            "video_loop": true,
+            "video_controls": true,
+            "title": "GET INSPIRED",
+            "text": "<p>Keep the coziness, lose the hassle. Think of a gas insert as the full upgrade – designed to slide into your existing fireplace and transform it into an efficient, sealed heat source. Gas inserts bring serious ambiance and warmth, with sleek finishes and modern controls.<br/></p>",
+            "button_label": "",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_MPGzee"
+      ],
+      "name": "Image or Video with text",
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "frd_before_after_nRtLEc": {
+      "type": "frd-before-after",
+      "blocks": {
+        "before_after_pair_L87H7g": {
+          "type": "before_after_pair",
+          "settings": {
+            "before_image": "shopify://shop_images/Rectangle_23.png",
+            "before_label": "Before",
+            "after_image": "shopify://shop_images/Rectangle_22.png",
+            "after_label": "After"
+          }
+        },
+        "before_after_pair_YXQBgA": {
+          "type": "before_after_pair",
+          "settings": {
+            "before_image": "shopify://shop_images/Rectangle_27.png",
+            "before_label": "Before",
+            "after_image": "shopify://shop_images/Rectangle_26.png",
+            "after_label": "After"
+          }
+        },
+        "before_after_pair_MBtz8H": {
+          "type": "before_after_pair",
+          "settings": {
+            "before_image": "shopify://shop_images/Rectangle_31.png",
+            "before_label": "Before",
+            "after_image": "shopify://shop_images/Rectangle_30.png",
+            "after_label": "After"
+          }
+        }
+      },
+      "block_order": [
+        "before_after_pair_L87H7g",
+        "before_after_pair_YXQBgA",
+        "before_after_pair_MBtz8H"
+      ],
+      "name": "Before & After",
+      "settings": {
+        "heading": "BEFORE & AFTER"
+      }
+    },
+    "frd_banner_text_with_button_PYxm6y": {
+      "type": "frd-banner-text-with-button",
+      "name": "Banner Text w/Button",
+      "settings": {
+        "heading": "",
+        "sub_text": "",
+        "button_label": "DOWNLOAD DESIGN GUIDE",
+        "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Transform_Your_Fireplace_Design_Guide.pdf?v=1758573029",
+        "background_image": "shopify://shop_images/Group_7.png",
+        "bg_color": "#e9841d",
+        "button_bg_color": "#e9841d",
+        "text_align": "text-center"
+      }
+    },
+    "frd_showcase_carousel_cpgxgw": {
+      "type": "frd-showcase-carousel",
+      "blocks": {
+        "product_showcase_rHLKM7": {
+          "type": "product_showcase",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_35.png",
+            "title": "Heat & Glo",
+            "subtitle": "Escape Gas Insert",
+            "custom_url": "https://fireside.com/collections/gas-inserts/products/heat-glo-escape-firebrick-gas-fireplace-insert",
+            "open_new_tab": false
+          }
+        },
+        "product_showcase_mfN8Dy": {
+          "type": "product_showcase",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_34.png",
+            "title": "Heat & Glo",
+            "subtitle": "Supreme Gas Insert",
+            "custom_url": "https://fireside.com/collections/gas-inserts/products/heat-glo-supreme-series-gas-fireplace-insert",
+            "open_new_tab": false
+          }
+        },
+        "product_showcase_RqKGaT": {
+          "type": "product_showcase",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_33.png",
+            "title": "Heat & Glo",
+            "subtitle": "Cosmo Gas Insert",
+            "custom_url": "https://fireside.com/collections/gas-inserts/products/heat-glo-cosmo-gas-fireplace-insert",
+            "open_new_tab": false
+          }
+        },
+        "product_showcase_8m6Cpc": {
+          "type": "product_showcase",
+          "settings": {
+            "image": "shopify://shop_images/heatnglo_provident_3.webp",
+            "title": "Heat & Glo",
+            "subtitle": "Provident Gas Insert",
+            "custom_url": "https://fireside.com/collections/gas-inserts/products/heat-glo-provident-series-gas-fireplace-insert",
+            "open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "product_showcase_rHLKM7",
+        "product_showcase_mfN8Dy",
+        "product_showcase_RqKGaT",
+        "product_showcase_8m6Cpc"
+      ],
+      "name": "Showcase Carousel",
+      "settings": {
+        "title": "EXPLORE FIREPLACES",
+        "products_to_show": 3,
+        "show_navigation": true,
+        "auto_scroll": false,
+        "auto_scroll_duration": 5000,
+        "background_color": "#ffffff",
+        "text_color": "#333333"
+      }
+    },
+    "frd_banner_text_with_button_nYLLDY": {
+      "type": "frd-banner-text-with-button",
+      "name": "Banner Text w/Button",
+      "settings": {
+        "heading": "NOT SURE WHERE TO START?",
+        "sub_text": "",
+        "button_label": "Take the Quiz",
+        "button_link": "https://fireside.com/pages/find-your-insert",
+        "bg_color": "#e9841d",
+        "button_bg_color": "#212626",
+        "text_align": "text-center"
+      }
+    },
+    "1680209685bfc4567e": {
+      "type": "apps",
+      "blocks": {
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTI2OTY3\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "frd_short_hero_z7h4UJ",
+    "frd_image_text_DkhbcB",
+    "frd_before_after_nRtLEc",
+    "frd_banner_text_with_button_PYxm6y",
+    "frd_showcase_carousel_cpgxgw",
+    "frd_banner_text_with_button_nYLLDY",
+    "1680209685bfc4567e"
+  ]
+}

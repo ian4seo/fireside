@@ -1,0 +1,168 @@
+<!-- Custom Quote Form Template -->
+
+<div class="form-wrapper site-width {{ section.settings.css_class }}">
+  <div class="inner">
+    
+    <h2 class="title h5">{{ section.settings.heading }}</h2>
+
+    {% form 'customer' %}
+      {{ form.errors | default_errors }}
+
+      <div class="your_project mb-20">
+        <label for="">Locations</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">DE – Bridgeville</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">MD – Elkridge</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">NC – Raleigh</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">NC – Charlotte</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">NC – Greensboro</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">NC – Wilmington</label>
+    	<input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">NJ – Robbinsville</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">NY – Goshen</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">PA – Limerick</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">PA – York</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">SC – Charleston</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">SC – Columbia</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">SC – Greenville</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">SC – Myrtle Beach</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">TN – Knoxville</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">VA – Charlottesville </label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">VA – Newport News</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">VA – Richmond</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">VA – Chantilly</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">TN – Nashville</label>
+        <input required="required" type="radio" name="" value="" id=""><label class="inline-label inline-block" for="">TX – Dallas</label>  
+    </div>
+      <div class="first-name half-left">
+        <label for="first-name">*First name</label>
+        <input required="required" type="text" name="new_comment[first_name]" id="first-name" />
+      </div>
+
+      <div class="last-name half-right">
+        <label for="last-name">*Last name</label>
+        <input required="required" type="text" name="new_comment[last_name]" id="last-name" />
+      </div>
+    
+      <div class="phone half-left">
+        <label for="phone">Phone</label>
+        <input type="tel" name="new_comment[phone]" id="phone" />
+      </div>
+
+      <div class="email half-right">
+        <label for="email">Email</label>
+        <input required="required" type="email" name="new_comment[email]" id="email" />
+      </div>
+
+      <div class="address whole">
+        <label for="address">Street Address</label>
+        <input type="text" name="new_comment[address]" id="address" />
+      </div>
+
+      <div class="city third-left">
+        <label for="city">City</label>
+        <input type="text" name="new_comment[city]" id="city" />
+      </div>
+
+      <div class="state third-center">
+        <label for="state">State</label>
+        <input type="text" name="new_comment[state]" id="state" />
+      </div>
+
+      <div class="zip third-right">
+        <label for="zip">*Zip</label>
+        <input required="required" type="text" name="new_comment[zip]" id="zip" />
+      </div>
+
+      <div class="your_project mb-20">
+        <label for="your_project">I’m a:</label>
+        <input required="required" type="radio" name="new_comment[your_project]" value="convert-existing" id="convert-existing"><label class="inline-label inline-block" for="convert-existing">Homeowner / Homebuyer </label>
+        <input required="required" type="radio" name="new_comment[your_project]" value="add-a-fireplace" id="add-a-fireplace"><label class="inline-label inline-block" for="add-a-fireplace">Professional </label>
+      </div>
+    
+      <div class="zip third-right">
+        <label for="">Builder or Contractor Name: (if homeowner was selected)</label>
+        <input required="required" type="text" name="new_comment[zip]" id="" />
+      </div>
+    
+      <div class="zip third-right">
+        <label for="">Company Name: (if pro was selected)</label>
+        <input required="required" type="text" name="new_comment[zip]" id="" />
+      </div>
+
+      <div class="fuel_type mb-20">
+        <label for="">Project Type</label>
+        <input required="required" type="radio" name="new_comment[fuel_type]" value="" id=""><label class="inline-label inline-block" for="">New Construction</label>
+        <input required="required" type="radio" name="new_comment[fuel_type]" value="" id=""><label class="inline-label inline-block" for="">Remodeling</label>
+      </div>
+
+      <div class="body">
+        <label for="body">Project Details</label>
+        <textarea name="new_comment[body]" id="body"></textarea>
+      </div>
+
+      <div class="submit">
+        <input class="btn bg-orange" type="submit" value="Request Quote" />
+      </div>
+    {% endform %}
+
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Quote Request 2",
+    "tag": "section",
+    "class": "custom-quote-form",
+    "settings": [
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Heading",
+        "default": "We'd Love To Hear From You"
+      },
+      {
+          "type": "header",
+          "content": "Advanced"
+      },
+      {
+          "type": "paragraph",
+          "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      },
+      {
+          "type": "text",
+          "id": "css_class",
+          "label": "CSS Class"
+      },
+      {
+          "type": "textarea",
+          "id": "custom_css",
+          "label": "Custom CSS"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Quote Request 2",
+        "category": "ADVANCED LAYOUT"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .form-wrapper { padding-top: 60px; padding-bottom: 150px; }
+  .form-wrapper .inner { padding: 60px; box-shadow: 0 0 20px 0 #A0A0A0BF; background-color: white; }
+  .form-wrapper .inner .title { margin-bottom: 40px; }
+  .custom-quote-form { position: relative; }
+  .custom-quote-form:after { content: ''; position: absolute; z-index: -1; bottom: 0; left: 0; right: 0; width: 100%; height: 30vw; min-height: 250px; max-height: 450px; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url('https://cdn.shopify.com/s/files/1/0634/4707/2998/files/wood-background.jpg?v=1653598971'); }
+  @media (max-width: 767px ) {
+    .form-wrapper { padding-top: 15px; padding-bottom: 60px; }
+    .form-wrapper .inner { padding: 20px; }
+  }
+</style>
+
+{% style %}
+    {%
+      render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+    %}
+{% endstyle %}

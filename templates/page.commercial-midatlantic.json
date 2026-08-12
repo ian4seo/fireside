@@ -1,0 +1,818 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "16637977600ca65b79": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Choose Fireside for the Best Commercial-Grade Fireplaces",
+        "sub-text": "Whether you're a developer, architect, or designer, make your next commercial project stand out with fireplaces. Since 1951 we've provided a wide selection of quality materials and professional services for fireplace solutions in Maryland, Virginia, and Washington DC.",
+        "bg-img": "shopify://shop_images/fireside_commercial_fireplaces_homepage_2389eec2-dd15-4bd2-bc72-b4680ccc4565.png",
+        "view-btn-link": "shopify://pages/commercial-bid-request",
+        "view-btn": "Request Bid",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "22810971-3491-4f2d-a051-ad500554ba9e": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16661204336870__22810971-3491-4f2d-a051-ad500554ba9e-1671746713c11dd0d5-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/cool_touch_fireplace_glass.jpg",
+            "heading-margin-top": 15,
+            "title": "Unparalled Technology",
+            "heading_size": "regular_text",
+            "text": "<p>All Stellar fireplaces feature double-paned SafeSurface Cool Touch Glass. They're UL certified with commercial-grade components for maximum safety, durability, and placement flexibility. </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "template--16661204336870__22810971-3491-4f2d-a051-ad500554ba9e-1671746713c11dd0d5-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/stellat_customization.png",
+            "heading-margin-top": 15,
+            "title": "Striking Design",
+            "heading_size": "regular_text",
+            "text": "<p>Each Stellar fireplace can be designed to best complement your specific project. Tall, bold flames pair with customization options including size, shape, authentic natural stone, colored glass media, driftwood logs, mirrored panels, image panels, and more. </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "5783855c-be6f-4012-a5a9-e00d05eba81d": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/chromotherapy_fireplace_lighting.png",
+            "heading-margin-top": 15,
+            "title": "Chromotherapy Lighting",
+            "heading_size": "regular_text",
+            "text": "<p>Control the programmable LED multi-colored chromotherapy lighting with an intuitive remote. Perfect to enhance relaxation or invigoration. </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--16661204336870__22810971-3491-4f2d-a051-ad500554ba9e-1671746713c11dd0d5-0",
+        "template--16661204336870__22810971-3491-4f2d-a051-ad500554ba9e-1671746713c11dd0d5-1",
+        "5783855c-be6f-4012-a5a9-e00d05eba81d"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Stellar Gas Fireplaces",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "c3341b9d-d4ca-46bd-b9e4-ae15d3b8076b": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify://shop_images/stellar_ignite_the_iconic.png",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "f1e70bbf-5ae8-41bd-af7e-516265cfd15d": {
+      "type": "image-text",
+      "blocks": {
+        "template--16661204336870__f1e70bbf-5ae8-41bd-af7e-516265cfd15d-1671744776279c559e-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_crop": "none",
+            "title": "STELLAR ENLIGHT BAY GAS FIREPLACE SERIES",
+            "text": "<p>Promotion description appears here.</p>",
+            "button_label": "Spec Tools",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--16661204336870__f1e70bbf-5ae8-41bd-af7e-516265cfd15d-1671744776279c559e-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Stellar_Corner_Gas_Fireplace_Fireside_Hearth_and_home.png",
+            "image_crop": "none",
+            "title": "STELLAR ENLIGHT CORNER GAS FIREPLACE SERIES",
+            "text": "<p>Promotion description appears here.</p>",
+            "button_label": "Spec Tools",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "a17622d2-82ba-4a71-bee4-d8ee305f16dc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/stellar_enlight_island_gas_fireplace_fireside_hearth_and_home.png",
+            "image_crop": "none",
+            "title": "STELLAR ENLIGHT ISLAND GAS FIREPLACE SERIES",
+            "text": "<p>Selling Message Copy Goes Here</p>",
+            "button_label": "Spec Tools",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "8144e024-bf3a-4c4c-8c69-87de77e8c16f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/stellar_enlight_pier_gas_fireplace_fireside_hearth_and_home.png",
+            "image_crop": "none",
+            "title": "STELLAR ENLIGHT PIER GAS FIREPLACE SERIES",
+            "text": "<p>Selling Message Copy Goes Here</p>",
+            "button_label": "Spec Tools",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "Watch Video",
+            "link-two": "https://www.youtube.com/watch?v=oeYtcTOl6oA",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "7d10b6a7-22b9-4bf1-a1f6-573e1c5a0df3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/stellar_see_through_gas_fireplace_fireside_hearth_and_home.png",
+            "image_crop": "none",
+            "title": "STELLAR ENLIGHT SEE-THROUGH GAS FIREPLACE SERIES",
+            "text": "<p>Selling Message Copy Goes Here</p>",
+            "button_label": "View all",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "36d71b30-0031-44d2-9d4e-ffa4c966a9c3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_crop": "none",
+            "title": "STELLAR ENLIGHT SINGLE-SIDED GAS FIREPLACE SERIES",
+            "text": "<p>Promotion description appears here.</p>",
+            "button_label": "View all",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "6308f877-983a-49a3-b2c2-98dafad8002e": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/stellar_trascend_indoor_outdoor_see_through_fireplace_fireside_hearth_and_home.png",
+            "image_crop": "none",
+            "title": "STELLAR TRANSCEND INDOOR/OUTDOOR GAS FIREPLACE SERIES",
+            "text": "<p>Promotion description appears here.</p>",
+            "button_label": "View all",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "b2753fcb-b04d-4637-a31c-ce760ddd1db1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/custom_stellar_gas_fireplace_round_fireplace_fireside_hearth_and_home.png",
+            "image_crop": "none",
+            "title": "STELLAR CUSTOM GAS FIREPLACE",
+            "text": "<p>Sales Messaging Goes Here</p>",
+            "button_label": "Build Custom",
+            "link": "https://custom.stellarhearth.com/",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16661204336870__f1e70bbf-5ae8-41bd-af7e-516265cfd15d-1671744776279c559e-0",
+        "template--16661204336870__f1e70bbf-5ae8-41bd-af7e-516265cfd15d-1671744776279c559e-1",
+        "a17622d2-82ba-4a71-bee4-d8ee305f16dc",
+        "8144e024-bf3a-4c4c-8c69-87de77e8c16f",
+        "7d10b6a7-22b9-4bf1-a1f6-573e1c5a0df3",
+        "36d71b30-0031-44d2-9d4e-ffa4c966a9c3",
+        "6308f877-983a-49a3-b2c2-98dafad8002e",
+        "b2753fcb-b04d-4637-a31c-ce760ddd1db1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "983ae98f-4eb1-4da1-8084-cca4e60eb2db": {
+      "type": "video",
+      "settings": {
+        "wide_display": true,
+        "aspect_ratio": "4:3",
+        "autoplay": false,
+        "autoloop": true,
+        "mute_video": false,
+        "show_controls": true,
+        "video_dark_overlay": false,
+        "iframe_video": "https://www.youtube.com/watch?v=WS6CuRjrEb8",
+        "html5_video": "",
+        "display_text_over_video": false,
+        "preheading": "",
+        "heading": "",
+        "subheading": "",
+        "button1_label": "Watch Video",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2_label": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16647602502b7d5031": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "d973f587-570d-4953-8294-da2d8f890a45": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-virtual-consult-01.png",
+            "heading-margin-top": 0,
+            "title": "Best Process & Tools",
+            "heading_size": "regular_text",
+            "text": "<p>Our 9-step process is designed to provide you the optimum fireplace solution, plus we offer a specification tool suite, certified continuing education programs, and on-site resources.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1664760250e4da8711-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/design-consult-160x160.png",
+            "heading-margin-top": 0,
+            "title": "Dedicated Team",
+            "heading_size": "regular_text",
+            "text": "<p>Our commercial team specializes in understanding your building process to ensure your projects are completed easily, efficiently, safely, and beautifully.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "4e8cf715-9cfa-49d9-bfca-ad32d24c0e2b": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/ongoing-service-support-160x160.png",
+            "heading-margin-top": 0,
+            "title": "Lifetime Support",
+            "heading_size": "regular_text",
+            "text": "<p>In addition to professional site previews and installations, every product is backed by post-install support and service for your clients. </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1664760250e4da8711-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-fireplace-01.png",
+            "heading-margin-top": 0,
+            "title": "Fireplaces For Any Project",
+            "heading_size": "regular_text",
+            "text": "<p>The Stellar brand offers a full portfolio of indoor and outdoor fireplaces certified for commercial settings.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "d973f587-570d-4953-8294-da2d8f890a45",
+        "1664760250e4da8711-1",
+        "4e8cf715-9cfa-49d9-bfca-ad32d24c0e2b",
+        "1664760250e4da8711-0"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "The Fireside DIfference",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1663796707c56de289": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "f7b97fcb-bf1b-44e2-810d-0454d2b01a51": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_commercial_stellar_fireplaces.png",
+            "title": "FIREPLACES ADD LUXURY & ARTISTRY",
+            "text": "<p>Fireplaces create a natural gathering spot in communal spaces. Choose from the best gas fireplace options - indoors or out - to differentiate your projects.</p>",
+            "button_label": "Request Spec Review",
+            "button_link": "shopify://pages/commercial-bid-request"
+          }
+        },
+        "6e6f4326-17a6-4a16-8a2c-ba1a4f59606b": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_spec_tools_Commercial.jpg",
+            "title": "SPECIFICATION TOOLS",
+            "text": "<p>Our entire fireplace product line is certified for commercial settings. Check out our specification tool suite - including CAD Drawings, Revit BIM, and Architect Guides.</p>",
+            "button_label": "Get Spec Tools",
+            "button_link": "shopify://pages/specification-tools"
+          }
+        },
+        "be84718e-cf22-4503-a69a-015216f54ec5": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-pro-resources.jpg",
+            "title": "CONTINUING EDUCATION & EVENTS",
+            "text": "<p>We provide certified continuing education courses for both in-person and online opportunities. Request a customized seminar, or check out our calendar for upcoming events in your area. </p>",
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/commercial-continuing-education"
+          }
+        },
+        "993e5f6c-b313-4c41-9c6e-e2350167aef5": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/commercial_fireplace_service_fireside.jpg",
+            "title": "SERVICE & PREVENTATIVE MAINTENANCE",
+            "text": "<p>Our customized commercial service plans make it easy and convenient to keep fireplaces working and looking their best for lasting luxury. Each plan is designed to meet the needs of the specific fireplaces on your properties.</p>",
+            "button_label": "Request Estimate",
+            "button_link": "shopify://pages/commercial-service-estimate-request"
+          }
+        }
+      },
+      "block_order": [
+        "f7b97fcb-bf1b-44e2-810d-0454d2b01a51",
+        "6e6f4326-17a6-4a16-8a2c-ba1a4f59606b",
+        "be84718e-cf22-4503-a69a-015216f54ec5",
+        "993e5f6c-b313-4c41-9c6e-e2350167aef5"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 27,
+        "vertical_text": ""
+      }
+    },
+    "906e2ee5-b224-493a-ab65-a3d51c147ecb": {
+      "type": "two-column-customer-type-button",
+      "blocks": {
+        "template--16504604688614__906e2ee5-b224-493a-ab65-a3d51c147ecb-1665147676c7eb10fe-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/commercial_fireplace_installation_inspection.jpg",
+            "title": "On-Site Project Review",
+            "heading_size": "regular_text",
+            "text": "<p>Additional copy goes here.</p>",
+            "customer-type": "none",
+            "button_label": "",
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "template--16504604688614__906e2ee5-b224-493a-ab65-a3d51c147ecb-1665147676c7eb10fe-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/commercial_fireplace_installation_1.jpg",
+            "title": "Professional Installation",
+            "heading_size": "regular_text",
+            "text": "<p>Additional copy goes here</p>",
+            "customer-type": "none",
+            "button_label": "",
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "5aa32815-87e6-484b-8fb2-283517e6d31c": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/gsa_fire_table_hotel_courtyard.jpg",
+            "title": "Outdoor Fireplaces & Fire Pits",
+            "heading_size": "regular_text",
+            "text": "<p>Elevate your outdoor spaces by including an outdoor fireplace, fire table, or fire feature in courtyards, near pools, and more for the ultimate experience.</p>",
+            "customer-type": "none",
+            "button_label": "Explore Products",
+            "button_link": "shopify://collections/commercial-outdoor-products",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--16504604688614__906e2ee5-b224-493a-ab65-a3d51c147ecb-1665147676c7eb10fe-1",
+        "template--16504604688614__906e2ee5-b224-493a-ab65-a3d51c147ecb-1665147676c7eb10fe-0",
+        "5aa32815-87e6-484b-8fb2-283517e6d31c"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile-padding-top": 0,
+        "mobile-padding-bottom": 0,
+        "section-bg": "",
+        "title": "COMMERCIAL FIREPLACE PROCESS FROM BID TO INSTALL",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "166379669185aa94bc": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16637966913c3e93ec-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>DAN YUROVICH<br/></strong>Senior Vice President </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "16637966913c3e93ec-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>JOHN ZACZEK</strong><br/>Finance Director </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "696cc56e-fa70-48dd-b094-4588efcf0adc": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>TIM THOMAS</strong><br/>Commercial Sales </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "5dcf468b-c764-42a7-8312-7c7f3cc1063a": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>BRUCE POTTER</strong><br/>Commercial Field Operations </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "16637966913c3e93ec-0",
+        "16637966913c3e93ec-1",
+        "696cc56e-fa70-48dd-b094-4588efcf0adc",
+        "5dcf468b-c764-42a7-8312-7c7f3cc1063a"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Meet Our Team",
+        "sub_text": "From start to finish, our team understands all of the elements included in commercial projects. We bid projects in Maryland, Virginia, and Washington DC.",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "166476098912c5f506": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "166476098941d42046-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>MARC HARRIS</strong><br/>Vice President / General Manager</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "166476098941d42046-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>BOB SCHROEDER</strong><br/>Operations Director</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "faf6820a-84d5-4ac5-929a-8389361e16b9": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>GLORIA FLANNIGAN CONNER</strong><br/>Customer Service Manager</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "4338cf2d-8587-4a08-aa6b-af58a3fc2742": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/headshotexample.jpg",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p><strong>CASI BEYER</strong><br/>Customer Service Specialist<br/></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "166476098941d42046-1",
+        "166476098941d42046-0",
+        "faf6820a-84d5-4ac5-929a-8389361e16b9",
+        "4338cf2d-8587-4a08-aa6b-af58a3fc2742"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "de3a2203-42d3-4b60-bd46-4a42f1405e9c": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify://shop_images/Fireside-Hearth-Home-Chantilly-Showroom-08182021_132826.jpg",
+        "pretext": "",
+        "title": "Locations",
+        "subtitle": "<p>6671 Santa Barbara Road, Suite J, Elkridge, MD 21075</p><p>14088 Sullyfield Circle B, Chantilly, VA 20151</p><p>11850 Canon Boulevard, Newport News, VA 23606</p><p>2146 Tomlynn Street, Richmond, VA 23230</p><p>162-E Industrial Drive, Troy, VA 22974</p><p></p>",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "text_box",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "080679a2-e618-4f46-ba14-b888f60c7f91": {
+      "type": "logo-bar",
+      "blocks": {
+        "template--16661204336870__080679a2-e618-4f46-ba14-b888f60c7f91-167174477632f98fe3-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/HGA_Architects.jpg",
+            "link": ""
+          }
+        },
+        "template--16661204336870__080679a2-e618-4f46-ba14-b888f60c7f91-167174477632f98fe3-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/ESG_logo.png",
+            "link": ""
+          }
+        },
+        "template--16661204336870__080679a2-e618-4f46-ba14-b888f60c7f91-167174477632f98fe3-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/RSP_Architects.png",
+            "link": ""
+          }
+        },
+        "template--16661204336870__080679a2-e618-4f46-ba14-b888f60c7f91-167174477632f98fe3-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/smith_dalia_archiects.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16661204336870__080679a2-e618-4f46-ba14-b888f60c7f91-167174477632f98fe3-0",
+        "template--16661204336870__080679a2-e618-4f46-ba14-b888f60c7f91-167174477632f98fe3-1",
+        "template--16661204336870__080679a2-e618-4f46-ba14-b888f60c7f91-167174477632f98fe3-2",
+        "template--16661204336870__080679a2-e618-4f46-ba14-b888f60c7f91-167174477632f98fe3-3"
+      ],
+      "settings": {
+        "title": "Clients",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16637977600ca65b79",
+    "22810971-3491-4f2d-a051-ad500554ba9e",
+    "c3341b9d-d4ca-46bd-b9e4-ae15d3b8076b",
+    "f1e70bbf-5ae8-41bd-af7e-516265cfd15d",
+    "983ae98f-4eb1-4da1-8084-cca4e60eb2db",
+    "16647602502b7d5031",
+    "1663796707c56de289",
+    "906e2ee5-b224-493a-ab65-a3d51c147ecb",
+    "166379669185aa94bc",
+    "166476098912c5f506",
+    "de3a2203-42d3-4b60-bd46-4a42f1405e9c",
+    "080679a2-e618-4f46-ba14-b888f60c7f91"
+  ]
+}

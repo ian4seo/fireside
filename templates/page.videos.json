@@ -1,0 +1,369 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "1653507618cddfb163": {
+      "type": "videos",
+      "blocks": {
+        "63b4452c-a85c-40e4-b0e9-c276e5d61e47": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Stellar Luxury & Custom Gas Fireplaces",
+            "video_id": "WS6CuRjrEb8"
+          }
+        },
+        "d531425e-fc6c-43e1-a456-68e943814620": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Stellar Enlight Gas Fireplace",
+            "video_id": "wcybnRdu-zw"
+          }
+        },
+        "6368a4af-cc91-47be-9b22-cf5d6200d852": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Stellar Enlight ST Gas Fireplace",
+            "video_id": "Klg26djEw5Q"
+          }
+        },
+        "92abc8af-bcfe-4635-a29a-e304c0615ed8": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Stellar Enlight Corner Gas Fireplace",
+            "video_id": "6jaPAZ0g7Sk"
+          }
+        },
+        "5ff3aa55-2d0d-4670-83e7-11efdbab7a20": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Stellar Enlight Pier Gas Fireplace",
+            "video_id": "oeYtcTOl6oA"
+          }
+        },
+        "02b9a08f-cfb5-4b63-81e1-5004d77f77fe": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Stellar Enlight Bay Gas Fireplace",
+            "video_id": "s-BLMhUuYRI"
+          }
+        },
+        "94c5e6f3-2b9e-4de6-a5ab-cf1b4e21e29e": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Stellar Outdoor Gas Fireplace",
+            "video_id": "DMioDjZTGM8"
+          }
+        },
+        "165350761877e84c78-0": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo Primo Gas Fireplace",
+            "video_id": "z_5XtFCdMjE"
+          }
+        },
+        "f38b2398-d7ae-403a-aac2-7e7f8a2ba81c": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo Mezzo Gas Fireplace",
+            "video_id": "qZP1-sh6ahY"
+          }
+        },
+        "a931f443-3416-473b-b576-4c93bb104e3b": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heatilator Crave Gas Fireplace",
+            "video_id": "2Uc37SEnnuc"
+          }
+        },
+        "085161c8-f444-46dc-9c9a-25b785473d68": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo Cosmo Gas Fireplace",
+            "video_id": "NLDXr1oUDEo"
+          }
+        },
+        "a30bed5f-23f2-4eec-8fad-f1fc27d6f864": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heatilator Rave Gas Fireplace",
+            "video_id": "fCC-1uJ9M5s"
+          }
+        },
+        "a8b6fa9a-ceb1-4dca-a7e4-c4a56fb4fc4c": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo 6000/8000 Modern Gas Fireplace",
+            "video_id": "a1WUiFCz0R4"
+          }
+        },
+        "e26d249a-a8c5-44ab-b2df-033a62cd6197": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo True Gas Fireplace",
+            "video_id": "E4LqgtQYIcY"
+          }
+        },
+        "4fe4e29c-97e4-401f-ae77-191a60881131": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heatilator Heirloom Gas Fireplace",
+            "video_id": "qdiPUsf_3Ak"
+          }
+        },
+        "d016b4e0-7299-49b1-8399-21f04f45dcf3": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo Cerona Gas Fireplace",
+            "video_id": "2IieTHfnBgA"
+          }
+        },
+        "8b4c30c5-3e27-4bca-af1c-4b769dc7a469": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo 6000/8000 Gas Fireplace",
+            "video_id": "-8-ePKIto2I"
+          }
+        },
+        "03ef2610-d95f-4e74-88ff-95c169eb24b6": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heatilator Caliber Gas Fireplace",
+            "video_id": "cq5kZgQTfTQ"
+          }
+        },
+        "ed3ce96a-0450-457a-b177-a23edfbe3cad": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heatilator Novus nXt Gas Fireplace",
+            "video_id": "_CEAmaHg1Ao"
+          }
+        },
+        "09bbbd86-07a6-4e6a-8876-c9dd6da0f8b0": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo Slim Line Gas Fireplace",
+            "video_id": "cAb4GXEJwsY"
+          }
+        },
+        "607e2ccd-b30e-415c-baf3-ff6b26644d14": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heatilator Novus Gas Fireplace",
+            "video_id": "n5NGgWbA92c"
+          }
+        },
+        "60779246-6b38-437d-9c72-7fe5b724ae87": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Outdoor Lifestyles Twilight Gas Fireplace",
+            "video_id": "x-Dj0mFw53U"
+          }
+        }
+      },
+      "block_order": [
+        "63b4452c-a85c-40e4-b0e9-c276e5d61e47",
+        "d531425e-fc6c-43e1-a456-68e943814620",
+        "6368a4af-cc91-47be-9b22-cf5d6200d852",
+        "92abc8af-bcfe-4635-a29a-e304c0615ed8",
+        "5ff3aa55-2d0d-4670-83e7-11efdbab7a20",
+        "02b9a08f-cfb5-4b63-81e1-5004d77f77fe",
+        "94c5e6f3-2b9e-4de6-a5ab-cf1b4e21e29e",
+        "165350761877e84c78-0",
+        "f38b2398-d7ae-403a-aac2-7e7f8a2ba81c",
+        "a931f443-3416-473b-b576-4c93bb104e3b",
+        "085161c8-f444-46dc-9c9a-25b785473d68",
+        "a30bed5f-23f2-4eec-8fad-f1fc27d6f864",
+        "a8b6fa9a-ceb1-4dca-a7e4-c4a56fb4fc4c",
+        "e26d249a-a8c5-44ab-b2df-033a62cd6197",
+        "4fe4e29c-97e4-401f-ae77-191a60881131",
+        "d016b4e0-7299-49b1-8399-21f04f45dcf3",
+        "8b4c30c5-3e27-4bca-af1c-4b769dc7a469",
+        "03ef2610-d95f-4e74-88ff-95c169eb24b6",
+        "ed3ce96a-0450-457a-b177-a23edfbe3cad",
+        "09bbbd86-07a6-4e6a-8876-c9dd6da0f8b0",
+        "607e2ccd-b30e-415c-baf3-ff6b26644d14",
+        "60779246-6b38-437d-9c72-7fe5b724ae87"
+      ],
+      "settings": {
+        "heading": "GAS FIREPLACE PRODUCT VIDEOS"
+      }
+    },
+    "81bb947f-b8ca-4f14-b32c-ad686492d63c": {
+      "type": "videos",
+      "blocks": {
+        "template--16718379811046__81bb947f-b8ca-4f14-b32c-ad686492d63c-16844476322ed2e6e9-0": {
+          "type": "heading",
+          "settings": {
+            "video_title": "SimpliFire Scion Trinity Electric Fireplace",
+            "video_id": "6rvc4mBfwUE"
+          }
+        },
+        "357fd8e2-cc52-4568-ab4b-f2f163f3c855": {
+          "type": "heading",
+          "settings": {
+            "video_title": "SimpliFire Scion Electric Fireplace",
+            "video_id": "ofMkcB-1GeE"
+          }
+        },
+        "57cc92fd-d7db-43d7-90c4-40b1ac9317c2": {
+          "type": "heading",
+          "settings": {
+            "video_title": "SimpliFire Allusion Platinum Electric Fireplace",
+            "video_id": "hj7I_6_qnxU"
+          }
+        },
+        "d22e6e68-8986-4fbf-a55d-39f1bdc1b7a3": {
+          "type": "heading",
+          "settings": {
+            "video_title": "SimpliFire Allusion Electric Fireplace",
+            "video_id": "Ypl6oodlM7U"
+          }
+        },
+        "07cecbc6-8862-497a-83a0-bbec49192740": {
+          "type": "heading",
+          "settings": {
+            "video_title": "SimpliFire Format Electric Fireplace",
+            "video_id": "FV7KZh7N_vk"
+          }
+        },
+        "b239cfcd-e4fc-4fbb-a3fd-4993cc5dc77e": {
+          "type": "heading",
+          "settings": {
+            "video_title": "SimpliFire Built In Electric Fireplace",
+            "video_id": "XpKShuW-DYA"
+          }
+        }
+      },
+      "block_order": [
+        "template--16718379811046__81bb947f-b8ca-4f14-b32c-ad686492d63c-16844476322ed2e6e9-0",
+        "357fd8e2-cc52-4568-ab4b-f2f163f3c855",
+        "57cc92fd-d7db-43d7-90c4-40b1ac9317c2",
+        "d22e6e68-8986-4fbf-a55d-39f1bdc1b7a3",
+        "07cecbc6-8862-497a-83a0-bbec49192740",
+        "b239cfcd-e4fc-4fbb-a3fd-4993cc5dc77e"
+      ],
+      "settings": {
+        "heading": "Electric Fireplace Product Videos"
+      }
+    },
+    "16535096307f589f73": {
+      "type": "videos",
+      "blocks": {
+        "16535096307652ab75-0": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo Escape Gas Insert",
+            "video_id": "9hLfRuyUQys"
+          }
+        },
+        "4a35299d-dfd3-4979-b586-0054066e3e0b": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo Cosmo Gas Insert",
+            "video_id": "0XYK3m9Hbpw"
+          }
+        },
+        "bbb0eaf2-6c78-4ef1-b483-c8c2c44290d0": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo Supreme Gas Insert",
+            "video_id": "rBWj2l_WBUU"
+          }
+        },
+        "16b5738e-cab8-4b63-8008-cd9e4fed31e7": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Heat & Glo Provident Gas Insert",
+            "video_id": "edZzRIHvK_I"
+          }
+        }
+      },
+      "block_order": [
+        "16535096307652ab75-0",
+        "4a35299d-dfd3-4979-b586-0054066e3e0b",
+        "bbb0eaf2-6c78-4ef1-b483-c8c2c44290d0",
+        "16b5738e-cab8-4b63-8008-cd9e4fed31e7"
+      ],
+      "settings": {
+        "heading": "GAS INSERT PRODUCT VIDEOS"
+      }
+    },
+    "16584296452fb679e6": {
+      "type": "videos",
+      "blocks": {
+        "16584296450bf51d0e-0": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Before & After: Gas Fireplace",
+            "video_id": "S2bM25oOSZQ"
+          }
+        },
+        "127c5a4d-e83b-4b30-a0a1-d2a1d8ba1cd0": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Before & After: Gas Insert",
+            "video_id": "_MPEAPA2E4U"
+          }
+        },
+        "fdc094f0-ae4e-41d7-ae2d-d881b472c076": {
+          "type": "heading",
+          "settings": {
+            "video_title": "Wit & Delight Gas Insert Project",
+            "video_id": "S38Xwuz_d5A"
+          }
+        },
+        "f0e88b59-4668-420b-9bbe-299068305d92": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "video_title": "Heat & Glo Provident Gas Insert",
+            "video_id": "edZzRIHvK_I"
+          }
+        }
+      },
+      "block_order": [
+        "16584296450bf51d0e-0",
+        "127c5a4d-e83b-4b30-a0a1-d2a1d8ba1cd0",
+        "fdc094f0-ae4e-41d7-ae2d-d881b472c076",
+        "f0e88b59-4668-420b-9bbe-299068305d92"
+      ],
+      "settings": {
+        "heading": "Project Videos"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "SIGN UP FOR OUR NEWSLETTER",
+        "newsletter_text": "<p>Be the first to get a sneak peek at the latest innovations in fireplace design and installation. Subscribe to our newsletter to view recent work, meet our designers, and inspire your next project. You'll also be the first to know about special promotions and exciting discounts to help you plan your fireplace.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1653507618cddfb163",
+    "81bb947f-b8ca-4f14-b32c-ad686492d63c",
+    "16535096307f589f73",
+    "16584296452fb679e6",
+    "newsletter"
+  ]
+}

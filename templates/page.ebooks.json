@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "16557527108f39a4c6": {
+      "type": "page-banner-alt",
+      "settings": {
+        "heading": "eBooks & Guides",
+        "image": "shopify://shop_images/Screen_Shot_2022-06-20_at_1.16.00_PM.png",
+        "text_alignment": "center",
+        "site_width": "mbl-site-width",
+        "css_class": "top-space",
+        "custom_css": ".top-space {margin-top:4em}"
+      }
+    },
+    "1655752511832a2260": {
+      "type": "banner-internal-pages",
+      "disabled": true,
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "eBooks & Guides",
+        "heading_size": "regular_text",
+        "content": "",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/fireside-ebooks.jpg",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165575275997cf4224": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1655752759b63b217b-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/ebook_fireplace_must_have_e0632d3c-f91f-469e-8dad-bc783feb016a.jpg",
+            "heading-margin-top": 30,
+            "title": "A Fireplace Must-Have",
+            "heading_size": "regular_text",
+            "text": "<p>Fireplaces are a key element in any new home, and this eBook shares why 68% of homebuyers say that a fireplace is a must-have feature in their new home.</p>",
+            "button_label": "Get eBook",
+            "open-new-window": true,
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Fireside_eBook_-_A_Fireplace_Must-Have__2.pdf?v=1655752937",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "1655752759b63b217b-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/ebook_homebuyers_story.jpg",
+            "heading-margin-top": 30,
+            "title": "The Homebuyer's Story",
+            "heading_size": "regular_text",
+            "text": "<p>When purchasing a fireplace, homebuyers see themselves in moments of their lives, not just in the moment of buying another product for their new home. This eBook includes the top reasons homebuyers want fireplaces plus best practices for you and your team on how to address these reasons.</p>",
+            "button_label": "Get eBook",
+            "open-new-window": true,
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Fireside_eBook_-_Homebuyers_Story.pdf?v=1655753472",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        },
+        "63bc0961-0d18-452c-976a-612efac35a3b": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/ebook_increase_homebuyer_satisfaction.jpg",
+            "heading-margin-top": 30,
+            "title": "Increase Homebuyer Satisfaction",
+            "heading_size": "regular_text",
+            "text": "<p>Homebuyer awareness of fireplace features is generally low, but this eBook walks you through which key features are right for your homebuyers based on home type.</p>",
+            "button_label": "Get eBook",
+            "open-new-window": true,
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Fireside_eBook_-_Increase_Knowledge_and_Satisfaction.pdf?v=1655753582",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1655752759b63b217b-0",
+        "1655752759b63b217b-1",
+        "63bc0961-0d18-452c-976a-612efac35a3b"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16557527108f39a4c6",
+    "1655752511832a2260",
+    "165575275997cf4224"
+  ]
+}

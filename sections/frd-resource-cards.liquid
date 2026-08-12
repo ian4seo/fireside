@@ -1,0 +1,354 @@
+{% comment %}
+  Section: Resource Cards
+  File:    frd-resource-table.liquid
+  Description: Displays a grid of resource cards, each with an icon/emoji,
+               title, description text, and a link label. Default 2×2 layout
+               with option for up to 4 columns on desktop.
+{% endcomment %}
+
+{%- assign section_title = section.settings.title -%}
+{%- assign bg_color = section.settings.background_color -%}
+{%- assign card_bg = section.settings.card_background_color -%}
+{%- assign card_border_color = section.settings.card_border_color -%}
+{%- assign heading_color = section.settings.heading_color -%}
+{%- assign text_color = section.settings.text_color -%}
+{%- assign btn_text_color = section.settings.button_text_color -%}
+{%- assign columns = section.settings.columns_per_row -%}
+{%- assign section_padding_top = section.settings.padding_top -%}
+{%- assign section_padding_bottom = section.settings.padding_bottom -%}
+
+<style>
+  #frd-resource-cards-{{ section.id }} {
+    background-color: {{ bg_color }};
+    padding-top: {{ section_padding_top }}px;
+    padding-bottom: {{ section_padding_bottom }}px;
+  }
+
+  #frd-resource-cards-{{ section.id }} .frd-rc__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #frd-resource-cards-{{ section.id }} .frd-rc__title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: {{ heading_color }};
+    text-transform: capitalize;
+  }
+
+  #frd-resource-cards-{{ section.id }} .frd-rc__grid {
+    display: grid;
+    grid-template-columns: repeat({{ columns }}, 1fr);
+    gap: 24px;
+  }
+
+  #frd-resource-cards-{{ section.id }} .frd-rc__card {
+    background: {{ card_bg }};
+    border: 1px solid {{ card_border_color }};
+    border-radius: 12px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  #frd-resource-cards-{{ section.id }} .frd-rc__card:hover {
+    border-color: #e9841d;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+  }
+
+  /* Icon / emoji */
+  #frd-resource-cards-{{ section.id }} .frd-rc__icon {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+
+  #frd-resource-cards-{{ section.id }} .frd-rc__icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+
+  /* Card title */
+  #frd-resource-cards-{{ section.id }} .frd-rc__heading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: {{ heading_color }};
+  }
+
+  /* Description */
+  #frd-resource-cards-{{ section.id }} .frd-rc__description {
+    font-size: 16px;
+    line-height: 1.55;
+    color: {{ text_color }};
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+
+  /* Button */
+  #frd-resource-cards-{{ section.id }} .frd-rc__button {
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+    background-color: #e9841d;
+    color: {{ btn_text_color }};
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.25s ease;
+    margin-top: auto;
+  }
+
+  #frd-resource-cards-{{ section.id }} .frd-rc__button:hover {
+    opacity: 0.88;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    #frd-resource-cards-{{ section.id }} .frd-rc__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    #frd-resource-cards-{{ section.id }} .frd-rc__card {
+      padding: 22px 20px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #frd-resource-cards-{{ section.id }} .frd-rc__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<section id="frd-resource-cards-{{ section.id }}">
+  <div class="frd-rc__wrapper">
+    {% if section_title != blank %}
+      <h2 class="frd-rc__title">{{ section_title }}</h2>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="frd-rc__grid">
+        {% for block in section.blocks %}
+          <div class="frd-rc__card" {{ block.shopify_attributes }}>
+
+            <div class="frd-rc__icon">
+              {%- if block.settings.image != blank -%}
+                <img
+                  src="{{ block.settings.image | image_url: width: 72 }}"
+                  alt="{{ block.settings.image.alt | default: block.settings.title }}"
+                  loading="lazy"
+                  width="36"
+                  height="36"
+                >
+              {%- elsif block.settings.emoji != blank -%}
+                {{ block.settings.emoji }}
+              {%- endif -%}
+            </div>
+
+            {% if block.settings.title != blank %}
+              <h3 class="frd-rc__heading">{{ block.settings.title }}</h3>
+            {% endif %}
+
+            {% if block.settings.description != blank %}
+              <p class="frd-rc__description">{{ block.settings.description }}</p>
+            {% endif %}
+
+            {% if block.settings.button_text != blank %}
+              <a
+                class="frd-rc__button"
+                href="{{ block.settings.link | default: '#' }}"
+              >
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Resource Cards",
+  "class": "shopify-section--frd-resource-cards",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Heading"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card Border Color",
+      "default": "#e2e8f0"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading / Title Color",
+      "default": "#2d3748"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Description Text Color",
+      "default": "#4a5568"
+    },
+
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "columns_per_row",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": "Columns Per Row (Desktop)",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "resource_card",
+      "name": "Resource Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Icon (Image)",
+          "info": "Optional — used instead of Emoji if provided"
+        },
+        {
+          "type": "text",
+          "id": "emoji",
+          "label": "Card Icon (Emoji)",
+          "info": "Paste an emoji here, e.g. 🔥. Ignored if an image is set.",
+          "default": "🔥"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Resource Name"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "\"Short description of this resource\""
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Resource Cards",
+      "settings": {
+        "title": "",
+        "columns_per_row": 2
+      },
+      "blocks": [
+        {
+          "type": "resource_card",
+          "settings": {
+            "emoji": "🔥",
+            "title": "Idea Gallery",
+            "description": "\"Browse real project photos for inspiration\"",
+            "button_text": "View Gallery"
+          }
+        },
+        {
+          "type": "resource_card",
+          "settings": {
+            "emoji": "📋",
+            "title": "Project Planner",
+            "description": "\"Plan your fireplace project from start to finish\"",
+            "button_text": "Plan My Project"
+          }
+        },
+        {
+          "type": "resource_card",
+          "settings": {
+            "emoji": "🎥",
+            "title": "Product Videos",
+            "description": "\"Watch video overviews of our top brands\"",
+            "button_text": "Watch Videos"
+          }
+        },
+        {
+          "type": "resource_card",
+          "settings": {
+            "emoji": "📖",
+            "title": "Buying Guides",
+            "description": "\"Read helpful guides to choose the right product\"",
+            "button_text": "Read Guides"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

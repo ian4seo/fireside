@@ -1,0 +1,228 @@
+{{ 'section-before-after.css' | asset_url | stylesheet_tag }}
+
+<div class="frd-bf-before-after-section page-width">
+  {% if section.settings.heading != blank %}
+    <div class="frd-bf-before-after-heading">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="frd-bf-before-after-grid">
+      {% for block in section.blocks %}
+        <div class="frd-bf-before-after-pair" {{ block.shopify_attributes }}>
+          <div class="frd-bf-before-after-images">
+            <div class="frd-bf-before-image-container">
+              {% if block.settings.before_image %}
+                <div class="frd-bf-image-wrapper">
+                  <img
+                    src="{{ block.settings.before_image | image_url: width: 600 }}"
+                    alt="{{ block.settings.before_image.alt | default: 'Before image' }}"
+                    width="{{ block.settings.before_image.width }}"
+                    height="{{ block.settings.before_image.height }}"
+                    loading="lazy"
+                  >
+                </div>
+              {% endif %}
+              <div class="frd-bf-image-label">
+                <span>{{ block.settings.before_label | default: 'Before' }}</span>
+              </div>
+            </div>
+            
+            <div class="frd-bf-after-image-container">
+              {% if block.settings.after_image %}
+                <div class="frd-bf-image-wrapper">
+                  <img
+                    src="{{ block.settings.after_image | image_url: width: 600 }}"
+                    alt="{{ block.settings.after_image.alt | default: 'After image' }}"
+                    width="{{ block.settings.after_image.width }}"
+                    height="{{ block.settings.after_image.height }}"
+                    loading="lazy"
+                  >
+                </div>
+              {% endif %}
+              <div class="frd-bf-image-label">
+                <span>{{ block.settings.after_label | default: 'After' }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  #shopify-section-template--19598484799718__frd_before_after_nRtLEc {
+    background-color: #E9E9EB;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%!important;
+    max-width: unset!important;
+  }
+  
+  .frd-bf-before-after-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px!important;
+    margin: auto!important;
+    padding-bottom: 60px;
+    padding-top: 40px;
+  }
+  
+  .frd-bf-before-after-heading {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .frd-bf-before-after-heading h2 {
+    font-weight: 700;
+    letter-spacing: 0px!important;
+    color: #212626;
+    margin: 0;
+  }
+  
+  .frd-bf-before-after-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .frd-bf-before-after-pair {
+    width: 100%;
+  }
+  
+  .frd-bf-before-after-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  
+  .frd-bf-before-image-container,
+  .frd-bf-after-image-container {
+    text-align: left;
+  }
+  
+  .frd-bf-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .frd-bf-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .frd-bf-image-wrapper:hover img {
+    transform: scale(1.02);
+  }
+  
+  .frd-bf-image-label {
+    margin-top: 1rem;
+  }
+  
+  .frd-bf-image-label span {
+    font-weight: 400;
+    color: #000;
+  }
+
+  @media screen and (min-width: 768px) {
+    .frd-bf-before-after-heading h2 {
+      font-size: 36px!important;
+    }
+    .frd-bf-image-label span {
+      font-size: 18px;
+    }
+  }
+  
+  /* Mobile responsive */
+  @media screen and (max-width: 768px) {
+    .frd-bf-before-after-heading h2 {
+      font-size: 30px!important;
+    }
+    .frd-bf-before-after-images {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .frd-bf-before-after-grid {
+      gap: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .frd-bf-before-after-heading {
+      margin-bottom: 2rem;
+    }
+    
+    .frd-bf-image-label span {
+      font-size: 18px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Before & After",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "BEFORE & AFTER",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "before_after_pair",
+      "name": "Before & After Pair",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "before_image",
+          "label": "Before Image"
+        },
+        {
+          "type": "text",
+          "id": "before_label",
+          "default": "Before",
+          "label": "Before Label"
+        },
+        {
+          "type": "image_picker",
+          "id": "after_image",
+          "label": "After Image"
+        },
+        {
+          "type": "text",
+          "id": "after_label",
+          "default": "After",
+          "label": "After Label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before & After",
+      "blocks": [
+        {
+          "type": "before_after_pair"
+        },
+        {
+          "type": "before_after_pair"
+        },
+        {
+          "type": "before_after_pair"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

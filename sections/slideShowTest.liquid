@@ -1,0 +1,691 @@
+<script
+  type="application/json"
+  data-section-type="slideshow"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" media="print" onload="this.media='all'">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+
+{% assign mobile_text_alpha = section.settings.mobile_text_color | default: 'rgba(0,0,0,0)' | color_extract: 'alpha' %}
+{% assign object_selector = '#shopify-section-' | append: section.id %}
+
+{% style %}
+  .black-bg {background: #000000; padding: .25em 2em 0;color: #ffffff !important; text-transform: uppercase !important}
+  p.black-bg {background: #000000; padding: .25em 2em; color:#ffffff !important; text-transform: uppercase !important}
+  .orange-bg {background:#e9841d;}
+  .splide__pagination__page.is-active {background: #e9841d}
+  @media screen and (max-width: 480px){
+    .slideshow-top-margin {
+      margin-top: {{ section.settings.top-margin }}em;
+    }
+  }
+  {%
+    render 'css-loop',
+    css: section.settings.custom_css,
+    id: section.id
+  %}
+
+  {% if section.settings.mobile_text_below_image and mobile_text_alpha != 0 %}
+    @media only screen and (max-width: 480px) {
+      {{ object_selector }} .pretext,
+      {{ object_selector }} .headline,
+      {{ object_selector }} .subtitle {
+        color: {{ section.settings.mobile_text_color }};
+      }
+    }
+  {% endif %}
+{% endstyle %}
+
+{% if section.blocks.size > 0 %}
+
+<div id="location-modal-{{ section.id }}" class="modal" hidden>
+  <div class="modal-content">
+    <button type="button" class="close" data-location-close aria-label="Close">&times;</button>
+    <h2>Share Location?</h2>
+    <p>We’re excited to provide our local customers with special deals, valuable information, and exclusive offers. To do this effectively, we need to access your location data.</p>
+    <button type="button" class="locationButton" data-location-accept>YES</button>
+    <button type="button" class="locationButton" data-location-decline>NO</button>
+  </div>
+</div>
+
+<section id="image-carousel-{{ section.id }}" class="splide" data-splide='{"type":"loop","perPage":1,"pagination":false,"arrows":true}'>
+  <div class="splide__track">
+		<ul class="splide__list">
+          {% for block in section.blocks %}
+            {% if block.settings.States == "" %}
+            <li class="splide__slide">
+            {% assign mobile_crop = 'mobile-banner--crop-' | append: block.settings.mobile_image_crop %}
+            <div
+              class="
+                gallery-cell
+                slide-{{ forloop.index }}
+                caption-background-{{ block.settings.caption_content_background }}
+                caption--below-{{ section.settings.mobile_text_below_image }}"
+              {{ block.shopify_attributes }}
+              data-block-id="{{ block.id }}"
+            >
+              {% if block.settings.mobile_image %}
+                <div class="is-hidden-mobile-only">
+              {% endif %}
+
+              {% if block.settings.image %}
+                {%
+                  render 'image-element',
+                  image: block.settings.image,
+                  alt: block.settings.image.alt,
+                  stretch_width: true,
+                  additional_classes: mobile_crop
+                %}
+
+                {% if block.settings.caption_content_background == 'darken_bg' %}
+                  <div class="darken-bg"></div>
+                {% endif %}
+              {% else %}
+                {% capture i %}{% cycle "1", "2" %}{% endcapture %}
+                {{ 'lifestyle-' | append: i | placeholder_svg_tag: 'placeholder-svg placeholder-svg--slideshow' }}
+              {% endif %}
+
+              {% if block.settings.mobile_image %}
+                </div>
+                <div class="is-hidden-desktop-only">
+                  {%
+                    render 'image-element',
+                    image: block.settings.mobile_image,
+                    alt: block.settings.mobile_image.alt,
+                    stretch_width: true,
+                    additional_classes: mobile_crop
+                  %}
+
+                  {% if block.settings.caption_content_background == 'darken_bg' %}
+                    <div class="darken-bg"></div>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% unless block.settings.button1_link != blank and block.settings.button2_link != blank %}
+                {% if block.settings.button1_link != blank and block.settings.button1 == blank %}
+                  <a class="banner-full-link" href="{{ block.settings.button1_link }}">
+                    {{ block.settings.title }}
+                  </a>
+                {% elsif block.settings.button2_link != blank and block.settings.button2 == blank %}
+                  <a class="banner-full-link" href="{{ block.settings.button2_link }}">
+                    {{ block.settings.title }}
+                  </a>
+                {% endif %}
+              {% endunless %}
+
+              {% unless block.settings.pretext == blank and block.settings.title == blank and block.settings.subtitle == blank and block.settings.button1 == blank and block.settings.button2 == blank %}
+                <div
+                  class="
+                    caption
+                    position-{{ block.settings.text_position }}
+                    js-caption
+                  "
+                >
+                  <div class="caption-content align-{{ block.settings.text_align }}">
+                    {% if block.settings.pretext != blank %}
+                      <div class="pretext">
+                        {{ block.settings.pretext }}
+                      </div>
+                    {% endif %}
+
+                    {% if forloop.first == true and block.settings.title != blank %}
+                      <h1 class="headline {% if section.settings.black-banner %}black-bg{% endif %}">
+                        {{ block.settings.title }}
+                      </h1>
+                    {% elsif block.settings.title != blank %}
+                      <p class="headline {% if section.settings.black-banner %}black-bg{% endif %}">
+                        {{ block.settings.title }}
+                      </p>
+                    {% endif %}
+
+                    {% if block.settings.subtitle != blank %}
+                      <div class="subtitle {% if section.settings.black-banner %}orange-bg{% endif %}">
+                        {{ block.settings.subtitle }}
+                      </div>
+                    {% endif %}
+
+                    {%
+                      render 'banner-buttons',
+                      button1_text: block.settings.button1,
+                      button1_style: block.settings.button1_style,
+                      button1_link: block.settings.button1_link,
+                      button2_text: block.settings.button2,
+                      button2_style: block.settings.button2_style,
+                      button2_link: block.settings.button2_link,
+                      mobile_text_below_image: section.settings.mobile_text_below_image,
+                      mobile_text_color: section.settings.mobile_text_color,
+                      object_selector: object_selector,
+                    %}
+                  </div>
+                </div>
+              {% endunless %}
+            </div>
+            </li>
+           {% endif %}
+          {% endfor %}
+		</ul>
+  </div>
+</section>
+
+
+
+<section hidden>
+  {% for block in section.blocks %}
+            {% if block.settings.States != "" %}
+          <div id="stateContainer" style="display: none;" class="{{ block.settings.States }}">
+            <li class="splide__slide">
+            {% assign mobile_crop = 'mobile-banner--crop-' | append: block.settings.mobile_image_crop %}
+            <div
+              class="
+                gallery-cell
+
+                caption-background-{{ block.settings.caption_content_background }}
+                caption--below-{{ section.settings.mobile_text_below_image }}"
+            >
+              {% if block.settings.mobile_image %}
+                <div class="is-hidden-mobile-only">
+              {% endif %}
+
+              {% if block.settings.image %}
+                {%
+                  render 'image-element',
+                  image: block.settings.image,
+                  alt: block.settings.image.alt,
+                  stretch_width: true,
+                  additional_classes: mobile_crop
+                %}
+
+                {% if block.settings.caption_content_background == 'darken_bg' %}
+                  <div class="darken-bg"></div>
+                {% endif %}
+              {% else %}
+                {% capture i %}{% cycle "1", "2" %}{% endcapture %}
+                {{ 'lifestyle-' | append: i | placeholder_svg_tag: 'placeholder-svg placeholder-svg--slideshow' }}
+              {% endif %}
+
+              {% if block.settings.mobile_image %}
+                </div>
+                <div class="is-hidden-desktop-only">
+                  {%
+                    render 'image-element',
+                    image: block.settings.mobile_image,
+                    alt: block.settings.mobile_image.alt,
+                    stretch_width: true,
+                    additional_classes: mobile_crop
+                  %}
+
+                  {% if block.settings.caption_content_background == 'darken_bg' %}
+                    <div class="darken-bg"></div>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% unless block.settings.button1_link != blank and block.settings.button2_link != blank %}
+                {% if block.settings.button1_link != blank and block.settings.button1 == blank %}
+                  <a class="banner-full-link" href="{{ block.settings.button1_link }}">
+                    {{ block.settings.title }}
+                  </a>
+                {% elsif block.settings.button2_link != blank and block.settings.button2 == blank %}
+                  <a class="banner-full-link" href="{{ block.settings.button2_link }}">
+                    {{ block.settings.title }}
+                  </a>
+                {% endif %}
+              {% endunless %}
+
+              {% unless block.settings.pretext == blank and block.settings.title == blank and block.settings.subtitle == blank and block.settings.button1 == blank and block.settings.button2 == blank %}
+                <div
+                  class="
+                    caption
+                    position-{{ block.settings.text_position }}
+                    js-caption
+                  "
+                >
+                  <div class="caption-content align-{{ block.settings.text_align }}">
+                    {% if block.settings.pretext != blank %}
+                      <div class="pretext">
+                        {{ block.settings.pretext }}
+                      </div>
+                    {% endif %}
+
+                    {% if forloop.first == true and block.settings.title != blank %}
+                      <h1 class="headline {% if section.settings.black-banner %}black-bg{% endif %}">
+                        {{ block.settings.title }}
+                      </h1>
+                    {% elsif block.settings.title != blank %}
+                      <p class="headline {% if section.settings.black-banner %}black-bg{% endif %}">
+                        {{ block.settings.title }}
+                      </p>
+                    {% endif %}
+
+                    {% if block.settings.subtitle != blank %}
+                      <div class="subtitle {% if section.settings.black-banner %}orange-bg{% endif %}">
+                        {{ block.settings.subtitle }}
+                      </div>
+                    {% endif %}
+
+                    {%
+                      render 'banner-buttons',
+                      button1_text: block.settings.button1,
+                      button1_style: block.settings.button1_style,
+                      button1_link: block.settings.button1_link,
+                      button2_text: block.settings.button2,
+                      button2_style: block.settings.button2_style,
+                      button2_link: block.settings.button2_link,
+                      mobile_text_below_image: section.settings.mobile_text_below_image,
+                      mobile_text_color: section.settings.mobile_text_color,
+                      object_selector: object_selector,
+                    %}
+                  </div>
+                </div>
+              {% endunless %}
+            </div>
+            </li>
+            </div>
+           {% endif %}
+  {% endfor %}
+</section>
+
+{% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sectionId = {{ section.id | json }};
+    const carousel = document.getElementById('image-carousel-' + sectionId);
+    const modal = document.getElementById('location-modal-' + sectionId);
+    if (!carousel || !modal || typeof Splide === 'undefined') return;
+
+    const setModalOpen = function (isOpen) {
+      modal.hidden = !isOpen;
+      modal.style.display = isOpen ? 'block' : 'none';
+    };
+
+    const splide = new Splide(carousel).mount();
+    const addStateSlides = function (state) {
+      if (!state || state === 'No') return;
+      document.querySelectorAll('#shopify-section-' + sectionId + ' .' + CSS.escape(state)).forEach(function (container) {
+        const slide = container.querySelector('.splide__slide');
+        if (slide) splide.add(slide.cloneNode(true));
+      });
+    };
+
+    const storedState = sessionStorage.getItem('State') || localStorage.getItem('State');
+    if (storedState) {
+      addStateSlides(storedState);
+    } else {
+      setModalOpen(true);
+    }
+
+    modal.querySelector('[data-location-close]').addEventListener('click', function () {
+      setModalOpen(false);
+    });
+    modal.querySelector('[data-location-decline]').addEventListener('click', function () {
+      localStorage.setItem('State', 'No');
+      setModalOpen(false);
+    });
+    modal.querySelector('[data-location-accept]').addEventListener('click', async function () {
+      setModalOpen(false);
+      try {
+        const response = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=e9632648f541479486e4ac9eae7f02ef&fields=state_prov');
+        if (!response.ok) return;
+        const data = await response.json();
+        if (data.state_prov) {
+          localStorage.setItem('State', data.state_prov);
+          addStateSlides(data.state_prov);
+        }
+      } catch (error) {
+        // Keep the default slides when location lookup is unavailable.
+      }
+    });
+    modal.addEventListener('click', function (event) {
+      if (event.target === modal) setModalOpen(false);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Slideshow Test",
+  "class": "shopify-section--slideshow under-menu slideshow-top-margin",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top-margin",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "unit": "em",
+      "label": "Top margin",
+      "default": 5.5
+    },
+    {
+      "type": "checkbox",
+      "id": "black-banner",
+      "label": "Use black banner styling",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "wide_display",
+      "label": "Wide display",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "slideshow_text_animation",
+      "label": "Text animation",
+      "default": "fadeInDown",
+      "options": [
+        {
+          "value": "fadeIn",
+          "label": "Fade In"
+        },
+        {
+          "value": "fadeInUp",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fadeInDown",
+          "label": "Fade Down"
+        },
+        {
+          "value": "",
+          "label": "None"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "slideshow_animation",
+      "label": "Transition",
+      "options": [
+        {
+          "value": "fade",
+          "label": "Fade"
+        },
+        {
+          "value": "slide",
+          "label": "Slide"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_text_below_image",
+      "label": "Show text below image",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "mobile_text_color",
+      "label": "Text below image",
+      "info": "Set this to “None” to use the “Regular text” color."
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1800 x 1000px recommended"
+        },
+        {
+          "type": "text",
+          "id": "States",
+          "label": "List of States",
+          "info": "list states speeprated by commmas, i.e: California, New York"
+        },
+        {
+          "type": "richtext",
+          "id": "pretext",
+          "label": "Preheading"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Your headline"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Subheading"
+        },
+        {
+          "type": "text",
+          "id": "button1",
+          "label": "First button label"
+        },
+        {
+          "type": "url",
+          "id": "button1_link",
+          "label": "First slide link"
+        },
+        {
+          "type": "select",
+          "id": "button1_style",
+          "label": "First button color",
+          "options": [
+            {
+              "value": "global-button--primary",
+              "label": "Primary button"
+            },
+            {
+              "value": "global-button--banner",
+              "label": "Banner button (outline)"
+            },
+            {
+              "value": "global-button--banner-highlighted",
+              "label": "Banner button (solid)"
+            },
+            {
+              "value": "global-button--banner-text",
+              "label": "Banner text button (outline)"
+            },
+            {
+              "value": "global-button--banner-text-highlighted",
+              "label": "Banner text button (solid)"
+            }
+          ],
+          "default": "global-button--banner"
+        },
+        {
+          "type": "text",
+          "id": "button2",
+          "label": "Second button label"
+        },
+        {
+          "type": "url",
+          "id": "button2_link",
+          "label": "Second slide link"
+        },
+        {
+          "type": "select",
+          "id": "button2_style",
+          "label": "Second button color",
+          "options": [
+            {
+              "value": "global-button--primary",
+              "label": "Primary button"
+            },
+            {
+              "value": "global-button--banner",
+              "label": "Banner button (outline)"
+            },
+            {
+              "value": "global-button--banner-highlighted",
+              "label": "Banner button (solid)"
+            },
+            {
+              "value": "global-button--banner-text",
+              "label": "Banner text button (outline)"
+            },
+            {
+              "value": "global-button--banner-text-highlighted",
+              "label": "Banner text button (solid)"
+            }
+          ],
+          "default": "global-button--banner"
+        },
+        {
+          "type": "header",
+          "content": "Content layout"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "Text position",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text alignment",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Text contrast",
+          "info": "Improve legibility by applying a contrast technique to your banner’s text."
+        },
+        {
+          "type": "select",
+          "id": "caption_content_background",
+          "label": "Contrast technique",
+          "default": "original",
+          "options": [
+            {
+              "value": "original",
+              "label": "None"
+            },
+            {
+              "value": "darken_bg",
+              "label": "Darken banner image"
+            },
+            {
+              "value": "text_box",
+              "label": "Solid box"
+            },
+            {
+              "value": "translucent_text_box",
+              "label": "Translucent box"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Mobile"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Image",
+          "info": "Display a different image on mobile screens. This only appears when the desktop image is set."
+        },
+        {
+          "type": "select",
+          "id": "mobile_image_crop",
+          "label": "Image cropping",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Slideshow Test",
+    "category": "Image",
+    "settings": {
+    },
+    "blocks": [
+      {
+        "type": "image",
+        "settings": {
+          "title": "Turbo Shopify Theme",
+          "text_align": "center"
+        }
+      },
+      {
+        "type": "image",
+          "settings": {
+          "text_align": "center"
+        }
+      }
+    ]
+  }]
+}
+
+{% endschema %}

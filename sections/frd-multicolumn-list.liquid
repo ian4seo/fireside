@@ -1,0 +1,120 @@
+<script
+  type="application/json"
+  data-section-type="logo-bar"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+{% comment %} Content settings {% endcomment %}
+{%- assign title = section.settings.title | escape -%}
+{%- assign blocks = section.blocks -%}
+{% comment %} End content settings {% endcomment %}
+
+<section class="section frd-multicolumn-list">
+  <div>
+    <div class="one-whole column">
+      {% if title != blank %}
+        <h2 class="title center">{{ title }}</h2>
+        <div class="feature_divider no-margin"></div>
+      {% endif %}
+
+      {% if blocks.size > 0 %}
+        <div class="logo-bar">
+          {% for block in blocks %}
+            {% comment %} Content settings {% endcomment %}
+            {%- assign image = block.settings.image -%}
+            {% comment %} End content settings {% endcomment %}
+
+            <div class="frd-multicolumn-list__item logo-bar__item frd-multicolumn-list-block" {{ block.shopify_attributes }}>
+              {% if block.settings.link != blank %}
+                <a href="{{ block.settings.link }}" class="logo-bar__link">
+              {% endif %}
+
+              {% if image != blank %}
+                {%
+                  render 'image-element',
+                  image: image,
+                  alt: image.alt
+                %}
+              {% else %}
+                {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+
+              {% if block.settings.link != blank %}
+                </a>
+              {% endif %}
+
+              {% if block.settings.heading %}
+                <h4>{{ block.settings.heading }}</h4>
+              {% endif %}
+
+              {% if block.settings.description %}
+                <p>{{ block.settings.description }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Multicolumn List",
+  "class": "shopify-section--logo-list",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description",
+          "label": "Description"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multicolumn List",
+      "blocks": [
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

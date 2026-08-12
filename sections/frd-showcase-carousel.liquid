@@ -1,0 +1,828 @@
+{%- style -%}
+  .frd-showcase-section {
+    background-color: {{ section.settings.background_color | default: '#ffffff' }};
+    color: {{ section.settings.text_color | default: '#212626' }};
+    padding: 60px 0;
+    overflow: visible;
+  }
+
+  .frd-showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+  }
+
+  .frd-showcase-title {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: {{ section.settings.text_color | default: '#212626' }};
+  }
+
+  .frd-showcase-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .frd-showcase-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 30px;
+  }
+
+  .frd-showcase-item {
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .frd-showcase-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .frd-showcase-card {
+    background: #fff;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .frd-showcase-card:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .frd-showcase-image-container {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .frd-showcase-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .frd-showcase-card:hover .frd-showcase-image {
+    transform: scale(1.05);
+  }
+
+  .frd-showcase-content {
+    padding: 25px 20px;
+    text-align: left;
+  }
+
+  .frd-showcase-product-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color: #000;
+    line-height: 1.4;
+    font-family: 'Minion Pro'!important;
+  }
+
+  .frd-showcase-product-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Minion Pro'!important;
+  }
+
+  .frd-showcase-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 999;
+    color: #333;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .frd-showcase-nav:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #000;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .frd-showcase-nav:focus {
+    outline: 2px solid {{ section.settings.text_color | default: '#333333' }};
+    outline-offset: 2px;
+  }
+
+  .frd-showcase-nav-prev {
+    left: 10px;
+  }
+
+  .frd-showcase-nav-next {
+    right: 10px;
+  }
+
+  .frd-showcase-nav svg {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    fill: currentColor;
+    display: block;
+  }
+
+  .frd-showcase-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: translateY(-50%);
+  }
+
+  .frd-showcase-nav:disabled:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Hide navigation arrows if disabled in settings */
+  {% unless section.settings.show_navigation %}
+  .frd-showcase-nav {
+    display: none !important;
+  }
+  {% endunless %}
+  
+  /* Force show navigation arrows when enabled */
+  {% if section.settings.show_navigation %}
+  .frd-showcase-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: #ffffff00 !important;
+  }
+  {% endif %}
+
+    /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .frd-showcase-item {
+      flex: 0 0 auto;
+    }
+    
+    .frd-showcase-carousel {
+      gap: 20px;
+    }
+    
+    .frd-showcase-carousel-wrapper {
+      margin: 0 auto;
+    }
+    
+    .frd-showcase-container {
+      padding: 0 40px;
+    }
+    
+    .frd-showcase-nav-prev {
+      left: -5px;
+    }
+
+    .frd-showcase-nav-next {
+      right: -5px;
+    }
+    
+    .frd-showcase-nav {
+      width: 56px;
+      height: 56px;
+      background: rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    
+    .frd-showcase-nav:hover {
+      background: rgba(255, 255, 255, 1) !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    
+    .frd-showcase-nav svg {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .frd-showcase-title {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+    
+    .frd-showcase-section {
+      padding: 40px 0;
+    }
+  }
+
+    @media screen and (max-width: 480px) {
+    .frd-showcase-item {
+      flex: 0 0 auto;
+    }
+    
+    .frd-showcase-carousel {
+      gap: 15px;
+    }
+    
+    .frd-showcase-carousel-wrapper {
+      margin: 0 auto;
+    }
+    
+    .frd-showcase-container {
+      padding: 0 20px;
+    }
+    
+    .frd-showcase-nav-prev {
+      left: -15px;
+    }
+
+    .frd-showcase-nav-next {
+      right: -15px;
+    }
+    
+    .frd-showcase-nav {
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      /* Ensure touch target is large enough */
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    .frd-showcase-nav:hover {
+      background: rgba(255, 255, 255, 1) !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transform: translateY(-50%) scale(1.05);
+    }
+    
+    .frd-showcase-nav svg {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .frd-showcase-title {
+      font-size: 28px;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+  }
+
+  /* Loading animation */
+  .frd-showcase-item[data-loading] {
+    opacity: 0.6;
+  }
+
+  /* Touch interaction improvements */
+  .frd-showcase-carousel {
+    touch-action: pan-y pinch-zoom;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .frd-showcase-item {
+    pointer-events: auto;
+  }
+  
+  .frd-showcase-nav {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Active state for touch feedback */
+  @media (hover: none) and (pointer: coarse) {
+    .frd-showcase-nav:active {
+      transform: translateY(-50%) scale(0.95);
+      background: rgba(255, 255, 255, 1) !important;
+    }
+    
+    .frd-showcase-card:active {
+      transform: scale(0.98);
+    }
+  }
+
+  /* Accessibility improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .frd-showcase-carousel,
+    .frd-showcase-item,
+    .frd-showcase-card,
+    .frd-showcase-image,
+    .frd-showcase-nav {
+      transition: none;
+    }
+  }
+{%- endstyle -%}
+
+<section class="frd-showcase-section" id="frd-showcase-{{ section.id }}">
+  <div class="frd-showcase-container">
+    {%- if section.settings.title != blank -%}
+      <h2 class="frd-showcase-title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    <div class="frd-showcase-carousel-wrapper">
+      <div class="frd-showcase-carousel" id="frd-showcase-carousel-{{ section.id }}" role="region" aria-label="Product showcase carousel">
+        {%- for block in section.blocks -%}
+          <div class="frd-showcase-item" data-block-id="{{ block.id }}" {{ block.shopify_attributes }}>
+            {%- liquid
+              assign link_url = block.settings.custom_url | default: '#'
+              assign target_attr = ''
+              if block.settings.open_new_tab
+                assign target_attr = 'target="_blank" rel="noopener noreferrer"'
+              endif
+              assign image_alt = block.settings.title | default: 'Product showcase image'
+            -%}
+            
+            <a href="{{ link_url }}" 
+               class="frd-showcase-card" 
+               {{ target_attr }}
+               aria-label="View {{ block.settings.title | default: 'product' }}">
+              
+              <div class="frd-showcase-image-container">
+                {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | image_url: width: 600 }}"
+                       alt="{{ image_alt }}"
+                       class="frd-showcase-image"
+                       loading="lazy"
+                       width="600"
+                       height="450">
+                {%- else -%}
+                  <div class="frd-showcase-image" style="background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: #999; font-size: 14px;">No image</span>
+                  </div>
+                {%- endif -%}
+              </div>
+              
+              <div class="frd-showcase-content">
+                {%- if block.settings.title != blank -%}
+                  <h3 class="frd-showcase-product-title">{{ block.settings.title }}</h3>
+                {%- endif -%}
+                {%- if block.settings.subtitle != blank -%}
+                  <p class="frd-showcase-product-subtitle">{{ block.settings.subtitle }}</p>
+                {%- endif -%}
+              </div>
+            </a>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- if section.settings.show_navigation -%}
+      <button type="button" 
+              class="frd-showcase-nav frd-showcase-nav-prev" 
+              id="frd-showcase-prev-{{ section.id }}"
+              aria-label="Previous products">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+      </button>
+      
+      <button type="button" 
+              class="frd-showcase-nav frd-showcase-nav-next" 
+              id="frd-showcase-next-{{ section.id }}"
+              aria-label="Next products">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+        </svg>
+      </button>
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sectionId = '{{ section.id }}';
+  const carousel = document.getElementById(`frd-showcase-carousel-${sectionId}`);
+  const prevBtn = document.getElementById(`frd-showcase-prev-${sectionId}`);
+  const nextBtn = document.getElementById(`frd-showcase-next-${sectionId}`);
+  
+  if (!carousel) return;
+  
+  const items = carousel.querySelectorAll('.frd-showcase-item');
+  const itemsToShow = {{ section.settings.products_to_show | default: 3 }};
+  const totalItems = items.length;
+  
+  let currentIndex = 0;
+  let itemWidth = 0;
+  let gap = 30;
+  
+  // Calculate item width and gap for responsive design
+  function calculateDimensions() {
+    let responsiveItemsToShow = itemsToShow;
+    
+    if (window.innerWidth <= 480) {
+      gap = 15;
+      responsiveItemsToShow = 1; // Show 1 item on very small screens
+    } else if (window.innerWidth <= 768) {
+      gap = 20;
+      responsiveItemsToShow = 2; // Show 2 items on tablets
+    } else {
+      gap = 30;
+      responsiveItemsToShow = itemsToShow; // Use setting value for desktop
+    }
+    
+    // Get the actual available width from the carousel wrapper
+    const carouselWrapper = carousel.parentElement;
+    const containerWidth = carouselWrapper.offsetWidth;
+    
+    // Calculate item width more precisely
+    const totalGapWidth = gap * (responsiveItemsToShow - 1);
+    itemWidth = (containerWidth - totalGapWidth) / responsiveItemsToShow;
+    
+    // Ensure items don't exceed container bounds - add small buffer for precision
+    const buffer = 1;
+    itemWidth = Math.floor(itemWidth - buffer);
+    
+    // Apply the calculated width to each item
+    items.forEach(item => {
+      item.style.flex = `0 0 ${itemWidth}px`;
+      item.style.width = `${itemWidth}px`;
+    });
+    
+    // Store current responsive items count for navigation logic
+    window.currentItemsToShow = responsiveItemsToShow;
+  }
+  
+  // Update carousel position
+  function updateCarousel() {
+    calculateDimensions();
+    
+    const currentItemsToShow = window.currentItemsToShow || itemsToShow;
+    
+    // Handle infinite looping properly
+    if (currentIndex >= totalItems) {
+      currentIndex = 0;
+    } else if (currentIndex < 0) {
+      currentIndex = totalItems - currentItemsToShow;
+      if (currentIndex < 0) currentIndex = 0;
+    }
+    
+    // Calculate maximum slides we can show (for cases where totalItems > currentItemsToShow)
+    let maxStartIndex = Math.max(0, totalItems - currentItemsToShow);
+    
+    // If we have more items than we can show, limit the currentIndex
+    if (totalItems > currentItemsToShow && currentIndex > maxStartIndex) {
+      currentIndex = 0; // Loop back to start
+    }
+    
+    // More precise translation calculation
+    const translateX = -(currentIndex * (itemWidth + gap));
+    
+    // Ensure we don't translate beyond what's necessary for the last slide
+    const maxTranslateX = -((totalItems - currentItemsToShow) * (itemWidth + gap));
+    const finalTranslateX = Math.max(translateX, maxTranslateX);
+    
+    carousel.style.transform = `translateX(${finalTranslateX}px)`;
+    
+    // For infinite scroll, buttons are never disabled
+    if (prevBtn) {
+      prevBtn.disabled = false;
+    }
+    if (nextBtn) {
+      nextBtn.disabled = false;
+    }
+  }
+  
+  // Navigation functions
+  function goToPrev() {
+    const currentItemsToShow = window.currentItemsToShow || itemsToShow;
+    currentIndex--;
+    
+    // Calculate the maximum position where we can start showing currentItemsToShow items
+    let maxStartIndex = Math.max(0, totalItems - currentItemsToShow);
+    
+    if (currentIndex < 0) {
+      currentIndex = maxStartIndex; // Go to the last valid position
+    }
+    updateCarousel();
+  }
+  
+  function goToNext() {
+    const currentItemsToShow = window.currentItemsToShow || itemsToShow;
+    currentIndex++;
+    
+    // Calculate the maximum position where we can start showing currentItemsToShow items
+    let maxStartIndex = Math.max(0, totalItems - currentItemsToShow);
+    
+    if (currentIndex > maxStartIndex) {
+      currentIndex = 0; // Loop back to start
+    }
+    updateCarousel();
+  }
+  
+  // Event listeners
+  if (prevBtn) {
+    prevBtn.addEventListener('click', goToPrev);
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', goToNext);
+  }
+  
+  // Keyboard navigation
+  carousel.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      goToPrev();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      goToNext();
+    }
+  });
+  
+  // Enhanced Touch/swipe support with momentum and better gesture detection
+  let touch = {
+    startX: 0,
+    startY: 0,
+    endX: 0,
+    endY: 0,
+    startTime: 0,
+    isDragging: false,
+    isVerticalScroll: false,
+    threshold: 30, // Minimum distance for swipe
+    velocityThreshold: 0.3, // Minimum velocity for momentum
+    restraint: 100, // Maximum vertical movement before canceling horizontal swipe
+  };
+  
+  function handleTouchStart(e) {
+    const touchObj = e.touches[0];
+    touch.startX = touchObj.clientX;
+    touch.startY = touchObj.clientY;
+    touch.startTime = Date.now();
+    touch.isDragging = true;
+    touch.isVerticalScroll = false;
+    
+    // Remove transition during touch for immediate feedback
+    carousel.style.transition = 'none';
+  }
+  
+  function handleTouchMove(e) {
+    if (!touch.isDragging) return;
+    
+    const touchObj = e.touches[0];
+    const currentX = touchObj.clientX;
+    const currentY = touchObj.clientY;
+    
+    const diffX = Math.abs(currentX - touch.startX);
+    const diffY = Math.abs(currentY - touch.startY);
+    
+    // Determine if this is a vertical scroll
+    if (!touch.isVerticalScroll && diffY > diffX && diffY > 10) {
+      touch.isVerticalScroll = true;
+      return;
+    }
+    
+    // If it's a horizontal swipe, prevent default scrolling
+    if (!touch.isVerticalScroll && diffX > 10) {
+      e.preventDefault();
+      
+      // Provide visual feedback during swipe
+      const displacement = currentX - touch.startX;
+      const maxDisplacement = itemWidth * 0.3; // Limit displacement
+      const clampedDisplacement = Math.max(-maxDisplacement, Math.min(maxDisplacement, displacement));
+      
+      const baseTranslateX = -(currentIndex * (itemWidth + gap));
+      const maxTranslateX = -((totalItems - (window.currentItemsToShow || itemsToShow)) * (itemWidth + gap));
+      const feedbackTranslateX = Math.max(baseTranslateX + clampedDisplacement, maxTranslateX);
+      
+      carousel.style.transform = `translateX(${feedbackTranslateX}px)`;
+    }
+  }
+  
+  function handleTouchEnd(e) {
+    if (!touch.isDragging || touch.isVerticalScroll) {
+      touch.isDragging = false;
+      // Restore transition and snap back to position
+      carousel.style.transition = 'transform 0.5s ease';
+      updateCarousel();
+      return;
+    }
+    
+    touch.isDragging = false;
+    const touchObj = e.changedTouches[0];
+    touch.endX = touchObj.clientX;
+    touch.endY = touchObj.clientY;
+    
+    const diffX = touch.startX - touch.endX;
+    const diffY = Math.abs(touch.startY - touch.endY);
+    const distance = Math.abs(diffX);
+    const elapsedTime = Date.now() - touch.startTime;
+    const velocity = distance / elapsedTime; // pixels per ms
+    
+    // Restore transition
+    carousel.style.transition = 'transform 0.5s ease';
+    
+    // Check if it's a valid horizontal swipe
+    if (diffY < touch.restraint && (distance > touch.threshold || velocity > touch.velocityThreshold)) {
+      if (diffX > 0) {
+        goToNext();
+      } else {
+        goToPrev();
+      }
+    } else {
+      // Snap back to current position
+      updateCarousel();
+    }
+  }
+  
+  // Add touch event listeners
+  carousel.addEventListener('touchstart', handleTouchStart, { passive: false });
+  carousel.addEventListener('touchmove', handleTouchMove, { passive: false });
+  carousel.addEventListener('touchend', handleTouchEnd, { passive: false });
+  carousel.addEventListener('touchcancel', function() {
+    touch.isDragging = false;
+    touch.isVerticalScroll = false;
+    carousel.style.transition = 'transform 0.5s ease';
+    updateCarousel();
+  });
+  
+  // Initialize
+  calculateDimensions();
+  updateCarousel();
+  
+  // Handle resize
+  let resizeTimeout;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+      calculateDimensions();
+      updateCarousel();
+    }, 250);
+  });
+  
+  // Auto-scroll functionality (optional)
+  {% if section.settings.auto_scroll %}
+  let autoScrollInterval;
+  
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(function() {
+      goToNext();
+    }, {{ section.settings.auto_scroll_duration | default: 5000 }});
+  }
+  
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+  
+  // Start auto-scroll if enabled
+  startAutoScroll();
+  
+  // Pause on hover
+  carousel.parentElement.addEventListener('mouseenter', stopAutoScroll);
+  carousel.parentElement.addEventListener('mouseleave', startAutoScroll);
+  
+  // Pause on focus
+  carousel.addEventListener('focusin', stopAutoScroll);
+  carousel.addEventListener('focusout', startAutoScroll);
+  {% endif %}
+});
+</script>
+
+{% schema %}
+{
+  "name": "Showcase Carousel",
+  "tag": "section",
+  "class": "frd-showcase-section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "EXPLORE FIREPLACES"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "Products to Show (Desktop)",
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "show_navigation",
+      "label": "Show Navigation Arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_scroll",
+      "label": "Enable Auto-scroll",
+      "default": false
+    },
+         {
+       "type": "range",
+       "id": "auto_scroll_duration",
+       "label": "Auto-scroll Duration (ms)",
+       "min": 3000,
+       "max": 9500,
+       "step": 500,
+       "default": 5000,
+       "info": "Only applies if auto-scroll is enabled"
+     },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#333333"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_showcase",
+      "name": "Product Showcase",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product Title",
+          "placeholder": "Enter product title"
+        },
+        {
+          "type": "textarea",
+          "id": "subtitle",
+          "label": "Product Subtitle/Description",
+          "placeholder": "Enter product description"
+        },
+        {
+          "type": "url",
+          "id": "custom_url",
+          "label": "Custom Link URL",
+          "info": "Link to product page or custom URL"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_new_tab",
+          "label": "Open Link in New Tab",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Showcase Carousel",
+      "blocks": [
+        {
+          "type": "product_showcase",
+          "settings": {
+            "title": "Heat & Glo",
+            "subtitle": "Escape Gas Insert"
+          }
+        },
+        {
+          "type": "product_showcase",
+          "settings": {
+            "title": "Quadra-Fire",
+            "subtitle": "QFI FB Gas Insert"
+          }
+        },
+        {
+          "type": "product_showcase",
+          "settings": {
+            "title": "Simplifire",
+            "subtitle": "Electric Insert"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

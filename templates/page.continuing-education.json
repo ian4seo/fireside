@@ -1,0 +1,103 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "1655754581f4d55040": {
+      "type": "page-banner-alt",
+      "settings": {
+        "heading": "Continuing Education",
+        "image": "shopify://shop_images/fireside-pro-resources.jpg",
+        "text_alignment": "center",
+        "site_width": "mbl-site-width",
+        "css_class": "top-space",
+        "custom_css": ".top-space{margin-top:4em}"
+      }
+    },
+    "165575491934c10fb6": {
+      "type": "image-text",
+      "blocks": {
+        "16557549195976bbd8-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside-continuing-ed.jpg",
+            "image_crop": "none",
+            "title": "Online CEU Courses",
+            "text": "<p><strong>Earn Credits Online, Anytime</strong></p><p>Earning your continuing education credit hours has never been easier. Our 1 hour, 1 LU online fireplace webinars are available through Hanley Wood University.</p>",
+            "button_label": "View Online Courses",
+            "link": "https://www.hanleywooduniversity.com/library/asearch/sponsors/hearth_&_home_technologies/",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16557549195976bbd8-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165575571506a72ec0": {
+      "type": "image-text",
+      "blocks": {
+        "16557557150e2f455a-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside-continuing-education.jpg",
+            "image_crop": "none",
+            "title": "Lunch & Learn",
+            "text": "<p><strong>GROUP SEMINARS</strong></p><p>Group learning is a great way for your team to gain education credits. We offer 1-hour fireplace design and technology seminars to groups of 5 or more and provide complimentary lunch.</p><p>Plus, it's an opportunity to discuss your current projects with a Fireplace Expert. Our Lunch & Learn Program is approved by the AIA, IDCEC and NARI.</p>",
+            "button_label": "View Course Catalog",
+            "link": "https://downloads.hearthnhome.com/pro/CEU/CEU-Course-Catalog-HNG-Brand.pdf",
+            "link-two-margin-top": 15,
+            "button_two_label": "Request A Seminar",
+            "link-two": "shopify://pages/request-a-seminar",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16557557150e2f455a-0"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row-reverse",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1655754581f4d55040",
+    "165575491934c10fb6",
+    "165575571506a72ec0"
+  ]
+}

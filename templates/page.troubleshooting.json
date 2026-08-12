@@ -1,0 +1,293 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "16536812224df649ee": {
+      "type": "page-banner-alt",
+      "settings": {
+        "heading": "Fireplace Troubleshooting Videos",
+        "image": "shopify://shop_images/tool-hero.jpg",
+        "text_alignment": "center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1653681426834d7bb5": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "mobile-padding-top": 20,
+        "mobile-padding-bottom": 0,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Our experienced team has created helpful tutorial videos to guide you through some of the most common questions for using and maintaining your fireplace.</p><p>From tips on how to sync your remote to instructions on how to relight your pilot light, our DIY videos have you covered for most scenarios. </p>",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "open-new-window": false,
+        "button_link": "",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165368127160d67c9b": {
+      "type": "videos",
+      "blocks": {
+        "1653681271eef6ea52-0": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Find the Model & Serial Number of My Gas Fireplace",
+            "video_id": "p8HhNrcluIQ"
+          }
+        },
+        "69379947-383c-403a-ad87-aa497e35b415": {
+          "type": "heading",
+          "settings": {
+            "video_title": "My Gas Fireplace Won't Light: Resetting the Control Module",
+            "video_id": "alZ_bheojiM"
+          }
+        },
+        "2a315154-6cca-470a-8d55-f992fcfca0e6": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Troubleshoot<br> My RC300 Remote",
+            "video_id": "0HJg61LZrAs"
+          }
+        },
+        "ebe0bcfb-f690-4c2e-9729-2b8ae693fcbb": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Remove & Clean <br>the Glass on My Gas Fireplace",
+            "video_id": "9h1y0PNX9f4"
+          }
+        },
+        "969793ba-7716-4c4c-8f5f-c51191295e21": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Shut Off<br> the Gas At My Fireplace",
+            "video_id": "9j6MjBBwQps"
+          }
+        },
+        "00c2372f-8318-4e4a-a558-12a3bf04e098": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Shut Off the Gas to My Fireplace At The Source",
+            "video_id": "UadnzGTNyAQ"
+          }
+        },
+        "61a0bfa6-e512-4343-995e-ed645bfeaa24": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Relight the Standing Pilot<br> On My Gas Fireplace",
+            "video_id": "_0w6GXQpHKM"
+          }
+        }
+      },
+      "block_order": [
+        "1653681271eef6ea52-0",
+        "69379947-383c-403a-ad87-aa497e35b415",
+        "2a315154-6cca-470a-8d55-f992fcfca0e6",
+        "ebe0bcfb-f690-4c2e-9729-2b8ae693fcbb",
+        "969793ba-7716-4c4c-8f5f-c51191295e21",
+        "00c2372f-8318-4e4a-a558-12a3bf04e098",
+        "61a0bfa6-e512-4343-995e-ed645bfeaa24"
+      ],
+      "settings": {
+        "heading": "Gas Fireplace Troubleshooting Videos"
+      }
+    },
+    "1653681324b71236be": {
+      "type": "videos",
+      "blocks": {
+        "16536813249eb1b8fd-0": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Find the Model & Serial Number of My Gas Insert",
+            "video_id": "p8HhNrcluIQ"
+          }
+        },
+        "5c2d6b1f-b4a0-4d8e-a0c5-6a5ae0b9acda": {
+          "type": "heading",
+          "settings": {
+            "video_title": "My Metal Gas Insert Won't Light: Resetting the Control Module",
+            "video_id": "1BK3IOIY3zk"
+          }
+        },
+        "b153f1e6-e23c-4273-997c-4594b95e7ac3": {
+          "type": "heading",
+          "settings": {
+            "video_title": "My FireBrick Gas Insert Won't Light: Resetting the Control Module",
+            "video_id": "OEkp-OT-OSQ"
+          }
+        },
+        "3c63d32a-0548-48a9-9f93-3be4d8608e1b": {
+          "type": "heading",
+          "settings": {
+            "video_title": "My FireBrick Gas Insert Pilot Light Works But Burner Doesn't: Cleaning the Sensor Rod",
+            "video_id": "KL0pvT0TCek"
+          }
+        },
+        "563fe6da-04bd-49a7-8798-6e657adf25fa": {
+          "type": "heading",
+          "settings": {
+            "video_title": "My Firebrick Gas Insert Won't Light: Resetting the Control Module After Cleaning the Sensor Rod",
+            "video_id": "OEkp-OT-OSQ"
+          }
+        },
+        "8fbaf138-b745-4432-80d3-22ee57260f3a": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Troubleshoot My RC300 Remote",
+            "video_id": "0HJg61LZrAs"
+          }
+        },
+        "c3d75076-9d6f-4c15-88e0-6e1ac6c5ffcd": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Use the Battery Backup on My Metal Gas Insert",
+            "video_id": "9xFU2b4lpdw"
+          }
+        },
+        "76667a1e-318f-48fe-a9de-8d5c888af58e": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Use the Battery Backup on My FireBrick Gas Insert",
+            "video_id": "b7GRgeNwe-A"
+          }
+        },
+        "10621fa2-c703-4e6b-9513-0015566fc21f": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Remove & Clean the Glass on My Metal Gas Insert",
+            "video_id": "kLCI8FXnZrI"
+          }
+        },
+        "e6b978a9-576b-4520-8dff-2c7a733ff9a2": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Remove & Clean the Glass on My FireBrick Gas Insert",
+            "video_id": "uoNTEySx13E"
+          }
+        },
+        "30cea5fc-0450-4126-8f00-4f18b1fe24ba": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Fix Fan Noise on My Gas Insert",
+            "video_id": "4Uqt-XxyI2c"
+          }
+        },
+        "9663e6af-b708-4a7f-83c3-405149e114e6": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Shut Off the Gas At My Insert",
+            "video_id": "9j6MjBBwQps"
+          }
+        },
+        "822c9178-1cbe-4571-a807-274f8a875b39": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Shut Off the Gas to My Insert At The Source",
+            "video_id": "UadnzGTNyAQ"
+          }
+        },
+        "301e9db3-15ee-40d0-afb1-93f4fb4a69a7": {
+          "type": "heading",
+          "settings": {
+            "video_title": "What To Do When My Gas Insert Accent Lighting Is Out",
+            "video_id": "Zof8rxajxfQ"
+          }
+        },
+        "77f8c766-95e9-489b-b985-ed7bf123d154": {
+          "type": "heading",
+          "settings": {
+            "video_title": "How to Relight the Standing Pilot On My Gas Insert",
+            "video_id": "_0w6GXQpHKM"
+          }
+        }
+      },
+      "block_order": [
+        "16536813249eb1b8fd-0",
+        "5c2d6b1f-b4a0-4d8e-a0c5-6a5ae0b9acda",
+        "b153f1e6-e23c-4273-997c-4594b95e7ac3",
+        "3c63d32a-0548-48a9-9f93-3be4d8608e1b",
+        "563fe6da-04bd-49a7-8798-6e657adf25fa",
+        "8fbaf138-b745-4432-80d3-22ee57260f3a",
+        "c3d75076-9d6f-4c15-88e0-6e1ac6c5ffcd",
+        "76667a1e-318f-48fe-a9de-8d5c888af58e",
+        "10621fa2-c703-4e6b-9513-0015566fc21f",
+        "e6b978a9-576b-4520-8dff-2c7a733ff9a2",
+        "30cea5fc-0450-4126-8f00-4f18b1fe24ba",
+        "9663e6af-b708-4a7f-83c3-405149e114e6",
+        "822c9178-1cbe-4571-a807-274f8a875b39",
+        "301e9db3-15ee-40d0-afb1-93f4fb4a69a7",
+        "77f8c766-95e9-489b-b985-ed7bf123d154"
+      ],
+      "settings": {
+        "heading": "Gas Insert Troubleshooting Videos"
+      }
+    },
+    "1653681459f40a5b18": {
+      "type": "two-column-bg-image-w-text",
+      "settings": {
+        "bg_img": "shopify://shop_images/fireside-call-in-pros.jpg",
+        "minion-font": false,
+        "heading": "Time to Call in The Pros?",
+        "content": "Though many fireplace repairs and troubleshooting issues are DIY, others require specific tools and a trained level of expertise. That's where our team of service techs can lend a hand with on-site professional repair and cleaning.",
+        "btn_link": "shopify://pages/request-service",
+        "btn_text": "Schedule Service",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "reveal-on": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "SIGN UP FOR OUR NEWSLETTER",
+        "newsletter_text": "<p>Be the first to get a sneak peek at the latest innovations in fireplace design and installation. Subscribe to our newsletter to view recent work, meet our designers, and inspire your next project. You'll also be the first to know about special promotions and exciting discounts to help you plan your fireplace.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16536812224df649ee",
+    "1653681426834d7bb5",
+    "165368127160d67c9b",
+    "1653681324b71236be",
+    "1653681459f40a5b18",
+    "newsletter"
+  ]
+}

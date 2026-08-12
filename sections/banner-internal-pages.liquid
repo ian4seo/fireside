@@ -1,0 +1,145 @@
+<!-- Banner (Internal Pages) Template -->
+{% style %}
+  .hide-on-mobile {
+    display: block
+  }
+
+  @media screen and (max-width: 480px){
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+{% endstyle %}
+
+<section class="banner-internal-pages {{ section.settings.css_class }} {% if section.settings.hide-on-mobile == true %}hide-on-mobile{% endif %}">
+    <div class="inner flex tbl-flex-wrap">
+        
+        <div class="text-col col-tbl-12 sm-text-center flex align-items-center tbl-order-2">
+
+            <div class="inner">
+              
+                {% if section.settings.heading != blank %}
+                <h1 class="white heading minion-pro {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h1>
+                {% endif %}
+
+                {% if section.settings.content != blank %}
+                <p class="content white">
+                  {{ section.settings.content }}
+                </p>
+                {% endif %}
+
+                {% if section.settings.btn_text != blank and section.settings.btn_link != blank %}
+                <a href="{{ section.settings.btn_link }}" class="btn bg-orange">{{ section.settings.btn_text | escape }}</a>
+                {% endif %}
+
+            </div>
+
+        </div>
+        
+        <div class="img-col col-tbl-12 bg-cover bg-center flex-grow-1 tbl-order-1" style="background-image:url('{{ section.settings.image | img_url: 'master' }}')">
+        </div>
+
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Banner (Internal Pages)",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide-on-mobile",
+          "label": "Hide on mobile",
+          "default": false
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "default": "regular_text",
+          "options": [
+            {
+              "value": "regular_text",
+              "label": "Regular"
+            },
+            {
+              "value": "large_text",
+              "label": "Large"
+            }
+          ]
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+        },
+        {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+			"info": "1200x675 px recommended"
+        },
+        {
+            "type": "header",
+            "content": "Advanced"
+        },
+        {
+            "type": "text",
+            "id": "css_class",
+            "label": "CSS Class"
+        },
+        {
+            "type": "textarea",
+            "id": "custom_css",
+            "label": "Custom CSS"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Banner (Internal Pages)",
+            "category": "ADVANCED LAYOUT"
+        }
+    ]
+}
+{% endschema %}
+
+<style>
+    .banner-internal-pages .inner .text-col { background-color: #3D484E; padding: 80px; max-width: 450px; min-width: 450px; }
+    .banner-internal-pages .inner .text-col .heading.large_text { font-size: 45px; }
+    .banner-internal-pages .inner .img-col { min-height: 600px; }
+
+    @media (max-width: 1024px ) {
+        .banner-internal-pages .inner .text-col { max-width: initial; min-width: initial; padding: 50px }
+        .banner-internal-pages .inner .text-col .heading.large_text { font-size: 40px; }
+        .banner-internal-pages .inner .img-col { min-height: 350px; }
+      }
+    }
+</style>
+
+{% style %}
+    {%
+        render 'css-loop',
+        css: section.settings.custom_css,
+        id: section.id
+    %}
+{% endstyle %}

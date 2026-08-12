@@ -1,0 +1,128 @@
+<!-- Two Column Background Image w/ Text Template -->
+{% style %}
+  .minion-font {
+    font-size: 36px;
+    font-family: 'minion-pro', serif;
+    font-weight: bold;
+	text-transform: capitalize;
+  }
+{% endstyle %}
+
+<section class="two-col-bg-img-w-text {{ section.settings.css_class }}">
+    <div
+      class="inner bg-cover bg-center flex align-items-center is-justify-right sm-flex-column"
+      data-performance-bg-large="{{ section.settings.bg_img | image_url: width: 1600 }}"
+      style="min-height: 200px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover"
+    >
+	<div class="{{ section.settings.text_alignment }} {{ section.settings.site_width }} relative z-index-2" style="width: 100%">
+        <div class="img-col display-none sm-block">
+            {%
+              render 'image-element',
+              image: section.settings.bg_img,
+              alt: section.settings.bg_img.alt,
+            %}
+        </div>
+        <div class="text-col col-6 col-tbl-8 col-sm-12 sm-text-center margin-left-auto">
+
+            {% if section.settings.heading != blank %}
+              <h3 class="h5 {% if section.settings.minion-font == true %} minion-font {% endif %}">{{ section.settings.heading | escape }}</h3>
+            {% endif %}
+
+            {% if section.settings.content != blank %}
+              <p class="content">
+                {{ section.settings.content }}
+              </p>
+            {% endif %}
+
+            {% if section.settings.btn_text != blank and section.settings.btn_link != blank %}
+              <a href="{{ section.settings.btn_link }}" class="btn bg-orange">{{ section.settings.btn_text | escape }}</a>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Two-Col Bg-Image w/ Text",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "bg_img",
+            "label": "Background Image"
+        },
+		{
+			"type": "checkbox",
+			"id": "minion-font",
+			"label" : "Use Minion Font"
+		},
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "html",
+            "id": "content",
+            "label": "Content"
+        },
+        {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text"
+        },
+        {
+            "type": "header",
+            "content": "Advanced"
+        },
+        {
+            "type": "paragraph",
+            "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+        },
+        {
+            "type": "text",
+            "id": "css_class",
+            "label": "CSS Class"
+        },
+        {
+            "type": "textarea",
+            "id": "custom_css",
+            "label": "Custom CSS"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Two Column Background Image w/ Text",
+            "category": "ADVANCED LAYOUT"
+        }
+    ]
+}
+{% endschema %}
+
+<style>
+    .two-col-bg-img-w-text .inner { padding-top: 15vw; padding-bottom: 15vw; }
+    .two-col-bg-img-w-text .inner .text-col { background-color: white; padding: 100px; }
+
+    @media (max-width: 1024px ) {
+        .two-col-bg-img-w-text .inner .text-col { padding: 60px; }
+    }
+
+    @media (max-width: 767px ) {
+        .two-col-bg-img-w-text .inner { background-image: none !important; padding-top: 0; padding-bottom: 0; }
+        .two-col-bg-img-w-text .inner .text-col { padding: 40px 20px; margin-bottom: 50px; }
+    }
+</style>
+
+{% style %}
+    {%
+      render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+    %}
+{% endstyle %}

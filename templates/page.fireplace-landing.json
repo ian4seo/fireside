@@ -1,0 +1,276 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "frd_landing_hero_LmtQdc": {
+      "type": "frd-landing-hero",
+      "name": "Landing Page Hero",
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": false,
+        "image": "shopify://shop_images/Rectangle_1.png",
+        "top_button_1": "Gas Inserts",
+        "top_button_1_link": "https://fireside.com/pages/upgrade-your-fireplace",
+        "top_button_2": "Gallery",
+        "top_button_2_link": "https://fireside.com/pages/gallery",
+        "top_button_3": "Resources",
+        "top_button_3_link": "https://fireside.com/pages/gas-insert-resources",
+        "title": "UPGRADE YOUR FIREPLACE. TRANSFORM YOUR HOME.",
+        "subtitle": "<p>A gas insert is an easy way to make your fireplace usable again. Choose from a range of styles and sizes that fit inside your existing fireplace and enjoy warmth and coziness at the touch of a button.</p>",
+        "button1": "Gas Insert Benefits",
+        "button1_link": "#",
+        "button2": "",
+        "button2_link": "",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image": "shopify://shop_images/Rectangle_1.png",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": "",
+        "background_vimeo_video_url": "https://vimeo.com/1118194486?share=copy",
+        "background_video_autoplay": true,
+        "background_video_loop": true,
+        "vimeo_video_url": "https://vimeo.com/1104249182?share=copy",
+        "video_autoplay_after_expand": true
+      }
+    },
+    "frd_image_text_overlap_xxPFXL": {
+      "type": "frd-image-text-overlap",
+      "blocks": {
+        "text_block_q9zhyc": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/BEFORE_AFTER_Web-banner.jpg",
+            "title": "WHY HOMEOWNERS ARE SWITCHING TO GAS INSERTS",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_q9zhyc"
+      ],
+      "name": "Image with Text Overlap",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "frd_multicolumn_list_gGh73c": {
+      "type": "frd-multicolumn-list",
+      "blocks": {
+        "logo_image_fx47nb": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/EASE.png",
+            "link": "",
+            "heading": "EASE",
+            "description": "Gas fireplace inserts redefine convenience, taking away the hassle of wood and offering you a real fire at the touch of a button."
+          }
+        },
+        "logo_image_tGFMEA": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/WARMTH.png",
+            "link": "",
+            "heading": "WARMTH & EFFICIENCY",
+            "description": "Enjoy consistent and adjustable heat. Our inserts are designed to contain and radiate heat, rather than lose it up your chimney."
+          }
+        },
+        "logo_image_bdwmBj": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/SAFETY.png",
+            "link": "",
+            "heading": "SAFETY",
+            "description": "An insert quickly transforms your unused or unsafe wood-burning fireplace into a safer, more beautiful fireside experience."
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_fx47nb",
+        "logo_image_tGFMEA",
+        "logo_image_bdwmBj"
+      ],
+      "name": "Multicolumn List",
+      "settings": {
+        "title": ""
+      }
+    },
+    "frd_featured_multicolumn_nGkVxT": {
+      "type": "frd-featured-multicolumn",
+      "blocks": {
+        "logo_image_fPBaQY": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_7.png",
+            "link": "https://fireside.com/pages/gallery",
+            "heading": "VIEW",
+            "subheading": "THE GALLERY",
+            "description": "Explore the possibilities."
+          }
+        },
+        "logo_image_VGJg8K": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/LionHouse__123.jpg",
+            "link": "https://fireside.com/pages/gas-insert-resources#what-to-expect",
+            "heading": "WHAT",
+            "subheading": "TO EXPECT",
+            "description": "Learn about the process."
+          }
+        },
+        "logo_image_igEjTN": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Insert_fireplace_measurements_26_59.png",
+            "link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Transform_Your_Fireplace_Design_Guide.pdf?v=1758573029",
+            "heading": "DOWNLOAD",
+            "subheading": "DESIGN GUIDE",
+            "description": "Get inspiration for your project."
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_fPBaQY",
+        "logo_image_VGJg8K",
+        "logo_image_igEjTN"
+      ],
+      "name": "Featured Multicolumn",
+      "settings": {
+        "title": ""
+      }
+    },
+    "frd_testimonial_YXdgpL": {
+      "type": "frd-testimonial",
+      "blocks": {
+        "testimonial_HhtUqF": {
+          "type": "testimonial",
+          "settings": {
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1102349502?share=copy",
+            "placeholder_image": "shopify://shop_images/Rectangle_10.png",
+            "rating": 5,
+            "headline": "",
+            "description": "<p>“We're now going to go from using our fireplace from once every few years to probably all the time thanks to this Heat & Glo Gas Fireplace Insert!”</p>"
+          }
+        },
+        "testimonial_q7QPkG": {
+          "type": "testimonial",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/unnamed.jpg",
+            "video_url": "",
+            "rating": 5,
+            "headline": "",
+            "description": "<p>We highly recommend going through Fireside. We had a gas insert installed in the existing wood firebox. They coordinated all of the work, permits, and inspections, and kept us well-informed about each step of the process. They were always on time, and the employees we met were professional and pleasant to chat with. We love our new fireplace!<br/><br/><em>- Tim Watkins</em></p>"
+          }
+        },
+        "testimonial_3jjgUM": {
+          "type": "testimonial",
+          "settings": {
+            "media_type": "image",
+            "video_url": "",
+            "rating": 5,
+            "headline": "",
+            "description": "<p>\"Absolutely wonderful customer service! Both the service rep and the technician were polite, so helpful, and went above and beyond. I will use them again and recommend them to anyone I know with a fireplace.\"</p><p><br/><em>- Julie Masimore</em></p>"
+          }
+        },
+        "testimonial_c7hXPY": {
+          "type": "testimonial",
+          "settings": {
+            "media_type": "image",
+            "video_url": "",
+            "rating": 5,
+            "headline": "",
+            "description": "<p>Having gone through the home building process this past year, Fireside has been the most professional contractor we’ve worked with. They helped us set up the perfect fireplace features for our home.. Their warranty, service and professionalism was second to none Highly recommended.<br/><br/><em>- Inc2ink art</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_HhtUqF",
+        "testimonial_q7QPkG",
+        "testimonial_3jjgUM",
+        "testimonial_c7hXPY"
+      ],
+      "name": "Testimonials Slider",
+      "settings": {
+        "title": "TESTIMONIALS",
+        "bg_color": "#ffffff",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "frd_banner_text_with_button_FMraG3": {
+      "type": "frd-banner-text-with-button",
+      "name": "Banner Text w/Button",
+      "settings": {
+        "heading": "NOT SURE WHERE TO START?",
+        "sub_text": "",
+        "button_label": "Take the Quiz",
+        "button_link": "https://fireside.com/pages/find-your-insert",
+        "bg_color": "#e9841d",
+        "button_bg_color": "#212626",
+        "text_align": "text-center"
+      }
+    },
+    "1680209685bfc4567e": {
+      "type": "apps",
+      "blocks": {
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTI2OTY3\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf"
+      ],
+      "settings": {}
+    },
+    "frd_banner_text_with_button_ypeHXM": {
+      "type": "frd-banner-text-with-button",
+      "name": "Banner Text w/Button",
+      "settings": {
+        "heading": "TRANSFORM YOUR FIREPLACE & SAVE UP TO $650 ",
+        "sub_text": "",
+        "button_label": "CLAIM YOUR SAVINGS",
+        "button_link": "https://fireside.com/pages/hht-650-promo",
+        "bg_color": "#3d484e",
+        "button_bg_color": "#e9841d",
+        "text_align": "text-center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "frd_landing_hero_LmtQdc",
+    "frd_banner_text_with_button_ypeHXM",
+    "frd_image_text_overlap_xxPFXL",
+    "frd_multicolumn_list_gGh73c",
+    "frd_featured_multicolumn_nGkVxT",
+    "frd_testimonial_YXdgpL",
+    "frd_banner_text_with_button_FMraG3",
+    "1680209685bfc4567e"
+  ]
+}

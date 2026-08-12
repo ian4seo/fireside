@@ -1,0 +1,324 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "33b8cc99-c0e5-409a-95c5-7c13ae075441": {
+      "type": "hero-banner",
+      "disabled": true,
+      "settings": {
+        "banner-heading": "",
+        "sub-text": "",
+        "bg-img": "shopify://shop_images/FHH_Winter_Sale.png",
+        "view-btn-link": "shopify://pages/request-coupon",
+        "view-btn": "GET OFFER",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "hero_banner_X4Hpej": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "",
+        "sub-text": "",
+        "bg-img": "shopify://shop_images/State_Fair_sale_2024.png",
+        "bg-img-mobile": "shopify://shop_images/State_Fair_sale_2024.png",
+        "view-btn-link": "shopify://pages/request-coupon",
+        "view-btn": "GET OFFER*",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "ff0283b3-85ca-4aeb-acd7-996e819f3f06": {
+      "type": "page-title-subtitle",
+      "settings": {
+        "heading": "Save up to $1,200 during the State Fair Sale!",
+        "sub_text": "<h3>The more you buy, the more you save! Instant savings off project total happening now through September 21, 2024*! Visit our five Twin Cities showrooms for details.</h3><h5></h5><p>*Qualifying Purchases include Gas Fireplaces, Gas Inserts, and related components</p>",
+        "text_align": "text-center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "39859915-3089-4338-9597-d1f42ac5d6e4": {
+      "type": "image-text",
+      "blocks": {
+        "template--16718379417830__39859915-3089-4338-9597-d1f42ac5d6e4-image-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/State_fair_landing_page_-_early_buy_offer.png",
+            "image_crop": "none",
+            "title": "LIMITED TIME OFFER | Free Outdoor Greatroom Company Stonefire Fire Table",
+            "text": "<p><a href=\"https://fireside.com/collections/gas-fireplaces-gas-inserts?view=boost-pfs-original\" title=\"https://fireside.com/collections/gas-fireplaces-gas-inserts?view=boost-pfs-original\">When you purchase a gas insert or gas fireplace with installation! Valid through August 22! For a limited time only and while supplies last. Restrictions apply.</a></p>",
+            "button_label": "Shop Now",
+            "link": "https://fireside.com/collections/gas-fireplaces-gas-inserts?view=boost-pfs-original",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16718379417830__39859915-3089-4338-9597-d1f42ac5d6e4-image-1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "53cb320a-17b2-4b72-86e6-78a0e108997d": {
+      "type": "divider",
+      "disabled": true,
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "499a9213-05f9-4ea1-bfc1-bfbf3fe2c780": {
+      "type": "collection-list",
+      "blocks": {
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-1": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "feature_collection": "save-200-on-1-500-1-999"
+          }
+        },
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-2": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "300-off-2-000-2-999"
+          }
+        },
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-3": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "500-off-3-000-3-999"
+          }
+        },
+        "4349e2df-5d70-4810-b348-6f987ebe4c88": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "700-off-4-000-4-999"
+          }
+        },
+        "collection_dqr7je": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "700-off-5-000-5-999"
+          }
+        },
+        "66946347-c7c9-4008-b866-39aea45fe1f4": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "1-000-off-6-000-6-999"
+          }
+        },
+        "collection_zUFY6z": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "1-000-off-7-000-7-999"
+          }
+        },
+        "3a665c28-f3d8-4b1f-8086-7eaf27efc753": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "1-200-off-7-000"
+          }
+        }
+      },
+      "block_order": [
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-1",
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-2",
+        "template--16718379417830__499a9213-05f9-4ea1-bfc1-bfbf3fe2c780-collection-3",
+        "4349e2df-5d70-4810-b348-6f987ebe4c88",
+        "collection_dqr7je",
+        "66946347-c7c9-4008-b866-39aea45fe1f4",
+        "collection_zUFY6z",
+        "3a665c28-f3d8-4b1f-8086-7eaf27efc753"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Save up to $1,200",
+        "align_height": false,
+        "collection_height": 400,
+        "frontpage_collections_per_row": 3,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "5aaa8d8a-6877-4681-8c81-c62f007da289": {
+      "type": "image-text",
+      "blocks": {
+        "fd29b551-0703-4576-8bbc-3e551c4673f2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SFE_35-in_Mission_1110x624_3f8c0d3d-0a3f-44e9-9e9a-476ac42b9518.jpg",
+            "image_crop": "none",
+            "title": "Shop Gas & Electric Inserts",
+            "text": "<p>Instant savings of up to $1,500 on gas and electric insert project totals, through May 11!</p>",
+            "button_label": "Shop Now",
+            "link": "https://fireside.com/collections/buy-gas-inserts-online",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--16787524714726__5aaa8d8a-6877-4681-8c81-c62f007da289-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FHH_BFC_Sale_PMAX_1200_x_628_px_1.png",
+            "image_crop": "none",
+            "title": "Shop Electric Fireplaces",
+            "text": "<p>Instant savings of up to $1,500 on electric fireplace project totals, through May 11!</p>",
+            "button_label": "Shop Now",
+            "link": "https://fireside.com/collections/shop-electric-fireplace-inserts",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "image_KUhfV6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/online-HNG_PHOENIX-BLK-GLS_gas_fireplace_livingroom_2x_1.png",
+            "image_crop": "none",
+            "title": "Shop Gas Fireplaces",
+            "text": "<p>Instant savings of up to $1,500 on gas fireplace project totals, through May 11!</p>",
+            "button_label": "Shop Now",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--16787524714726__5aaa8d8a-6877-4681-8c81-c62f007da289-image-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DAR-1224-EBG-K_FlameC_Waterfall.jpg",
+            "image_crop": "none",
+            "title": "Shop Gas Fire Tables",
+            "text": "<p>Take $200 off an online purchase with code: <strong>GLOWSALE</strong>, only through December 2.</p>",
+            "button_label": "Shop Now",
+            "link": "https://fireside.com/collections/shop-gas-fire-tables-fire-pits",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "image_RKXdxT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/online-QDF_43M-ACC-C_960x456_cb34fcdf-efa8-45ec-95c3-6ff280c2c7ab.png",
+            "image_crop": "none",
+            "title": "Shop Stoves",
+            "text": "<p>Instant savings of up to $1,500 on stove project totals, through May 11!</p>",
+            "button_label": "Shop Now",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "fd29b551-0703-4576-8bbc-3e551c4673f2",
+        "template--16787524714726__5aaa8d8a-6877-4681-8c81-c62f007da289-image-2",
+        "image_KUhfV6",
+        "template--16787524714726__5aaa8d8a-6877-4681-8c81-c62f007da289-image-1",
+        "image_RKXdxT"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "7fefda24-fc06-492d-a22d-85ad6dc325a5": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": false,
+        "image": "shopify://shop_images/Untitled_design_-_2023-10-24T141841.160.png",
+        "pretext": "",
+        "title": "Showroom Locator",
+        "subtitle": "<p>Find a Fireside Hearth & Home showroom nearest you. </p><p>*Spring Sale valid only in Twin Cities locations</p>",
+        "button1": "View Locations",
+        "button1_link": "https://fireside.com/pages/store-locator",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "33b8cc99-c0e5-409a-95c5-7c13ae075441",
+    "hero_banner_X4Hpej",
+    "ff0283b3-85ca-4aeb-acd7-996e819f3f06",
+    "39859915-3089-4338-9597-d1f42ac5d6e4",
+    "main",
+    "53cb320a-17b2-4b72-86e6-78a0e108997d",
+    "499a9213-05f9-4ea1-bfc1-bfbf3fe2c780",
+    "5aaa8d8a-6877-4681-8c81-c62f007da289",
+    "7fefda24-fc06-492d-a22d-85ad6dc325a5"
+  ]
+}

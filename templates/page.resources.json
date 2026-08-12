@@ -1,0 +1,318 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "16533191942f38abe6": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "Fireplace Resources",
+        "heading_size": "regular_text",
+        "content": "<p>Whether you're just starting your project or already have a fireplace and need troubleshooting tips, we can help. \n\nFind inspiration from our idea gallery, project planner, and product videos, or watch videos to learn to troubleshoot common issues.</p>",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/fireside_fireplace_resources.png",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "frd_resource_cards_T7jKpd": {
+      "type": "frd-resource-cards",
+      "blocks": {
+        "resource_card_ppRT6n": {
+          "type": "resource_card",
+          "settings": {
+            "emoji": "",
+            "title": "Idea Gallery",
+            "description": "Browse real project photos for inspiration",
+            "button_text": "View Our Gallery",
+            "link": "https://fireside.com/pages/project-gallery"
+          }
+        },
+        "resource_card_n6m4nM": {
+          "type": "resource_card",
+          "settings": {
+            "emoji": "",
+            "title": "Project Planner",
+            "description": "Plan your fireplace project from start to finish",
+            "button_text": "Plan Your Design",
+            "link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/pre-consultation_checklist.pdf?v=1652895504"
+          }
+        },
+        "resource_card_dijMzi": {
+          "type": "resource_card",
+          "settings": {
+            "emoji": "",
+            "title": "Product Videos",
+            "description": "Watch video overviews of our top brands",
+            "button_text": "Watch Product Videos",
+            "link": "https://fireside.com/pages/product-videos"
+          }
+        },
+        "resource_card_838nKJ": {
+          "type": "resource_card",
+          "settings": {
+            "emoji": "",
+            "title": "Troubleshooting",
+            "description": "Read helpful guides to choose the right product",
+            "button_text": "Watch Troubleshoot videos",
+            "link": "https://fireside.com/pages/troubleshoot"
+          }
+        }
+      },
+      "block_order": [
+        "resource_card_ppRT6n",
+        "resource_card_n6m4nM",
+        "resource_card_dijMzi",
+        "resource_card_838nKJ"
+      ],
+      "name": "Resource Cards",
+      "settings": {
+        "title": "",
+        "background_color": "#3d484e",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e2e8f0",
+        "heading_color": "#2d3748",
+        "text_color": "#4a5568",
+        "button_text_color": "#ffffff",
+        "columns_per_row": 2,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "165331935820d3bb75": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "b3388f1e-d777-4c9b-b28d-493579e86150": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-family-twirling.jpg",
+            "title": "Plan Your Fireplace",
+            "text": "<p>Ready to make your fireplace dream a reality? We can't wait to help! Check out our planner tool to easily design and customize your fireplace to fit your style, space, and personality.</p>",
+            "button_label": "Plan Your Design",
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/pre-consultation_checklist.pdf?v=1652895504"
+          }
+        },
+        "31d92e24-f960-448c-91ad-6acefccdaaeb": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-symetrical-tables.jpg",
+            "title": "Project Gallery",
+            "text": "<p>Our gallery highlights just a few of our favorite fireplace projects. From wood to gas to electric, let us help inspire your design. </p>",
+            "button_label": "View Our Gallery",
+            "button_link": "shopify://pages/project-gallery"
+          }
+        },
+        "0bb14046-f8bd-408d-9470-4ef9ddd8ef64": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-product-videos.jpg",
+            "title": "Product Videos",
+            "text": "<p>Watch our product videos to learn more about how our unique products can enhance your home.</p>",
+            "button_label": "Watch Product Videos",
+            "button_link": "shopify://pages/product-videos"
+          }
+        },
+        "621254af-5190-477d-b57c-aceeadd85590": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/beforeandafter.jpg",
+            "title": "Before & After Projects",
+            "text": "<p>From simple swaps to full remodels, we love seeing rooms transformed to make your house even more of a home.</p>",
+            "button_label": "View Projects",
+            "button_link": "shopify://pages/before-after"
+          }
+        },
+        "16ea7ce4-a2aa-4311-8d29-7730fc34332d": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside-troubleshoot.jpg",
+            "title": "Troubleshoot Fireplace Issues",
+            "text": "<p>As with any fixture of your home, regular care and maintenance can extend the life of your fireplace. Learn tips from our experts on how to troubleshoot common issues. We'll help you recognize when a problem is DIY and when it's time to call the pros.</p>",
+            "button_label": "Watch Our Videos",
+            "button_link": "shopify://pages/troubleshoot"
+          }
+        }
+      },
+      "block_order": [
+        "b3388f1e-d777-4c9b-b28d-493579e86150",
+        "31d92e24-f960-448c-91ad-6acefccdaaeb",
+        "0bb14046-f8bd-408d-9470-4ef9ddd8ef64",
+        "621254af-5190-477d-b57c-aceeadd85590",
+        "16ea7ce4-a2aa-4311-8d29-7730fc34332d"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": ""
+      }
+    },
+    "frd_educational_guides_erdajq": {
+      "type": "frd-educational-guides",
+      "blocks": {
+        "guide_card_4CfzfR": {
+          "type": "guide_card",
+          "settings": {
+            "image": "shopify://shop_images/fireplace-icon-1.svg",
+            "emoji": "🔥",
+            "heading": "Gas Insert vs. Wood Burning Units: Which Is Right for You?",
+            "description": "Compare fuel types side-by-side to find the perfect match for your home, budget, and lifestyle.",
+            "button_text": "Read Guide",
+            "link": "https://fireside.com/pages/gas-fireplace-insert-vs-traditional-wood-burning-units-what-to-know"
+          }
+        },
+        "guide_card_rYUKfN": {
+          "type": "guide_card",
+          "settings": {
+            "image": "shopify://shop_images/fireside-home-consultation-icon.png",
+            "emoji": "🏠",
+            "heading": "Gas Log Fireplaces for Busy Homeowners",
+            "description": "How to cut fireplace maintenance while keeping the cozy ambiance.",
+            "button_text": "Read Guide",
+            "link": "https://fireside.com/pages/why-a-gas-log-fireplace-is-a-practical-upgrade-for-busy-homeowners"
+          }
+        },
+        "guide_card_4JThFG": {
+          "type": "guide_card",
+          "settings": {
+            "image": "shopify://shop_images/Installation.png",
+            "emoji": "🔧",
+            "heading": "When to Replace Your Fireplace with an Insert",
+            "description": "How to know your old fireplace is costing you comfort and cash.",
+            "button_text": "Read Guide",
+            "link": "https://fireside.com/pages/when-to-replace-your-existing-fireplace-with-a-modern-fireplace-insert"
+          }
+        }
+      },
+      "block_order": [
+        "guide_card_4CfzfR",
+        "guide_card_rYUKfN",
+        "guide_card_4JThFG"
+      ],
+      "name": "Educational Guides",
+      "settings": {
+        "title": "",
+        "description": "",
+        "center_heading": true,
+        "background_color": "#3d484e",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e2e8f0",
+        "heading_color": "#2d3748",
+        "text_color": "#4a5568",
+        "link_color": "#d4882b",
+        "button_text_color": "#ffffff",
+        "columns_per_row": 3,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "frd_featured_blogs_xLwGU7": {
+      "type": "frd-featured-blogs",
+      "name": "Featured Blogs",
+      "settings": {
+        "title": "LATEST BLOGS",
+        "description": "<p>Discover the latest trends in style and fireplace designs. Learn tips from our experts on the basics of caring for your fireplace.</p>",
+        "center_heading": true,
+        "blog_widget_select": "news",
+        "home_page_articles": 3,
+        "columns_per_row": 3,
+        "blog_tags": false,
+        "blog_author": false,
+        "read_time": true,
+        "blog_date": true,
+        "blog_comment_count": false,
+        "read_more_link": true,
+        "excerpt_display": "none",
+        "background_color": "#ffffff",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e2e8f0",
+        "heading_color": "#2d3748",
+        "text_color": "#4a5568",
+        "meta_color": "#a0aec0",
+        "link_color": "#e9841d",
+        "button_color": "#e9841d",
+        "button_text_color": "#ffffff",
+        "cta_button_text": "Visit Our Blog",
+        "cta_button_link": "shopify://blogs/news",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "frd_next_steps_ggrfr3": {
+      "type": "frd-next-steps",
+      "blocks": {
+        "step_card_xeyDhW": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Browse Products",
+            "description": "Explore our full range of fireplaces, inserts, and stoves",
+            "button_text": "Shop Now",
+            "link": "https://fireside.com/collections/all-products"
+          }
+        },
+        "step_card_UTKdrn": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Find a Showroom",
+            "description": "Visit one of our Minnesota showrooms to see products in person",
+            "button_text": "Find Us",
+            "link": "https://fireside.com/pages/locations"
+          }
+        },
+        "step_card_bNtRkN": {
+          "type": "step_card",
+          "settings": {
+            "heading": "Talk to an Expert",
+            "description": "Get personalized help with your fireplace project",
+            "button_text": "Contact",
+            "link": "https://fireside.com/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "step_card_xeyDhW",
+        "step_card_UTKdrn",
+        "step_card_bNtRkN"
+      ],
+      "name": "Next Steps",
+      "settings": {
+        "title": "What Would You Like to Do Next?",
+        "bottom_richtext": "",
+        "background_color": "#f7f8fa",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e0e0e0",
+        "heading_color": "#333333",
+        "text_color": "#666666",
+        "button_text_color": "#ffffff",
+        "button_style_outlined": false,
+        "columns_per_row": 3,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "card_padding_top": 32,
+        "card_padding_bottom": 32
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16533191942f38abe6",
+    "frd_resource_cards_T7jKpd",
+    "165331935820d3bb75",
+    "frd_educational_guides_erdajq",
+    "frd_featured_blogs_xLwGU7",
+    "frd_next_steps_ggrfr3"
+  ]
+}

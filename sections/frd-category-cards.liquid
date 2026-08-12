@@ -1,0 +1,358 @@
+{% comment %}
+  Section: Category Cards
+  File:    frd-category-cards.liquid
+  Description: Displays a row of category cards, each with an icon/image,
+               heading, description text, and a CTA button.
+{% endcomment %}
+
+{%- assign section_title = section.settings.title -%}
+{%- assign bg_color = section.settings.background_color -%}
+{%- assign btn_text_color = section.settings.button_text_color -%}
+{%- assign columns = section.settings.columns_per_row -%}
+{%- assign card_bg = section.settings.card_background_color -%}
+{%- assign heading_color = section.settings.heading_color -%}
+{%- assign text_color = section.settings.text_color -%}
+{%- assign section_padding_top = section.settings.padding_top -%}
+{%- assign section_padding_bottom = section.settings.padding_bottom -%}
+{%- assign card_padding_top = section.settings.card_padding_top -%}
+{%- assign card_padding_bottom = section.settings.card_padding_bottom -%}
+{%- assign card_border_radius = section.settings.card_border_radius -%}
+
+<style>
+  #frd-category-cards-{{ section.id }} {
+    background-color: {{ bg_color }};
+    padding-top: {{ section_padding_top }}px;
+    padding-bottom: {{ section_padding_bottom }}px;
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: {{ heading_color }};
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__grid {
+    display: grid;
+    grid-template-columns: repeat({{ columns }}, 1fr);
+    gap: 24px;
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__card {
+    background: {{ card_bg }};
+    border-radius: {{ card_border_radius }}px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: {{ card_padding_top }}px 24px {{ card_padding_bottom }}px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+    transform: translateY(-4px);
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    object-fit: contain;
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__icon-placeholder {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 50%;
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__icon-placeholder svg {
+    width: 32px;
+    height: 32px;
+    fill: #ccc;
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__heading {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: {{ heading_color }};
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: {{ text_color }};
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__button {
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+    background-color: #e9841d;
+    color: {{ btn_text_color }};
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.25s ease;
+  }
+
+  #frd-category-cards-{{ section.id }} .frd-cc__button:hover {
+    opacity: 0.88;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    #frd-category-cards-{{ section.id }} .frd-cc__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    #frd-category-cards-{{ section.id }} .frd-cc__card {
+      padding: 24px 20px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #frd-category-cards-{{ section.id }} .frd-cc__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<section id="frd-category-cards-{{ section.id }}">
+  <div class="frd-cc__wrapper">
+    {% if section_title != blank %}
+      <h2 class="frd-cc__title">{{ section_title }}</h2>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="frd-cc__grid">
+        {% for block in section.blocks %}
+          <div class="frd-cc__card" {{ block.shopify_attributes }}>
+
+            {%- if block.settings.image != blank -%}
+              <img
+                class="frd-cc__icon"
+                src="{{ block.settings.image | image_url: width: 128 }}"
+                alt="{{ block.settings.image.alt | default: block.settings.heading }}"
+                loading="lazy"
+                width="64"
+                height="64"
+              >
+            {%- endif -%}
+
+            {% if block.settings.heading != blank %}
+              <h3 class="frd-cc__heading">{{ block.settings.heading }}</h3>
+            {% endif %}
+
+            {% if block.settings.description != blank %}
+              <p class="frd-cc__description">{{ block.settings.description }}</p>
+            {% endif %}
+
+            {% if block.settings.button_text != blank %}
+              <a
+                class="frd-cc__button"
+                href="{{ block.settings.link | default: '#' }}"
+              >
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Category Cards",
+  "class": "shopify-section--frd-category-cards",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Heading"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#3d484e"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "columns_per_row",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": "Columns Per Row (Desktop)",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "card_padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Card Padding Top",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Card Padding Bottom",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card Border Radius",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_card",
+      "name": "Category Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon / Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Category Name"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "Short description of this category"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Browse Collection"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Cards",
+      "blocks": [
+        {
+          "type": "category_card",
+          "settings": {
+            "heading": "Gas Fireplaces",
+            "description": "Browse our full selection of gas fireplaces",
+            "button_text": "Browse Collection"
+          }
+        },
+        {
+          "type": "category_card",
+          "settings": {
+            "heading": "Gas Inserts",
+            "description": "Upgrade your existing fireplace with a gas insert",
+            "button_text": "Browse Collection"
+          }
+        },
+        {
+          "type": "category_card",
+          "settings": {
+            "heading": "Wood & Gas Stoves",
+            "description": "Efficient heating with beautiful design",
+            "button_text": "Browse Collection"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

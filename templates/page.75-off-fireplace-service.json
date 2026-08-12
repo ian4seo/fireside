@@ -1,0 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "image_with_text_overlay_nFgkqB": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": true,
+        "image": "shopify://shop_images/fireplace-blueprint-bg-3.webp",
+        "pretext": "<h1>Save $75 On Fireplace Service</h1><p>Schedule a fireplace tune-up or repair and use promo code HS-75 to redeem your discount.</p>",
+        "title": "",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner",
+        "button_bg_color": "#e9841d",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_color": "",
+        "css_class": "",
+        "custom_css": "#banner-template--21741500104934__image_with_text_overlay_nFgkqB > div > div > div.position-center.caption.js-caption > div > div > h1 {\n  color: #fff !important;\n}"
+      }
+    },
+    "17454507909564ff3c": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_AMghKi": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTMwNjQ0\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_AMghKi"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_nFgkqB",
+    "17454507909564ff3c"
+  ]
+}

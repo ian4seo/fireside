@@ -1,0 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "59e95e4f-b5aa-4855-afda-44ca40079ba2": {
+      "type": "custom-html",
+      "custom_css": [
+        "h1 {color: black; padding-bottom: 0px; margin-bottom: 0px; font-weight: 700;}",
+        ".html-section {padding-bottom: 0px;}"
+      ],
+      "settings": {
+        "custom_html": "<h1>Looking to Make a Commercial Bid Request? <br> You're in the Right Place.</h1>",
+        "no-top-padding": false,
+        "show-wood-bg": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "e67fbcbe-0726-466a-b68a-1e8a6af4e4db": {
+      "type": "commercial-bid-form",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "59e95e4f-b5aa-4855-afda-44ca40079ba2",
+    "e67fbcbe-0726-466a-b68a-1e8a6af4e4db"
+  ]
+}

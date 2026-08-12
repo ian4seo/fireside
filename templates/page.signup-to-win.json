@@ -1,0 +1,52 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "banner_internal_pages_jCaMXA": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "Sign Up To Win",
+        "heading_size": "large_text",
+        "content": "",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/outdoorgreatroom_stonefire_3_2000x_03d1d6e5-f2ed-4d26-a47f-24e677532563.jpg",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1680209685bfc4567e": {
+      "type": "apps",
+      "blocks": {
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "{formbuilder:MTI0OTA5}"
+          }
+        }
+      },
+      "block_order": [
+        "3b9d432a-8efa-47ce-a920-7cf951e4e1bf"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "banner_internal_pages_jCaMXA",
+    "1680209685bfc4567e"
+  ]
+}

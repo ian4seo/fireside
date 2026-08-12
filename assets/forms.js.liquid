@@ -1,0 +1,2615 @@
+$(window).on('load',function(){
+function sendLog(message) {
+  try {
+    console.log("sendLog called:", message);
+    
+    fetch("https://fireside.ianinc.net/logger.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: message,
+        timestamp: new Date().toISOString()
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log("Log sent successfully to logger.php");
+      } else {
+        console.error("Logger.php returned error status:", response.status);
+      }
+    })
+    .catch(err => {
+      console.error("Failed to send log:", err);
+    });
+  } catch (error) {
+    console.error("Error in sendLog function:", error);
+  }
+}
+
+// Test function to verify logging is working
+function testLogging() {
+  sendLog("=== LOGGING TEST STARTED ===");
+  sendLog("Current timestamp: " + new Date().toISOString());
+  sendLog("Window location: " + window.location.href);
+  sendLog("User agent: " + navigator.userAgent);
+  sendLog("=== LOGGING TEST COMPLETED ===");
+}
+
+// Manual test function for form submission process
+function testFormSubmission() {
+  sendLog("=== MANUAL FORM SUBMISSION TEST ===");
+  
+  // Test the sendToPHPScript function with dummy data
+  const testData = JSON.stringify({
+    DealerID: "0013000000MqUg9AAF",
+    Firstname: "TEST",
+    Lastname: "USER",
+    Email: "test@example.com",
+    HHTCampaignID: "HHTC146696CNT",
+    Leadsource: "Test Form",
+    Leadtype: "Test Request",
+    RawUrl: "https://fireside.com/test",
+    Brands: "HNG,HTL,SFE,STL,MON",
+    Sitecode: "FHH",
+    Phone: "555-1234",
+    PostalCode: "12345"
+  });
+  
+  sendLog("Test data created: " + testData);
+  sendLog("Testing sendToPHPScript function...");
+  
+  // Test the function (this will fail but should log the attempt)
+  sendToPHPScript("https://fireside.ianinc.net/generic-form-processor.php", testData, "TEST123");
+  
+  sendLog("=== MANUAL TEST COMPLETED ===");
+}
+
+// Make test functions available globally for console access
+window.testLogging = testLogging;
+window.testFormSubmission = testFormSubmission;
+window.sendLog = sendLog;
+
+// Function to submit form to Shopify after processing
+function submitFormToShopify(formId) {
+  sendLog("=== submitFormToShopify STARTED ===");
+  sendLog("Form ID: " + formId);
+  
+  try {
+    // Find the form element
+    const form = document.querySelector(`form[data-id="${formId}"]`);
+    if (form) {
+      sendLog("Form element found successfully");
+      sendLog("Form action: " + form.action);
+      sendLog("Form method: " + form.method);
+      
+      // Create a new FormData object from the form
+      const formData = new FormData(form);
+      sendLog("FormData created successfully");
+      
+      // Log form data contents for debugging
+      for (let [key, value] of formData.entries()) {
+        sendLog("Form field: " + key + " = " + value);
+      }
+      
+      // Submit the form to Shopify using the form's action URL
+      // This ensures the form data goes to the Shopify form app
+      sendLog("Submitting form to Shopify...");
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+        }
+      })
+      .then(response => {
+        sendLog("=== SHOPIFY SUBMISSION RESPONSE ===");
+        sendLog("Response status: " + response.status);
+        sendLog("Response status text: " + response.statusText);
+        sendLog("Response ok: " + response.ok);
+        sendLog("Response type: " + response.type);
+        
+        if (response.ok) {
+          sendLog("Form " + formId + " successfully submitted to Shopify");
+          console.log("Form submitted to Shopify successfully");
+        } else {
+          sendLog("Error submitting form " + formId + " to Shopify: " + response.status);
+          console.error("Error submitting to Shopify:", response.status);
+        }
+        
+        // Try to get response text for debugging
+        return response.text();
+      })
+      .then(responseText => {
+        if (responseText) {
+          sendLog("Shopify response text: " + responseText);
+        }
+        sendLog("=== SHOPIFY SUBMISSION COMPLETED ===");
+      })
+      .catch(error => {
+        sendLog("=== SHOPIFY SUBMISSION ERROR ===");
+        sendLog("Network error submitting form " + formId + " to Shopify: " + error.message);
+        sendLog("Error type: " + error.name);
+        sendLog("Error stack: " + error.stack);
+        console.error("Network error submitting to Shopify:", error);
+      });
+    } else {
+      sendLog("ERROR: Could not find form " + formId + " to submit to Shopify");
+      console.error("Form not found:", formId);
+      
+      // Try alternative selector
+      const altForm = document.querySelector(`[data-id="${formId}"]`);
+      if (altForm) {
+        sendLog("Found alternative form element with selector [data-id='" + formId + "']");
+        sendLog("Element tag name: " + altForm.tagName);
+        sendLog("Element class list: " + altForm.className);
+      } else {
+        sendLog("No form found with any selector for ID: " + formId);
+      }
+    }
+  } catch (error) {
+    sendLog("CRITICAL ERROR in submitFormToShopify: " + error.message);
+    sendLog("Error stack: " + error.stack);
+    console.error("Critical error in submitFormToShopify:", error);
+  }
+}
+
+// Function to send data to PHP script with retry logic
+function sendToPHPScript(url, data, formId, maxRetries = 3) {
+  let retryCount = 0;
+  
+  sendLog("=== sendToPHPScript STARTED ===");
+  sendLog("URL: " + url);
+  sendLog("Form ID: " + formId);
+  sendLog("Data length: " + (data ? data.length : "undefined"));
+  sendLog("Max retries: " + maxRetries);
+  
+  function attemptSend() {
+    sendLog(`Attempt ${retryCount + 1}/${maxRetries + 1} to send data to PHP script`);
+    
+    return $.ajax({
+      url: url,
+      type: "POST",
+      dataType: "json",
+      data: data,
+      contentType: "application/json", // Send as raw JSON
+      processData: false, // Don't process the data - send it as-is
+      timeout: 30000, // 30 second timeout
+      beforeSend: function(xhr) {
+        sendLog("AJAX request starting...");
+        sendLog("Request headers: " + JSON.stringify(xhr.getAllResponseHeaders()));
+        sendLog("Content-Type: application/json (raw JSON data)");
+        sendLog("Data being sent: " + data);
+        sendLog("Request method: POST");
+        sendLog("URL: " + url);
+        
+        // Set additional headers to ensure proper transmission
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('Accept', 'application/json');
+      },
+      success: function(response) {
+        sendLog("=== PHP SCRIPT SUCCESS ===");
+        sendLog("Response received: " + JSON.stringify(response));
+        console.log("Data sent successfully!");
+        console.log(response);
+        
+        // Now submit the form to Shopify
+        sendLog("Calling submitFormToShopify...");
+        submitFormToShopify(formId);
+      },
+      error: function(xhr, status, error) {
+        sendLog("=== PHP SCRIPT ERROR ===");
+        sendLog("XHR status: " + xhr.status);
+        sendLog("XHR statusText: " + xhr.statusText);
+        sendLog("Status: " + status);
+        sendLog("Error: " + error);
+        sendLog("Response text: " + xhr.responseText);
+        sendLog("Ready state: " + xhr.readyState);
+        
+        console.log("Error details:", {xhr, status, error});
+        retryCount++;
+        
+        if (retryCount < maxRetries) {
+          sendLog(`Retry ${retryCount}/${maxRetries} for form ${formId} after error`);
+          console.log(`Retry ${retryCount}/${maxRetries} after error:`, error);
+          
+          // Wait 2 seconds before retrying
+          setTimeout(() => {
+            sendLog(`Executing retry ${retryCount}/${maxRetries}`);
+            attemptSend();
+          }, 2000);
+        } else {
+          sendLog(`Failed to send data to PHP script after ${maxRetries} attempts for form ${formId}`);
+          console.error(`Failed after ${maxRetries} attempts:`, error);
+          
+          // Even if there's an error, we should still submit to Shopify
+          // but log the error for debugging
+          sendLog("Attempting to submit to Shopify despite PHP script failure");
+          submitFormToShopify(formId);
+        }
+      },
+      complete: function(xhr, status) {
+        sendLog("=== AJAX REQUEST COMPLETED ===");
+        sendLog("Final status: " + status);
+        sendLog("Final XHR status: " + xhr.status);
+      }
+    });
+  }
+  
+  try {
+    sendLog("Starting first attempt...");
+    return attemptSend();
+  } catch (error) {
+    sendLog("CRITICAL ERROR in sendToPHPScript: " + error.message);
+    sendLog("Error stack: " + error.stack);
+    console.error("Critical error in sendToPHPScript:", error);
+    
+    // Try to submit to Shopify even if there's a critical error
+    try {
+      submitFormToShopify(formId);
+    } catch (shopifyError) {
+      sendLog("ERROR submitting to Shopify after critical error: " + shopifyError.message);
+    }
+  }
+}
+
+  /* ============================== Find Your Insert Quiz form ============================= */
+  $("form[data-id='127135']").on('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+    let formId = $(this).attr('data-id');
+    let email = $(`#${formId}-email-1`).val();
+    let hhtCampaignID = "HHTC146696CNT";
+    let leadType = "Promotion Request";
+    const form = document.querySelector(`.globo-form-app[data-id="${formId}"]`);
+    const leadSource = "HHT Gas Inserts Program"; 
+    const rawURL = form.querySelector('input[name="page[href]"]').value; // Gets the URL of the page 
+    let brands = "HNG,HTL,SFE,STL,MON";
+    let siteCode = "FHH";
+    let zipCode = $(`#${formId}-number-1`).val();
+    //let dealerID = 'MN - Eagan';
+    //let dealerCode = '0013000000MqUg9AAF';
+
+    // Zipcode validation
+    let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/;
+    let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i;
+    if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+        // valid code
+    } else {
+        var getZipCode = document.getElementById(`${formId}-number-1`);
+        getZipCode.value = "";
+        zipCode = "";
+        alert("Invalid zip or postal code");
+        return false;
+    }
+
+    // Check leadSource length
+    if (leadSource.length > 80) {
+        alert("LeadSource length cannot exceed 80 characters");
+        return false;
+    }
+
+    let formData = {
+        Email: email,
+        HHTCampaignID: hhtCampaignID,
+        Leadsource: leadSource,
+        Leadtype: leadType,
+        RawUrl: rawURL,
+        Brands: brands,
+        Sitecode: siteCode,
+        PostalCode: zipCode
+    };
+
+    let formJSON = JSON.stringify(formData);
+    console.log(formJSON);
+
+    // Check for empty mandatory fields
+    if (email && hhtCampaignID && leadSource && leadType && rawURL && brands && siteCode) {
+        sendToPHPScript("https://fireside.ianinc.net/generic-form-processor.php", formJSON, formId);
+        console.log("Attempted to send data.");
+    } else {
+        console.log("Please fill in the mandatory fields");
+        alert("Please fill in all required fields");
+        return false;
+    }
+  });
+
+  /* ============================== Ask A Pro form ============================= */
+  $("form[data-id='126967']").on('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+    let formId = $(this).attr('data-id');
+    let firstName = $(`#${formId}-text-1`).val();
+    let email = $(`#${formId}-email-1`).val();
+    let zipCode = $(`#${formId}-number-1`).val();
+    let message = $(`#${formId}-textarea-1`).val();
+    let hhtCampaignID = "HHTC146696CNT";
+    let leadType = "Promotion Request";
+    const form = document.querySelector(`.globo-form-app[data-id="${formId}"]`);
+    const leadSource = "HHT Gas Inserts Program"; 
+    const rawURL = form.querySelector('input[name="page[href]"]').value; // Gets the URL of the page 
+    let brands = "HNG,HTL,SFE,STL,MON";
+    let siteCode = "FHH";
+    //let dealerID = 'MN - Eagan';
+    //let dealerCode = '0013000000MqUg9AAF';
+
+    // Zipcode validation
+    let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/;
+    let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i;
+    if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+        // valid code
+    } else {
+        var getZipCode = document.getElementById(`${formId}-number-1`);
+        getZipCode.value = "";
+        zipCode = "";
+        alert("Invalid zip or postal code");
+        return false;
+    }
+
+    // Check leadSource length
+    if (leadSource.length > 80) {
+        alert("LeadSource length cannot exceed 80 characters");
+        return false;
+    }
+
+    let formData = {
+        Firstname: firstName,
+        Email: email,
+        HHTCampaignID: hhtCampaignID,
+        Leadsource: leadSource,
+        Leadtype: leadType,
+        RawUrl: rawURL,
+        Brands: brands,
+        Sitecode: siteCode,
+        PostalCode: zipCode,
+        Message: message
+    };
+
+    let formJSON = JSON.stringify(formData);
+    console.log(formJSON);
+
+    // Check for empty mandatory fields
+    if (firstName && email && hhtCampaignID && leadSource && leadType && rawURL && brands && siteCode) {
+        sendToPHPScript("https://fireside.ianinc.net/generic-form-processor.php", formJSON, formId);
+        console.log("Attempted to send data.");
+    } else {
+        console.log("Please fill in the mandatory fields");
+        alert("Please fill in all required fields");
+        return false;
+    }
+  });
+
+
+  
+
+  /* ============================== Product Quote form ============================= */
+  
+  $("form[data-id='126001']").on('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+    let formId = $(this).attr('data-id');
+    let dealerID = $(`#${formId}-select`).val();
+    let firstName = $(`#${formId}-name`).val();
+    let lastName = $(`#${formId}-name-2`).val();
+    let email = $(`#${formId}-email`).val();
+    let phone = $(`#${formId}-phone`).val();
+    let message = $(`#${formId}-textarea-1`).val();
+    let hhtCampaignID = "HHTC146696CNT";
+    let leadType = "Promotion Request";
+    const form = document.querySelector(`.globo-form-app[data-id="${formId}"]`);
+    const leadSource = form.querySelector('input[name="page[title]"]').value; // Gets the title of the page 
+    const rawURL = form.querySelector('input[name="page[href]"]').value; // Gets the URL of the page 
+    let brands = "HNG,HTL,SFE,STL,MON";
+    let siteCode = "FHH";
+    let dealerCode;
+    let productTitle = $(`#hidden-4`).val();
+    let productSKU = $(`#hidden-5`).val();
+    let zipCode = $(`#${formId}-number`).val();
+
+    // Zipcode validation
+    let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/;
+    let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i;
+    if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+      // valid code
+    } else {
+        var getZipCode = document.getElementById(`${formId}-number`);
+        getZipCode.value = "";
+        zipCode = "";
+        alert("Invalid zip or postal code");
+        return false;
+    }
+  
+    
+    const referrer = document.referrer || "No referrer"; // Get the referrer and set it to the hidden field, or fallback if no referrer
+    $(`#hidden-1`).val(referrer); // Set hidden field value
+
+    // Check leadSource length
+    if (leadSource.length > 80) {
+        alert("LeadSource length cannot exceed 80 characters");
+        return false;
+    }
+
+    // Dealer code assignment
+    if (dealerID == 'MN - Eagan') {
+        dealerCode = '0013000000MqUg9AAF';
+      } else if (dealerID == 'MN - Eden Prairie') {
+          dealerCode = '0013000000MqUgBAAV';
+      } else if (dealerID == 'MN - Maple Grove') {
+          dealerCode = '0013000000MqUg7AAF';
+      } else if (dealerID == 'MN - Minnetonka') {
+          dealerCode = '0013000000MqUgAAAV';
+      } else if (dealerID == 'MN - Roseville') {
+          dealerCode = '0013000000MqUg8AAF';
+      } else if (dealerID == 'WI - Madison') {
+          dealerCode = '0013000000MqUfwAAF';
+          hhtCampaignID = "HHTC146697CNT";
+      } else if(dealerID == 'DE - Bridgeville'){
+         dealerCode = '0013000000MqUfTAAV';
+      } else if(dealerID == 'MD - Elkridge'){
+         dealerCode = '0013000000MqUfeAAF';
+      } else if (dealerID == 'NC - Charlotte'){
+         dealerCode = '0013000000MqUfiAAF';
+      } else if (dealerID == 'NC - Greensboro'){
+         dealerCode = '0013000000MqUfjAAF';
+      } else if (dealerID == 'NC - Raleigh'){
+         dealerCode = '0013000000MqUfhAAF';
+      } else if (dealerID == 'NC - Wilmington'){
+         dealerCode = '0013000000sj0MPAAY';
+      } else if (dealerID == 'NJ - Burlington'){
+         dealerCode = '0013000000MqUfkAAF';
+      } else if (dealerID == 'NY - Goshen'){
+         dealerCode = '0013000000MqUflAAF';
+      } else if (dealerID == 'PA - Limerick'){
+         dealerCode = '0013000000MqUfnAAF';
+      } else if (dealerID == 'PA - York'){
+         dealerCode = '0013000000MqUfmAAF';
+      } else if (dealerID == 'SC - Charleston'){
+         dealerCode = '0013000000MqUfqAAF';
+      } else if (dealerID == 'SC - Columbia'){
+         dealerCode = '0013000000sizzsAAA';
+      } else if (dealerID == 'SC - Greenville'){
+         dealerCode = '0013000000MqUfpAAF';
+      } else if (dealerID == 'SC - Myrtle Beach'){
+         dealerCode = '0011O00002IaVPgQAN';
+      } else if (dealerID == 'TN - Knoxville'){
+         dealerCode = '0013000000MqUfrAAF';
+      } else if (dealerID == 'TN - Nashville'){
+         dealerCode = '0013000000MqUdyAAF';
+      } else if (dealerID == 'TX - Dallas'){
+         dealerCode = '0013000000b3y9hAAA';
+      } else if (dealerID == 'VA - Chantilly'){
+         dealerCode = '0011400001lobfCAAQ';
+      } else if (dealerID == 'VA - Charlottesville'){
+         dealerCode = '0013000000MqUfvAAF';
+      } else if (dealerID == 'VA - Manasses'){
+         dealerCode = '0013000000MqUfsAAF';
+      } else if (dealerID == 'VA - Newport News'){
+         dealerCode = '0013000000MqUftAAF';
+      } else if (dealerID == 'VA - Richmond'){
+         dealerCode = '0013000000MqUfuAAF';
+      } else { }     
+
+    let formData = {
+        DealerID: dealerCode,
+        Firstname: firstName,
+        Lastname: lastName,
+        Email: email,
+        HHTCampaignID: hhtCampaignID,
+        Leadsource: leadSource,
+        Leadtype: leadType,
+        RawUrl: rawURL,
+        Brands: brands,
+        Sitecode: siteCode,
+        Phone: phone,
+        Message: message,
+        Referrer: referrer,
+        ProductTitle: productTitle,
+        ProductSKU: productSKU
+    };
+
+    let formJSON = JSON.stringify(formData);
+    console.log(formJSON);
+
+    // Check for empty mandatory fields
+    if (dealerID && firstName && lastName && email && productTitle && productSKU && hhtCampaignID && leadSource && leadType && rawURL && brands && siteCode) {
+        sendToPHPScript("https://fireside.ianinc.net/generic-form-processor.php", formJSON, formId);
+        console.log("Attempted to send data.");
+    } else {
+        console.log("Please fill in the mandatory fields");
+        alert("Please fill in all required fields");
+        return false;
+    }
+  });
+
+
+
+  
+
+  /* ============================== Generic Promotional Sales form ============================= */
+  /* Reusable Promo Forms */
+  
+  $("form[data-id='125759'], form[data-id='125762'], form[data-id='127391'], form[data-id='129058'], form[data-id='129571'], form[data-id='127390'], form[data-id='130521'], form[data-id='130527']").on('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+    try {
+      sendLog("=== FORM SUBMISSION STARTED ===");
+      sendLog("Form ID: " + $(this).attr('data-id'));
+      sendLog("Event type: " + e.type);
+      
+      // Generic form for Twin Cities and Madison
+      let formId = $(this).attr('data-id');
+      sendLog("Processing form ID: " + formId);
+      
+      let dealerID = $(`#${formId}-select-1`).val();
+      let firstName = $(`#${formId}-text-1`).val();
+      let lastName = $(`#${formId}-name-2`).val();
+      let email = $(`#${formId}-email-1`).val();
+      let phone = $(`#${formId}-phone-1`).val();
+      let zipCode = $(`#${formId}-number-1`).val();
+      
+      sendLog("Form values extracted:");
+      sendLog("DealerID: " + dealerID);
+      sendLog("FirstName: " + firstName);
+      sendLog("LastName: " + lastName);
+      sendLog("Email: " + email);
+      sendLog("Phone: " + phone);
+      sendLog("ZipCode: " + zipCode);
+      
+      let hhtCampaignID = "HHTC146696CNT";
+      let leadType = "Promotion Request";
+      
+      // Find the form element and get page information
+      const form = document.querySelector(`.globo-form-app[data-id="${formId}"]`);
+      if (!form) {
+        sendLog("ERROR: Could not find .globo-form-app element with data-id: " + formId);
+        throw new Error("Form element not found");
+      }
+      
+      sendLog("Form element found successfully");
+      
+      // Get page title and URL
+      let leadSource, rawURL;
+      try {
+        const titleElement = form.querySelector('input[name="page[title]"]');
+        const hrefElement = form.querySelector('input[name="page[href]"]');
+        
+        if (titleElement) {
+          leadSource = titleElement.value;
+          sendLog("LeadSource from page title: " + leadSource);
+        } else {
+          sendLog("WARNING: Could not find page[title] input");
+          leadSource = "Unknown Page";
+        }
+        
+        if (hrefElement) {
+          rawURL = hrefElement.value;
+          sendLog("RawURL from page href: " + rawURL);
+        } else {
+          sendLog("WARNING: Could not find page[href] input");
+          rawURL = window.location.href;
+        }
+      } catch (error) {
+        sendLog("ERROR getting page info: " + error.message);
+        leadSource = "Unknown Page";
+        rawURL = window.location.href;
+      }
+      
+      let brands = "HNG,HTL,SFE,STL,MON";
+      let siteCode = "FHH";
+      let dealerCode;
+
+      // Zipcode validation
+      try {
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/;
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i;
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+          sendLog("Zipcode validation passed: " + zipCode);
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number-1`);
+          getZipCode.value = "";
+          zipCode = "";
+          alert("Invalid zip or postal code");
+          sendLog("Zipcode validation failed, alert shown");
+          return false;
+        }
+      } catch (error) {
+        sendLog("ERROR in zipcode validation: " + error.message);
+        return false;
+      }
+
+      // Check leadSource length
+      try {
+        if (leadSource.length > 80) {
+          alert("LeadSource length cannot exceed 80 characters");
+          sendLog("LeadSource too long: " + leadSource.length + " characters");
+          return false;
+        }
+        sendLog("LeadSource length check passed: " + leadSource.length + " characters");
+      } catch (error) {
+        sendLog("ERROR in leadSource length check: " + error.message);
+        return false;
+      }
+
+      // Dealer code assignment
+      try {
+        if (dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+        } else if (dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+        } else if (dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+        } else if (dealerID == 'MN - Minnetonka'){
+          dealerCode = '0013000000MqUgAAAV';
+        } else if (dealerID == 'MN - Roseville'){
+          dealerCode = '0013000000MqUg8AAF';
+        } else if(dealerID == 'DE - Bridgeville'){
+          dealerCode = '0013000000MqUfTAAV';
+        } else if(dealerID == 'MD - Elkridge'){
+          dealerCode = '0013000000MqUfeAAF';
+        } else if (dealerID == 'NC - Charlotte'){
+          dealerCode = '0013000000MqUfiAAF';
+        } else if (dealerID == 'NC - Greensboro'){
+          dealerCode = '0013000000MqUfjAAF';
+        } else if (dealerID == 'NC - Raleigh'){
+          dealerCode = '0013000000MqUfhAAF';
+        } else if (dealerID == 'NC - Wilmington'){
+          dealerCode = '0013000000sj0MPAAY';
+        } else if (dealerID == 'NJ - Burlington'){
+          dealerCode = '0013000000MqUfkAAF';
+        } else if (dealerID == 'NY - Goshen'){
+          dealerCode = '0013000000MqUflAAF';
+        } else if (dealerID == 'PA - Limerick'){
+          dealerCode = '0013000000MqUfnAAF';
+        } else if (dealerID == 'PA - York'){
+          dealerCode = '0013000000MqUfmAAF';
+        } else if (dealerID == 'SC - Charleston'){
+          dealerCode = '0013000000MqUfqAAF';
+        } else if (dealerID == 'SC - Columbia'){
+          dealerCode = '0013000000sizzsAAA';
+        } else if (dealerID == 'SC - Greenville'){
+          dealerCode = '0013000000MqUfpAAF';
+        } else if (dealerID == 'SC - Myrtle Beach'){
+          dealerCode = '0011O00002IaVPgQAN';
+        } else if (dealerID == 'TN - Knoxville'){
+          dealerCode = '0013000000MqUfrAAF';
+        } else if (dealerID == 'TN - Nashville'){
+          dealerCode = '0013000000MqUdyAAF';
+        } else if (dealerID == 'TX - Dallas'){
+          dealerCode = '0013000000b3y9hAAA';
+        } else if (dealerID == 'VA - Chantilly'){
+          dealerCode = '0011400001lobfCAAQ';
+        } else if (dealerID == 'VA - Charlottesville'){
+          dealerCode = '0013000000MqUfvAAF';
+        } else if (dealerID == 'VA - Manasses'){
+          dealerCode = '0013000000MqUfsAAF';
+        } else if (dealerID == 'VA - Newport News'){
+          dealerCode = '0013000000MqUftAAF';
+        } else if (dealerID == 'VA - Richmond'){
+          dealerCode = '0013000000MqUfuAAF';
+        } else if (dealerID == 'WI - Madison'){
+          dealerCode = '0013000000MqUfwAAF';
+          hhtCampaignID = "HHTC146697CNT";
+        } else {
+          dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+          sendLog("WARNING: Unknown dealer ID, defaulting to Eagan: " + dealerID);
+        }
+        sendLog("Dealer code assigned: " + dealerCode);
+      } catch (error) {
+          sendLog("ERROR in dealer code assignment: " + error.message);
+          dealerCode = '0013000000MqUg9AAF'; // Default fallback
+      }
+
+      let formData = {
+        DealerID: dealerCode,
+        Firstname: firstName,
+        Lastname: lastName,
+        Email: email,
+        HHTCampaignID: hhtCampaignID,
+        Leadsource: leadSource,
+        Leadtype: leadType,
+        RawUrl: rawURL,
+        Brands: brands,
+        Sitecode: siteCode,
+        Phone: phone,
+        PostalCode: zipCode
+      };
+
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+      sendLog("Form data JSON created successfully");
+      sendLog("JSON length: " + formJSON.length + " characters");
+      
+      // Check for empty mandatory fields
+      if (dealerID && firstName && lastName && email && hhtCampaignID && leadSource && leadType && rawURL && brands && siteCode) {
+        sendLog("All mandatory fields validated successfully");
+        sendLog("Sending data to PHP script...");
+        
+        // Use the enhanced sendToPHPScript function
+        sendToPHPScript("https://fireside.ianinc.net/generic-form-processor.php", formJSON, formId);
+        console.log("Attempted to send data.");
+        sendLog("sendToPHPScript called successfully");
+      } else {
+        sendLog("ERROR: Missing mandatory fields:");
+        sendLog("dealerID: " + (dealerID ? "present" : "missing"));
+        sendLog("firstName: " + (firstName ? "present" : "missing"));
+        sendLog("lastName: " + (lastName ? "present" : "missing"));
+        sendLog("email: " + (email ? "present" : "missing"));
+        sendLog("hhtCampaignID: " + (hhtCampaignID ? "present" : "missing"));
+        sendLog("leadSource: " + (leadSource ? "present" : "missing"));
+        sendLog("leadType: " + (leadType ? "present" : "missing"));
+        sendLog("rawURL: " + (rawURL ? "present" : "missing"));
+        sendLog("brands: " + (brands ? "present" : "missing"));
+        sendLog("siteCode: " + (siteCode ? "present" : "missing"));
+        
+        console.log("Please fill in the mandatory fields");
+        alert("Please fill in all required fields");
+        return false;
+      }
+    } catch (error) {
+      sendLog("CRITICAL ERROR in form submission: " + error.message);
+      sendLog("Error stack: " + error.stack);
+      console.error("Critical error:", error);
+      
+      // Even if there's a critical error, try to submit to Shopify
+      try {
+        const formId = $(this).attr('data-id');
+        sendLog("Attempting to submit to Shopify despite error");
+        submitFormToShopify(formId);
+      } catch (shopifyError) {
+        sendLog("ERROR submitting to Shopify: " + shopifyError.message);
+      }
+    }
+  });
+
+
+
+
+  /* ============================== Twin Cities $100 Off Coupon form + $1000 Off Garage Heater Coupon ============================= */
+  /* $100 Off Coupon form for Twin Cities 
+     This form runs between promotional sales on the Twin Cities Offers page */
+  /* $1000 Off Coupon shares the same fields but the email template is different for it */ 
+    
+  $("form[data-id='125765'], form[data-id='126473']").on('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission
+      let formId = $(this).attr('data-id');
+      let dealerID = $(`#${formId}-select-1`).val();
+      let firstName = $(`#${formId}-text-1`).val();
+      let lastName = $(`#${formId}-name-2`).val();
+      let email = $(`#${formId}-email-1`).val();
+      let phone = $(`#${formId}-phone-1`).val();
+      let zipCode = $(`#${formId}-number-1`).val();
+      let hhtCampaignID = "HHTC146696CNT";
+      let leadType = "Promotion Request";
+      const form = document.querySelector(`.globo-form-app[data-id="${formId}"]`);
+      const leadSource = form.querySelector('input[name="page[title]"]').value; // Gets the title of the page 
+      const rawURL = form.querySelector('input[name="page[href]"]').value; // Gets the URL of the page
+      let brands = "HNG,HTL,SFE,STL,MON";
+      let siteCode = "FHH";
+      let dealerCode;
+  
+      // Zipcode validation
+      let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/;
+      let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i;
+      if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+          // valid code
+      } else {
+          var getZipCode = document.getElementById(`${formId}-number-1`);
+          getZipCode.value = "";
+          zipCode = "";
+          alert("Invalid zip or postal code");
+          return false;
+      }
+  
+      // Check leadSource length
+      if (leadSource.length > 80) {
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+      }
+  
+      // Dealer code assignment
+      if (dealerID == 'MN - Eagan') {
+          dealerCode = '0013000000MqUg9AAF';
+      } else if (dealerID == 'MN - Eden Prairie') {
+          dealerCode = '0013000000MqUgBAAV';
+      } else if (dealerID == 'MN - Maple Grove') {
+          dealerCode = '0013000000MqUg7AAF';
+      } else if (dealerID == 'MN - Minnetonka') {
+          dealerCode = '0013000000MqUgAAAV';
+      } else if (dealerID == 'MN - Roseville') {
+          dealerCode = '0013000000MqUg8AAF';
+      } else if (dealerID == 'WI - Madison') {
+          dealerCode = '0013000000MqUfwAAF';
+          hhtCampaignID = "HHTC146697CNT";
+      } else { }
+  
+      let formData = {
+          DealerID: dealerCode,
+          Firstname: firstName,
+          Lastname: lastName,
+          Email: email,
+          HHTCampaignID: hhtCampaignID,
+          Leadsource: leadSource,
+          Leadtype: leadType,
+          RawUrl: rawURL,
+          Brands: brands,
+          Sitecode: siteCode,
+          Phone: phone,
+          PostalCode: zipCode
+      };
+  
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+  
+      // Check for empty mandatory fields
+      if (dealerID && firstName && lastName && email && hhtCampaignID && leadSource && leadType && rawURL && brands && siteCode) {
+          sendToPHPScript("https://fireside.ianinc.net/generic-form-processor.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      } else {
+          console.log("Please fill in the mandatory fields");
+          alert("Please fill in all required fields");
+          return false;
+      }
+  });
+
+  /* ============================== Madison $100 Off Coupon form ============================= */
+  /* $100 Off Coupon form for Madison
+     This form runs between promotional sales on the Madison Offers page */
+    
+  $("form[data-id='125765'], form[data-id='125764']").on('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission
+      let formId = $(this).attr('data-id');
+      let dealerID = $(`#${formId}-select-1`).val();
+      let firstName = $(`#${formId}-text`).val();
+      let lastName = $(`#${formId}-name`).val();
+      let email = $(`#${formId}-email`).val();
+      let phone = $(`#${formId}-phone`).val();
+      let zipCode = $(`#${formId}-number`).val();
+      let hhtCampaignID = "HHTC146696CNT";
+      let leadType = "Promotion Request";
+      const form = document.querySelector(`.globo-form-app[data-id="${formId}"]`);
+      const leadSource = form.querySelector('input[name="page[title]"]').value; // Gets the title of the page 
+      const rawURL = form.querySelector('input[name="page[href]"]').value; // Gets the URL of the page
+      let brands = "HNG,HTL,SFE,STL,MON";
+      let siteCode = "FHH";
+      let dealerCode;
+  
+      // Zipcode validation
+      let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/;
+      let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i;
+      if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+          // valid code
+      } else {
+          var getZipCode = document.getElementById(`${formId}-number`);
+          getZipCode.value = "";
+          zipCode = "";
+          alert("Invalid zip or postal code");
+          return false;
+      }
+  
+      // Check leadSource length
+      if (leadSource.length > 80) {
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+      }
+  
+      // Dealer code assignment
+      if (dealerID == 'WI - Madison') {
+          dealerCode = '0013000000MqUfwAAF';
+          hhtCampaignID = "HHTC146697CNT";
+      } else { }
+  
+      let formData = {
+          DealerID: dealerCode,
+          Firstname: firstName,
+          Lastname: lastName,
+          Email: email,
+          HHTCampaignID: hhtCampaignID,
+          Leadsource: leadSource,
+          Leadtype: leadType,
+          RawUrl: rawURL,
+          Brands: brands,
+          Sitecode: siteCode,
+          Phone: phone,
+          PostalCode: zipCode
+      };
+  
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+  
+      // Check for empty mandatory fields
+      if (dealerID && firstName && lastName && email && hhtCampaignID && leadSource && leadType && rawURL && brands && siteCode) {
+          sendToPHPScript("https://fireside.ianinc.net/generic-form-processor.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      } else {
+          console.log("Please fill in the mandatory fields");
+          alert("Please fill in all required fields");
+          return false;
+      }
+  });
+
+
+  
+
+
+   /* ============================== PMA Scheduling form ============================= */
+    
+  $("form[data-id='111838']").on('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission
+      let formId = $(this).attr('data-id');
+      let dealerID = $(`#${formId}-select-1`).val();
+      let lastName = $(`#${formId}-text`).val();
+      let firstName = $(`#${formId}-name`).val();
+      let email = $(`#${formId}-email`).val();
+      let phone = $(`#${formId}-phone-1`).val();
+      let street = $(`#${formId}-text-2`).val();
+      let city = $(`#${formId}-text-3`).val();
+      let state = $(`#${formId}-text-1`).val();
+      let zipCode = $(`#${formId}-number-1`).val();
+      let productType = $(`#${formId}-select-3`).val();
+      let hhtCampaignID = "HHTC146696CNT";
+      let leadType = "Service Request";
+      const form = document.querySelector(`.globo-form-app[data-id="${formId}"]`);
+      const leadSource = form.querySelector('input[name="page[title]"]').value; // Gets the title of the page 
+      const rawURL = form.querySelector('input[name="page[href]"]').value; // Gets the URL of the page
+      let siteCode = "FHH";
+      let dealerCode;
+      let comments = $(`#${formId}-textarea-1`).val();
+      let brands = $(`#${formId}-select-2`).val();  
+      let brandCodeshort;
+
+      if (brands == 'Heat & Glo') {
+          brandCodeshort = 'HNG';
+        } else if(brands == 'Heatilator'){
+          brandCodeshort = 'HTL';
+        } else if(brands == 'SimpliFire'){
+          brandCodeshort = 'SFE';
+        } else if(brands == 'Stellar'){
+          brandCodeshort = 'STL';
+        } else if(brands == 'Monessen'){
+          brandCodeshort = 'MON';
+        } else if(brands == 'Outdoor'){
+          brandCodeshort = 'HNG';
+        } else{
+          brandCodeshort = 'HNG,HTL,SFE,STL,MON,OUT';
+      }
+  
+      // Zipcode validation
+      let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/;
+      let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i;
+      if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+          // valid code
+      } else {
+          var getZipCode = document.getElementById(`${formId}-number-1`);
+          getZipCode.value = "";
+          zipCode = "";
+          alert("Invalid zip or postal code");
+          return false;
+      }
+  
+      // Check leadSource length
+      if (leadSource.length > 80) {
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+      }
+
+      // check total character length of state field
+      if (state.length > 2) {
+        alert("Please enter 2-character ISO state code");
+        return false;
+      }    
+  
+      // Dealer code assignment
+      if (dealerID == 'MN - Eagan') {
+        dealerCode = '0013000000MqUg9AAF';
+      } else if (dealerID == 'MN - Eden Prairie') {
+          dealerCode = '0013000000MqUgBAAV';
+      } else if (dealerID == 'MN - Maple Grove') {
+          dealerCode = '0013000000MqUg7AAF';
+      } else if (dealerID == 'MN - Minnetonka') {
+          dealerCode = '0013000000MqUgAAAV';
+      } else if (dealerID == 'MN - Roseville') {
+          dealerCode = '0013000000MqUg8AAF';
+      } else if (dealerID == 'WI - Madison') {
+          dealerCode = '0013000000MqUfwAAF';
+          hhtCampaignID = "HHTC146697CNT";
+      } else if(dealerID == 'DE - Bridgeville'){
+         dealerCode = '0013000000MqUfTAAV';
+      } else if(dealerID == 'MD - Elkridge'){
+         dealerCode = '0013000000MqUfeAAF';
+      } else if (dealerID == 'NC - Charlotte'){
+         dealerCode = '0013000000MqUfiAAF';
+      } else if (dealerID == 'NC - Greensboro'){
+         dealerCode = '0013000000MqUfjAAF';
+      } else if (dealerID == 'NC - Raleigh'){
+         dealerCode = '0013000000MqUfhAAF';
+      } else if (dealerID == 'NC - Wilmington'){
+         dealerCode = '0013000000sj0MPAAY';
+      } else if (dealerID == 'NJ - Burlington'){
+         dealerCode = '0013000000MqUfkAAF';
+      } else if (dealerID == 'NY - Goshen'){
+         dealerCode = '0013000000MqUflAAF';
+      } else if (dealerID == 'PA - Limerick'){
+         dealerCode = '0013000000MqUfnAAF';
+      } else if (dealerID == 'PA - York'){
+         dealerCode = '0013000000MqUfmAAF';
+      } else if (dealerID == 'SC - Charleston'){
+         dealerCode = '0013000000MqUfqAAF';
+      } else if (dealerID == 'SC - Columbia'){
+         dealerCode = '0013000000sizzsAAA';
+      } else if (dealerID == 'SC - Greenville'){
+         dealerCode = '0013000000MqUfpAAF';
+      } else if (dealerID == 'SC - Myrtle Beach'){
+         dealerCode = '0011O00002IaVPgQAN';
+      } else if (dealerID == 'TN - Knoxville'){
+         dealerCode = '0013000000MqUfrAAF';
+      } else if (dealerID == 'TN - Nashville'){
+         dealerCode = '0013000000MqUdyAAF';
+      } else if (dealerID == 'TX - Dallas'){
+         dealerCode = '0013000000b3y9hAAA';
+      } else if (dealerID == 'VA - Chantilly'){
+         dealerCode = '0011400001lobfCAAQ';
+      } else if (dealerID == 'VA - Charlottesville'){
+         dealerCode = '0013000000MqUfvAAF';
+      } else if (dealerID == 'VA - Manasses'){
+         dealerCode = '0013000000MqUfsAAF';
+      } else if (dealerID == 'VA - Newport News'){
+         dealerCode = '0013000000MqUftAAF';
+      } else if (dealerID == 'VA - Richmond'){
+         dealerCode = '0013000000MqUfuAAF';
+      } else { }  
+  
+      let formData = {
+          DealerID: dealerCode,
+          Firstname: firstName,
+          Lastname: lastName,
+          City:city,
+          State:state,
+          Email: email,
+          Phone:phone,
+          Brands:brandCodeshort,
+          ProductType:productType,
+          HHTCampaignID: hhtCampaignID,
+          Leadsource: leadSource,
+          Leadtype: leadType,
+          RawUrl: rawURL,
+          Sitecode: siteCode,
+          Street: street,
+          PostalCode: zipCode,
+          Comments:comments
+      };
+  
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+  
+      // Check for empty mandatory fields
+      if (dealerID && firstName && lastName && email && phone && street && hhtCampaignID && leadSource && leadType && rawURL && brands && siteCode) {
+          sendToPHPScript("https://fireside.ianinc.net/generic-form-processor.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      } else {
+          console.log("Please fill in the mandatory fields");
+          alert("Please fill in all required fields");
+          return false;
+      }
+  });
+
+
+  
+
+  /* ============================== Madison Spring Sale form ============================= */
+  
+  $("form[data-id='125315']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text-1`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let email = $(`#${formId}-email-1`).val();
+     let phone = $(`#${formId}-phone-1`).val();
+     let zipCode = $(`#${formId}-number-1`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – Madison Spring Sale";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/request-mad-spring-sale-coupon"; //THE URL THE FORM IS ON
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number-1`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+      
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/march-into-savings-madison.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  }); 
+
+
+
+     /* ============================== Twin Cities Spring Sale Form ============================= */
+  
+  $("form[data-id='125293']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text-1`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let email = $(`#${formId}-email-1`).val();
+     let phone = $(`#${formId}-phone-1`).val();
+     let zipCode = $(`#${formId}-number-1`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH - Twin Cities Spring Sale";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/request-forge-and-flame-blazing-deal"; //THE URL THE FORM IS ON
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number-1`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+      
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/forge-flame.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  }); 
+  
+
+
+     /* ============================== Request Home and Garden Next Project form ============================= */
+
+  $("form[data-id='125299']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select`).val();
+     let firstName = $(`#${formId}-name`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let email = $(`#${formId}-email`).val();
+     let zipCode = $(`#${formId}-text-4`).val();
+     let hhtCampaignID = "HHTC146695QUT";
+     let leadSource = "FHH - Home Garden Next Project";
+     let leadType = "Quote Request";
+     let rawURL = "https://fireside.com/pages/mn-homeandgarden-show-next-project";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let address =  $(`#${formId}-text`).val();
+     let city = $(`#${formId}-text-2`).val();
+     let state = $(`#${formId}-text-3`).val();
+     let comments = $(`#${formId}-textarea`).val();
+     let dealerCode;
+     
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-text-4`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+        }  
+
+        // check total character length of state field
+        if(state.length > 2){
+          alert("Please enter 2-character ISO state code");
+          return false;
+        }    
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else{
+         
+       }     
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Phone:phone,
+         Email:email,
+         PostalCode:zipCode,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Address:address,
+         City:city,
+         State:state,
+         Comments:comments
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log (formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !phone == "" && !email == "" && !zipCode == "" && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/home-garden-next-project.php", formJSON, formId);
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });
+
+
+  /* ============================== Home Garden Giveaway form ============================= */
+  
+  $("form[data-id='125298']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let firstName = $(`#${formId}-text`).val();
+     let lastName = $(`#${formId}-name`).val();
+     let company = $(`#${formId}-text-1`).val();
+     let email = $(`#${formId}-email`).val();
+     let workWith = $(`#${formId}-select-1`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – Home Garden Giveaway";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/mn-homeandgarden-show-giveaway";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+    console.log('Sign Up To Win form submitted! '+ formId);
+    
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+        }
+    
+      let formData = {
+         Firstname:firstName,
+         Lastname:lastName,
+         Company:company,
+         Email:email,
+         WorkWith:workWith,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode
+      };
+        console.log(firstName + lastName + email + company + workWith);
+
+      let formJSON = JSON.stringify(formData);
+      console.log (formJSON);
+
+      if(!firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/home-garden-giveaway.php", formJSON, formId);
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });  
+
+
+ /* ============================== MN Home Show Sale form ============================= */
+  
+  $("form[data-id='125189']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text-1`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let email = $(`#${formId}-email-1`).val();
+     let phone = $(`#${formId}-phone-1`).val();
+     let zipCode = $(`#${formId}-number-1`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – MN Home Show Sale";  // max 80 characters
+     let leadType = "Promotion Request";
+     const form = document.querySelector(`.globo-form-app[data-id="${formId}"]`);
+     const rawURL = form.querySelector('input[name="page[href]"]').value; // Gets the URL of the page 
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number-1`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+      
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/mn-home-show-sale.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  }); 
+
+
+ /* ============================== Madison 100 Off Request form ============================= */
+  
+  $("form[data-id='124913']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text`).val();
+     let lastName = $(`#${formId}-name`).val();
+     let email = $(`#${formId}-email`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let zipCode = $(`#${formId}-number`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – Madison 100 Off";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/wi-request-100-coupon";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+      
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/madison-100-off.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });  
+
+
+
+/* ============================== Winter Coupon Form  form ============================= */
+  
+  $("form[data-id='124596']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text-1`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let email = $(`#${formId}-email-1`).val();
+     let phone = $(`#${formId}-phone-1`).val();
+     let zipCode = $(`#${formId}-number-1`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – Winter Coupon Form";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/request-winter-coupon";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number-1`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length  cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/request-winter-coupon.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });  
+
+
+
+  
+/* ============================== Twin Cities 100 Off Request form ============================= */
+  
+  $("form[data-id='124912']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text-1`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let email = $(`#${formId}-email-1`).val();
+     let phone = $(`#${formId}-phone-1`).val();
+     let zipCode = $(`#${formId}-number-1`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – Twin Cities 100 Off";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/mn-request-100-coupon";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number-1`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/twin-cities-100-off.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });
+
+
+ /* ============================== test form ============================= */
+  
+  $("form[data-id='124026']").on('submit',function(e){     
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text`).val();
+     let lastName = $(`#${formId}-name`).val();
+     let email = $(`#${formId}-email`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let zipCode = $(`#${formId}-number`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – PROMO";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/test-form";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length  cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/fhh-test-form.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });
+
+  /* ============ Check serial number character limit =========== */
+
+   $('#121815-text-4').on('input', function() {
+        let inputLength = $(this).val().length;
+        console.log(inputLength);  
+        if (inputLength === 20) {
+            alert('Serial Number length cannot exceed 20 characters');
+        }
+    });
+
+  /* ============================== Home Show Sale Form ============================= */
+  
+  $("form[data-id='124713']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text`).val();
+     let lastName = $(`#${formId}-name`).val();
+     let email = $(`#${formId}-email`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let zipCode = $(`#${formId}-number`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – Home Show Sale";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/request-home-show-sales-coupon";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/home-show-sale.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });  
+
+
+/* ============================== Sign Up To Win form ============================= */
+  
+  $("form[data-id='124909']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let firstName = $(`#${formId}-text`).val();
+     let lastName = $(`#${formId}-name`).val();
+     let company = $(`#${formId}-text-1`).val();
+     let email = $(`#${formId}-email`).val();
+     let workWith = $(`#${formId}-select-1`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – Sign Up To Win";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/brsmn-stonefire-giveaway";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+
+    console.log('Sign Up To Win form submitted! '+ formId);
+    
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length cannot exceed 80 characters");
+          return false;
+        }
+    
+      let formData = {
+         Firstname:firstName,
+         Lastname:lastName,
+         Company:company,
+         Email:email,
+         WorkWith:workWith,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode
+      };
+        console.log(firstName + lastName + email + company + workWith);
+
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/sign-up-win.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });  
+
+
+/* ============================== promotional coupon code form ============================= */
+  
+  $("form[data-id='121818']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text`).val();
+     let lastName = $(`#${formId}-name`).val();
+     let email = $(`#${formId}-email`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let zipCode = $(`#${formId}-number`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – PROMO";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/request-coupon";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length  cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/fhh-promotional-coupon-code.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });
+
+/* ============================== contact us form ============================= */
+
+  $("form[data-id='121817']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select`).val();    
+     let firstName = $(`#${formId}-name`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let email = $(`#${formId}-email`).val();
+     let zipCode = $(`#${formId}-number`).val();
+     let submitterType = $(this).find(`input[name="radio"]:checked`).val();
+     let comments = $(`#${formId}-textarea`).val();
+     let hhtCampaignID = "HHTC146694CNT";
+     let leadSource = "FHH";
+     let leadType = "Contact Request";
+     let rawURL = "https://fireside.com/pages/contact";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let address = $(`#${formId}-text`).val();
+     let city = $(`#${formId}-text-2`).val();
+     let state = $(`#${formId}-text-3`).val();
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length  cannot exceed 80 characters");
+          return false;
+        }
+
+       // check total character length of state field
+        if(state.length > 2){
+          alert("Please enter 2-character ISO state code");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+       }else if(dealerID == 'DE - Bridgeville'){
+         dealerCode = '0013000000MqUfTAAV';
+       }else if(dealerID == 'MD - Elkridge'){
+         dealerCode = '0013000000MqUfeAAF';
+       }else if(dealerID == 'NC - Charlotte'){
+         dealerCode = '0013000000MqUfiAAF';
+       }else if(dealerID == 'NC - Greensboro'){
+         dealerCode = '0013000000MqUfjAAF';
+       }else if(dealerID == 'NC - Raleigh'){
+         dealerCode = '0013000000MqUfhAAF';
+       }else if(dealerID == 'NC - Wilmington'){
+         dealerCode = '0013000000sj0MPAAY';
+       }else if(dealerID == 'NJ - Burlington'){
+         dealerCode = '0013000000MqUfkAAF';
+       }else if(dealerID == 'NY - Goshen'){
+         dealerCode = '0013000000MqUflAAF';
+       }else if(dealerID == 'PA - Limerick'){
+         dealerCode = '0013000000MqUfnAAF';
+       }else if(dealerID == 'PA - York'){
+         dealerCode = '0013000000MqUfmAAF';
+       }else if(dealerID == 'SC - Charleston'){
+         dealerCode = '0013000000MqUfqAAF';
+       }else if(dealerID == 'SC - Columbia'){
+         dealerCode = '0013000000sizzsAAA';
+       }else if(dealerID == 'SC - Greenville'){
+         dealerCode = '0013000000MqUfpAAF';
+       }else if(dealerID == 'SC - Myrtle Beach'){
+         dealerCode = '0011O00002IaVPgQAN';
+       }else if(dealerID == 'TN - Knoxville'){
+         dealerCode = '0013000000MqUfrAAF';
+       }else if(dealerID == 'TN - Nashville'){
+         dealerCode = '0013000000MqUdyAAF';
+       }else if(dealerID == 'TX - Dallas'){
+         dealerCode = '0013000000b3y9hAAA';
+       }else if(dealerID == 'VA - Chantilly'){
+         dealerCode = '0011400001lobfCAAQ';
+       }else if(dealerID == 'VA - Charlottesville'){
+         dealerCode = '0013000000MqUfvAAF';
+       }else if(dealerID == 'VA - Manasses'){
+         dealerCode = '0013000000MqUfsAAF';
+       }else if(dealerID == 'VA - Newport News'){
+         dealerCode = '0013000000MqUftAAF';
+       }else if(dealerID == 'VA - Richmond'){
+         dealerCode = '0013000000MqUfuAAF';
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }     
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode,
+         SubmitterType:submitterType,
+         Comments:comments,
+         Address:address,
+         City:city,
+         State:state
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !phone == "" && !email == "" && !zipCode == "" && !submitterType == "" && !comments == "" && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/fhh-contact-us.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });  
+
+/* ============================== Commercial bid  form ============================= */  
+
+  $("form[data-id='121816']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = '0013000000MqUfgAAF'; 
+     let companyName = $(`#${formId}-text`).val();
+     let firstName = $(`#${formId}-name`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let email = $(`#${formId}-email`).val();
+     let zipCode = $(`#${formId}-number`).val();
+     let projectArr = [];
+     $(this).find('input[name="checkbox[]"]:checked').each(function () {
+        projectArr.push($(this).val());
+      }); 
+     let typeOfProject = projectArr[0];
+     let hhtCampaignID = "HHTC146699QUT";
+     let leadSource = "FHH";
+     let leadType = "Commercial Request";
+     let rawURL = "https://fireside.com/pages/commercial-bid-request";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let comments = $(`#${formId}-textarea`).val();
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length  cannot exceed 80 characters");
+          return false;
+        }
+
+        // Don't allow multiple selections for project type
+         if(projectArr.length > 1){
+           typeOfProject = "";
+         }
+    
+      let formData = {
+         DealerID:dealerCode,
+         Company:companyName,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         Phone:phone,
+         PostalCode:zipCode,
+         TypeOfProject:typeOfProject,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Comments:comments,
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !companyName == "" && !firstName == "" && !lastName == "" && !phone == "" && !email == "" && !zipCode == "" && !typeOfProject == "" && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/fhh-commercial-bid.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  }); 
+
+  /* ============================== Request service  form ============================= */
+
+  $("form[data-id='121815']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select`).val();
+     let firstName = $(`#${formId}-name`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let address =  $(`#${formId}-text`).val();
+     let city = $(`#${formId}-text-2`).val();
+     let state = $(`#${formId}-text-3`).val();
+     let zipCode = $(`#${formId}-number`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let email = $(`#${formId}-email`).val();
+     let brands = $(`#${formId}-select-2`).val();  
+     let productType = $(`#${formId}-select-3`).val();
+     let hhtCampaignID = "HHTC146693SVC";
+     let leadSource = "FHH";
+     let leadType = "Service Request";
+     let rawURL = "https://fireside.com/pages/request-service";
+     let siteCode = "FHH";
+     let serialNumber = $(`#${formId}-text-4`).val();
+     let comments = $(`#${formId}-textarea`).val();
+     let brandCodeshort;
+     let dealerCode;
+     let promoCode =  $(`#${formId}-text-6`).val();
+
+     if(brands == 'Heat & Glo'){
+        brandCodeshort = 'HNG';
+     }else if(brands == 'Heatilator'){
+        brandCodeshort = 'HTL';
+     }else if(brands == 'SimpliFire'){
+        brandCodeshort = 'SFE';
+     }else if(brands == 'Stellar'){
+       brandCodeshort = 'STL';
+     }else if(brands == 'Monessen'){
+       brandCodeshort = 'MON';
+     }else if(brands == 'Outdoor'){
+       brandCodeshort = 'HNG';
+     }else{
+       brandCodeshort = 'HNG,HTL,SFE,STL,MON,OUT';
+     }
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length  cannot exceed 80 characters");
+          return false;
+        }
+
+       // check total character length of state field
+        if(state.length > 2){
+          alert("Please enter 2-character ISO state code");
+          return false;
+        }    
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+       }else if(dealerID == 'DE - Bridgeville'){
+         dealerCode = '0013000000MqUfTAAV';
+       }else if(dealerID == 'MD - Elkridge'){
+         dealerCode = '0013000000MqUfeAAF';
+       }else if(dealerID == 'NC - Charlotte'){
+         dealerCode = '0013000000MqUfiAAF';
+       }else if(dealerID == 'NC - Greensboro'){
+         dealerCode = '0013000000MqUfjAAF';
+       }else if(dealerID == 'NC - Raleigh'){
+         dealerCode = '0013000000MqUfhAAF';
+       }else if(dealerID == 'NC - Wilmington'){
+         dealerCode = '0013000000sj0MPAAY';
+       }else if(dealerID == 'NJ - Burlington'){
+         dealerCode = '0013000000MqUfkAAF';
+       }else if(dealerID == 'NY - Goshen'){
+         dealerCode = '0013000000MqUflAAF';
+       }else if(dealerID == 'PA - Limerick'){
+         dealerCode = '0013000000MqUfnAAF';
+       }else if(dealerID == 'PA - York'){
+         dealerCode = '0013000000MqUfmAAF';
+       }else if(dealerID == 'SC - Charleston'){
+         dealerCode = '0013000000MqUfqAAF';
+       }else if(dealerID == 'SC - Columbia'){
+         dealerCode = '0013000000sizzsAAA';
+       }else if(dealerID == 'SC - Greenville'){
+         dealerCode = '0013000000MqUfpAAF';
+       }else if(dealerID == 'SC - Myrtle Beach'){
+         dealerCode = '0011O00002IaVPgQAN';
+       }else if(dealerID == 'TN - Knoxville'){
+         dealerCode = '0013000000MqUfrAAF';
+       }else if(dealerID == 'TN - Nashville'){
+         dealerCode = '0013000000MqUdyAAF';
+       }else if(dealerID == 'TX - Dallas'){
+         dealerCode = '0013000000b3y9hAAA';
+       }else if(dealerID == 'VA - Chantilly'){
+         dealerCode = '0011400001lobfCAAQ';
+       }else if(dealerID == 'VA - Charlottesville'){
+         dealerCode = '0013000000MqUfvAAF';
+       }else if(dealerID == 'VA - Manasses'){
+         dealerCode = '0013000000MqUfsAAF';
+       }else if(dealerID == 'VA - Newport News'){
+         dealerCode = '0013000000MqUftAAF';
+       }else if(dealerID == 'VA - Richmond'){
+         dealerCode = '0013000000MqUfuAAF';
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }     
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Address:address,
+         City:city,
+         State:state,
+         PostalCode:zipCode,
+         Phone:phone,
+         Email:email,
+         Brands:brandCodeshort,
+         ProductType:productType,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Sitecode:siteCode,
+         SerialNumber:serialNumber,
+         Comments:comments,
+         PromoCode:promoCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !address == "" && !city == "" && !state == "" && !phone == "" && !email == "" && !zipCode == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == "" && !productType == ""){
+          sendToPHPScript("https://fireside.ianinc.net/fhh-request-service.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });   
+
+   /* ============================== Request an Estimate form ============================= */
+
+  $("form[data-id='122382']").on('submit',function(e){      
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select`).val();
+     let firstName = $(`#${formId}-name`).val();
+     let lastName = $(`#${formId}-name-2`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let email = $(`#${formId}-email`).val();
+     let zipCode = $(`#${formId}-text-4`).val();
+     let hhtCampaignID = "HHTC146695QUT";
+     let leadSource = "FHH";
+     let leadType = "Quote Request";
+     let rawURL = "https://fireside.com/pages/request-estimate";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let address =  $(`#${formId}-text`).val();
+     let city = $(`#${formId}-text-2`).val();
+     let state = $(`#${formId}-text-3`).val();
+     let comments = $(`#${formId}-textarea`).val();
+     let dealerCode;
+     
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-text-4`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }  
+
+        // check total character length of state field
+        if(state.length > 2){
+          alert("Please enter 2-character ISO state code");
+          return false;
+        }    
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+       }else if(dealerID == 'DE - Bridgeville'){
+         dealerCode = '0013000000MqUfTAAV';
+       }else if(dealerID == 'MD - Elkridge'){
+         dealerCode = '0013000000MqUfeAAF';
+       }else if(dealerID == 'NC - Charlotte'){
+         dealerCode = '0013000000MqUfiAAF';
+       }else if(dealerID == 'NC - Greensboro'){
+         dealerCode = '0013000000MqUfjAAF';
+       }else if(dealerID == 'NC - Raleigh'){
+         dealerCode = '0013000000MqUfhAAF';
+       }else if(dealerID == 'NC - Wilmington'){
+         dealerCode = '0013000000sj0MPAAY';
+       }else if(dealerID == 'NJ - Robinsville'){
+         dealerCode = '0013000000MqUfkAAF';
+       }else if(dealerID == 'NY - Goshen'){
+         dealerCode = '0013000000MqUflAAF';
+       }else if(dealerID == 'PA - Limerick'){
+         dealerCode = '0013000000MqUfnAAF';
+       }else if(dealerID == 'NJ - York'){
+         dealerCode = '0013000000MqUfmAAF';
+       }else if(dealerID == 'SC - Charleston'){
+         dealerCode = '0013000000MqUfqAAF';
+       }else if(dealerID == 'SC - Columbia'){
+         dealerCode = '0013000000sizzsAAA';
+       }else if(dealerID == 'SC - Greenville'){
+         dealerCode = '0013000000MqUfpAAF';
+       }else if(dealerID == 'SC - Myrtle Beach'){
+         dealerCode = '0011O00002IaVPgQAN';
+       }else if(dealerID == 'TN - Knoxville'){
+         dealerCode = '0013000000MqUfrAAF';
+       }else if(dealerID == 'TN - Nashville'){
+         dealerCode = '0013000000MqUdyAAF';
+       }else if(dealerID == 'TX - Dallas'){
+         dealerCode = '0013000000b3y9hAAA';
+       }else if(dealerID == 'VA - Chantilly'){
+         dealerCode = '0011400001lobfCAAQ';
+       }else if(dealerID == 'VA - Charlottesville'){
+         dealerCode = '0013000000MqUfvAAF';
+       }else if(dealerID == 'VA - Manasses'){
+         dealerCode = '0013000000MqUfsAAF';
+       }else if(dealerID == 'VA - Newport News'){
+         dealerCode = '0013000000MqUftAAF';
+       }else if(dealerID == 'VA - Richmond'){
+         dealerCode = '0013000000MqUfuAAF';
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }     
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Phone:phone,
+         Email:email,
+         PostalCode:zipCode,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Address:address,
+         City:city,
+         State:state,
+         Comments:comments
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !phone == "" && !email == "" && !zipCode == "" && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/fhh-request-estimate.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });
+
+
+ /* ============================== test form ============================= */
+  
+  $("form[data-id='124026']").on('submit',function(e){     
+     e.preventDefault(); // Prevent default form submission
+     let formId = $(this).attr('data-id');
+     let dealerID = $(`#${formId}-select-1`).val();
+     let firstName = $(`#${formId}-text`).val();
+     let lastName = $(`#${formId}-name`).val();
+     let email = $(`#${formId}-email`).val();
+     let phone = $(`#${formId}-phone`).val();
+     let zipCode = $(`#${formId}-number`).val();
+     let hhtCampaignID = "HHTC146696CNT";
+     let leadSource = "FHH – PROMO";  // max 80 characters
+     let leadType = "Promotion Request";
+     let rawURL = "https://fireside.com/pages/test-form";
+     let brands = "HNG,HTL,SFE,STL,MON";
+     let siteCode = "FHH";
+     let dealerCode;
+
+      // New zipcode validation which only allows a valid US zipcode or a valid Canadian postal code
+        let usRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; // US ZIP code format
+        let canadaRegex = /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1}[ -]?\d{1}[A-Z]{1}\d{1}$/i; // Canadian postal code format
+        if ((zipCode.length <= 10 && usRegex.test(zipCode)) || (zipCode.length <= 10 && canadaRegex.test(zipCode))) {
+            // valid code
+        } else {
+          var getZipCode = document.getElementById(`${formId}-number`); 
+          getZipCode.value = "";
+          zipCode = ""; 
+          alert("Invalid zip or postal code");
+          return false;
+        }    
+
+      // check total character length of leadSource field
+        if(leadSource.length > 80){
+          alert("LeadSource length  cannot exceed 80 characters");
+          return false;
+        }
+
+       if(dealerID == 'MN - Eagan'){
+          dealerCode = '0013000000MqUg9AAF';
+       }else if(dealerID == 'MN - Eden Prairie'){
+          dealerCode = '0013000000MqUgBAAV';
+       }else if(dealerID == 'MN - Maple Grove'){
+          dealerCode = '0013000000MqUg7AAF';
+       }else if(dealerID == 'MN - Minnetonka'){
+         dealerCode = '0013000000MqUgAAAV';
+       }else if(dealerID == 'MN - Roseville'){
+         dealerCode = '0013000000MqUg8AAF';
+       }else if(dealerID == 'WI - Madison'){
+         dealerCode = '0013000000MqUfwAAF';
+         hhtCampaignID = "HHTC146697CNT"
+       }else{
+         dealerCode = '0013000000MqUg9AAF'; // Default to Eagan
+       }    
+    
+      let formData = {
+         DealerID:dealerCode,
+         Firstname:firstName,
+         Lastname:lastName,
+         Email:email,
+         HHTCampaignID:hhtCampaignID,
+         Leadsource:leadSource,
+         Leadtype:leadType,
+         RawUrl:rawURL,
+         Brands:brands,
+         Sitecode:siteCode,
+         Phone:phone,
+         PostalCode:zipCode
+      };
+    
+      let formJSON = JSON.stringify(formData);
+      console.log(formJSON);
+
+      if(!dealerID == "" && !firstName == "" && !lastName == "" && !email == ""  && !hhtCampaignID == "" && !leadSource == "" && !leadType == "" && !rawURL == "" && !brands == "" && !siteCode == ""){
+          sendToPHPScript("https://fireside.ianinc.net/fhh-test-form.php", formJSON, formId);
+          console.log("Attempted to send data.");
+      }else{
+        console.log("Please fill in the mandatory fields");
+      }
+  });
+
+}); 

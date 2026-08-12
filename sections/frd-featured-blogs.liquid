@@ -1,0 +1,586 @@
+{% comment %}
+  Section: Featured Blogs
+  File:    frd-featured-blogs.liquid
+  Description: Displays a grid of blog post cards from a selected blog.
+               Each card shows image, title, meta info, excerpt, and
+               a continue-reading link. Text is left-aligned.
+{% endcomment %}
+
+{%- assign blog = blogs[section.settings.blog_widget_select] -%}
+{%- assign title = section.settings.title | escape -%}
+{%- assign posts_count = section.settings.home_page_articles -%}
+{%- assign bg_color = section.settings.background_color -%}
+{%- assign card_bg = section.settings.card_background_color -%}
+{%- assign card_border_color = section.settings.card_border_color -%}
+{%- assign heading_color = section.settings.heading_color -%}
+{%- assign text_color = section.settings.text_color -%}
+{%- assign link_color = section.settings.link_color -%}
+{%- assign meta_color = section.settings.meta_color -%}
+{%- assign columns = section.settings.columns_per_row -%}
+{%- assign center_heading = section.settings.center_heading -%}
+{%- assign description = section.settings.description -%}
+{%- assign btn_color = section.settings.button_color -%}
+{%- assign btn_text_color = section.settings.button_text_color -%}
+{%- assign cta_text = section.settings.cta_button_text -%}
+{%- assign cta_link = section.settings.cta_button_link -%}
+{%- assign section_padding_top = section.settings.padding_top -%}
+{%- assign section_padding_bottom = section.settings.padding_bottom -%}
+
+<style>
+  #frd-featured-blogs-{{ section.id }} {
+    background-color: {{ bg_color }};
+    padding-top: {{ section_padding_top }}px;
+    padding-bottom: {{ section_padding_bottom }}px;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__header {
+    text-align: {% if center_heading %}center{% else %}left{% endif %};
+    margin-bottom: 28px;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: {{ heading_color }};
+    text-transform: capitalize;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__description {
+    font-size: 16px;
+    line-height: 1.55;
+    color: {{ text_color }};
+    max-width: 700px;
+    {% if center_heading %}margin: 0 auto;{% endif %}
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__grid {
+    display: grid;
+    grid-template-columns: repeat({{ columns }}, 1fr);
+    gap: 24px;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__card {
+    background: {{ card_bg }};
+    border: 1px solid {{ card_border_color }};
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__card:hover {
+    border-color: {{ link_color }};
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+  }
+
+  /* Image */
+  #frd-featured-blogs-{{ section.id }} .frd-fb__image-wrapper {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__card:hover .frd-fb__image-wrapper img {
+    transform: scale(1.04);
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #f0f2f4;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__image-placeholder svg {
+    width: 60px;
+    height: 60px;
+    fill: #ccc;
+  }
+
+  /* Content */
+  #frd-featured-blogs-{{ section.id }} .frd-fb__content {
+    padding: 20px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: {{ heading_color }};
+    line-height: 1.35;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__title a:hover {
+    text-decoration: underline;
+  }
+
+  /* Meta */
+  #frd-featured-blogs-{{ section.id }} .frd-fb__meta {
+    font-size: 13px;
+    color: {{ meta_color }};
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__meta span {
+    white-space: nowrap;
+  }
+
+  /* Tags */
+  #frd-featured-blogs-{{ section.id }} .frd-fb__tags {
+    font-size: 12px;
+    color: {{ meta_color }};
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__tags a {
+    color: {{ link_color }};
+    text-decoration: none;
+    background: #f0f2f4;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__tags a:hover {
+    background: {{ link_color }};
+    color: #fff;
+  }
+
+  /* Excerpt */
+  #frd-featured-blogs-{{ section.id }} .frd-fb__excerpt {
+    font-size: 15px;
+    line-height: 1.55;
+    color: {{ text_color }};
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+
+  /* Read more link */
+  #frd-featured-blogs-{{ section.id }} .frd-fb__read-more {
+    font-size: 16px;
+    font-weight: 600;
+    color: {{ link_color }};
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s ease;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__read-more:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__read-more-arrow {
+    transition: transform 0.2s ease;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__read-more:hover .frd-fb__read-more-arrow {
+    transform: translateX(3px);
+  }
+
+  /* CTA Button */
+  #frd-featured-blogs-{{ section.id }} .frd-fb__cta-wrapper {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__cta-button {
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+    background-color: {{ btn_color }};
+    color: {{ btn_text_color }};
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.25s ease;
+  }
+
+  #frd-featured-blogs-{{ section.id }} .frd-fb__cta-button:hover {
+    opacity: 0.88;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    #frd-featured-blogs-{{ section.id }} .frd-fb__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #frd-featured-blogs-{{ section.id }} .frd-fb__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<section id="frd-featured-blogs-{{ section.id }}">
+  <div class="frd-fb__wrapper">
+    {% if title != blank or description != blank %}
+      <div class="frd-fb__header">
+        {% if title != blank %}
+          <h2 class="frd-fb__section-title">{{ title }}</h2>
+        {% endif %}
+        {% if description != blank %}
+          <div class="frd-fb__description">{{ description }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="frd-fb__grid">
+      {% if blog != blank %}
+        {% for article in blog.articles limit: posts_count %}
+          <div class="frd-fb__card">
+
+            {%- if article.image != blank -%}
+              <a class="frd-fb__image-wrapper" href="{{ article.url }}">
+                <img
+                  src="{{ article.image | image_url: width: 720 }}"
+                  alt="{{ article.image.alt | default: article.title | escape }}"
+                  loading="lazy"
+                  width="720"
+                >
+              </a>
+            {%- endif -%}
+
+            <div class="frd-fb__content">
+
+              <h3 class="frd-fb__title">
+                <a href="{{ article.url }}">{{ article.title }}</a>
+              </h3>
+
+              <p class="frd-fb__meta">
+                {% if section.settings.blog_author %}
+                  <span>{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+                {% endif %}
+
+                {% if section.settings.blog_date %}
+                  <span>{{ article.published_at | date: format: "month_day_year" }}</span>
+                {% endif %}
+
+                {% if section.settings.read_time %}
+                  {% render 'include-read-time', article: article %}
+                {% endif %}
+
+                {% if section.settings.blog_comment_count %}
+                  {% if article.comments_enabled? and article.comments_count > 0 %}
+                    <span>
+                      <a href="{{ article.url }}#comments">{{ 'blogs.counts.comments_with_count' | t: count: article.comments_count }}</a>
+                    </span>
+                  {% endif %}
+                {% endif %}
+              </p>
+
+              {% if section.settings.blog_tags %}
+                {% if article.tags.size > 0 %}
+                  <div class="frd-fb__tags">
+                    {% for tag in article.tags %}
+                      <a href="{{ blog.url }}/tagged/{{ tag | handle }}" title="{{ blog.title | escape }} {{ 'blogs.general.tagged' | t }} {{ tag | escape }}">
+                        {{ tag }}
+                      </a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              {% endif %}
+
+              {% if section.settings.excerpt_display == 'full_excerpt' and article.excerpt != blank %}
+                <div class="frd-fb__excerpt">{{ article.excerpt }}</div>
+              {% elsif section.settings.excerpt_display == 'truncated_excerpt' and article.excerpt != blank %}
+                <div class="frd-fb__excerpt">{{ article.excerpt | truncate: 100 }}</div>
+              {% endif %}
+
+              {% if section.settings.read_more_link %}
+                <a class="frd-fb__read-more" href="{{ article.url }}" title="{{ article.title | escape }}">
+                  {{ 'blogs.general.continue_reading_html' | t }}
+                  <span class="frd-fb__read-more-arrow">&rarr;</span>
+                </a>
+              {% endif %}
+
+            </div>
+          </div>
+        {% endfor %}
+
+      {% else %}
+        {%- comment -%} Placeholder cards when no blog is selected {%- endcomment -%}
+        {% for i in (1..posts_count) %}
+          <div class="frd-fb__card">
+            <div class="frd-fb__image-placeholder">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+            <div class="frd-fb__content">
+              <h3 class="frd-fb__title">
+                <a href="#">{{ 'homepage.onboarding.blogpost_title' | t }}</a>
+              </h3>
+              <p class="frd-fb__meta">
+                {% if section.settings.blog_date %}
+                  <span>{{ 'now' | date: format: "month_day_year" }}</span>
+                {% endif %}
+              </p>
+              {% if section.settings.excerpt_display != 'none' %}
+                <div class="frd-fb__excerpt">
+                  {{ 'homepage.onboarding.blog_excerpt' | t }}
+                </div>
+              {% endif %}
+              {% if section.settings.read_more_link %}
+                <a class="frd-fb__read-more" href="#">
+                  {{ 'blogs.general.continue_reading_html' | t }}
+                  <span class="frd-fb__read-more-arrow">&rarr;</span>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    {% if cta_text != blank %}
+      <div class="frd-fb__cta-wrapper">
+        <a class="frd-fb__cta-button" href="{{ cta_link | default: '#' }}">
+          {{ cta_text }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Blogs",
+  "class": "shopify-section--frd-featured-blogs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Heading",
+      "default": "Featured Blog Posts"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Section Description",
+      "info": "Displayed below the heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "center_heading",
+      "label": "Center Heading & Description",
+      "default": true
+    },
+    {
+      "type": "blog",
+      "id": "blog_widget_select",
+      "label": "Blog"
+    },
+    {
+      "type": "range",
+      "id": "home_page_articles",
+      "label": "Number of Posts",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "columns_per_row",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": "Columns Per Row (Desktop)",
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_tags",
+      "label": "Show tags",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_author",
+      "label": "Show author",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "read_time",
+      "label": "Show estimated read time",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_comment_count",
+      "label": "Show comment count",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "read_more_link",
+      "label": "Show continue reading link",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "excerpt_display",
+      "label": "Excerpt display",
+      "default": "full_excerpt",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "full_excerpt",
+          "label": "Full excerpt"
+        },
+        {
+          "value": "truncated_excerpt",
+          "label": "Truncated excerpt"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card Border Color",
+      "default": "#e2e8f0"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#2d3748"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#4a5568"
+    },
+    {
+      "type": "color",
+      "id": "meta_color",
+      "label": "Meta Text Color",
+      "default": "#a0aec0"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link Color",
+      "default": "#d4882b"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Color",
+      "default": "#d4882b"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "cta_button_text",
+      "label": "CTA Button Text",
+      "default": "Visit Our Blog"
+    },
+    {
+      "type": "url",
+      "id": "cta_button_link",
+      "label": "CTA Button Link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Blogs",
+      "category": "Blog",
+      "settings": {
+        "title": "Featured Blog Posts"
+      }
+    }
+  ]
+}
+{% endschema %}

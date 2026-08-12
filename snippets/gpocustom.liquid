@@ -1,0 +1,39 @@
+<style>
+  button.gpo-init-button {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    text-align: center;
+    line-height: 1.2;
+    font-family: Helvetica,Helvetica Neue,Arial,Lucida Grande,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-break: break-word;
+    cursor: pointer;
+    transition: all .2s linear;
+    border: 1px solid #d9e5e8;
+    background: #d9e5e8;
+    color: #3d484e;
+  }
+</style>
+<script>
+  function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  }
+  function addClearButton() {
+    let gpoApp = document.querySelector('.gpo-app');
+    let initBtn = document.createElement('button');
+    initBtn.classList.add('gpo-init-button');
+    initBtn.textContent = "Clear Selections";
+    initBtn.addEventListener('click', function () {
+      GPOConfigs.initialize();
+    });
+    insertAfter(initBtn, gpoApp);
+  }
+  document.addEventListener("gpoRenderCompleted", (e) => {
+    addClearButton();
+  });
+</script>

@@ -1,0 +1,320 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1652819784bb51824f": {
+      "type": "page-title-subtitle",
+      "settings": {
+        "heading": "Inspired Design",
+        "sub_text": "<p>From concept to installation, we'll help you transform any living space into a destination for connection and well-being.</p>",
+        "text_align": "text-center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ".top-space {\nmargin-top: 3em\n}"
+      }
+    },
+    "165282100128c53158": {
+      "type": "featured-video",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "title": "",
+        "text": "",
+        "video_url": "https://www.youtube.com/embed/GhP3DNogciI",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1652821109a09d5ab1": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "PLAN YOUR PROJECT",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Whether you explore our products online or in the showroom, you'll find all the tools, materials, and styles to ensure your new fireplace expresses your vision.</p><p>We've helped bring friends and family together around the fire for more than 70 years. So when you partner with our team, you can always expect quality products, services, and support.</p>",
+        "button_text_alignment": "center",
+        "button_label": "Download Project Planner",
+        "open-new-window": true,
+        "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Fireside_Fireplace_Project_Planner_Editable.pdf?v=1683735473",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1652822242f793fff0": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "12656a45-52ba-4323-bc7d-ee5183d90c45": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/convert_wood_to_gas.jpg",
+            "title": "CONVERT WOOD TO GAS",
+            "text": "<p>Convert your wood fireplace to gas and experience greater performance, safety, and convenience. </p><p>Projects start around $4,800.</p>",
+            "button_label": "EXPLORE",
+            "button_link": "shopify://pages/convert-my-fireplace"
+          }
+        },
+        "8b9e1761-10cd-4158-9a48-d581f275aa13": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/add_new_fireplace_1.jpg",
+            "title": "ADD A NEW FIREPLACE",
+            "text": "<p>Add a new fireplace where one doesn’t exist for a warmth and comfort upgrade indoors or outdoors. </p><p>Projects start around $7,200.</p>",
+            "button_label": "EXPLORE",
+            "button_link": "shopify://pages/add-new-fireplace"
+          }
+        },
+        "3c3113e6-6f31-4d38-a1e6-dc6a73d5af65": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/remodel_your_fireplace_2.png",
+            "title": "REPLACE YOUR FIREPLACE",
+            "text": "<p>Replace your existing fireplace to match the evolving style and technology of your home. </p><p>Projects start around $6,800.</p>",
+            "button_label": "EXPLORE",
+            "button_link": "shopify://pages/replace-my-fireplace"
+          }
+        },
+        "1392bea5-9750-49b4-b6a1-69e7b5d82fa9": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/six_common_reasons_to_add_fireplace_to_home.png",
+            "title": "EXPLORE WHAT MATTERS MOST",
+            "text": "<p>See the six most common reasons to consider a fireplace project for your home and discover which ones resonates most for you.</p>",
+            "button_label": "Download Checklist",
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/Common_Reasons_For_Choosing_A_Fireplace_Stove_Insert_-_Editable_Form_2023.pdf?v=1677259366"
+          }
+        }
+      },
+      "block_order": [
+        "12656a45-52ba-4323-bc7d-ee5183d90c45",
+        "8b9e1761-10cd-4158-9a48-d581f275aa13",
+        "3c3113e6-6f31-4d38-a1e6-dc6a73d5af65",
+        "1392bea5-9750-49b4-b6a1-69e7b5d82fa9"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": "GATHER"
+      }
+    },
+    "1652892185d7b6cfb2": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16528921857d2de32c-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>Our process is simple. Once you share your fireplace dreams with us, we'll provide you with hand-picked customized solutions to make the selection easy and fun.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "16528921857d2de32c-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>Our qualified and experienced professionals will guide you through every aspect of selection, installation, and service, so you get your dream fireplace.</p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "508c4e92-f6af-4933-a29c-8b8bca409617": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>We're proud to carry the best-selling fireplace brands. You'll enjoy award-winning designs and technology plus the peace of mind knowing your fireplace is built to last. </p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        }
+      },
+      "block_order": [
+        "16528921857d2de32c-0",
+        "16528921857d2de32c-1",
+        "508c4e92-f6af-4933-a29c-8b8bca409617"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "You Dream It. We Build It.",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1652892863f59eccb8": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1652892863fbee39fd-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Fill Out a Project Checklist",
+            "heading_size": "regular_text",
+            "text": "<p>This will help our showroom sales consultants better understand your project and give it a jump start.</p>",
+            "button_label": "Download Checklist",
+            "open-new-window": false,
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/pre-consultation_checklist.pdf?v=1652895504",
+            "align_text": "center",
+            "border_style": "box"
+          }
+        },
+        "1652892863fbee39fd-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Take Pictures of Your Space",
+            "heading_size": "regular_text",
+            "text": "<p>Take 2-3 pictures of the room where the project will take place. We also encourage you to bring any inspirational photos. </p>",
+            "button_label": "Browse Idea Gallery",
+            "open-new-window": false,
+            "button_link": "shopify://pages/project-gallery",
+            "align_text": "center",
+            "border_style": "box"
+          }
+        },
+        "ed709661-e6fc-48d7-b6e4-04502ef052a1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Visit A Fireside Showroom",
+            "heading_size": "regular_text",
+            "text": "<p>Bring your project checklist and photos to a Fireside showroom. Our sales consultants are happily waiting to help.</p>",
+            "button_label": "Find A Fireside",
+            "open-new-window": false,
+            "button_link": "https://fireside-hearth-and-home.myshopify.com/pages/store-locator",
+            "align_text": "center",
+            "border_style": "box"
+          }
+        }
+      },
+      "block_order": [
+        "1652892863fbee39fd-0",
+        "1652892863fbee39fd-1",
+        "ed709661-e6fc-48d7-b6e4-04502ef052a1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Get Started Today",
+        "sub_text": "We offer free in-home and virtual consults, as well as convenient and beautiful showrooms to inspire your project. To get the most value out of our first meeting, we recommend completing a few simple steps:",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165289233963ee0606": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "#d9e5e8",
+        "heading_text_alignment": "center",
+        "title": "Ready to Convert, Add or Replace Your Fireplace?",
+        "heading_type": "h2",
+        "paragraph_text_alignment": "center",
+        "content": "<p>We want you to feel confident throughout your project and excited to take the next step toward your dream design. </p><p>We'll help you find the best solutions to complement your renovation or new build. </p>",
+        "button_text_alignment": "center",
+        "button_label": "Request Quote",
+        "open-new-window": false,
+        "button_link": "shopify://pages/request-estimate",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "1652819784bb51824f",
+    "165282100128c53158",
+    "1652821109a09d5ab1",
+    "1652822242f793fff0",
+    "1652892185d7b6cfb2",
+    "1652892863f59eccb8",
+    "165289233963ee0606",
+    "main"
+  ]
+}

@@ -1,0 +1,112 @@
+{% style %}
+  .banner-bg-img {
+    background: url({{ section.settings.background-img | image_url }});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: {{ section.settings.background-position }};
+    height: {{ section.settings.background-img-height }}px;
+  }
+  .banner-container {
+    background: {{ section.settings.banner-color }};
+  }
+
+  .banner-heading-style {
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1em 0 0;
+  }
+
+  .banner-heading-style > p > strong {
+    color: {{ section.settings.bold-color }};
+  }
+
+  @media screen and (max-width: 480px){
+    .banner-container {
+      margin-top: 5em;
+    }
+
+    .banner-heading-style > p {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+
+    .banner-heading-style {
+      margin: 2em 0 0;
+      padding: 10px;
+    }
+  }
+{% endstyle %}
+
+<div class="banner-container">
+  <h1 class="banner-heading-style">{{ section.settings.heading }}</h1> 
+</div>
+{% schema %}
+  {
+    "name": "Homepage Sale Banner",
+    "class": "banner-bg-img",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background-img",
+        "label": "Background image"
+      },
+      {
+        "type": "color",
+        "id": "banner-color",
+        "label": "Banner color"
+      },
+      {
+        "type": "range",
+        "id": "background-img-height",
+        "min": 100,
+        "max": 600,
+        "step": 100,
+        "unit": "px",
+        "label": "Background image height",
+        "default": 500
+      },
+      {
+        "type": "select",
+        "id": "background-position",
+        "label": "Background image position",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "header",
+        "content": "Heading Settings"
+      },
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Heading",
+        "info": "To change the color of a word, apply the bold setting to the text and pick a color below."
+      },
+      {
+        "type": "color",
+        "id": "bold-color",
+        "label": "Bold color"
+      }
+    ],
+    "presets": [
+      {
+       "name": "Homepage Sale Banner"
+      }
+    ]
+  }
+{% endschema %}

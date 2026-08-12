@@ -1,0 +1,190 @@
+/* Global elements Styles */
+html, body { font-family: 'minion-pro', serif; }
+body, button, input, select, textarea { -webkit-font-smoothing: antialiased; font-size: 17px; line-height: 1.5; }
+body { background-color:white;  margin: 0 auto; overflow: hidden !important; max-width: 2400px; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { clear: both; font-family: 'Helvetica', serif; font-weight: bold; }
+h1, h2, h3, h4, h5, h6 { margin: 0 0 20px 0; }
+
+/* enter customer header styles for each media break point below */
+h1, .h1 { font-size:  34px; line-height:1.2; }
+h2, .h2 { font-size:  32px; line-height:1.2; }
+h3, .h3 { font-size:  28px; line-height:1.3; }
+h4, .h4 { font-size:  24px; line-height:1.25; }
+h5, .h5 { font-size:  20px; line-height:1.4; }
+h6, .h6 { font-size:  14px; line-height:1.4; }
+
+@media(max-width: 1024px) {
+    h1, .h1 { font-size:  34px; line-height:1.2; }
+    h2, .h2 { font-size:  32px; line-height:1.3; }
+    h3, .h3 { font-size:  28px; line-height:1.25; }
+    h4, .h4 { font-size:  26px; line-height:1.4; }
+    h5, .h5 { font-size:  24px; line-height:1.4; }
+    h6, .h6 { font-size:  14px; line-height:1.4; }
+}
+@media(max-width: 767px) {
+    h1, .h1 { font-size:  30px; line-height:1.3; }
+    h2, .h2 { font-size:  26px; line-height:1.3; }
+    h3, .h3 { font-size:  24px; line-height:1.5; }
+    h4, .h4 { font-size:  22px; line-height:1.4; }
+    h5, .h5 { font-size:  20px; line-height:1.4; }
+    h6, .h6 { font-size:  14px; line-height:1.4; }
+    p { font-size:  16px; line-height: 1.2; }
+}
+
+@media(max-width: 500px) {
+
+}
+
+.text-col ul { padding-left: 20px; }
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+select,
+textarea { border: 1px solid #CCCCCC; appearance:none; -webkit-appearance:none; -moz-appearance:none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0;
+    width: 100%; height: 44px; padding: 0; padding-left: 15px; }
+
+/* Use for custom select dropdowns styles */
+/*select { cursor: pointer; background-image: url('../../images/select-arrow.png'); background-position: 97%; background-repeat: no-repeat; padding-right: 30px; }*/
+select::-ms-expand { display: none; }
+select:not([disabled]):focus { box-shadow: none; }
+
+textarea { height: 120px; padding: 10px; }
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus,
+input[type="text"]:active,
+input[type="tel"]:active,
+input[type="email"]:active,
+input[type="number"]:active,
+input[type="password"]:active,
+input[type="search"]:active,
+select:active,
+textarea:active { outline: 2px solid orange; box-shadow: none; }
+
+::-webkit-input-placeholder { font-weight: 400; }
+:-moz-placeholder { font-weight: 400; }
+::-moz-placeholder { font-weight: 400; }
+:-ms-input-placeholder { font-weight: 400; }
+
+input:focus::-webkit-input-placeholder { color: transparent; }
+input:focus:-moz-input-placeholder { color: transparent; }
+input:focus::-moz-input-placeholder { color: transparent; }
+input:focus::-ms-input-placeholder { color: transparent; }
+
+/*a { color: @link-color; text-decoration: none; }
+a:hover, a:focus { color: @link-color-hover; text-decoration: none; }
+a:focus { outline: 2px solid @purple; }
+a:active { outline: none; }*/
+
+/*main a,
+footer a { .transition(color, .2s); }*/
+
+/*.link-color         { color: #E9841D; }
+.link-color-hover   { color: #E9841D; }*/
+
+p { margin-top: 0; margin-bottom: 20px; }
+
+hr { display: block; border: none; border-bottom: 3px solid #333; padding-top: 25px; margin-bottom: 25px; }
+
+i { font-style: italic; display: inline-block; }
+b, strong, .bold { font-weight: 800; }
+cite, dfn, em { font-style: italic; }
+/*iframe { border: none; width: 100%; height: auto; }*/
+iframe#preview-bar-iframe { min-height: auto !important; }
+
+@media (max-width: 767px ) {
+    iframe { min-height: 300px; }
+}
+
+
+/****************************************************************************************************/
+/****************************************** Helpers *************************************************/
+/****************************************************************************************************/
+.main-color { color: #3D484E; }
+.bg-main-color { background-color: #3D484E; }
+.orange { color: #E9841D; }
+.bg-orange { background-color: #E9841D; border: none }
+.red { color: #ED1C24; }
+.bg-red { background-color: #ED1C24; }
+.yellow { color: #F4C900; }
+.bg-yellow { background-color: #F4C900; }
+.white { color: white; }
+.bg-white { background-color: white; }
+.light-gray { color: #C8CCCE; }
+.bg-light-gray { background-color: #C8CCCE; }
+.light-gray-alt { color: #D9E5E8; }
+.bg-light-gray-alt { background-color: #D9E5E8; }
+
+
+.helvetica { font-family: 'Helvetica', sans-serif; }
+.minion-pro { font-family: 'minion-pro', serif; }
+
+.has-text-align-center { text-align: center; }
+
+/****************************************************************************************************/
+/****************************************** Buttons *************************************************/
+/****************************************************************************************************/
+.btn, a.btn, input[type="submit"] { display:inline-block; margin-bottom: 0; text-align: center; 
+    vertical-align: middle; cursor: pointer; white-space: nowrap; line-height: 1; -webkit-user-select: none;
+  -moz-user-select: none; -ms-user-select: none; user-select: none; border: none;
+  -webkit-transition: color .2s, background-color .2s;-o-transition: color .2s, background-color .2s;transition: color .2s, background-color .2s;
+  color: white; padding: 12px 40px; font-size: 18px; text-transform: uppercase; font-family: 'Helvetica', sans-serif; font-weight: bold; }
+
+.btn:hover,
+input[type="submit"]:hover { color: white; }
+
+.btn.bg-white { color: #3D484E; }
+.btn.bg-white:hover { background-color: #E9841D; color: white; }
+
+.btn.bg-orange:hover { background-color: #3D484E; }
+
+.btn.bg-orange-text { color: #E9841D; border: 1px solid #E9841D; }
+.btn.bg-orange-text:hover { background-color: #E9841D; color: white; }
+
+@media (max-width: 767px) {
+    .btn, a.btn, input[type="submit"] { font-size: 16px; width: 100% }
+}
+
+/****************************************************************************************************/
+/****************************************** Global *************************************************/
+/****************************************************************************************************/
+
+.homeowner-content { display: none; }
+.professional-content { display: none; }
+
+/****************************************************************************************************/
+/******************************************* Forms **************************************************/
+/****************************************************************************************************/
+
+/* half */
+form .half-left,
+form .half-right { float: left; width: 50%; }
+form .half-left { padding-right: 10px; clear: both; }
+form .half-right { padding-left: 10px; }
+
+/* thirds */
+form .third-left,
+form .third-center,
+form .third-right { float: left; width: 33.3333333%; }
+form .third-left { padding-right: 8px; }
+form .third-center { padding-left: 8px; padding-right: 8px; }
+form .third-right { padding-left: 8px; }
+
+form .inline-label { padding-left: 7px; margin-right: 20px; font-weight: normal; }
+
+@media screen and (max-width: 767px) {
+  form .half-left, 
+  form .half-right,
+  form .third-left,
+  form .third-center,
+  form .third-right { float: none; width: 100%; padding-left: 0; padding-right: 0; } 
+}

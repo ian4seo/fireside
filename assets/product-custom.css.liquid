@@ -1,0 +1,16 @@
+
+/* Remove gutter on first and last column (must be consistent size) */
+.equal-columns--outside-trim .one-half:nth-of-type(2n), .equal-columns--outside-trim .eight:nth-of-type(2n), .equal-columns--outside-trim .one-third:nth-of-type(3n), .equal-columns--outside-trim .one-fourth:nth-of-type(4n), .equal-columns--outside-trim .four:nth-of-type(4n), .equal-columns--outside-trim .one-fifth:nth-of-type(5n), .equal-columns--outside-trim .one-sixth:nth-of-type(6n), .equal-columns--outside-trim .one-seventh:nth-of-type(7n), .equal-columns--outside-trim .two:nth-of-type(8n) {
+  margin-right: 0 !important;
+}
+.equal-columns--outside-trim .one-half:nth-of-type(2n+1),
+.equal-columns--outside-trim .eight:nth-of-type(2n+1),
+.equal-columns--outside-trim .one-third:nth-of-type(3n+1),
+.equal-columns--outside-trim .one-fourth:nth-of-type(4n+1),
+.equal-columns--outside-trim .four:nth-of-type(4n+1),
+.equal-columns--outside-trim .one-fifth:nth-of-type(5n+1),
+.equal-columns--outside-trim .one-sixth:nth-of-type(6n+1),
+.equal-columns--outside-trim .one-seventh:nth-of-type(7n+1),
+.equal-columns--outside-trim .two:nth-of-type(8n+1) {
+  margin-left: 0 !important;
+}

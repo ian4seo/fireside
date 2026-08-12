@@ -1,0 +1,503 @@
+{% comment %}
+** Search results - default view **
+- Template section
+- Uses blocks
+{% endcomment %}
+{%- assign filter_tree_vertical_style = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'filterTreeVerticalStyle":"' | last | split: '","' | first | strip -%}
+{%- assign enable_filter_sticky_d = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'stickyFilterOnDesktop":' | last | split: ',' | first | strip -%}
+{%- assign enable_filter_sticky_m = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'stickyFilterOnMobile":' | last | split: ',' | first |  split: '}}' | first | strip -%}
+
+{%- assign enable_filter_tree_button_desktop_v = false -%}
+{%- if filter_tree_vertical_style == 'style-off-canvas' or filter_tree_vertical_style == 'style-expand' -%}
+  {%- assign enable_filter_tree_button_desktop_v = true -%}
+{%- endif -%}
+
+{%- assign search_pagination = section.settings.pagination_limit -%}
+{% if section.settings.image != blank %}
+<section class="section is-width-wide has-no-side-gutter">
+  <a name="pagecontent" id="pagecontent"></a>
+  <div class="container">
+    <div class="one-whole column">
+      <header class="banner center page-banner dark-overlay-{{ section.settings.image_darken }} full-width--true">
+        {% render 'image-element',
+        image: section.settings.image,
+        alt: section.settings.image.alt,
+        stretch_width: true
+        %}
+        <div class="caption captionOverlay--true">
+          <h1 class="headline boost-pfs-search-result-header">{{ 'general.search.title' | t }}</h1>
+        </div>
+      </header>
+    </div>
+  </div>
+</section>
+{% endif %}
+<section class="section 
+  {% for result in search.results %}
+    {% if result.object_type == 'product' and result.title contains "Stellar" %}
+      stellar-product
+      {% endif %}
+  {% endfor %}">
+  {% if section.settings.image == blank %}
+  <a name="pagecontent" id="pagecontent"></a>
+  {% endif %}
+  <div class="container content">
+    <div class="one-whole column">
+      <div class="breadcrumb-collection">
+        {% if section.settings.search_breadcrumb %}
+        <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "item": {
+                        "@id": "{{ shop.url }}",
+                        "name": "{{ 'general.breadcrumbs.home' | t }}"
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                      "@id": "{{ routes.search_url }}",
+                      "name": "{{ 'general.search.title' | t }}"
+                    }
+                  }
+                ]
+              }
+            </script>
+        <div class="breadcrumb_text">
+          <a href="{{ routes.root_url }}" title="{{ shop.name | escape }}" class="breadcrumb_link">
+            <span>{{ 'general.breadcrumbs.home' | t }}</span>
+          </a>
+          <span class="breadcrumb-divider">/</span>
+          <a href="{{ routes.search_url }}" class="breadcrumb_link">
+            <span class="boost-pfs-search-result-header">{% render 'boost-pfs-filter-skeleton', width: 4 %}</span>
+          </a>
+          <span class="boost-pfs-filter-top-pagination"></span>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="search__container" data-autocomplete-{{ settings.enable_autocomplete }}>
+      <form class="search search__form" action="{{ routes.search_url }}">
+        <div class="search__wrapper">
+          <input type="hidden" name="type" value="{{ settings.search_option }}" />
+          <input type="text" name="q" placeholder="{{ search_term }}" value="{{ search.terms | replace: '*', ''}}" x-webkit-speech autocapitalize="off" autocomplete="off" autocorrect="off" />
+          <button type="submit" name="submit" class="search__button" value="">
+            <span class="icon-search"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="one-whole column boost-pfs-search-result-toolbar">
+      <div class="boost-pfs-search-result-item">
+        <ul class="boost-pfs-search-result-panel-controls">
+          <li>{% render 'boost-pfs-filter-skeleton', width: 2 %}</li>
+          <li>{% render 'boost-pfs-filter-skeleton', width: 2 %}</li>
+          <li>{% render 'boost-pfs-filter-skeleton', width: 1 %}</li>
+        </ul>
+      </div>
+      <div class="boost-pfs-search-result-item">
+        <span class="boost-pfs-search-total-result">
+          {% render 'boost-pfs-filter-skeleton', width: 2 %}
+        </span>
+      </div>
+    </div>
+    {% comment %} Check to see if sidebar should be enabled {% endcomment %}
+    {%- if enable_filter_tree_button_desktop_v  -%}
+      <div class="boost-pfs-filter-tree-desktop-button-wrapper {% if enable_filter_sticky_d  %} boost-pfs-filter-tree-desktop-button-sticky-wrapper {% endif %}">
+        <div class="boost-pfs-filter-tree-desktop-button">{%- render 'boost-pfs-filter-skeleton', type: 'button' -%}</div>
+    {%- endif -%}
+      <div class="one-whole column section_select boost-pfs-search-panel-product-show">
+      <select aria-label="Sort by" class="sort_by boost-pfs-filter-top-sorting">
+        {% render 'boost-pfs-filter-skeleton', width: 2 %}
+      </select>
+    </div>
+    {%- if enable_filter_tree_button_desktop_v  -%}
+      </div>
+    {%- endif -%}
+
+    
+    {% if section.settings.image == blank %}
+    <div class="one-whole column">
+      <div class="feature_divider"></div>
+    </div>
+    {% endif %}
+    {%- assign sidebar = true -%}
+    <div class="content-wrapper is-flex is-flex-wrap boost-pfs-filter-wrapper">
+      <div class="boost-pfs-filter-left-col" {% if context=='product' %}data-product-sidebar{% endif %}>
+        <div class="sidebar-wrap">
+          <div class="boost-pfs-filter-tree-mobile-button">
+            {% render 'boost-pfs-filter-skeleton', type: 'button' %}
+          </div>
+          <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v">
+            {%- unless enable_filter_tree_button_desktop_v -%}
+              {% render 'boost-pfs-filter-skeleton', type: 'filter-tree' %}
+            {%- endunless -%}
+          </div>
+        </div>
+      </div>
+      <div class="boost-pfs-filter-right-col">
+        <div class="container">
+          <div class="one-whole column">
+            <div itemtype="http://schema.org/ItemList" class="boost-pfs-filter-products is-flex is-flex-wrap product-list clearfix equal-columns--clear equal-columns--outside-trim">
+              {% comment %} Fix Shopify search term report {% endcomment %}
+              {% paginate search.results by 2 %}
+              {% if search.performed %}
+              {% for item in search.results %}
+              <div class="grid__item" style="display: none !important"></div>
+              {% endfor %}
+              {% endif %}
+              {% endpaginate %}
+            </div>
+            <div class="boost-pfs-filter-bottom-pagination paginate"></div>
+            <div class="boost-pfs-filter-load-more"></div>
+          </div>
+        </div>
+      </div>
+      <div class="boost-pfs-search-result-wrap boost-hidden">
+        <div class="boost-pfs-search-result-collections">
+          <div class="boost-pfs-search-result-list-item"><a href="#">{% render 'boost-pfs-filter-skeleton', width: 4 %}</a></div>
+          <div class="boost-pfs-search-result-list-item"><a href="#">{% render 'boost-pfs-filter-skeleton', width: 3 %}</a></div>
+          <div class="boost-pfs-search-result-list-item"><a href="#">{% render 'boost-pfs-filter-skeleton', width: 4 %}</a></div>
+        </div>
+        <div class="boost-pfs-search-result-collection-pagination paginate">{% render 'boost-pfs-filter-skeleton', width: 4 %}</div>
+      </div>
+      <div class="boost-pfs-search-result-wrap boost-hidden">
+        <div class="boost-pfs-search-result-pages">
+          <div class="boost-pfs-search-result-list-item"><a href="#">{% render 'boost-pfs-filter-skeleton', width: 4 %}</a></div>
+          <div class="boost-pfs-search-result-list-item"><a href="#">{% render 'boost-pfs-filter-skeleton', width: 3 %}</a></div>
+          <div class="boost-pfs-search-result-list-item"><a href="#">{% render 'boost-pfs-filter-skeleton', width: 4 %}</a></div>
+        </div>
+        <div class="boost-pfs-search-result-page-pagination paginate">{% render 'boost-pfs-filter-skeleton', width: 4 %}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Declare boostPFSThemeConfig variable
+var boostPFSThemeConfig = {
+  label: {
+    sale: {{ 'product.badge.sale' | t | json}},
+    sold_out: {{ 'product.badge.sold_out' | t | json }},
+    sold_out_text: {{ settings.sold_out_text | json }},
+    new: {{ 'collections.general.new' | t | json }},
+    coming_soon: {{ 'collections.general.coming_soon' | t | json }},
+    pre_order: {{ 'collections.general.pre_order' | t | json}},
+    quick_shop: {{ 'collections.general.quick_shop' | t | json }},
+    free_price: {{ settings.free_price_text | json }},
+    from_price: {{ 'products.general.from' | t | json }},
+    view_detail: {{ 'collections.general.view_product_details' | t | escape | json }},
+    breadcrumb_page: {{ 'general.breadcrumbs.page' | t | json }},
+    breadcrumb_home: {{ 'general.breadcrumbs.home' | t | json}},
+    paginate_prev: {{ 'shopify.pagination.previous' | t | json }},
+    paginate_next: {{ 'shopify.pagination.next' | t | json }}
+  },
+  custom: {
+    sidebar: {% if sidebar != nil %} {{ sidebar | json }} {% else %} false {% endif %},
+    products_per_page: {% if section.settings.pagination_limit %} {{ section.settings.pagination_limit | json }} {% else %} 20 {% endif %},
+    products_per_row: {% if section.settings.products_per_row %} {{ section.settings.products_per_row }} {% else %} 4 {% endif %},
+    mobile_products_per_row: {% if settings.mobile_products_per_row %} {{ settings.mobile_products_per_row | json }} {% else %} '1' {% endif %},
+    secondary_image: {% if settings.collection_secondary_image != nil %} {{ settings.collection_secondary_image | json }} {% else %} false {% endif %},
+    sale_banner_enabled: {% if settings.sale_banner_enabled != nil %} {{ settings.sale_banner_enabled | json }} {% else %} false {% endif %},
+    image_loading_style: {% if settings.image_loading_style %} {{ settings.image_loading_style | json }} {% else %} '' {% endif %},
+    vendor_enable: {% if settings.display_vendor != nil %} {{ settings.display_vendor | json }} {% else %} false {% endif %},
+    quick_shop_enabled: {% if settings.quick_shop_enabled != nil %} {{ settings.quick_shop_enabled | json }} {% else %} false {% endif %},
+    quick_shop_style: {% if settings.quick_shop_style %} {{ settings.quick_shop_style | json }} {% else %} "popup" {% endif %},
+    collection_swatches: {% if settings.collection_swatches != nil %} {{ settings.collection_swatches | json }} {% else %} false {% endif %},
+    description_words: {% if settings.description_words %} {{ settings.description_words | json }} {% else %} 25 {% endif %},
+    loader_image_url: "{{ 'loader.gif' | asset_url }}",
+    thumbnail_hover_enabled: {% if settings.thumbnail_hover_enabled != nil %} {{ settings.thumbnail_hover_enabled | json }} {% else %} false {% endif %},
+    enable_shopify_collection_badges: {% if settings.enable_shopify_collection_badges != nil %} {{ settings.enable_shopify_collection_badges | json }} {% else %} false {% endif %},
+    enable_shopify_review_comments: {% if settings.enable_shopify_review_comments != nil %} {{ settings.enable_shopify_review_comments | json }} {% else %} false {% endif %},
+    align_height: {% if settings.align_height != nil %} {{ settings.align_height | json }} {% else %} false {% endif %},
+    collection_height: {% if settings.collection_height %} {{ settings.collection_height | plus: 0 }} {% else %} 0 {% endif %},
+    pagination_type: {% if settings.pagination_type %} {{ settings.pagination_type | json }} {% else %} "basic_pagination" {% endif %},
+    currency_format: {% if settings.currency_format %} {{ settings.currency_format | json }} {% else %} "money_with_currency_format" {% endif %},
+    display_price: {% if settings.display_price != nil %} {{ settings.display_price | json }} {% else %} false {% endif %},
+    sticker_style: {% if settings.sticker_style %} {{ settings.sticker_style | json }} {% else %} '' {% endif %}
+  }
+};
+
+// Declare Templates
+var boostPFSTemplate = {
+  // Grid Template
+  'productGridItemHtml': {% render 'boost-pfs-filter-html', layout: 'productGridItemHtml' %},
+
+  // Label Template
+  'quickViewBtnHtml':  {% render 'boost-pfs-filter-html', layout: 'quickViewBtnHtml' %},
+  'newRowHtml': {% render 'boost-pfs-filter-html', layout: 'newRowHtml' %},
+
+  // Pagination Template
+  'previousHtml': {% render 'boost-pfs-filter-html', layout: 'previousHtml' %},
+  'nextHtml': {% render 'boost-pfs-filter-html', layout: 'nextHtml' %},
+  'pageItemHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemHtml' %},
+  'pageItemSelectedHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemSelectedHtml' %},
+  'pageItemRemainHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemRemainHtml' %},
+  'paginateHtml': {% render 'boost-pfs-filter-html', layout: 'paginateHtml' %},
+
+  // Sorting Template
+  'sortingHtml': {% render 'boost-pfs-filter-html', layout: 'sortingHtml' %},
+};
+</script>
+{% schema %}
+
+{
+  "name": "Search",
+  "class": "shopify-section--search-template under-menu",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "wide_display",
+      "label": "Wide display",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Banner image",
+      "info": "1600 x 1000px recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile banner image",
+      "info": "Display a different image on mobile screens. This only appears when the desktop image is set."
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_crop",
+      "label": "Mobile image cropping",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "caption_content_background",
+      "label": "Text contrast technique",
+      "default": "original",
+      "info": "Improve legibility by applying a contrast technique to your banner’s text.",
+      "options": [
+        {
+          "value": "original",
+          "label": "None"
+        },
+        {
+          "value": "darken_bg",
+          "label": "Darken banner image"
+        },
+        {
+          "value": "text_box",
+          "label": "Solid box"
+        },
+        {
+          "value": "translucent_text_box",
+          "label": "Translucent box"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "search_breadcrumb",
+      "label": "Show breadcrumb",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "search_term",
+      "label": "Placeholder text",
+      "default": "Search..."
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "Products per row",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "pagination_limit",
+      "label": "Products per page",
+      "min": 2,
+      "max": 50,
+      "step": 1,
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Blog results"
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_author",
+      "label": "Show author"
+    },
+    {
+      "type": "checkbox",
+      "id": "read_more_link",
+      "label": "Show continue reading link",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create search sidebar by adding content blocks."
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle",
+      "label": "Collapse sidebar content",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "filter_by_collection",
+      "name": "Collection list",
+      "limit": 1
+    },
+    {
+      "type": "faceted_filtering",
+      "name": "Faceted filtering",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "[Learn how](https://help.shopify.com/en/manual/online-store/themes/os20/customize/filters) to configure filters."
+        },
+        {
+          "type": "paragraph",
+          "content": "Using this block will hide any tag filter, tag list, type list, and vendor list blocks."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_filter_product_count",
+          "label": "Show product counts",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "custom_menu_linklist",
+          "label": "Menu"
+        }
+      ]
+    },
+    {
+      "type": "page",
+      "name": "Page",
+      "settings": [
+        {
+          "type": "page",
+          "id": "content_page",
+          "label": "Page"
+        }
+      ]
+    },
+    {
+      "type": "recently_viewed",
+      "name": "Recently viewed products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "To test the recently viewed products, view your online store outside of the Editor and visit multiple product pages. [Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115008765228)"
+        },
+        {
+          "type": "text",
+          "id": "sidebar_rv_title",
+          "label": "Title",
+          "default": "Recently Viewed"
+        },
+        {
+          "type": "range",
+          "id": "sidebar_rv_per",
+          "label": "Products limit",
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "default": 3
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Text area can be used for special announcements or general information.</p>"
+        }
+      ]
+    },
+    {
+      "type": "filter_by_type",
+      "name": "Type list",
+      "limit": 1
+    },
+    {
+      "type": "filter_by_vendor",
+      "name": "Vendor list",
+      "limit": 1
+    }
+  ]
+}
+
+{% endschema %}

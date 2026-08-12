@@ -1,0 +1,62 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "frd_short_hero_yNEbkQ": {
+      "type": "frd-short-hero",
+      "name": "Short Hero",
+      "settings": {
+        "wide_display": true,
+        "use-mobile-space": false,
+        "image": "shopify://shop_images/Rectangle_1_2.png",
+        "top_button_1": "Gas Inserts",
+        "top_button_1_link": "https://fireside.com/pages/upgrade-your-fireplace",
+        "top_button_2": "Gallery",
+        "top_button_2_link": "https://fireside.com/pages/gallery",
+        "top_button_3": "Resources",
+        "top_button_3_link": "https://fireside.com/pages/gas-insert-resources",
+        "title": "THANK YOU",
+        "subtitle": "",
+        "button1": "",
+        "button1_link": "",
+        "button2": "",
+        "button2_link": "",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_content_background": "original",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_color": ""
+      }
+    },
+    "frd_landing_richtext_KddEpA": {
+      "type": "frd-landing-richtext",
+      "name": "Landing Rich Text",
+      "settings": {
+        "heading": "THANKS FOR YOUR INTEREST",
+        "sub_text": "<p>You don’t need to settle for a cold, empty box. With the right setup, your fireplace can be the warmest, coziest, most lived-in part of your home.</p>",
+        "text_align": "text-center",
+        "site_width": "site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "frd_short_hero_yNEbkQ",
+    "frd_landing_richtext_KddEpA"
+  ]
+}

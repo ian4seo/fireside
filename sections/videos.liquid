@@ -1,0 +1,105 @@
+<script type="application/json" data-section-type="videos" data-section-id="{{ section.id }}"></script>
+
+<div class="video-section">
+  <div class="lg-site-width">
+    
+    {% if section.settings.heading != blank %}
+      <header class="hundred text-center">
+        <h2 class="h1 title minion-pro">
+          {{ section.settings.heading | escape }}
+        </h2>
+      </header>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <ul class="videos-wrapper no-list flex justify-center flex-wrap text-center">
+        {% for block in section.blocks %}
+          <li class="video col-4" data-video-id="{{ block.settings.video_id }}">
+            <div class="inner">
+              <p class="video-title text-uppercase helvetica">{{ block.settings.video_title }}</p>
+              <div class="youtube-player flex align-items-center justify-center bg-center" data-id="{{ block.settings.video_id }}" style="background-image:url(//i.ytimg.com/vi/{{ block.settings.video_id }}/hqdefault.jpg);">
+                  <div class="play-button"></div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+  </div>
+</div>
+
+<style>
+  .outer-video:nth-child(even) { background-color: rgba(82,88,102,0.1); }
+  .video-section { padding-top: 80px; padding-bottom: 80px; }
+  @media screen and (max-width: 480px){.video-section{margin-top:4em}}
+  .video-section .title { margin-bottom: 40px; line-height: 1.3; color: #e9841d; font-weight: bold; }
+  .videos-wrapper { margin: -13px; }
+  .videos-wrapper .video { padding: 13px; }
+  .videos-wrapper .video .inner { padding: 28px; box-shadow: 0 0 5px #e9e8e8; background-color: white; }
+  .videos-wrapper .video .inner iframe { height: 100%; }
+  .videos-wrapper .video .youtube-player { height: 230px; cursor: pointer; }
+  .videos-wrapper .video .youtube-player .play-button { height: 50px; width: 70px; position: absolute; background: url("https://cdn.shopify.com/s/files/1/0634/4707/2998/files/youtube-play-btn.png?v=1653508531") no-repeat top; }
+  .videos-wrapper .video .youtube-player:hover .play-button { background-position: bottom; }
+</style>
+
+<script>
+  (function (init) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  })(function () {
+    jQuery('.youtube-player').on('click', function() {
+      var id = jQuery(this).data('id');
+      var html = '<iframe src="//www.youtube.com/embed/' + id + '?rel=0&amp;autoplay=1&amp;autohide=2&amp;border=0&amp;wmode=transparent&amp;enablejsapi=1&amp;showinfo=0" frameborder="0" id="youtube-iframe"></iframe>';
+      jQuery(this).html(html);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product Videos",
+  "tag": "section",
+  "class": "outer-video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A Heading For Video Types"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Video",
+      "type": "heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "video_title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "video_id",
+          "label": "Youtube Video ID"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Videos",
+      "category": "ADVANCED LAYOUT",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+          }
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

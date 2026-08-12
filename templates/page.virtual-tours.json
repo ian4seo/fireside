@@ -1,0 +1,288 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "165609216345171cbf": {
+      "type": "page-banner-alt",
+      "settings": {
+        "heading": "Virtual Tours",
+        "image": "shopify://shop_images/fireside-mantels.jpg",
+        "text_alignment": "center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656093812dc5fbd37": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 0,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "Tour A Showroom",
+        "paragraph_text_alignment": "center",
+        "content": "<p>View one of our many showrooms by choosing a location to see the virtual tour.</p>",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "open-new-window": false,
+        "button_link": "",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "open-new-window-two": false,
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "mbl-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1663708394f7f4a280": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1663708394c1671e30-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Eagan, MN",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "view showroom",
+            "open-new-window": false,
+            "button_link": "https://my.matterport.com/show/?m=iVDg2oboCKE",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "a0721870-f26f-4105-b603-18c991efa55e": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Eden Prairie, MN",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "view showroom",
+            "open-new-window": false,
+            "button_link": "https://my.matterport.com/show/?m=hADqaLes9CB",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "7ddd9106-dcf3-436d-ba89-c5246def37b3": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Maple Grove, MN",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "view showroom",
+            "open-new-window": false,
+            "button_link": "https://my.matterport.com/show/?m=nby6YDuHTDZ",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1663708394c1671e30-1",
+        "a0721870-f26f-4105-b603-18c991efa55e",
+        "7ddd9106-dcf3-436d-ba89-c5246def37b3"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656088853174f585a": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16560888530e7e6632-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Minnetonka, MN",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "View Showroom",
+            "open-new-window": false,
+            "button_link": "https://my.matterport.com/show/?m=dy5BEJw5djZ",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "b430250c-122d-4159-8e26-f6e1be982fc0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Roseville, MN",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "View Showroom",
+            "open-new-window": false,
+            "button_link": "https://my.matterport.com/show/?m=zjKBimFzQBe",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "16560888530e7e6632-0",
+        "b430250c-122d-4159-8e26-f6e1be982fc0"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165608978726b4c157": {
+      "type": "text-columns-with-images",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656090499d6f81131": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16560904987445e597-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Chantilly, VA",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "View Showroom",
+            "open-new-window": false,
+            "button_link": "https://my.matterport.com/show/?m=SDwX5yMAEJK",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "16560904987445e597-1"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165609156039a66c18": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "17e1de97-5c02-4fe6-8031-10d4be6c9718": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": true,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "left",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "17e1de97-5c02-4fe6-8031-10d4be6c9718"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165609216345171cbf",
+    "1656093812dc5fbd37",
+    "1663708394f7f4a280",
+    "1656088853174f585a",
+    "165608978726b4c157",
+    "1656090499d6f81131",
+    "165609156039a66c18"
+  ]
+}

@@ -1,0 +1,53 @@
+{% comment %}
+  frd-product-mobile-bar.liquid
+  ------------------------------------------------------------
+  Persistent sticky bottom action bar, mobile only (≤768px).
+  Hidden by default and revealed by IntersectionObserver once
+  the user has scrolled past the inline PCA CTA module.
+
+  Kept visually hidden on desktop via CSS media query so it can
+  never conflict with the existing sticky header on desktop.
+
+  Product context (title / SKU) is appended as URL query params
+  so the Powerful Form Builder hidden fields can be auto-populated
+  on arrival. SKU is read from the product's first/selected
+  variant SKU (product.selected_or_first_available_variant.sku).
+
+  @param product {Object}  The product object
+{% endcomment %}
+
+{%- assign pca_sku = product.selected_or_first_available_variant.sku -%}
+
+{%- capture pca_quote_href -%}
+/pages/free-quote-request?product_title={{ product.title | url_encode }}{%- if pca_sku != blank -%}&product_sku={{ pca_sku | url_encode }}{%- endif -%}
+{%- endcapture -%}
+
+{%- capture pca_consult_href -%}
+https://app.acuityscheduling.com/schedule.php?owner=19466363&appointmentType=51953675&product_title={{ product.title | url_encode }}{%- if pca_sku != blank -%}&product_sku={{ pca_sku | url_encode }}{%- endif -%}
+{%- endcapture -%}
+
+<div
+  class="pca-mobile-bar"
+  data-pca-mobile-bar
+  aria-hidden="true"
+>
+  <a
+    href="{{ pca_quote_href | strip }}"
+    class="pca-btn pca-btn--primary pca-mobile-bar__btn"
+    data-pca-action="quote-mobile"
+  >
+    Request a Quote
+  </a>
+
+  {% comment %} Temporarily hidden — will be re-enabled later.
+  <a
+    href="{{ pca_consult_href | strip }}"
+    class="pca-btn pca-btn--secondary pca-mobile-bar__btn"
+    data-pca-action="consult-mobile"
+    target="_blank"
+    rel="noopener"
+  >
+    Schedule Consultation
+  </a>
+  {% endcomment %}
+</div>

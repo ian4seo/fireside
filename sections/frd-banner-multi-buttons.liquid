@@ -1,0 +1,186 @@
+<section class="{{ section.settings.text_align }} page-plain-rich-text frd-banner-text-with-multi-buttons" style="{% if section.settings.background_image %}background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');{% endif %}--button-bg-color: {{ section.settings.button_bg_color | default: '#212626' }};">
+	{% if section.settings.background_image %}
+		<div class="frd-banner-overlay"></div>
+	{% endif %}
+	<div class="frd-banner-content">
+		<h2 class="minion-pro">{{ section.settings.heading }}</h2>
+		{% if section.settings.sub_text != blank %}
+			<p>{{ section.settings.sub_text }}</p>
+		{% endif %}
+	 	{% if section.settings.button_label != blank %}
+			<a target="_blank" rel="noopener noreferrer" class="global-button" href="{% if section.settings.button_link %}{{ section.settings.button_link }}{% else %} #{% endif %}">{{ section.settings.button_label }}</a>
+		{% endif %}
+        {% if section.settings.button_label_2 != blank %}
+			<a target="_blank" rel="noopener noreferrer" class="global-button" href="{% if section.settings.button_link_2 %}{{ section.settings.button_link_2 }}{% else %} #{% endif %}">{{ section.settings.button_label_2 }}</a>
+		{% endif %}
+        {% if section.settings.button_label_3 != blank %}
+			<a target="_blank" rel="noopener noreferrer" class="global-button" href="{% if section.settings.button_link_3 %}{{ section.settings.button_link_3 }}{% else %} #{% endif %}">{{ section.settings.button_label_3 }}</a>
+		{% endif %}
+	</div>
+</section>
+
+<style>
+  /* Download Design Guide */ 
+.frd-banner-text-with-multi-buttons {
+  background-color: #E9841D!important;
+  background-size: cover!important;
+  background-position: center center!important;
+  background-repeat: no-repeat!important;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  min-height: 200px;
+}
+
+.frd-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.frd-banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.frd-banner-text-with-multi-buttons h2 {
+  color: #fff!important;
+  font-family: 'Helvetica'!important;
+  font-weight: 600!important;
+  margin-bottom: 40px;
+}
+
+.frd-banner-text-with-multi-buttons p {
+  color: #fff!important;
+}
+
+.frd-banner-text-with-multi-buttons a {
+  background-color: var(--button-bg-color, #212626)!important;
+  color: #fff!important;
+  text-transform: capitalize!important;
+  width: 100%;
+  max-width: 425px;
+  border: 0px!important;
+  letter-spacing: 0px!important;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.frd-banner-text-with-multi-buttons a:hover {
+  background-color: #fff!important;
+  color: #000!important;
+  transition: 0.4s;
+}
+
+@media only screen and (min-width: 798px) {
+  .frd-banner-text-with-multi-buttons h2 {
+    font-size: 36px!important;
+  }
+  .frd-banner-text-with-multi-buttons a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 798px) {
+  .frd-banner-text-with-multi-buttons h2 {
+    font-size: 30px!important;
+  }
+  .frd-banner-text-with-multi-buttons a {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+</style>
+
+{% schema %}
+{
+    "name": "Banner Multi Buttons",
+    "tag": "section",
+    "settings": [
+		{
+			"id": "heading",
+			"type": "text",
+			"label": "Heading",
+			"default": "Lorem Ipsum Dolor"
+		},
+		{
+			"type": "richtext",
+			"id": "sub_text",
+			"label": "Paragraph Text"
+		},
+        {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+        },
+        {
+            "type": "text",
+            "id": "button_label_2",
+            "label": "Button label 2"
+        },
+        {
+            "type": "url",
+            "id": "button_link_2",
+            "label": "Button link 2"
+        },
+        {
+            "type": "text",
+            "id": "button_label_3",
+            "label": "Button label 3"
+        },
+        {
+            "type": "url",
+            "id": "button_link_3",
+            "label": "Button link 3"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image",
+            "info": "Recommended size: 1920x600px or larger. If no image is selected, the orange background color will be used."
+        },
+        {
+            "type": "color",
+            "id": "button_bg_color",
+            "label": "Button Background Color",
+            "default": "#212626"
+        },
+		{
+		  "type": "select",
+		  "id": "text_align",
+		  "label": "Text Align",
+		  "default": "text-center",
+		  "options": [
+		    {
+		      "value": "",
+		      "label": "Left"
+		    },
+		    {
+		      "value": "text-center",
+		      "label": "Center"
+		    },
+		    {
+		      "value": "text-right",
+		      "label": "Right"
+		    }
+		  ]
+		}
+    ],
+    "presets": [{
+		"name": "Banner Multi Buttons"
+    }]
+}
+{% endschema %}

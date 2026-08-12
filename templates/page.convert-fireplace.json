@@ -1,0 +1,239 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "16541786461f485e1e": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Convert Your Fireplace",
+        "sub-text": "Transform your wood-burning fireplace into a beautiful, easy-to-use gas insert.",
+        "bg-img": "shopify://shop_images/fireside_convert_your_fireplace_a10772f2-66b8-4bcd-98c6-80a293f48c41.jpg",
+        "view-btn-link": "https://fireside-hearth-and-home.myshopify.com/tools/perfect-product-finder/help-me-choose-my-insert",
+        "view-btn": "Help Me Choose",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "1654180711a2cedae9": {
+      "type": "two-column-image-w-text",
+      "blocks": {
+        "e6e39e69-5d67-419d-ae9f-0c05b2a0eae4": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/gasinserts.jpg",
+            "title": "Transform Your Home",
+            "text": "<p>Inserts fit inside your existing wood-burning fireplace opening and use natural gas or propane for an easy, safe, and affordable solution to enjoy your fireplace again! </p><p>Our products are designed to give you the ambiance of a wood-burning fire—with less maintenance required. Turn the fireplace on and off with a simple press of a button.</p>",
+            "button_label": "Gas Insert Help Guide",
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/HNG-0208-0519_AIP2_HNG_Gas_Insert_Guide-FINAL.pdf?v=1654183151"
+          }
+        },
+        "fc1b0f84-7907-476b-a57b-1043b633eac5": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_convert_your_fireplace_2.jpg",
+            "title": "Convert a Wood Fireplace to Gas",
+            "text": "<p>Featuring an easy-to-operate remote control or wall switch, our gas inserts ignite on your schedule. They can also help you lower monthly utility bills by keeping warm air in and cold air out, and providing zone heating in the room you use most.</p><p>On average, gas insert projects generally cost between $4,200 and $6,500 fully installed. </p><p>From a simple swap to a full remodel, Fireside can help.</p>",
+            "button_label": "Request a Quote",
+            "button_link": "shopify://pages/request-estimate"
+          }
+        },
+        "8dc90215-778a-4a1d-ae85-b71aefe74212": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/fireside_convert_your_fireplace_4.png",
+            "title": "Need Inspiration?",
+            "text": "<p>Feeling stuck with an old, drafty wood fireplace? Converting to a gas insert is easy and fast.  </p><p>Discover how a gas insert can help you fall back in love with your fireplace.</p>",
+            "button_label": "Before & After Projects",
+            "button_link": "shopify://pages/before-after"
+          }
+        },
+        "041b1808-5196-4f71-a378-7ed3e3e750ac": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/full_fireplace_installation_fireside.jpg",
+            "title": "Fireside Makes Installation Easy",
+            "text": "<p>Fireside is a full-service contractor for gas insert installation. In addition to installing the insert itself, we provide gas line installation, electrical, stonework, custom woodwork, mantel, installation, chimney sweep cleanings, and more!</p>",
+            "button_label": "Watch Video",
+            "button_link": "https://youtu.be/cCPfPP8eQX4"
+          }
+        }
+      },
+      "block_order": [
+        "e6e39e69-5d67-419d-ae9f-0c05b2a0eae4",
+        "fc1b0f84-7907-476b-a57b-1043b633eac5",
+        "8dc90215-778a-4a1d-ae85-b71aefe74212",
+        "041b1808-5196-4f71-a378-7ed3e3e750ac"
+      ],
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "vertical_text": ""
+      }
+    },
+    "1658286338d0a1ae87": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658286338a0010a6f-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"Fireside made our purchase of a gas insert a very rewarding experience. From the showroom to the entire installation process, we couldn't have been happier with the professional, friendly, and efficient service we received.\"</p><p><strong>- Scott O.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1658286338a0010a6f-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"Fireside installed our gas insert and we couldn't be happier or warmer! They're pros!\" </p><p><strong>- Justine R. </strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "5efe9493-6cef-4c57-ac72-fcd5e64e44d6": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-star-rating-01.png",
+            "heading-margin-top": 0,
+            "title": "",
+            "heading_size": "regular_text",
+            "text": "<p>\"Great from start to finish! They provided gas insert options based on the size of our wood-burning fireplace. Provided everything from chimney sweep to electrical to install. A wealth of knowledge, design flare, and can-do attitude.\"</p><p><strong>- Shane S.</strong></p>",
+            "button_label": "",
+            "open-new-window": false,
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658286338a0010a6f-1",
+        "1658286338a0010a6f-0",
+        "5efe9493-6cef-4c57-ac72-fcd5e64e44d6"
+      ],
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16571308308c23ec7a": {
+      "type": "featured-collection",
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "title": "Explore Products",
+        "collection_description": true,
+        "collection": "gas-inserts",
+        "collection_style": "slider",
+        "products_per": 3,
+        "products_limit": 6,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1654187489d0f10678": {
+      "type": "text-columns-with-images",
+      "settings": {
+        "reveal-on": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "Browse All Inserts",
+        "section_button_link": "shopify://collections/gas-inserts",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16541891961920097c": {
+      "type": "featured-text",
+      "settings": {
+        "reveal-on": true,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "#d3d3d3",
+        "heading_text_alignment": "center",
+        "title": "Request a Free Consultation",
+        "paragraph_text_alignment": "center",
+        "content": "<p>We'd love to know more about your fireplace goals so we can find a solution that is complementary to your living space.</p><p>Learn how we can help you plan the design—no obligations, we promise!</p>",
+        "button_text_alignment": "center",
+        "button_label": "Find A Showroom",
+        "open-new-window": false,
+        "button_link": "shopify://pages/store-locator",
+        "button_type": "orange",
+        "customer_type": "none",
+        "button_label_2": "Get Free Consult",
+        "open-new-window-two": false,
+        "button_link_2": "shopify://pages/schedule-a-consultation",
+        "button_type_2": "orange",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "med-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16541786461f485e1e",
+    "1654180711a2cedae9",
+    "1658286338d0a1ae87",
+    "16571308308c23ec7a",
+    "1654187489d0f10678",
+    "16541891961920097c"
+  ]
+}

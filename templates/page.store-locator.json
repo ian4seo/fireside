@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b35b291c-3a6a-4141-a952-2284902e9802": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"top-space\">&nbsp;</div>",
+        "css_class": "",
+        "custom_css": ".top-space {margin-top:2em}"
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "settings": {}
+    }
+  },
+  "order": [
+    "b35b291c-3a6a-4141-a952-2284902e9802",
+    "main"
+  ]
+}

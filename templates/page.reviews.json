@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1653678059169d8ba2": {
+      "type": "page-banner-alt",
+      "settings": {
+        "heading": "What Our Customers Are Saying!",
+        "image": "shopify://shop_images/fireside-reviews.jpg",
+        "text_alignment": "center",
+        "site_width": "mbl-site-width",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165367801139ea1af4": {
+      "type": "featured-text",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mobile-padding-top": 80,
+        "mobile-padding-bottom": 80,
+        "bg_color": "",
+        "heading_text_alignment": "center",
+        "title": "",
+        "paragraph_text_alignment": "center",
+        "content": "<p>Since 1951, our goal has always been to make the fireplace selection and installation process easy and fun by offering the best sales and service experience possible. </p><p>As your partner in warmth and comfort, we strive to help you build a beautiful focal point in your living space to create connection and well-being with loved ones.</p><p>It's what we do best and what we aim to accomplish with each new customer we have the pleasure of working with! </p><p>But don't just take our word for it. Check out what others have to say about working with our team!</p>",
+        "button_text_alignment": "center",
+        "button_label": "",
+        "button_link": "",
+        "button_type": "white",
+        "customer_type": "none",
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_type_2": "white",
+        "customer_type_2": "none",
+        "text_size": "featured_text",
+        "text_color": "",
+        "site_width": "sm-site-width",
+        "html_id": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "page-template",
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "SIGN UP FOR OUR NEWSLETTER",
+        "newsletter_text": "<p>Be the first to get a sneak peek at the latest innovations in fireplace design and installation. Subscribe to our newsletter to view recent work, meet our designers, and inspire your next project. You'll also be the first to know about special promotions and exciting discounts to help you plan your fireplace.</p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "1653678059169d8ba2",
+    "165367801139ea1af4",
+    "main",
+    "newsletter"
+  ]
+}

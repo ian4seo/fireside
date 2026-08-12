@@ -1,0 +1,196 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "16541971100631add6": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Schedule A Free Sales Consult",
+        "sub-text": "Our goal is to make your experience easy and above all - fun! We offer 3 simple ways to start your fireplace project with a free sales consult.",
+        "bg-img": "shopify://shop_images/free_consult_4e81e2bc-670f-4aa4-9f09-bf6bd4260c16.jpg",
+        "view-btn-link": "",
+        "view-btn": "",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "16541975565f19d2f0": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16541975563b63cf20-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-consult-01.png",
+            "heading-margin-top": 0,
+            "title": "Showroom Consultations",
+            "heading_size": "regular_text",
+            "text": "<p>Explore dozens of beautiful product displays in person. Showroom walk-ins are most common, and we don't require an appointment to visit our showroom, but you're welcome to make one. Showroom consults typically last 30 minutes.</p>",
+            "button_label": "",
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "16541975563b63cf20-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-consultation-icon-01.png",
+            "heading-margin-top": 0,
+            "title": "In-Home Consultations",
+            "heading_size": "regular_text",
+            "text": "<p>Skip the showroom. Work with a sales expert in person to discuss your project and options without leaving the comfort of your home.   In-home consults typically last 45 minutes.</p>",
+            "button_label": "",
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "abe5415d-590a-4b67-9dc6-9199ece1267e": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 100,
+            "image": "shopify://shop_images/fireside-virtual-consult-01.png",
+            "heading-margin-top": 0,
+            "title": "Virtual Consultations",
+            "heading_size": "regular_text",
+            "text": "<p>Experience our showrooms virtually by connecting with a sales expert through video on your tablet or smartphone to discuss your upcoming project and see product displays. Virtual consults typically last 30 minutes.</p>",
+            "button_label": "",
+            "button_link": "",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "16541975563b63cf20-0",
+        "16541975563b63cf20-1",
+        "abe5415d-590a-4b67-9dc6-9199ece1267e"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "section-bg": "#d9e5e8",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "Schedule Now",
+        "section_button_link": "https://app.acuityscheduling.com/schedule.php?owner=19466363",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16541980642ef5050b": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1654198064b9c1e874-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Fill Out a Project Checklist",
+            "heading_size": "regular_text",
+            "text": "<p>This will help our sales associates better understand your project and give it a head start. </p>",
+            "button_label": "Download Checklist",
+            "button_link": "https://cdn.shopify.com/s/files/1/0634/4707/2998/files/fireside_pre-consultation_checklist.pdf?v=1657199593",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "1654198064b9c1e874-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Take Pictures of Your Space",
+            "heading_size": "regular_text",
+            "text": "<p>Take 2-3 pictures of the room where the project will take place. We also encourage you to bring any inspirational photos.</p>",
+            "button_label": "Inspiration Gallery",
+            "button_link": "shopify://pages/project-gallery",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        },
+        "42d9df16-0150-467a-b6fd-10980273e31f": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": false,
+            "img_width": 100,
+            "heading-margin-top": 0,
+            "title": "Visit a Fireside Showroom",
+            "heading_size": "regular_text",
+            "text": "<p>Bring your project checklist and photos to any of our showrooms. Our sales consultants will be happy to assist you!</p>",
+            "button_label": "Find a Showroom",
+            "button_link": "shopify://pages/store-locator",
+            "align_text": "left",
+            "border_style": "box"
+          }
+        }
+      },
+      "block_order": [
+        "1654198064b9c1e874-0",
+        "1654198064b9c1e874-1",
+        "42d9df16-0150-467a-b6fd-10980273e31f"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "Ready to Get Started?",
+        "sub_text": "During the initial consultation, our goal is to learn more about your fireplace needs and goals. From there, we'll empower you to make well-informed decisions that leave you feeling confident.",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165419845026afaa66": {
+      "type": "two-column-bg-image-w-text",
+      "settings": {
+        "bg_img": "shopify://shop_images/fireside-girls-laughing.png",
+        "minion-font": false,
+        "heading": "Let's Get to Work",
+        "content": "Want to convert your wood fireplace to gas, add a new fireplace, or replace an existing fireplace? \n\nSchedule a free consultation today! No obligations. No gimmicks. Just everything you need to take the next step for your project.",
+        "btn_link": "shopify://pages/schedule-a-consultation",
+        "btn_text": "Schedule Now",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16541971100631add6",
+    "16541975565f19d2f0",
+    "16541980642ef5050b",
+    "165419845026afaa66"
+  ]
+}

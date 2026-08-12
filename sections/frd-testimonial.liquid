@@ -1,0 +1,730 @@
+<!-- Testimonials Slider Template -->
+
+<script
+  type="application/json"
+  data-section-type="testimonials-slider"
+  data-section-id="{{ section.id }}"
+>
+</script>
+
+{%- assign id = section.id -%}
+{%- assign blocks = section.blocks -%}
+{%- assign title = section.settings.title | escape -%}
+{%- assign css_class = section.settings.css_class -%}
+{%- assign custom_css = section.settings.custom_css -%}
+
+{% style %}
+  {%
+    render 'css-loop',
+    css: custom_css,
+    id: id
+  %}
+  
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  
+  .frd-testimonials-slider {
+    background-color: {{ section.settings.bg_color }};
+  }
+
+  @media only screen and (min-width: 798px) {
+    .frd-testimonials-slider .frd-testimonial-heading {
+      font-size: 36px;
+    }
+    .frd-testimonials-slider .frd-testimonial-heading {
+      margin-bottom: 60px;
+    }
+    .frd-testimonial-description {
+      font-size: 18px;
+      line-height: 24px;
+      padding-right: 70px;
+    }
+    .frd-star-rating {
+      display: flex;
+    }
+    .frd-testimonial-slide {
+      padding: 40px 0;   
+    }
+    .frd-star-rating {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 798px) {
+    .frd-testimonials-slider .frd-testimonial-heading {
+      font-size: 30px;
+    }
+    .frd-testimonial-description {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .frd-star-rating {
+      display: block;
+    }
+  }
+  
+  .frd-testimonials-slider .frd-testimonial-heading {
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .frd-testimonials-container h2 {
+    font-family: 'Helvetica'!important;
+  }
+  
+  .frd-testimonials-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  
+  .frd-testimonial-slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .frd-testimonial-slides-container {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+  }
+  
+  .frd-testimonial-slide {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  .frd-testimonial-media {
+    flex: 0 0 400px;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .frd-testimonial-media.video-media {
+    flex: 0 0 500px;
+    max-width: 500px;
+  }
+  
+  .frd-testimonial-content {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .frd-testimonial-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .frd-testimonial-video {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .frd-video-placeholder {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+    max-width: 360px;
+    margin: auto;
+  }
+  
+  .frd-video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .frd-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .frd-play-button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
+  .frd-play-button svg {
+    width: 32px;
+    height: 32px;
+    fill: #333;
+    margin-left: 4px;
+  }
+  
+  .frd-star-rating {
+    gap: 4px;
+  }
+  
+  .frd-star {
+    width: 24px;
+    height: 24px;
+    color: #ff9500;
+  }
+  
+  .frd-testimonial-headline {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000;
+    line-height: 1.3;
+  }
+  
+  .frd-testimonial-description {
+    color: #333;
+  }
+  
+  .frd-slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+  }
+  
+  .frd-slider-nav:hover {
+    opacity: 1;
+  }
+  
+  .frd-slider-nav.prev {
+    left: -18px;
+  }
+  
+  .frd-slider-nav.next {
+    right: -18px;
+  }
+  
+  .frd-slider-nav svg {
+    width: 48px;
+    height: 48px;
+    fill: #000;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  
+  @media (max-width: 768px) {
+    .frd-testimonials-slider {
+      padding: 60px 0;
+    }
+    
+    .frd-testimonial-heading {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    
+    .frd-testimonial-slide {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    
+    .frd-testimonial-content {
+      padding-left: 0;
+    }
+    
+    .frd-testimonials-container {
+      padding: 0 20px;
+    }
+    
+    .frd-testimonial-media {
+      flex: none;
+      max-width: 100%;
+    }
+    
+    .frd-testimonial-media.video-media {
+      flex: none;
+      max-width: 100%;
+    }
+    
+    .frd-testimonial-video {
+      height: 300px;
+    }
+    
+    .frd-video-placeholder {
+      height: 300px;
+    }
+    
+    .frd-play-button {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .frd-play-button svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .frd-slider-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+    }
+    
+    .frd-slider-nav.prev {
+      left: -15px;
+    }
+    
+    .frd-slider-nav.next {
+      right: -15px;
+    }
+    
+    .frd-slider-nav svg {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .frd-slider-navigation {
+      display: none !important;
+    }
+
+    .frd-testimonial-media img {
+      max-height: 300px!important;
+      min-height: 220px!important;
+      max-width: 270px;
+      object-fit: cover;
+    }
+  }
+
+  .testimonial-divider {
+    border-top: 1px solid #000;
+    border-bottom: 0px!important;
+  }
+{% endstyle %}
+
+{% if blocks.size > 0 %}
+<section class="frd-testimonials-slider {{ css_class }}">
+  <div class="frd-testimonials-container">
+    <hr class="testimonial-divider">
+    {% if title != blank %}
+      <h2 class="frd-testimonial-heading">{{ title }}</h2>
+    {% endif %}
+    <div class="frd-testimonial-slider" id="testimonials-{{ section.id }}">
+      <div class="frd-testimonial-slides-container" id="slides-container-{{ section.id }}">
+      
+        {% for block in blocks %}
+          <div class="frd-testimonial-slide" {{ block.shopify_attributes }}>
+            {% if block.settings.placeholder_image != blank or block.settings.video_url != blank or block.settings.image != blank %}
+            <!-- Media Section -->
+            <div class="frd-testimonial-media {% if block.settings.media_type == 'video' %}video-media{% endif %}">
+              {% if block.settings.media_type == 'video' and block.settings.video_url != blank %}
+                {% assign video_url = block.settings.video_url %}
+                {% if video_url contains 'vimeo.com' %}
+                  {% assign vimeo_id = video_url | split: '/' | last %}
+                  <div class="frd-video-placeholder" data-gtm-event="video_play_click" data-video-id="1102349502" onclick="playVideo(this, 'vimeo', '{{ vimeo_id }}')">
+                    {% if block.settings.placeholder_image != blank %}
+                      <img class="frd-testimonial-video-placeholder" src="{{ block.settings.placeholder_image | img_url: '1000x' }}" alt="{{ block.settings.placeholder_image.alt | default: 'Video thumbnail' }}" loading="lazy">
+                    {% else %}
+                      <img src="https://vumbnail.com/{{ vimeo_id }}.jpg" alt="Video thumbnail" loading="lazy">
+                    {% endif %}
+                    <div class="frd-play-button">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
+                      </svg>
+                    </div>
+                  </div>
+                {% elsif video_url contains 'youtube.com' or video_url contains 'youtu.be' %}
+                  {% if video_url contains 'youtu.be' %}
+                    {% assign youtube_id = video_url | split: '/' | last %}
+                  {% else %}
+                    {% assign youtube_id = video_url | split: '?v=' | last | split: '&' | first %}
+                  {% endif %}
+                  <div class="frd-video-placeholder" onclick="playVideo(this, 'youtube', '{{ youtube_id }}')">
+                    {% if block.settings.placeholder_image != blank %}
+                      <img src="{{ block.settings.placeholder_image | img_url: '1000x' }}" alt="{{ block.settings.placeholder_image.alt | default: 'Video thumbnail' }}" loading="lazy">
+                    {% else %}
+                      <img src="https://img.youtube.com/vi/{{ youtube_id }}/maxresdefault.jpg" alt="Video thumbnail" loading="lazy">
+                    {% endif %}
+                    <div class="frd-play-button">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
+                      </svg>
+                    </div>
+                  </div>
+                {% else %}
+                  <div class="frd-video-placeholder" onclick="playVideo(this, 'direct', '', '{{ video_url }}')">
+                    {% if block.settings.placeholder_image != blank %}
+                      <img src="{{ block.settings.placeholder_image | img_url: '1000x' }}" alt="{{ block.settings.placeholder_image.alt | default: 'Video thumbnail' }}" loading="lazy">
+                    {% else %}
+                      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {% endif %}
+                    <div class="frd-play-button">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
+                      </svg>
+                    </div>
+                  </div>
+                {% endif %}
+              {% else %}
+                {% if block.settings.image != blank %}
+                  {%
+                    render 'image-element',
+                    image: block.settings.image,
+                    alt: block.settings.image.alt,
+                    stretch_width: true
+                  %}
+                {% else %}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="empty-image-block"></div>
+          {% endif %}
+          
+          <!-- Content Section -->
+          <div class="frd-testimonial-content">
+            
+            <!-- Star Rating -->
+            {% if block.settings.rating > 0 %}
+              <div class="frd-star-rating">
+                {% for i in (1..5) %}
+                  <svg class="frd-star" viewBox="0 0 24 24">
+                    {% if i <= block.settings.rating %}
+                      <path fill="currentColor" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/>
+                    {% else %}
+                      <path fill="#ddd" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/>
+                    {% endif %}
+                  </svg>
+                {% endfor %}
+              </div>
+            {% endif %}
+            
+            <!-- Headline -->
+            {% if block.settings.headline != blank %}
+              <h3 class="frd-testimonial-headline">{{ block.settings.headline | escape }}</h3>
+            {% endif %}
+            
+            <!-- Description -->
+            {% if block.settings.description != blank %}
+              <div class="frd-testimonial-description">
+                {{ block.settings.description }}
+              </div>
+            {% endif %}
+            
+            </div>
+          </div>
+        {% endfor %}
+        
+      </div> <!-- Close slides container -->
+      
+      <!-- Navigation Arrows -->
+      {% if blocks.size > 1 %}
+        <button class="frd-slider-nav prev" onclick="previousSlide('{{ section.id }}')">
+          <svg viewBox="0 0 24 24">
+            <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"/>
+          </svg>
+        </button>
+        <button class="frd-slider-nav next" onclick="nextSlide('{{ section.id }}')">
+          <svg viewBox="0 0 24 24">
+            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+          </svg>
+        </button>
+
+      {% endif %}
+      
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<script>
+// Testimonials Slider JavaScript
+(function() {
+  const sliders = {};
+  
+  function initSlider(sectionId) {
+    const slidesContainer = document.querySelector(`#slides-container-${sectionId}`);
+    const slides = document.querySelectorAll(`#testimonials-${sectionId} .frd-testimonial-slide`);
+    
+    sliders[sectionId] = {
+      currentSlide: 0,
+      totalSlides: slides.length,
+      slidesContainer: slidesContainer
+    };
+    
+    // Set initial position
+    updateSliderPosition(sectionId);
+  }
+  
+  function updateSliderPosition(sectionId) {
+    const slider = sliders[sectionId];
+    if (slider && slider.slidesContainer) {
+      const translateX = -slider.currentSlide * 100;
+      slider.slidesContainer.style.transform = `translateX(${translateX}%)`;
+    }
+  }
+  
+  window.nextSlide = function(sectionId) {
+    if (!sliders[sectionId]) initSlider(sectionId);
+    
+    const slider = sliders[sectionId];
+    slider.currentSlide = (slider.currentSlide + 1) % slider.totalSlides;
+    updateSliderPosition(sectionId);
+  };
+  
+  window.previousSlide = function(sectionId) {
+    if (!sliders[sectionId]) initSlider(sectionId);
+    
+    const slider = sliders[sectionId];
+    slider.currentSlide = slider.currentSlide === 0 ? 
+      slider.totalSlides - 1 : slider.currentSlide - 1;
+    updateSliderPosition(sectionId);
+  };
+  
+  // Video play functionality
+  window.playVideo = function(element, type, videoId, directUrl) {
+    let videoHTML = '';
+    
+    switch(type) {
+      case 'vimeo':
+        videoHTML = `<iframe 
+          class="frd-testimonial-video"
+          src="https://player.vimeo.com/video/${videoId}?autoplay=1&loop=0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>`;
+        break;
+      case 'youtube':
+        videoHTML = `<iframe 
+          class="frd-testimonial-video"
+          src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>`;
+        break;
+      case 'direct':
+        videoHTML = `<iframe 
+          class="frd-testimonial-video"
+          src="${directUrl}?autoplay=1"
+          allowfullscreen>
+        </iframe>`;
+        break;
+    }
+    
+    if (videoHTML) {
+      // Store parent reference before replacement
+      const parentElement = element.parentNode;
+      
+      // Replace the placeholder with video
+      element.outerHTML = videoHTML;
+      
+      // Additional fallback: try to trigger play after iframe loads
+      setTimeout(() => {
+        const iframe = parentElement.querySelector('.frd-testimonial-video');
+        if (iframe) {
+          // Force reload with autoplay for stubborn browsers
+          const currentSrc = iframe.src;
+          iframe.src = '';
+          setTimeout(() => {
+            iframe.src = currentSrc;
+          }, 50);
+        }
+      }, 200);
+    }
+  };
+  
+  // Initialize slider for this section
+  document.addEventListener('DOMContentLoaded', function() {
+    initSlider('{{ section.id }}');
+  });
+  
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    // Recalculate position on resize
+    if (sliders['{{ section.id }}']) {
+      updateSliderPosition('{{ section.id }}');
+    }
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Testimonials Slider",
+  "class": "testimonials-slider-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "TESTIMONIALS"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 100,
+      "default": 80,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "default": 80,
+      "min": 0,
+      "max": 100,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Media"
+        },
+        {
+          "type": "select",
+          "id": "media_type",
+          "label": "Media Type",
+          "default": "image",
+          "options": [
+            {
+              "value": "image",
+              "label": "Image"
+            },
+            {
+              "value": "video",
+              "label": "Video"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "Video URL",
+          "info": "Supports YouTube, Vimeo, or direct video URLs. Example: https://vimeo.com/1102349502"
+        },
+        {
+          "type": "image_picker",
+          "id": "placeholder_image",
+          "label": "Video Placeholder Image",
+          "info": "Custom thumbnail for the video. If not provided, will use automatic thumbnail from video service."
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Star Rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "headline",
+          "label": "Headline",
+          "default": "Amazing Product!"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials Slider",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "media_type": "image",
+            "rating": 5,
+            "headline": "Amazing Product!",
+            "description": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1102349502",
+            "rating": 5,
+            "headline": "Love the quality!",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,326 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "16582643580cc60545": {
+      "type": "hero-banner",
+      "settings": {
+        "banner-heading": "Because memories are more than just the big moments.",
+        "sub-text": "We offer a variety of products to provide the best fireplace styles and solutions to match how you live.",
+        "bg-img": "shopify://shop_images/fireside_brands_homeowner.png",
+        "view-btn-link": "",
+        "view-btn": "",
+        "scroll-arrow": "",
+        "pro-content-active": false,
+        "pro-banner-heading": "",
+        "pro-sub-text": "",
+        "pro-view-btn-link": "",
+        "pro-view-btn": "",
+        "pro-scroll-arrow": ""
+      }
+    },
+    "16582646573c9720ae": {
+      "type": "image-text",
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658264687e7f5da87": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658264687a9295a51-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireside_brands_heatnglo.jpg",
+            "heading-margin-top": 41,
+            "title": "Heat & Glo",
+            "heading_size": "regular_text",
+            "text": "<p>Heat & Glo products are innovative, safe, and beautifully styled to fit seamlessly with your décor. Make amazing memories in a warm, alluring environment with Heat & Glo.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/heat-glo",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1658264687a9295a51-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireside_brands_stellar.jpg",
+            "heading-margin-top": 41,
+            "title": "Stellar by Heat & Glo",
+            "heading_size": "regular_text",
+            "text": "<p>Stellar combines bold creativity and advanced technology collaboratively with your vision. With Stellar, you can create showstopping custom fireplaces from 4' - 22' wide, up to 6' tall, and in single, two, three or four-sides for both indoor and outdoor spaces.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/stellar-by-heat-glo",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "47de206d-42f2-4053-8285-164d7c71042a": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireside_brands_heatilator.jpg",
+            "heading-margin-top": 41,
+            "title": "Heatilator",
+            "heading_size": "regular_text",
+            "text": "<p>Value mixed with dependability. Established in 1927, Heatilator has built a long-standing reputation for providing quality, dependable hearth products. Today, Heatilator remains one of the most preferred, recommended and installed fireplace brands.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/heatilator",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "6ee411ab-14b9-45eb-a4d6-6ac241e69630": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireside_brands_simplifire.jpg",
+            "heading-margin-top": 41,
+            "title": "SimpliFire",
+            "heading_size": "regular_text",
+            "text": "<p>With an electric fireplace all you need is a nearby outlet to enjoy a soothing and welcoming mood in any room. Plug it in and let the ambiance pour over you.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/simplifire",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658264687a9295a51-0",
+        "1658264687a9295a51-1",
+        "47de206d-42f2-4053-8285-164d7c71042a",
+        "6ee411ab-14b9-45eb-a4d6-6ac241e69630"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658296755844d9153": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "165829675530c7eeef-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/quadrafire_e9ac5f9e-d15d-4fac-b782-deba8ebcb8d9.jpg",
+            "heading-margin-top": 41,
+            "title": "Quadra-Fire",
+            "heading_size": "regular_text",
+            "text": "<p>Pure performance. Quadra-Fire is the heating source for any walk of life with an award-winning performance streak that's unrivaled in the industry. Its stunning flame and environmentally friendly emissions make Quadra-Fire a perfect addition to your home.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/quadra-fire",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "165829675530c7eeef-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireside_brands_harman.jpg",
+            "heading-margin-top": 41,
+            "title": "Harman",
+            "heading_size": "regular_text",
+            "text": "<p>Harman pellet stoves are heating solutions built to withstand the test of time with reliable warmth and aesthetic elegance. Each and every product is designed for optimal performance and engineering excellence.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/harman",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "e18f3340-091e-4e79-ba20-f09ae232e2b5": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/vermont_castings.jpg",
+            "heading-margin-top": 41,
+            "title": "Vermont Castings",
+            "heading_size": "regular_text",
+            "text": "<p>Passion and pride are infused into every element of Vermont Castings stoves, resulting in the timeless designs and furniture-quality finishes that are the hallmarks of American craftsmanship.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/vermont-castings",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "8de59e3d-b645-432f-82ca-47cf3b077b99": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireside_brands_outdoorlifestyles.jpg",
+            "heading-margin-top": 41,
+            "title": "Outdoor Lifestyles",
+            "heading_size": "regular_text",
+            "text": "<p>Completely transform your outdoor living space. Create a fun and functional living area for the whole family to enjoy, while producing an ambiance that only a live fire can provide.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/outdoor-lifestyles",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "165829675530c7eeef-0",
+        "165829675530c7eeef-1",
+        "e18f3340-091e-4e79-ba20-f09ae232e2b5",
+        "8de59e3d-b645-432f-82ca-47cf3b077b99"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16582974700599753b": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1658297469ce4ff5b2-0": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/outdoor_greatroom.jpg",
+            "heading-margin-top": 41,
+            "title": "Outdoor GreatRoom",
+            "heading_size": "regular_text",
+            "text": "<p>The perfect addition to any outdoor space! Easily add Outdoor GreatRoom gas fire pit tables to patios, decks, and backyards. Available in a variety of styles and sizes.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/outdoor-greatroom",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "1658297469ce4ff5b2-1": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/breeo.jpg",
+            "heading-margin-top": 41,
+            "title": "Breeo",
+            "heading_size": "regular_text",
+            "text": "<p>Breeo invented the first smokeless wood fire pit in 2011 and remains committed to building the best fire pits. They're engineered to drastically reduce smoke output - saving your eyes and the environment. </p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/breeo",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "ef65af7a-a102-4fd4-a008-79fdcaef38df": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/fireside_finishings.jpg",
+            "heading-margin-top": 41,
+            "title": "Fireside Finishings",
+            "heading_size": "regular_text",
+            "text": "<p>With a broad range of wood mantels and stone selections, Fireside Finishings brings thoughtful details together to transform a simple fireplace into a beautiful showpiece. It's the finishing touch to turn your room into a natural reflection of your dreams and style.</p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/mantels-stonework",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        },
+        "505cfbfb-47a5-4f53-b019-f30401971d76": {
+          "type": "text_block",
+          "settings": {
+            "hide-mobile": false,
+            "enable_image": true,
+            "img_width": 600,
+            "image": "shopify://shop_images/brand_hearth_and_home.jpg",
+            "heading-margin-top": 41,
+            "title": "Hearth & Home Technologies",
+            "heading_size": "regular_text",
+            "text": "<p>The leader in an award-winning brand portfolio of fireplace and stove products driven by safety and innovation. </p>",
+            "button_label": "Explore",
+            "button_link": "shopify://collections/hearth-home-technologies",
+            "align_text": "center",
+            "border_style": "none"
+          }
+        }
+      },
+      "block_order": [
+        "1658297469ce4ff5b2-0",
+        "1658297469ce4ff5b2-1",
+        "ef65af7a-a102-4fd4-a008-79fdcaef38df",
+        "505cfbfb-47a5-4f53-b019-f30401971d76"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-bg": "",
+        "title": "",
+        "sub_text": "",
+        "section_button_label": "",
+        "section_button_link": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16582643580cc60545",
+    "16582646573c9720ae",
+    "1658264687e7f5da87",
+    "1658296755844d9153",
+    "16582974700599753b"
+  ]
+}

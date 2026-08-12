@@ -1,0 +1,99 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {}
+    },
+    "banner_internal_pages_HgRA3c": {
+      "type": "banner-internal-pages",
+      "settings": {
+        "hide-on-mobile": false,
+        "heading": "TRANSFORM YOUR FIREPLACE & SAVE UP TO $650",
+        "heading_size": "large_text",
+        "content": "<p><strong>Get installed for as low as $249/month with 18-Month No Interest Financing for well-qualified customers</strong></p><p>Upgrade to a gas insert for instant warmth, no mess, and everyday comfort at the push of a button. Fill out the form below to claim your exclusive savings code.</p>",
+        "btn_link": "",
+        "btn_text": "",
+        "image": "shopify://shop_images/HNG_SupremeX_30_Oak_BlkFirescreen_Room.jpg",
+        "css_class": "madison-landing",
+        "custom_css": "p {color:white}"
+      }
+    },
+    "17454507909564ff3c": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_AMghKi": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTI1NzYy\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_AMghKi"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "image_text_xHihAk": {
+      "type": "image-text",
+      "blocks": {
+        "image_cfKRgf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fireside-find.png",
+            "image_crop": "none",
+            "title": "Flexible Financing!",
+            "text": "<p>Did we mention that we have a standard 12-month No Interest Financing for well-qualified customers? That means you can get a gas insert installed starting at just $389/month! Enjoy the warmth and ambiance of a new fireplace without the upfront cost. Contact a hearth expert today by visiting one of our locations or general offers page.</p>",
+            "button_label": "",
+            "link": "",
+            "link-two-margin-top": 0,
+            "button_two_label": "",
+            "link-two": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_cfKRgf"
+      ],
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row",
+        "css_class": "",
+        "custom_css": ".metafield-rich_text_field a {color:#e9841d}"
+      }
+    },
+    "custom_liquid_pLBfAN": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"https://code.jquery.com/jquery-3.6.3.min.js\" integrity=\"sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=\" crossorigin=\"anonymous\"></script>\n<script src=\"https://code.jquery.com/jquery-migrate-3.4.0.min.js\" integrity=\"sha256-mBCu5+bVfYzOqpYyK4jm30ZxAZRomuErKEFJFIyrwvM=\" crossorigin=\"anonymous\"></script>\n<script src=\"https://syndication.hearthnhome.com/syndication/runtime/client/HHTSyndicationJS.js\" type=\"text/javascript\"></script>\n<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"https://syndication.hearthnhome.com/syndication/runtime/client/HHTSyndicationCSS.css\" />\n<div id=\"site_configuration\">{\"SiteKey\":\"0013000000MqUfgAAF\",\"Implementation\":\"Coupon\",\"CatalogIncludeCoupon\":false,\"CatalogIncludeContact\":false,\"CatalogIncludeProductFilter\":false,\"CustomIncludeProductFilter\":false,\"CustomIncludeCoupon\":false,\"CustomIncludeContact\":false,\"CustomBrandFilter\":null,\"CurrentUrl\":null,\"CurrentDomain\":null,\"HHTDomain\":\"https://syndication.hearthnhome.com\",\"Filters\":null,\"AdHocProducts\":null,\"ADHOCIncludeCoupon\":false,\"ADHOCIncludeContact\":false,\"CustomCategory\":null}</div>\n<script>\n$j(document).ready(function () {\nHHT.LoadConfig();\nSyndicationUtility.loadHtml();\n});\n</script>\n<div id=\"HHTSyndicatedCatalogContent\"></div><br><br>",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_internal_pages_HgRA3c",
+    "17454507909564ff3c",
+    "image_text_xHihAk",
+    "custom_liquid_pLBfAN"
+  ]
+}
