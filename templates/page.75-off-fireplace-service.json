@@ -14,12 +14,12 @@
       "disabled": true,
       "settings": {}
     },
-    "image_with_text_overlay_nFgkqB": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
+    "frd_image_with_text_overlay_white_3d6V3H": {
+      "type": "frd-image-with-text-overlay-white",
+      "name": "Image Overlay White Text",
       "settings": {
         "wide_display": true,
-        "use-mobile-space": true,
+        "use-mobile-space": false,
         "image": "shopify://shop_images/fireplace-blueprint-bg-3.webp",
         "pretext": "<h1>Save $75 On Fireplace Service</h1><p>Schedule a fireplace tune-up or repair and use promo code HS-75 to redeem your discount.</p>",
         "title": "",
@@ -38,7 +38,7 @@
         "mobile_text_below_image": true,
         "mobile_text_color": "",
         "css_class": "",
-        "custom_css": "#banner-template--21741500104934__image_with_text_overlay_nFgkqB > div > div > div.position-center.caption.js-caption > div > div > h1 {\n  color: #fff !important;\n}"
+        "custom_css": ""
       }
     },
     "17454507909564ff3c": {
@@ -59,7 +59,7 @@
   },
   "order": [
     "main",
-    "image_with_text_overlay_nFgkqB",
+    "frd_image_with_text_overlay_white_3d6V3H",
     "17454507909564ff3c"
   ]
 }
