@@ -18,9 +18,9 @@
       "type": "banner-internal-pages",
       "settings": {
         "hide-on-mobile": false,
-        "heading": "Save Up to $1,500 + Get a FREE Fireplace Care Plan",
+        "heading": "Save Up to $1,500",
         "heading_size": "large_text",
-        "content": "<p>Upgrade your fireplace during our biggest sale of the year and receive a FREE Fireplace Care Plan ($499 value) with qualifying purchase. Early Buy offer ends August 22nd. Fill out the form to claim your savings!</p>",
+        "content": "<p>Save up to $1,500 on qualifying fireplace projects during our biggest sale of the year. Offer valid August 8–September 19. Fill out the form below to get started!</p>",
         "btn_link": "",
         "btn_text": "",
         "image": "shopify://shop_images/SFS_GHELandingPage_1.jpg",
@@ -34,7 +34,7 @@
         "powerful_form_builder_app_block_AMghKi": {
           "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
           "settings": {
-            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTI3Mzkw\"></div>"
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTMxMDQz\"></div>"
           }
         }
       },
