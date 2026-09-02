@@ -107,6 +107,7 @@
       "block_order": [
         "6eff8d33-f153-4f4f-8e42-ef023d8523ab"
       ],
+      "disabled": true,
       "settings": {
         "reveal-on": false,
         "padding_top": 0,

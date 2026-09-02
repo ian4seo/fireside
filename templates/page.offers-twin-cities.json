@@ -96,6 +96,7 @@
       "block_order": [
         "text_block_4iC8Di"
       ],
+      "disabled": true,
       "settings": {
         "reveal-on": false,
         "padding_top": 0,
