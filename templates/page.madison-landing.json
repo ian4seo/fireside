@@ -16,6 +16,7 @@
     },
     "banner_internal_pages_HgRA3c": {
       "type": "banner-internal-pages",
+      "disabled": true,
       "settings": {
         "hide-on-mobile": false,
         "heading": "Save Up to $1,500 + Get a FREE Fireplace Care Plan",
@@ -41,6 +42,7 @@
       "block_order": [
         "powerful_form_builder_app_block_AMghKi"
       ],
+      "disabled": true,
       "settings": {}
     },
     "image_text_LMkiJx": {
