@@ -16,6 +16,7 @@
     },
     "frd_image_with_text_overlay_white_3d6V3H": {
       "type": "frd-image-with-text-overlay-white",
+      "disabled": true,
       "name": "Image Overlay White Text",
       "settings": {
         "wide_display": true,
@@ -54,6 +55,7 @@
       "block_order": [
         "powerful_form_builder_app_block_AMghKi"
       ],
+      "disabled": true,
       "settings": {}
     }
   },
