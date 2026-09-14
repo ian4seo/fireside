@@ -91,7 +91,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "hide-announcement-bar": false,
+          "hide-announcement-bar": true,
           "promo_text": "<p><strong>HURRY TO SHOP OUR BIGGEST SALE OF THE YEAR!</strong></p>",
           "promo_btn_text": "Claim Your Savings",
           "promo_btn_link": "https://fireside.com/pages/general-offers",
