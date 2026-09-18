@@ -54,7 +54,7 @@
                   product-{{ product.id }}">
         <div class="product-wrap {% if settings.collection_secondary_image != blank and product.media[1] != blank %}has-secondary-media-swap{% endif %}">
           <div class="relative product_image">
-            <a href="{{ product.url | within: collection }}">
+            <a href="{{ product.url }}">
               <div class="image__container">
                 {% if settings.quick_shop_enabled and settings.quick_shop_style == 'inline' and product.selected_or_first_available_variant.image %}
                   {%
@@ -109,7 +109,7 @@
               %}
             {% endif %}
           </div>
-          <a class="product-info__caption {% if settings.thumbnail_hover_enabled %}hidden{% endif %}" href="{{ product.url | within: collection }}">
+          <a class="product-info__caption {% if settings.thumbnail_hover_enabled %}hidden{% endif %}" href="{{ product.url }}">
             {%
               render 'product-info',
               product: product,
