@@ -10,7 +10,7 @@
 <div class="js-recently-viewed-product product-{{ product.id }}">
   <div class="product-wrap {% if settings.collection_secondary_image != blank and product.media[1] != blank %}has-secondary-media-swap{% endif %}">
     <div class="relative product_image">
-      <a href="{{ product.url | within: collection }}">
+      <a href="{{ product.url }}">
         <div class="image__container">
           {% if settings.product_form_style == 'select' %}
             {%
