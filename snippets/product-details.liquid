@@ -1,6 +1,6 @@
 {% if settings.thumbnail_hover_enabled or settings.quick_shop_enabled and settings.quick_shop_style == 'popup' %}
   <div class="thumbnail-overlay">
-    <a href="{{ product.url | within: collection }}" itemprop="url" class="hidden-product-link">
+    <a href="{{ product.url }}" itemprop="url" class="hidden-product-link">
       {{ product.title }}
       {{ collection_handles }}
     </a>
