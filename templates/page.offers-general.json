@@ -377,7 +377,7 @@
             "heading": "Find a Showroom",
             "description": "Visit one of our Minnesota showrooms to see products in person",
             "button_text": "Find Us",
-            "link": "/pages/locations"
+            "link": "shopify://pages/store-locator"
           }
         },
         "step_card_EC8ze3": {
