@@ -281,7 +281,9 @@ if (typeof boostPFSThemeConfig !== 'undefined') {
               values.push(value);
               var fileColorUrl = boostPFSConfig.general.asset_url.replace('boost-pfs.js', Utils.slugify(value) + '.png');
               fileColorUrl = Utils.optimizeImage(fileColorUrl, '50x');
-              itemColorSwatchesHtml += '<a href="' + Utils.buildProductItemUrl(data) + '?variant=' + variant.id + '" class="swatch" data-swatch-name="meta-' + downcasedOption + '_' + (value.replace(/\s/g, '_')).toLowerCase() + '">';
+              //itemColorSwatchesHtml += '<a href="' + Utils.buildProductItemUrl(data) + '?variant=' + variant.id + '" class="swatch" data-swatch-name="meta-' + downcasedOption + '_' + (value.replace(/\s/g, '_')).toLowerCase() + '">';
+              itemColorSwatchesHtml += '<a href="' + Utils.buildProductItemUrl(data).replace(/\/collections\/[^\/?#]+(?=\/products\/)/, '') + '?variant=' + variant.id + '" class="swatch" data-swatch-name="meta-' + downcasedOption + '_' +
+  (value.replace(/\s/g, '_')).toLowerCase() + '">';
               itemColorSwatchesHtml += '<span ';
               if (boostPFSConfig.custom.products_per_row == 2) {
                 itemColorSwatchesHtml += 'data-image="' + Utils.optimizeImage(variant.image, '600x') + '" ';
@@ -310,7 +312,8 @@ if (typeof boostPFSThemeConfig !== 'undefined') {
     itemHtml = itemHtml.replace(/{{itemId}}/g, data.id);
     itemHtml = itemHtml.replace(/{{itemHandle}}/g, data.handle);
     itemHtml = itemHtml.replace(/{{itemTitle}}/g, data.title);
-    itemHtml = itemHtml.replace(/{{itemUrl}}/g, Utils.buildProductItemUrlWithVariant(data));
+    //itemHtml = itemHtml.replace(/{{itemUrl}}/g, Utils.buildProductItemUrlWithVariant(data));
+    itemHtml = itemHtml.replace(/{{itemUrl}}/g, Utils.buildProductItemUrlWithVariant(data).replace(/\/collections\/[^\/?#]+(?=\/products\/)/, ''));
 
     return itemHtml;
   };
