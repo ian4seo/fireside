@@ -207,7 +207,7 @@
             "heading": "Visit Our Showroom",
             "description": "Find a showroom near you",
             "button_text": "Find Location",
-            "link": "https://fireside.com/pages/locations"
+            "link": "shopify://pages/store-locator"
           }
         },
         "category_card_RBJbrr": {
