@@ -153,7 +153,7 @@
         "title": "Let's Build Your Perfect Fireplace Together",
         "heading_type": "h2",
         "paragraph_text_alignment": "center",
-        "content": "<p>From our in-person and virtual <a href=\"https://fireside.com/collections/all-products\" title=\"https://fireside.com/collections/all-products\">design assistance</a> to the brand-name products in our <a href=\"https://fireside.com/pages/locations\" title=\"https://fireside.com/pages/locations\">showrooms</a>, you'll find quality in everything we do. Not to mention a lifetime partner to ensure the integrity and functionality of your fireplace.</p>",
+        "content": "<p>From our in-person and virtual <a href=\"https://fireside.com/collections/all-products\" title=\"https://fireside.com/collections/all-products\">design assistance</a> to the brand-name products in our <a href=\"https://fireside.com/pages/store-locator\" title=\"https://fireside.com/pages/store-locator\">showrooms</a>, you'll find quality in everything we do. Not to mention a lifetime partner to ensure the integrity and functionality of your fireplace.</p>",
         "button_text_alignment": "center",
         "button_label": "View Products",
         "open-new-window": false,
@@ -181,7 +181,7 @@
           "settings": {
             "image": "shopify://shop_images/fireside-showroom.jpg",
             "title": "Find a Fireplace Store Near You",
-            "text": "<p>Ready to add a fireplace to your homes or commercial projects? We can help! Find the nearest <a href=\"https://fireside.com/pages/locations\" title=\"https://fireside.com/pages/locations\">showroom</a> near you. </p><p>Our team is ready to share their knowledge with you, so you feel confident and ready to take the next step!</p>",
+            "text": "<p>Ready to add a fireplace to your homes or commercial projects? We can help! Find the nearest <a href=\"https://fireside.com/pages/store-locator\" title=\"https://fireside.com/pages/store-locator\">showroom</a> near you. </p><p>Our team is ready to share their knowledge with you, so you feel confident and ready to take the next step!</p>",
             "button_label": "View Locations",
             "button_link": "https://fireside-hearth-and-home.myshopify.com/pages/store-locator"
           }
