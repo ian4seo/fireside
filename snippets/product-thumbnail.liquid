@@ -88,7 +88,7 @@
 <div class="product-{{ product.id }}">
   <div class="product-wrap {% if settings.collection_secondary_image != blank and secondaryImage != blank %}has-secondary-media-swap{% endif %}">
     <div class="relative product_image">
-      <a href="{{ product.url | within: collection }}">
+      <a href="{{ product.url }}">
         <div class="image__container">
           {% if settings.product_form_style == 'select' %}
             {%
@@ -147,7 +147,7 @@
     %}
   </div>
 </div>
-  <a class="product-info__caption {% if settings.thumbnail_hover_enabled %}hidden{% endif %}" href="{{ product.url | within: collection }}">
+  <a class="product-info__caption {% if settings.thumbnail_hover_enabled %}hidden{% endif %}" href="{{ product.url }}">
     {%
       render 'product-info',
       product: product,
