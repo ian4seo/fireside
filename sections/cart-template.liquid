@@ -667,7 +667,7 @@ function submitQuote() {
   if(invalidEntries.length == 0) {
     $.ajax({
       type: 'GET',
-      url: 'https://fireside-hearth-and-home.myshopify.com/cart.json',
+      url: 'https://fireside.com/cart.json',
       dataType: 'jsonp',
       success: function(data) {
         let cartItems = data.items;
