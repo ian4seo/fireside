@@ -4,7 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
-    <meta name="robots" content="index,follow">
+     {% comment %} SEO: removed hardcoded <meta name="robots" content="index,follow">.
+         It forced an index directive onto collection-scoped duplicate URLs
+         (/collections/x/products/y) and single-facet URLs, fighting the canonical tag.
+         Absent this tag, index,follow is already the default. Do not re-add. {% endcomment %}
 
     <!-- Mobile Specific Metas -->
     <meta name="HandheldFriendly" content="True">
